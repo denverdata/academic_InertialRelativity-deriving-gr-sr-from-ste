@@ -1,0 +1,403 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RSC Article Template with Section Structure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{extsizes}
+\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{mathptmx}
+\usepackage{siunitx}
+\usepackage{sectsty}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage[compact]{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{makecell}
+\usepackage{array} % Include in the preamble for vertical 
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\mathtoolsset{showonlyrefs}
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
+
+\begin{document}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
+%%%HEADER%%%
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
+
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\footnoterule{\vspace*{1pt}% 
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}} 
+\setcounter{secnumdepth}{5}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@makefntext[1]% 
+{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother 
+\renewcommand{\figurename}{\small{Fig.}~}
+\sectionfont{\sffamily\Large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\bf}
+\setstretch{1.125} %In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+\fancyfoot[LO,RE]{\vspace{-7.1pt}\includegraphics[height=9pt]{head_foot/LF}}
+%\fancyfoot[CO]{\vspace{-7.1pt}\hspace{11.9cm}\includegraphics{head_foot/RF}}
+%\fancyfoot[CE]{\vspace{-7.2pt}\hspace{-13.2cm}\includegraphics{head_foot/RF}}
+\fancyfoot[RO]{\footnotesize{\sffamily{1--\pageref{LastPage} ~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\hspace{4.65cm} 1--\pageref{LastPage}}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter 
+\newlength{\figrulesep} 
+\setlength{\figrulesep}{0.5\textfloatsep} 
+
+\newcommand{\topfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}% 
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+
+  {  \noindent\includegraphics[height=30pt]{head_foot/dec}}\\
+  \normalsize\text{DOI: \href{https://doi.org/10.55277/researchhub.0e0cgoor}{10.55277/researchhub.0e0cgoor}}
+{\hfill\raisebox{0pt}[0pt][0pt]{\includegraphics[height=55pt]{head_foot/RSC_LOGO_CMYK}}\\[1ex]
+}\par
+\vspace{1em}
+\sffamily
+\begin{tabular}{m{4.5cm} p{13.5cm} }
+
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{Introducing Inertial Density and Characterizing the Schwarzschild Condition as a Constant Threshold of Mass over Radius (m/r)}} \\
+\vspace{0.3cm} & \vspace{0.3cm} \\
+ & \noindent\large{Thomas Damon DeGerlia,$^{\dag}$\textit{$^{a}$}} \\
+ & \noindent\small{Originally published: May 11, 2025 C.E. Mother's Day} \\
+& \noindent\small{Revision 0.10 June 15, 2025 C.E. Father's Day} \\
+ \vspace{0.3cm} & \vspace{0.3cm} \\
+ 
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: We introduce inertial density ($P = I/v$) as a fundamental property characterizing the distribution of inertia across any system. For this study we focus on spherical systems, and from this property in the spherical context, we derive the Schwarzschild condition as a constant threshold of mass over radius ($m/r$), resulting in what we refer to herein as "DeGerlia Compactness" $(D)$ where $D=(m/r)$, and the static universal constant \textit{"the DeGerlia threshold"} $D_{crit} = \SI{6.73295e+26}{kg/m}$. This method provides a \textit{simple and direct algebraic determination of black hole formation as a function of mass distribution about an axis}. Through mathematical derivation and calculations for the Earth, a hypothetical neutron star, and a hypothetical galactic cluster, we demonstrate that this approach yields identical results to standard general relativity calculations while offering conceptual and computational simplicity.}
+\end{tabular}
+
+ \end{@twocolumnfalse} \vspace{0.6cm}
+
+  ]
+%%%END OF TITLE, AUTHORS AND ABSTRACT%%%
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\vspace{-1cm}
+%%%FOOTNOTES%%%
+\footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
+\footnotetext{\dag~Mr. DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S. in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado. Tom brings over 35 years of professional and academic multidisciplinary scientific problem-solving experience across chemistry, physical chemistry, artificial intelligence, software engineering, archaeology, forensics, and psychology.}
+\section{Introduction}
+Considering the classic figure skater example in rotational dynamics, when the static mass skater pulls their arms in, their moment of inertia reduces. Since momentum is conserved, the pace of rotational movement increases. The factor by which the motion changes is inversely proportional to the change in moment of inertia about the same axis. \\
+To understand the relationship between inertia and density, and to represent how density influences motion from a rotational perspective, we introduce the concept of \textbf{\textit{inertial density $P = I/v$}} as shown in \eqref{eq:longinertialdensity} where I is inertia, and v is volume.
+\section{Inertia and Moment of Inertia}
+Inertia dictates how a system's motion changes in response to an applied force. This applies to both linear and rotational motion.
+In rotational dynamics, the "moment of inertia" (I) dictates how the angular motion of a system about a specific axis changes when a torque is applied, and is defined as the sum of each mass element multiplied by the square of its distance from the axis of rotation.\\
+\begin{equation}
+\text{Moment of Inertia: }
+I = \sum_i m_i r_i^2
+\label{eq:momentofinertia}
+\end{equation}
+Using Equation \eqref{eq:momentofinertia}, one can determine how motion changes for any system when energy is applied about an axis (torque). As it pertains to linear motion, inertia (I) is characterized solely by the system's mass.{footnote: in many physics equations, what is mass in simple linear dynamics, is moment of inertia in rotational dynamics such as [fix this: f=ma vs xxx in the rotation al context]}
+\section{Introducing Inertial Density $P$}
+To represent how density influences motion from a rotational perspective, we introduce the concept of \textbf{\textit{inertial density $P$}} as shown in \eqref{eq:longinertialdensity} as a fundamental system property characterizing the distribution of inertia across any system, whether in the linear or rotational context, in any direction, or about any axis. If we were to redefine classical density as I/v (moment of inertia/volume), because inertia is mass for one-dimensional motion, this would remain consistent with the classical definition of density, where $\rho = m/v$. Stated in different terms:\\
+\begin{quote}
+\textbf{\textit{Mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.}}
+\end{quote}
+\subsection{Mathematics of Inertial Density}
+To derive the inertial density relationship, we begin with the established relationship between mass and density $\rho$ as shown in \eqref{eq:massdensity}:
+\begin{equation}
+\rho \;=\; \frac{m}{v}
+\label{eq:massdensity}
+\end{equation}
+Where $\rho$ is density, $m$ is mass, and $v$ is volume.
+Because mass is equivalent to linear inertia, and because density is $m/v$, we define inertial density $P$ in terms of moment of inertia over volume:
+\begin{equation}
+\boxed{ \text{Inertial Density}: P \;=\; \frac{I}{v}}
+\label{eq:longinertialdensity}
+\end{equation}
+Where inertial density $P$ is equal to inertia $I$ over volume $v$. Note, the moment of inertia $I$ for a system is distinct about every axis for systems that are not uniform.\\
+For a uniform sphere\cite{goldstein1980}, we substitute $I = \frac{2}{5}mr^2$ and $v = \frac{4}{3}\pi r^3$:
+\begin{equation}
+P \;=\; \frac{I}{v} \;=\; \frac{\frac{2}{5}mr^2}{\frac{4}{3}\pi r^3} \;=\; \frac{3m}{10\pi r}
+\label{eq:sphericalP}
+\end{equation}
+Which can be simplified as follows:
+\begin{align}
+P \;&=\; \frac{m}{r} \times \frac{3}{10\pi} \\
+P \;&=\; \frac{m}{r} \times \SI{9.549296585e-2}{}
+\label{eq:massinertialdensity}
+\end{align}
+Therefore, for spherical systems, $P$ can be calculated from the ratio of mass to radius multiplied by the conversion factor $\frac{3}{10\pi}$ as shown in \eqref{eq:massinertialdensity}.\\
+\subsection{DeGerlia Compactness $D$}
+For all spherical systems, m/r multiplied by the geometric factor $3/(10\pi)$ equals inertial density. \textbf{\textit{DeGerlia Compactness}} is a simplified analog to inertial density $I/v$ that is equal to $mass$ over $radius$ $m/r$ while omitting the $3/10\pi$ geometric conversion factor:
+\begin{align}
+\boxed{\text{DeGerlia Compactness: } D=\frac{m}{r} }
+\label{eq:degerliacompact}
+\end{align}
+DeGerlia compactness \eqref{eq:degerliacompact} $D = m/r$ is related to inertial density $P$ by the geometric factor $3/10\pi$ as shown in \eqref{eq:ptod}:
+\begin{equation}
+    P=\frac{3}{10\pi} \times D
+\label{eq:ptod}
+\end{equation}
+\subsection{The DeGerlia Threshold $D_{crit}$}
+The DeGerlia spherical compactness $D$ is equal to the m/r ratio for any spherical system:
+\begin{equation}
+D=\frac{m}{r}
+\label{eq:degerliadef}
+\end{equation}
+We define $r = r_s$ (the Schwarzschild condition):
+\begin{equation}
+D_{crit} = \frac{m}{r_s}
+\label{eq:dcritdef}
+\end{equation}
+Recall the Schwarzschild radius\cite{schwarzschild1916radius}:
+\begin{equation}
+r_s = \frac{2Gm}{c^2}
+\label{eq:schwarzschildradius}
+\end{equation}
+Substitute $r_s$ into the expression for $D_{crit}$:
+\begin{align}
+D_{crit} &= \frac{m}{\frac{2Gm}{c^2}} = \frac{m c^2}{2Gm} = \frac{c^2}{2G}
+\end{align}
+Insert the fundamental constants\cite{crc2019} $c = \SI{2.99792458e8}{m/s}$ and $G = \SI{6.67430e-11}{m^3.kg^{-1}.s^{-2}}$:
+\begin{align}
+D_{crit} &= \frac{(2.99792458 \times 10^8)^2}{2 \times 6.67430 \times 10^{-11}}~\si{kg/m} \\
+         &= \frac{8.98755179 \times 10^{16}}{1.334860 \times 10^{-10}} \\
+         &= \SI{6.73295e26}{kg/m}
+\end{align}
+\begin{equation}
+\boxed{ \text{DeGerlia Threshold: $D_{crit}$ = \SI{6.73295e+26}{kg/m} }}
+\label{eq:criticalmassdensity}
+\end{equation}
+The DeGerlia Threshold represents the mass over radius threshold at which gravitational collapse occurs. Just as the Schwarzchild radius, the DeGerlia threshold is universally applicable to spherical gravitational systems. Examples include black holes or neutron stars, a spherical region of an interstellar cloud, or even a galactic cluster.
+As defined in \eqref{eq:criticalmassdensity}, this universal threshold provides a simple criterion for determining when a system will undergo gravitational collapse.
+\section{Calculating Inertial Density}
+The following techniques allow the characterization of the moment of inertia for almost any type of system about any axis. Note, for rotational motion of non-uniform or non-spherical systems, the moment of inertia is dimensional and distinct about each axis of rotation. 
+\begin{enumerate}
+    \item Any system: The $P = I/v$ formula will accurately calculate P for the system.
+    \item Any system: Substitute the mass-weighted mean radius squared for radius squared to calculate inertial density using $P=m/r (3/10\pi)$. 
+    \item Any system: Take a spherical "sample" of any system and calculate the average inertial density over that region of space, about an axis using $P=m/r (3/10\pi)$.
+    \item Spherical systems: Multiplying $m/r$ by $(3/10\pi)$ will accurately calculate $P$.
+    \item Spherical systems: Multiplying density $\rho$ by $ r^2$ \ will produce an accurate $P$.
+    \item Non-spherical uniform systems: You can substitute radius squared with mean radius squared (MRS) and utilize the uniform sphere formula $P=m/r (3/10\pi)$.
+\end{enumerate}
+\section{Example Calculations}
+Refer to Table \ref{tab:sphere_comparison} for a programmatic property comparison for the three examples described herein.
+\newpage
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Comparison of Three Example Systems with Properties Calculated via Python Script}
+\label{tab:sphere_comparison}
+\begin{tabular}{@{}p{4.5cm}S[table-format=1.8e2]S[table-format=1.8e2]S[table-format=1.8e2]@{}}
+\toprule
+\textbf{Property} & {\textbf{Earth}} & {\textbf{Galactic Cluster}} & {\textbf{Neutron Star}} \\
+\midrule
+Radius & \SI{6.37814e+6}{m} & \SI{7.100000e+22}{m} & \SI{1.980000e+3}{m} \\
+Mass & \SI{5.97217e+24}{kg} & \SI{3.980000e+45}{kg} & \SI{1.000000e+30}{kg} \\
+Volume & \SI{1.08685e+21}{m^3} & \SI{1.49921e+69}{m^3} & \SI{3.25150e+10}{m^3} \\
+Density & \SI{5.49493e+3}{kg/m^3} & \SI{2.65472e-24}{kg/m^3} & \SI{3.07550e+19}{kg/m^3} \\
+Moment of Inertia & \SI{9.71806e+37}{kg·m^2} & \SI{8.02527e+90}{kg·m^2} & \SI{1.56816e+36}{kg·m^2} \\
+DeGerlia Compactness D=m/r & \SI{9.36350e+17}{kg/m} & \SI{5.60563e+22}{kg/m} & \SI{5.05051e+26}{kg/m} \\
+Inertial Density $P=I/v$ & \SI{8.94148E+16}{kg/m} & \SI{5.35299E+21}{kg/m} & \SI{4.82288E+25}{kg/m} \\
+Inertial Density $P=(m/r)(3/10\pi)$ & \SI{8.94148E+16}{kg/m} & \SI{5.35299E+21}{kg/m} & \SI{4.82288E+25}{kg/m} \\
+Schwarzschild Radius $r_s$ & \SI{8.87006e-3}{m} & \SI{5.91122e+18}{m} & \SI{1.48523e+3}{m} \\
+DeGerlia Threshold $D_{\text{crit}}$ & \SI{6.73295e+26}{kg/m} & \SI{6.73295e+26}{kg/m} & \SI{6.73295e+26}{kg/m} \\
+$D_{norm} = D/D_{crit}$ & \num{1.39070e-9} & \num{8.32567e-5} & \num{7.50118e-1} \\
+GTD from $\sqrt{1-D_{norm}}$ & \num{9.9999999930465e-1} & \num{9.9995837076999e-1} & \num{4.9988227391858e-1} \\
+GTD per GR formula & \num{9.9999999930465e-1} & \num{9.9995837079848e-1} & \num{4.9988227873603e-1} \\
+Surface Gravity & \SI{9.79829e+0}{m/s^2} & \SI{5.26953e-11}{m/s^2} & \SI{1.70245e+13}{m/s^2} \\
+Escape Velocity & \SI{1.11799e+4}{m/s} & \SI{2.73546e+6}{m/s} & \SI{2.59648e+8}{m/s} \\
+\end{tabular}
+\end{table*}
+\subsection{Example 1: Earth}
+\begin{itemize}
+\item \textbf{Properties}
+\begin{align}
+m &= \SI{5.97216787e24}{kg}\\
+r &= \SI{6.3781370e6}{m}
+\end{align}
+\item \textbf{Calculate Earth's DeGerlia Compactness}
+
+The DeGerlia compactness D of the Earth is calculated as m/r:
+\begin{align}
+D &= \frac{m}{r} = \frac{\SI{5.97216787e24}{kg}}{\SI{6.3781370e6}{m}} \\
+D &= \SI{9.36349889e17}{kg/m}
+\end{align}
+\item \textbf{Calculate Critical Radius for Earth}
+
+The critical radius $r_crit$ for the Earth is the radius that corresponds to the DeGerlia Threshold:
+
+Recall the DeGerlia Threshold: 
+\begin{align}
+D_{crit} &= \SI{6.73295e+26}{kg/m}\\
+r_{crit} &= \frac{m}{D_{crit}} = \frac{\SI{5.97216787e24}{kg}}{\SI{6.73295e+26}{kg/m}}\\
+r_{crit} &=  \SI{8.87005515e-3}{m} 
+\end{align}
+\item \textbf{Calculate the Schwarzschild Radius for Earth}
+\begin{align}
+r_s &= \frac{2Gm}{c^2}  \\
+&= \frac{2 \times \SI{6.67430e-11}{m^3\,kg^{-1}\,s^{-2}} \times \SI{5.97216787e24}{kg}}{(\SI{2.99792458e8}{m/s})^2} \\
+r_s &= \SI{8.87005515e-3}{m}
+\end{align}
+\item \textbf{Verification}
+\begin{align}
+r_s &= \SI{8.87005e-3}{m} = r_{crit} = \SI{8.87005e-3}{m} 
+\end{align}
+The computed values of the critical radius $r_{crit}$ and the Schwarzschild radius $r_s$ are mathematically identical, confirming that the DeGerlia compactness threshold formulation provides the same physical threshold as general relativity\cite{einstein1915}.
+\end{itemize}
+
+\subsection{Example 2: Hypothetical Galactic Cluster}
+\begin{itemize}
+\item \textbf{Properties}
+\begin{align}
+m &= \SI{3.98000e45}{kg}\\
+r &= \SI{7.10000e22}{m}
+\end{align}
+\item \textbf{Calculate Galactic Cluster's DeGerlia compactness}
+
+The DeGerlia compactness D of the Galactic Cluster is calculated as m/r:
+\begin{align}
+D &= \frac{m}{r} = \frac{\SI{3.98000e45}{kg}}{\SI{7.10000e22}{m}} \\
+D &= \SI{5.6056338028e22}{kg/m}
+\end{align}
+\item \textbf{Calculate Critical Radius for a Hypothetical Galactic Cluster}
+
+The critical radius is the radius that corresponds to the critical DeGerlia compactness for the Galactic Cluster:
+
+Recall the DeGerlia Threshold: 
+\begin{align}
+D_{crit} &= \SI{6.73295e+26}{kg/m}\\
+r_{crit} &= \frac{m}{D_{crit}} = \frac{\SI{3.98000e45}{kg}}{\SI{6.73295e+26}{kg/m}}\\
+r_{crit} &=  \SI{5.9112235720e18}{m} 
+\end{align}
+\item \textbf{Calculate the Schwarzschild Radius for the Galactic Cluster}
+\begin{align}
+r_s &= \frac{2Gm}{c^2}  \\
+&= \frac{2 \times \SI{6.67430e-11}{m^3\,kg^{-1}\,s^{-2}} \times \SI{3.98000e45}{kg}}{(\SI{2.99792458e8}{m/s})^2} \\
+r_s &= \SI{5.9112235742e18}{m}
+\end{align}
+\item \textbf{Verification}
+\begin{align}
+r_s &= \SI{5.91122e18}{m} = r_{crit} = \SI{5.91122e18}{m}
+\end{align}
+The computed values of the critical radius $r_{crit}$ and the Schwarzschild radius $r_s$ are mathematically identical, confirming that the DeGerlia compactness threshold formulation provides the same physical threshold as general relativity.
+\end{itemize}
+\subsection{Example 3: Hypothetical Neutron Star}
+\begin{itemize}
+\item \textbf{Properties}
+\begin{align}
+m &= \SI{1.00000e30}{kg}\\
+r &= \SI{1.98000e3}{m}
+\end{align}
+\item \textbf{Calculate Neutron Star's DeGerlia compactness}
+
+The DeGerlia compactness $D$ of the Neutron Star is calculated as m/r:
+\begin{align}
+D &= \frac{m}{r} = \frac{\SI{1.00000e30}{kg}}{\SI{1.98000e3}{m}} \\
+D &= \SI{5.05051e+26}{kg/m}
+\end{align}
+Because the DeGerlia compactness $D$ of the Neutron Star is close to the $D_{crit}$, it is near gravitational collapse.
+\item \textbf{Calculate Critical Radius for Neutron Star}
+The critical radius is the radius that corresponds to the critical DeGerlia compactness for a Neutron Star:
+Recall the DeGerlia Threshold: 
+\begin{align}
+D_{crit} &= \SI{6.73295e+26}{kg/m}\\
+r_{crit} &= \frac{m}{D_{crit}} = \frac{\SI{1.00000e30}{kg}}{\SI{6.73295e+26}{kg/m}}\\
+r_{crit} &=  \SI{1.48523e3}{m} 
+\end{align}
+\item \textbf{Calculate the Schwarzschild Radius for Neutron Star}
+\begin{align}
+r_s &= \frac{2Gm}{c^2}  \\
+&= \frac{2 \times \SI{6.67430e-11}{m^3\,kg^{-1}\,s^{-2}} \times \SI{1.00000e30}{kg}}{(\SI{2.99792458e8}{m/s})^2} \\
+r_s &= \SI{1.48523e3}{m}
+\end{align}
+\item \textbf{Verification}
+\begin{align}
+r_s &= \SI{1.48523e3}{m} = r_{crit} = \SI{1.48523e3}{m}
+\end{align}
+The computed values of the critical radius $r_{crit}$ and the Schwarzschild radius $r_s$ are mathematically identical, confirming that the DeGerlia compactness threshold formulation provides the same physical threshold as  general relativity\cite{einstein1915}.
+\end{itemize}
+\balance
+\section{Conclusion}
+Several key conclusions can be drawn from the results of this study:
+\begin{enumerate}
+    \item DeGerlia compactness $D$ provides a simple and effective tool for evaluating gravitational collapse in any system. When $D$ exceeds the DeGerlia threshold, the object necessarily forms an event horizon. Using the DeGerlia compactness of the system and the critical inertia density represented by the DeGerlia threshold, the point of gravitational collapse is a direct algebraic comparison. Inertial density abstracts the density gradient/profile (moment of inertia) within a system. \\
+    \item Inertial density can be calculated in two distinct ways: as a function of the system's moment of inertia $P=I/v$, which is suitable for any system geometry, or as a function of mass and radius $P=m/r \times (3/10\pi)$ for spherical systems. \\
+    \item This investigation reveals the staggering moments of inertia for relatively large distributed systems like galactic clusters, highlighting their extreme rotational dynamics.
+\end{enumerate}
+\section{Future Research}
+The results of this study suggest the following further research:
+\begin{itemize}
+    \item The relationship between moment of inertia and spacetime curvature should be investigated.\\
+    \item Inertial density and associated mathematics/behavior should be researched further across physical domains. 
+\end{itemize}
+%%%REFERENCES%%%
+\bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc} %the RSC's .bst file
+\balance
+\clearpage
+\end{document}

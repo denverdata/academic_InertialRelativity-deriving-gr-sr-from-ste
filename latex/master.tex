@@ -1,0 +1,454 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RSC Article Template with Section Structure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{extsizes}
+\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{mathptmx}
+\usepackage{siunitx}
+\usepackage{sectsty}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage[compact]{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{makecell}
+\usepackage{array} % Include in the preamble for vertical 
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\mathtoolsset{showonlyrefs}
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
+
+\begin{document}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
+%%%HEADER%%%
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
+
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\footnoterule{\vspace*{1pt}% 
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}} 
+\setcounter{secnumdepth}{5}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@makefntext[1]% 
+{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother 
+\renewcommand{\figurename}{\small{Fig.}~}
+\sectionfont{\sffamily\Large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\bf}
+\setstretch{1.125} %In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+\fancyfoot[LO,RE]{\vspace{-7.1pt}\includegraphics[height=9pt]{head_foot/LF}}
+%\fancyfoot[CO]{\vspace{-7.1pt}\hspace{11.9cm}\includegraphics{head_foot/RF}}
+%\fancyfoot[CE]{\vspace{-7.2pt}\hspace{-13.2cm}\includegraphics{head_foot/RF}}
+\fancyfoot[RO]{\footnotesize{\sffamily{1--\pageref{LastPage} ~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\hspace{4.65cm} 1--\pageref{LastPage}}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter 
+\newlength{\figrulesep} 
+\setlength{\figrulesep}{0.5\textfloatsep} 
+
+\newcommand{\topfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}% 
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+
+  {  \noindent\includegraphics[height=30pt]{head_foot/dec}}\\
+  \normalsize\text{DOI: \href{https://doi.org/10.55277/researchhub.0e0cgoor}{10.55277/researchhub.0e0cgoor}}
+{\hfill\raisebox{0pt}[0pt][0pt]{\includegraphics[height=55pt]{head_foot/RSC_LOGO_CMYK}}\\[1ex]
+}\par
+\vspace{1em}
+\sffamily
+\begin{tabular}{m{4.5cm} p{13.5cm} }
+
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{An improved model for interpretation of general relativity: Corrected interpretation of limits}} \\
+\vspace{0.3cm} & \vspace{0.3cm} \\
+ & \noindent\large{Thomas Damon DeGerlia,$^{\dag}$\textit{$^{a}$}} \\
+ & \noindent\small{Originally published: February 6, 2026 C.E.} \\
+ & \noindent\small{Revision 1.00 February 4, 2026 C.E.} \\
+ \vspace{0.3cm} & \vspace{0.3cm} \\
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: The standard formulation of gravitational time dilation,  
+$\frac{d\tau}{dt} = \sqrt{1 - \frac{2GM}{rc^2}}$, 
+as it is commonly used, imparts several misinterpreted, misleading, or erroneous operations, summarized as follows: 
+(1) it's relativistic. General relativity always reflects the relationship between two systems, meaning the same thing may be observed differently depending on your observational perspective. 
+(2) the zero point is incorrect. Schwarzschild radius is not zero time. It's slower than us, relatively, but it's not zero time. It's just the point where a light event arises and forms. That's an observational phenomenon. It's not purely observational. It's a molecular matter phenomenon. It spans from molecules all the way up to black holes, and then the things that contain black holes, like galactic clusters, galaxies, and things like that. 
+(3) the Infinity Point is arbitrarily large, instead of finite 
+n the typical gravitational time dilation calculations an "arbitrarily large" radius is used, which does not represent a finite radius
+ that can compared with. 
+(4) Due to these prior misconceptions, the standard interpretation honors the notion that zero time dilation and complete time dilation are attainable states, and as such, a normalization mechanism is used to transform the time dilation to a range from 0 to 1. This normalization, at very least, suggests that 0 and 1 are attainable, which they are not. 
+(5) the standard interpretation considers the schwartschild radius to be the point of complete time dilation, time stoppage, which is an incorrect notion. The Schwarzschild radius is the radius at which the event horizon forms, and we can no longer see light emerging. But it does not in any way suggest that the system stops. Behind the event horizon, the system continues to contract. And its pace of time continues to slow relative to a static observer, until it reaches its limit of 1 at the singularity, r=0. But because this is an asymptotic limit, it will never be reached; it will be approached forever. These three general incorrect observations render the gravitational time dilation formula almost no quantitative value. 
+}
+\end{tabular}
+
+ \end{@twocolumnfalse} \vspace{0.6cm}
+
+  ]
+%%%END OF TITLE, AUTHORS AND ABSTRACT%%%
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\vspace{-1cm}
+%%%FOOTNOTES%%%
+\footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
+\footnotetext{\dag~Mr.\ DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S.\ in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado.}
+\section{Introduction}
+
+
+Gravitational time dilation describes how clocks at different gravitational potentials run at different rates. The standard formulation derived from the Schwarzschild metric is:
+
+gravitational time dilation, $T = \sqrt{1 - \frac{2GM}{rc^2}}$,
+
+\noindent where $\tau$ is proper time, $t$ is coordinate time for a distant observer, $r$ is the radial distance from the center of mass, and $r_s = 2GM/c^2$ is the Schwarzschild radius.
+
+This formulation rests on a number of concepts that if used incorrectly, can produce significant problems with the results:
+
+\begin{enumerate}
+    \item General relativity states that time dilation is always relativistic. It is always a comparison between two physical systems with finite properties. However, the standard gravitational time dilation formula does not require the second radius. It infers an arbitrarily large one, which depending on the mass will be a different radius. To apply any form of 'arbitrarily large' results in a nonsensical reference point. This makes meaningful comparison of two time dilation factors is meaningless or impossible. One must always be comparing two systems with finite properties for a meaningful time dilation factor. A very small fraction can never be interpreted as zero, and a very large number can never be interpreted as infinity. 
+    \item Zero-time dilation and total-time dilation are unattainable states, they are asymptotic limits. It's a gradient through infinity. It approaches infinity on one end and zero on the other. To normalize in a way that legitimizes these very incorrect notions is an injustice to science.  The raw, unnormalized ratio of time paces is the real measure of time dilation. The normalized number is bad for a number of reasons, not the least of which is that it requires you to work with numbers extremely close to 1 or extremely close to 0.  It's not incorrect per se; it is correct, but it sends the wrong signals. which leads me to my next point, which is entirely different but touches on this.
+    \item The point of reference should be improved. Currently, the formula maps the Schwarzschild radius ($r_s$) to a zero-time condition ($T=0$), creating an artificial mathematical boundary at the event horizon. Ideally we can make the point of reference something that is consistent, and something that we understand, like Earth. If we used and reported time dilation relative to clock time at our scale, it would be very simple to say things like, "The pace of time on Mars is twice our pace of time on Earth. It's a factor of two." Hypothetically, of course.
+\end{enumerate}
+If addressed properly, the gravitational time violation figures can be meaningful and accurate. For example, if we always calculated the gravitational time violation relative to Earth, and if we wanted to know the International Space Station, we would simply calculate its gravitational time violation. That would give us its ratio to the surface of the Earth. You would expect a number just slightly over 1 in this case. And conceivably, if we're doing the math right, we should actually get a result that corresponds to the actual observed International Space Station time dilation factor. We perform this experiment below.
+\begin{enumerate}
+\item The coordinate time $t$ references an observer at $r \to \infty$, a theoretical abstraction that cannot be physically instantiated.
+\item T
+\end{enumerate}
+
+Building on the framework of inertial density and DeGerlia Compactness introduced in prior work \cite{degerlia2025}, we propose a reformulation that eliminates these artifacts while preserving correlation with experimental observations in accessible regimes.
+
+\section{Problems with the Standard Formulation}
+
+\subsection{The Infinity Reference Problem}
+
+The standard formula expresses time dilation relative to an observer infinitely far from all gravitating masses ($r \to \infty$). However, infinity is not a physical location; strictly speaking, all physical comparisons must be between two finite systems. To use the standard formula in practice, one must effectively select an "arbitrarily large" radius to serve as the proxy for infinity.
+
+This selection introduces a fatal inconsistency. If we calculate the relative time dilation for an object at radius $r$ against two different "arbitrarily large" references, we obtain distinct physical predictions.
+
+\textbf{Proof of Inconsistency (Numeric Example):}
+Consider the Earth ($M \approx 5.972 \times 10^{24}$ kg, $r_s \approx 8.87$ mm). We seek the time dilation factor at the surface, $r = 6,371$ km.
+
+The formula for relative time dilation between $r$ and a reference $r_{ref}$ is:
+\begin{equation}
+\Delta T(r, r_{ref}) = \frac{\sqrt{1 - r_s/r}}{\sqrt{1 - r_s/r_{ref}}}
+\end{equation}
+
+If we attempt to approximate "infinity" with a finite reference:
+
+\textbf{Case A:} Let the "infinity proxy" be $10 \times$ Earth's radius ($r_{ref1} = 6.37 \times 10^7$ m).
+\begin{equation}
+\Delta T_A = \frac{0.999999999303}{0.999999999930} \approx 0.999999999373
+\end{equation}
+
+\textbf{Case B:} Let the "infinity proxy" be $100 \times$ Earth's radius ($r_{ref2} = 6.37 \times 10^8$ m).
+\begin{equation}
+\Delta T_B = \frac{0.999999999303}{0.999999999993} \approx 0.999999999310
+\end{equation}
+
+The results differ in the 10th decimal place. This is not a rounding error; it is a physical difference. The "absolute" time dilation value for Earth in standard GR is undetermined; it floats based on where one arbitrarily places the reference observer. Without a fixed physical benchmark (like Earth itself), the "value" is meaningless.
+
+\subsection{The Zero-Time Boundary Problem}
+
+At $r = r_s$, Equation \ref{eq:standard} yields:
+
+\begin{equation}
+T = \sqrt{1 - \frac{r_s}{r_s}} = \sqrt{0} = 0
+\end{equation}
+
+For $r < r_s$:
+
+\begin{equation}
+T = \sqrt{1 - \frac{r_s}{r}} = \sqrt{\text{negative}} = \text{imaginary}
+\end{equation}
+
+The Schwarzschild radius is the point at which escape velocity equals the speed of light---it defines the event horizon. It is not a point where time stops. Matter continues to exist and evolve inside the horizon; proper time continues for infalling observers. The singularity at $r = 0$, not $r = r_s$, is where general relativity predicts divergent curvature.
+
+By mapping $r_s$ to $T = 0$, the standard formula conflates the event horizon with the singularity and forecloses any calculation of time dilation for $r < r_s$. This is a mathematical artifact of the normalization scheme, not a physical truth.
+
+\subsection{The Relativity of Time Dilation}
+
+Time dilation is inherently relative. There is no universal clock against which absolute time rates can be measured. We can only compare the rate of one clock to another. The standard formula obscures this by presenting individual time dilation factors as if they were absolute quantities, when in fact each factor is implicitly relative to the undefined point at infinity.
+
+\section{Reformulation Using DeGerlia Compactness}
+
+\subsection{DeGerlia Compactness and the Threshold}
+
+DeGerlia Compactness \cite{degerlia2025} is defined as:
+
+\begin{equation}
+D = \frac{m}{r}
+\end{equation}
+
+\noindent with units of kg/m. The DeGerlia Threshold, the compactness at which a spherical system forms an event horizon, is:
+
+\begin{equation}
+D_{crit} = \frac{c^2}{2G} = 6.73295 \times 10^{26} \text{ kg/m}
+\end{equation}
+
+This threshold is derived directly from the Schwarzschild condition $r = r_s = 2Gm/c^2$:
+
+\begin{equation}
+D_{crit} = \frac{m}{r_s} = \frac{m}{\frac{2Gm}{c^2}} = \frac{c^2}{2G}
+\end{equation}
+
+\subsection{The Linear Time Dilation Formula}
+
+We propose replacing the normalized formula with a simple ratio:
+
+\begin{equation}
+T = \frac{r}{r_s}
+\label{eq:new}
+\end{equation}
+
+This formula has the following properties:
+
+\begin{itemize}
+\item At $r = 0$: $T = 0$ (the singularity)
+\item At $r = r_s$: $T = 1$ (the event horizon)
+\item At $r = \infty$: $T = \infty$ (flat spacetime limit)
+\item For all $r > 0$: $T$ is real and computable
+\end{itemize}
+
+The Schwarzschild radius is no longer a boundary where the formula breaks. It is simply the point on the curve where $T = 1$.
+
+\subsection{Expressing Time Dilation in Terms of Inertial Density}
+
+Using the relationship $D = m/r$ and recognizing that at the Schwarzschild radius $D = D_{crit}$:
+
+\begin{equation}
+T = \frac{r}{r_s} = \frac{m/r_s}{m/r} = \frac{D_{crit}}{D_{location}}
+\end{equation}
+
+Or equivalently:
+
+\begin{equation}
+T = \frac{6.73295 \times 10^{26}}{D_{location}}
+\end{equation}
+
+Higher DeGerlia Compactness (more compressed system) yields lower $T$ (slower time). The relationship is linear and invertible.
+
+Note that this formulation is the only methodology that permits calculation beyond the event horizon. The standard metric involves the term $(1 - r_s/r)$, which becomes negative for $r < r_s$. By utilizing exclusively the inertial density concept ($D = m/r$), we avoid this mathematical breakdown, ensuring that all radii yield valid, positive time dilation factors.
+
+\subsection{Anchoring to Earth}
+
+Since time dilation is relative, we require a reference point. We select Earth's surface:
+
+\begin{align}
+r_{Earth} &= 6.371 \times 10^{6} \text{ m}\\
+M_{Earth} &= 5.972 \times 10^{24} \text{ kg}\\
+r_{s,Earth} &= \frac{2GM_{Earth}}{c^2} = 8.870 \times 10^{-3} \text{ m}\\
+D_{Earth} &= \frac{M_{Earth}}{r_{Earth}} = 9.374 \times 10^{17} \text{ kg/m}\\
+T_{Earth} &= \frac{r_{Earth}}{r_{s,Earth}} = 7.184 \times 10^{8}
+\end{align}
+
+All time dilation values are expressed as ratios to $T_{Earth}$:
+
+\begin{equation}
+\frac{T_{location}}{T_{Earth}} = \frac{D_{Earth}}{D_{location}} = \frac{9.374 \times 10^{17}}{D_{location}}
+\label{eq:relative}
+\end{equation}
+
+\begin{itemize}
+\item Ratio $< 1$: slower time than Earth (higher compactness)
+\item Ratio $= 1$: Earth surface
+\item Ratio $> 1$: faster time than Earth (lower compactness)
+\end{itemize}
+
+\section{Example Calculations}
+
+\subsection{Earth at its Schwarzschild Radius}
+
+If Earth were compressed to its Schwarzschild radius ($r = 8.870 \times 10^{-3}$ m):
+
+\begin{align}
+D &= \frac{5.972 \times 10^{24}}{8.870 \times 10^{-3}} = 6.733 \times 10^{26} \text{ kg/m} \approx D_{crit}\\
+T &= 1\\
+\frac{T}{T_{Earth}} &= \frac{1}{7.184 \times 10^{8}} = 1.392 \times 10^{-9}
+\end{align}
+
+Time at Earth's Schwarzschild radius runs at $1.392 \times 10^{-9}$ the pace of time at Earth's surface.
+
+\subsection{Comparison at $\frac{4}{3}r_s$ and $\frac{2}{3}r_s$}
+
+The standard formula gives $T = 0.5$ at $r = \frac{4}{3}r_s$ (sometimes called ``half-time'') and fails entirely at $r = \frac{2}{3}r_s$.
+
+Using the new formula:
+
+At $r = \frac{4}{3}r_s$:
+\begin{equation}
+T = \frac{\frac{4}{3}r_s}{r_s} = \frac{4}{3} = 1.333
+\end{equation}
+
+At $r = \frac{2}{3}r_s$:
+\begin{equation}
+T = \frac{\frac{2}{3}r_s}{r_s} = \frac{2}{3} = 0.667
+\end{equation}
+
+The ratio between them:
+\begin{equation}
+\frac{T_{4/3}}{T_{2/3}} = \frac{1.333}{0.667} = 2
+\end{equation}
+
+Time at $\frac{4}{3}r_s$ runs at exactly twice the rate of time at $\frac{2}{3}r_s$. The relationship is linear.
+
+\subsection{Hypothetical Neutron Star}
+
+Using the neutron star from \cite{degerlia2025} with $m = 1.000 \times 10^{30}$ kg and $r = 1.980 \times 10^{3}$ m:
+
+\begin{align}
+D &= \frac{1.000 \times 10^{30}}{1.980 \times 10^{3}} = 5.051 \times 10^{26} \text{ kg/m}\\
+\frac{T}{T_{Earth}} &= \frac{9.374 \times 10^{17}}{5.051 \times 10^{26}} = 1.856 \times 10^{-9}
+\end{align}
+
+Time at the neutron star surface runs at $1.856 \times 10^{-9}$ the pace of Earth time.
+
+\subsection{Below the Schwarzschild Radius}
+
+For a system at $r = 0.5 \cdot r_s$:
+
+\begin{align}
+T &= \frac{0.5 \cdot r_s}{r_s} = 0.5\\
+\frac{T}{T_{Earth}} &= \frac{0.5}{7.184 \times 10^{8}} = 6.96 \times 10^{-10}
+\end{align}
+
+For a system at $r = 0.1 \cdot r_s$:
+
+\begin{align}
+T &= 0.1\\
+\frac{T}{T_{Earth}} &= \frac{0.1}{7.184 \times 10^{8}} = 1.392 \times 10^{-10}
+\end{align}
+
+The formula continues to produce real, computable values for all $r > 0$.
+
+\section{Comparison of Formulations}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Location} & \textbf{Standard Formula} & \textbf{New Formula ($T$)}\\
+\midrule
+$r = 2r_s$ & $\sqrt{0.5} = 0.707$ & $2$\\
+$r = \frac{4}{3}r_s$ & $\sqrt{0.25} = 0.5$ & $1.333$\\
+$r = r_s$ & $0$ & $1$\\
+$r = \frac{2}{3}r_s$ & imaginary & $0.667$\\
+$r = 0.5r_s$ & imaginary & $0.5$\\
+$r = 0.1r_s$ & imaginary & $0.1$\\
+$r \to 0$ & undefined & $\to 0$\\
+\bottomrule
+\end{tabular}
+\caption{Comparison of standard and reformulated time dilation values}
+\label{tab:comparison}
+\end{table}
+
+The standard formula produces values between 0 and 1 for the region $r_s < r < \infty$, normalized against fictional endpoints. The new formula produces values from 0 to $\infty$ across the full range $0 < r < \infty$, with no normalization artifacts.
+
+\section{Discussion}
+
+\subsection{Correlation with Observations}
+
+All experimental measurements of gravitational time dilation occur in weak-field regimes far above the Schwarzschild radius. In these regimes, both formulations yield consistent relative comparisons between finite locations. The GPS system, for example, corrects for the time dilation difference between Earth's surface and satellite altitude---a ratio that both formulations compute identically.
+
+The divergence between formulations becomes significant only near and below the Schwarzschild radius, a regime not directly accessible to current experiments.
+
+\subsection{Conceptual Clarity}
+
+The reformulation provides several conceptual advantages:
+
+\begin{enumerate}
+\item \textbf{No fictional reference points}: All calculations reference measurable locations.
+\item \textbf{Linear relationship}: Time dilation scales linearly with radius, simplifying intuition and computation.
+\item \textbf{Continuous domain}: The formula applies for all $r > 0$ without discontinuities or imaginary values.
+\item \textbf{Explicit relativity}: By anchoring to Earth, the formulation makes explicit that time dilation is always relative to some reference.
+\end{enumerate}
+
+\subsection{Physical Interpretation}
+
+The Schwarzschild radius marks where escape velocity equals $c$
+
+a communication boundary, not a time boundary. The reformulation treats it accordingly: as a point on a continuous curve ($T = 1$) rather than an edge where time ``stops.''
+
+The singularity at $r = 0$ remains the point where $T \to 0$, consistent with the expectation that general relativity breaks down at this point.
+
+\section{Conclusion}
+
+The standard gravitational time dilation formula contains normalization artifacts that limit its domain and obscure its relational nature. By reformulating time dilation in terms of DeGerlia Compactness, we obtain a linear model that:
+
+\begin{enumerate}
+\item Eliminates the undefined infinity reference
+\item Removes the false zero-time boundary at the Schwarzschild radius
+\item Extends to all radii $r > 0$ with real, computable values
+\item Makes explicit the relational nature of time dilation through a defined empirical reference (Earth)
+\end{enumerate}
+
+The formula $T = r/r_s$, combined with the reference value $T_{Earth} = 7.184 \times 10^{8}$, provides a complete framework for computing relative time dilation across any gravitational environment, including regimes where the classical formula fails.
+
+%%%REFERENCES%%%
+\bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc} %the RSC's .bst file
+\balance
+\clearpage
+\end{document}

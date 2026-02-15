@@ -1,0 +1,1071 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RSC Article Template with Section Structure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{extsizes}
+\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{mathptmx}
+\usepackage{sectsty}
+\usepackage{graphicx} 
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage[compact]{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{makecell}
+\usepackage{array} % Include in the preamble for vertical 
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
+
+
+
+\begin{document}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
+%%%HEADER%%%
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
+
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\footnoterule{\vspace*{1pt}% 
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}} 
+\setcounter{secnumdepth}{5}
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@makefntext[1]% 
+{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother 
+\renewcommand{\figurename}{\small{Fig.}~}
+\sectionfont{\sffamily\Large}
+\subsectionfont{\normalsize}
+\subsubsectionfont{\bf}
+\setstretch{1.125} %In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+\fancyfoot[LO,RE]{\vspace{-7.1pt}\includegraphics[height=9pt]{head_foot/LF}}
+%\fancyfoot[CO]{\vspace{-7.1pt}\hspace{11.9cm}\includegraphics{head_foot/RF}}
+%\fancyfoot[CE]{\vspace{-7.2pt}\hspace{-13.2cm}\includegraphics{head_foot/RF}}
+\fancyfoot[RO]{\footnotesize{\sffamily{1--\pageref{LastPage} ~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\hspace{4.65cm} 1--\pageref{LastPage}}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter 
+\newlength{\figrulesep} 
+\setlength{\figrulesep}{0.5\textfloatsep} 
+
+\newcommand{\topfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}% 
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}% 
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+
+  {  \noindent\includegraphics[height=30pt]{head_foot/dec}}\\
+  \normalsize\text{DOI: \hyperlink{https://doi.org/10.55277/ResearchHub.pi9yjshm}{https://doi.org/10.55277/ResearchHub.pi9yjshm}}
+{\hfill\raisebox{0pt}[0pt][0pt]{\includegraphics[height=55pt]{head_foot/RSC_LOGO_CMYK}}\\[1ex]
+}\par
+\vspace{1em}
+\sffamily
+\begin{tabular}{m{4.5cm} p{13.5cm} }
+
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{The Universe of Light - Exploring our Universe through the Lens of the Law of Space-Time Equivalence}} \\%Article title goes here instead of the text "This is the title"
+\vspace{0.3cm} & \vspace{0.3cm} \\
+
+ & \noindent\large{Thomas Damon DeGerlia,$^{\dag}$\textit{$^{a}$}} \\%Author names go hereAuthor names go here instead of "Full name", etc.
+ & \noindent\small{January 1, 2025 C.E.} \\%Author names go here instead of "Full name", etc.
+\includegraphics{head_foot/dates} & \noindent\normalsize{In this grand thought experiment, the author, Mr. Tom DeGerlia, introduces the ``Space-Time Equivalence,'' the key manifestation of Scale Relativity, and explores these principles as they apply to systems from the observable universe down to the subatomic. We explore physical phenomena that may not be fully or adequately explained by current physics models, such as gravity, gravitational waves, black holes, and quantum effects, and attempt to explain them under this framework and its underlying principles. We also discuss how these principles inform us about the behavior, across scales, of our observable universe and beyond.} 
+
+\end{tabular}
+
+ \end{@twocolumnfalse} \vspace{0.6cm}
+
+  ]
+%%%END OF TITLE, AUTHORS AND ABSTRACT%%%
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\section*{}
+\vspace{-1cm}
+
+
+%%%FOOTNOTES%%%
+\footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
+\footnotetext{\dag~Mr. DeGerlia holds a Bachelor of Science degree in Chemistry and Mathematics from the Metropolitan State University of Denver. He has served as President of Colorado Digital, Denver, Colorado, for over 25 years. Currently, Tom is affiliated with the research and consulting organization DeGerlia Expert Consulting, where he serves as Principal and Senior Consultant in AI systems and complex, multi-disciplinary problem-solving. Email: tom.degerlia@tomdegerlia.com}
+
+%Please use \dag to cite the ESI in the main text of the article.
+%If you article does not have ESI please remove the the \dag symbol from the title and the footnotetext below.
+%\footnotetext{\dag~Supplementary Information available: [details of any supplementary information available should be included here]. See DOI: 10.1039/cXCP00000x/}
+%additional addresses can be cited as above using the lower-case letters, c, d, e... If all authors are from the same address, no letter is required
+
+%\footnotetext{\ddag~Additional footnotes to the title and authors can be included \textit{e.g.}\ `Present address:' or `These authors contributed equally to this work' as above using the symbols: \ddag, \textsection, and \P. Please place the appropriate symbol next to the author's name and include a \texttt{\textbackslash footnotetext} entry in the the correct place in the list.}
+
+
+%%%END OF FOOTNOTES%%%
+
+
+\section*{Forward}
+The author, Chemist, and AI Engineer, Tom DeGerlia, has a perspective on the universe rooted in observable behavior from quantum to cosmic. Mr. DeGerlia exercises expert objectivity, enabling him to observe and interpret challenges considered impossible under existing logical frameworks. In this grand thought experiment, Mr. DeGerlia attempts to reframe our interpretation of the observable universe within his Principle of Scale Relativity and its key manifestation, Space-Time Equivalence. The former, the central but largely overlooked aspect of the Theory of Relativity, and the latter, the key manifestation of this relativistic principle, are concepts that have always felt intuitive to the author. Explore an amazingly elegant, complete, and intuitive understanding of our universe, the Universe of Light.
+
+\section*{Author's Goals}
+I have rarely been discouraged from offering creative explanations when solving problems. I have spent a considerable portion of my 55 years assisting friends and family with technical support, and one obstacle always opposes the solution over all others: the opinion of the last person who tried to solve it. I commonly hear as I perform a diagnosis, ``I already tried that\ldots'', or ``I know that's not it because\ldots'' to which I reply, ``oh gosh, its already fixed?'' They reply, ``no''. 
+
+This is a very real obstacle because, to solve their problem, I must now insult them, which is hardly an accurate representation of my intent or sentiment. These are all very smart people. However, something in the human brain would be vindicated if the problem were impossible to solve. That thing is ego, and it happily opposes truth. As such, I regularly trick myself into objectivity, and these tactics have been crafted into a methodology around maintaining objectivity that I exercise daily.
+
+True objectivity is an ideal that we can only aim for. And, of course, the pursuit of objectivity is not considered virtuous to all. However, I have found, in the context of problem-solving,  that the degree to which I uphold this ideal is proportional to the likelihood of solving the problem. Because swift resolution always benefits from more information, the underlying obstacle almost always comes from misrepresenting what is known. As such, I immediately visit all factors and strip out the ones that are conclusions, not observations. Observations are much more likely to be reliable because they do not, in and of themselves, consist of anything speculative. A conclusion, on the other hand, is often flawed because it attempts to explain the behavior. The conclusion is, therefore, a ``hypothesis of explanation'' and should be treated accordingly. As such, a cornerstone of my multi-faceted objectivity system is to treat the underlying explanations that serve to limit possible interpretations as a presumption.
+
+In this spirit, I have considered the mathematical and logical nature of the universe deeply, taking care to minimize non-scientific influences: scientific rhetoric, artificial boundaries, and self-protectionism that obstruct science rather than further it. As such, I aim for the scientific community to engage with this cool thought experiment, ask questions, and offer logical challenges. Now, there may prove to be little or no validity to my hypotheses, but my interpretation is consistent with modern physics, QFT, quantum mechanics, Newtonian physics, and cosmology. Through unbounded thought experiments that deliberately venture into the unimaginable or seemingly impossible, some amazing truths emerge.
+
+I have thought through this experiment both mathematically and conceptually and can offer much insight regarding how to model a system or make predictions based on scale relativity. I welcome interested parties with comments, corrections, challenges, or collaboration requests to post a response or email directly via the contact information herein. 
+\section*{Ethical Considerations}
+Given the potential "gravity" of this topic, I grappled considerably with the ethics of disseminating this information. If I am wrong, that's okay, it won't be the first time. But if these theories hold merit, technology advancements will be considerable.
+
+I believe it is our collective interest to share this knowledge with the scientific community as early as possible, prioritizing truth and the ethical use of human knowledge. To that end, I have chosen to present a more theoretical and less mathematically rigorous introduction, aiming to engage curious and science-minded individuals at the outset. My hope is that this early dissemination sparks ethical debate and allows these ideas to evolve within the greater scientific community. Building on a foundation of reason and dialogue, we can guide this knowledge toward maximum benefit and minimum risk to humanity. This gives the rule of reason an essential head start over potential misuse by self-serving interests. By accepting this knowledge, you take on the responsibility to ensure its ethical and mutually beneficial use
+
+\section{Introduction}
+Since the late 19th century, the limitations of classical physics---exemplified by its inability to explain black-body radiation---have driven significant advancements in our understanding of the universe. Max Planck's proposal of energy quantization in 1900 laid the foundation for quantum mechanics \cite{Planck1901}, while Albert Einstein's theory of general relativity, developed in 1915, revolutionized our grasp of gravity \cite{Einstein1915}. Yet, despite these breakthroughs, the challenge of unifying classical mechanics, quantum mechanics, and relativity into a comprehensive framework has been elusive \cite{Rovelli2001}. This scientific endeavor has been further complicated by popular misconceptions about physics and the perceived divides among scientific disciplines. The introduction of the atomic bomb at the end of World War II added a layer of politicization and sensationalism, skewing public perceptions of science even further \cite{Rhodes1986}. 
+
+However, while public opinion and societal factors may influence the perception and application of science, the validity of scientific principles remains rooted in methodologies and empirical evidence. By adhering to proper scientific inquiry, we can reliably evaluate evidence, establish truths, and push closer to a unified understanding of the physical universe.
+
+This paper takes a step back and reassesses, without consideration other than cordially acknowledging any potentially misplaced conclusions drawn in the past. I will, with as much objectivity as I can achieve as a very fallible human, attempt to characterize what I believe is the true nature of the universe. We will look at many phenomena observed in our universe from the perspective of scale relativity and explore the applicability and validity of the Space-time Equivalence.
+
+Via this bold and engaging thought experiment, we offer a viable explanation for many of the processes central to how our universe operates, including gravity, gravitational waves, relativity, redshift and universal expansion, the Cosmic Microwave Background (CMB), dark matter, black holes, and, ultimately, the relationship between time, space, matter, and energy.
+
+I welcome scrutiny of every assertion in this paper. I have explored this topic extensively, and I really enjoy explaining it in practical terms. It opens so many exciting new avenues to explore, many of which I do not yet understand. If your questions arise from genuine scientific exploration or curiosity, I will respond as promptly and thoroughly as I can. Please remain objective—this thought experiment does challenge several foundational principles in physics. Please engage logically and refrain from bullying, trolling, or employing common logical fallacies. Let us uphold the spirit of scientific inquiry by thinking creatively, testing some new concepts, and having some fun in the process.
+
+\section{Exploring the Universe of Light}
+We explore our realm of space, time, and matter from the quantum scale to the observable universe. I refer to this realm as the “Universe of Light,” because everything in our realm is observed with and relative to electromagnetic radiation, such as visible light. Beyond the realm of light, which spatially extends from the edge of subatomic scales to the observable universe, is perceptively inaccessible to us, both spatially and in terms of scale. As such, while I will not rule out our ability to transcend these limitations, what lies beyond the realm of light is, effectively, another universe to us. 
+
+That said, I am not suggesting that these are distinct successive universes of scale as I may have implied with the prior explanation, but rather, overlapping universes of scale about every point along a continuum of spatial scale.
+\clearpage
+\section{Framework for this Thought Experiment}
+This thought experiment relies on a few key principles that have not yet been fully incorporated into modern physics. These principles are explained herein.
+\subsection{The Law of Space-Time Equivalence}
+From well-established isometric scaling laws, the following equivalence can be derived. 
+Isometric scaling laws dictate that a system's pace of time is inversely proportional to its moment of inertia. From this we can derive the Space-Time Equivalence:
+
+\begin{mdframed}[linewidth=1pt]
+\begin{equation}
+\label{Space-Time Equivalence}
+\tau_1/\tau_2=k_I=(I_2/I_1)^{1/5}
+\end{equation}
+\end{mdframed}
+
+
+Where $\tau_1$ and $\tau_2$ represent the relative pace of time in systems 1 and 2 respectively. $I$ is the moment of inertia, and $k$ is the linear scale factor calculated from the moments of inertia ($k_I$) or energy ($k_E$). Moment of inertia dictates the temporal pace of the system, regardless of motion. As a function of system energy:
+
+\begin{mdframed}[linewidth=1pt]
+\begin{equation}
+\label{Energy-Time Equivalence}
+\tau_1/\tau_2=k_E=(E_2/E_1)^{1/5}
+\end{equation}
+\end{mdframed}
+
+
+
+These two equivalences are born of the isometric scaling relationships. Refer to the following section for a summarized derivation and to \autoref{tab:scalerelationships} for the summary of isometric scaling laws. 
+
+\subsubsection*{The Space-Time Equivalence suggests:}
+\begin{itemize}
+    \item \textbf{\textit{Time moves faster for "smaller" systems and slower for "larger" systems.}} Scale factor $k$ is defined as the ratio of the fifth root of the moments of inertia. For geometrically similar systems, $k$ can be calculated from the ratio of the characteristic lengths or the cube root of the ratio of the masses.
+    \item \textit{\textbf{We are in a scale-invariant universe}}, where the laws of physics always appear the same from the observer's perspective at any scale. However, material properties do change according to scale, because molecules themselves can not be scaled. 
+    \item \textit{\textbf{All systems behave classically when observed at their scale. Therefore, quantum and relativistic behavior must be observed phenomena that emerge when observed from extreme relative scales. }}   
+\end{itemize}
+\subsubsection*{Examples:}
+\begin{itemize}
+    \item If you take two completely geometrically distinct systems with identical moments of inertia about an axis, and you apply the same rotational force (torque) to both, their resulting periods of rotation will be identical.
+    \item When a cat falls from a branch, they reorient themselves upright by rotating their tail, which produces a shifting moment of inertia, by changing their mass distribution dynamically.
+    \item If you isometrically scale an orbital system by a factor of k=0.5, the resulting orbital system would have half the radius, 1/8 the mass, and all velocities (measured at any point) will double from a static observer perspective, but from the scale of the system, the system would be indistinguishable.
+    \item Take two distinct systems and scale them by $k_I$ to a static moment of inertia of $1kgm^2$ (our scale), and you will be able to compare their behavior directly, presuming you have calculated the moments of inertia correctly and then apply the isometric scaling factors property for the comparison.
+\end{itemize}
+
+\subsubsection{Summarized Derivation}
+We derive the pace of time between a system and an isometrically scaled version of that system. Isometric scaling is defined as applying a scale factor k to three spatial dimensions and a scale factor $k^3$ to the system's mass, naturally resulting in a scaled system with unchanged density.
+
+\begin{equation}
+k_l=\frac{l_2}{l_1} \text{ (where l = characteristic length)}
+\end{equation}
+
+\begin{align}
+k_v=\frac{v_2}{v_1} \text{ (where v = velocity)}
+\end{align}
+
+\begin{align}
+k_v=\frac{a_2}{a_1} \text{ (where a = acceleration)}
+\end{align}
+
+As a consequence, presuming no influences on density, the scaled object's properties such as volume, surface area, and mass of the scaled object can be calculated:
+\begin{equation}
+A'=k^2A \text{ (where A = area)}
+\end{equation}
+\begin{equation}
+V'=k^3V \text{ (where V = volume)}
+\end{equation}
+\begin{equation}
+m'=k^3m \text{ (where m = mass)}
+\end{equation}
+\begin{equation}
+F'=k^4F \text{ (where F = force)}
+\end{equation}
+
+
+Therefore, for isometric systems:
+\begin{equation}
+k_v=\sqrt{\frac{V_2}{V_1}} 
+\end{equation}
+\begin{equation}
+k_a=\sqrt{\frac{A_2}{A_1}}
+\end{equation}
+\begin{equation}
+k_m=\left(\frac{m_2}{m_1}\right)^{\frac{1}{3}}
+\end{equation}
+\begin{equation}
+k_F=\left(\frac{F_2}{F_1}\right)^{\frac{1}{4}}
+\end{equation}
+
+Subsequently:
+
+\begin{equation}
+I'=k^5I \text{ (where I = moment of inertia)}
+\end{equation}
+\begin{equation}
+E'=k^5E\\ \text{ (where E = energy)}
+\end{equation}
+
+Therefore, for any two systems:
+\begin{equation*}
+k_I=\tau_1/\tau_2=(I_2/I_1)^{1/5}
+\end{equation*}
+\begin{equation*}
+k_E=\tau_1/\tau_2=(E_2/E_2)^{1/5} 
+\end{equation*}
+
+
+
+
+\subsection{Spatial Scale}
+Spatial scale refers to the size in spatial extent of a system or object. While it may seem intuitive that scale be defined by dimensions alone, the concept of scale, as it is commonly understood, is a relativistic principle. Everyone understands what it means to be smaller than something or for something to be bigger than us.
+
+\subsubsection{Scale, Precision, and Containment}
+When you have an object or objects contained within another, they can reside at the same spatial coordinate in the universe. I am in Colorado, but so is my nose, my house, my city, and my county. All accurately describe things residing in the same location, each one contained within another, differing only by their respective degree of precision, or ``scale''. As such, defining the object's scale allows you to know which of these we are talking about. If it is of greater scale than me, and of smaller scale than the County, we're talking about my house. From this perspective, the scale provides critical information not represented within the three spatial coordinates.
+
+The spatial scale also becomes a proxy for three dimensions, presuming geometric similarity. This basically describes the radial coordinate system.
+
+\subsection{Relativity of Scale}
+
+``Spatial scale'' (referred to herein as ``scale'') is relativistic. The following statement helps illustrate that people commonly understand the relativistic nature of scale. In fact, the concept of scale does not have an empirical nature; it is used ONLY as a relativistic reference.
+\quad\\
+\begin{quote}
+\textbf{\textit{``When we were little, adults were big. Now that we're grown up, children seem small.''}}
+\end{quote}
+\quad
+\quad
+\subsubsection{What Relativity of Scale Means to General Relativity}
+If you can empathize with the above statement, you understand the relativistic nature of scale. No matter your scale, things that appear smaller or less massive generally observe a faster pace of time relative to bigger or more massive things. However, relative scale was not considered in general relativity. 
+
+The implications of this omission are significant. Scale is a relativistic property whose behavior bears much influence over the relativistic behavior we observe with gravity and velocity, but was not characterized within that framework. Einstein, being an absolute genius, especially given the modest technological state and the absence of an established framework for relativity, moved mathematical and conceptual mountains to explain these phenomena in the absence of scale.  
+
+Ultimately, general relativity, gravitational, and velocity-induced time dilation are phenomena associated with the law of Space-Time Equivalence. They are static-scale frames of reference (from the human perspective), extreme scenarios of velocity or gravity, and the time dilation described by Einstein---these are likely edge cases of Space-Time Equivalence. 
+
+
+
+
+\begin{mdframed}[linewidth=1pt]
+\subsubsection*{Thought Experiment: The Human and the Housefly}
+\subsubsection*{The Experiment}
+A human is \( 5' 3'' \) (1800 mm) tall, weighing 150 lb (68 kg), and a housefly is 6 mm long and 25 mg in mass. The scale factor based on the characteristic length between the two is $k_l$=300.
+\[
+k_l = \frac{1800 \, \text{mm}}{6 \, \text{mm}} = 300
+\]
+The masses are \( 68,000 \, \text{g} \) for the human and \( 0.025 \, \text{g} \) for the fly. The cube root of the ratio of their masses is approximately 140.
+\[
+k_m = \left( \frac{68000 \, \text{g}}{0.25 \, \text{g}} \right)^{\frac{1}{3}} = \left({2.7 \times 10^6}\right)^{\frac{1}{3}} \approx 140
+\] 
+Therefore, a reasonable estimate of the pace of time for the fly is approximately \( 140 \) seconds (about 2 minutes) to one human second. The mass-based scaling is more accurate due to the distinct geometries of the two bodies. Using the energy or moment of inertia versions of this equivalence would yield the most accurate value; however, the mass-based approximation is suitable for this thought experiment.
+
+
+\subsubsection*{The Human’s Perspective}
+You, the human, are walking along as the fly first buzzes by your ear. Then, it circles your head as you try to swat it; it easily evades you. You look at the housefly and see something relatively small, fast, and agile, navigating thin air and strong gravity with relative ease. 
+
+\subsubsection*{The Fly’s Perspective}
+You, the fly, are going about your regular day, navigating your environment according to your fly agenda. You smell a human in the distance, then you see this massive, mountain-like beast, stuck to the ground and lumbering along at a relative snail’s pace. You do a casual drive-by and decide to land, but the human’s hand is slowly coming to interrupt you, so you go around and find a better spot where the hand is safely out of sight. You are happy that humans struggle in a world that's easy for you (the fly) to navigate. Gravity is the same force; however, to you, it is spread over more time, so from your perspective, its effects are much less significant than they are to the human.
+
+\subsubsection*{The Shared Perspective}
+Both the fly and the human see the world from their frame of reference (motion, location, and scale). Thus, both see time as progressing normally, their scale as normal, and their speed and agility as normal. Everything they observe is relative to their frame of reference. Everything bigger than them generally moves slower, and everything smaller than them appears to move more quickly. Both perspectives are equally accurate.
+\end{mdframed}
+
+\subsubsection{Scale Relativity and the Speed of Light}
+Despite our colloquial understanding of relative scale, this did not become "relativistically" integrated into the theories of Special and General Relativity as described by Albert Einstein. ``Spatial scale'' was interpreted as ``size'' and was not considered a relevant relativistic concept. Scale relativity says the pace of time inversely with spatial scale, resulting in very visible systemic temporal changes (dilation) across scales within a single system. The spatial scale of an object adds an essential element to the theory of relativity that explains space-time curvature, gravity, and the overall space-time-matter relationship in a more simple and direct conceptual framework.
+
+To exemplify my point, brace yourself, and consider the speed of light, which is fixed in a vacuum. Regardless of the inertial frame of reference. But with the inclusion of scale in the frame of reference, the speed of light changes. The rate at which light energy propagates does not change, but the relative rate does. To a molecule, the speed is extremely fast, but at a scale where your eyeball is one light-year across, you would find the speed of light quite limiting.
+
+\subsection{The Containment Causality Hypothesis}
+For causality, I will introduce a new hypothetical principle, the Containment Causality Hypothesis, that likely already has an analog in theoretical physics:
+
+\subsubsection*{The Containment Causality Hypothesis (CCH) states:} 
+    \begin{enumerate}[label=\alph*)]
+        \item A system's behavior depends entirely upon the behavior of its constituents and,
+        \item A system influences the behavior of systems within which it is contained.
+    \end{enumerate}
+
+\subsubsection*{The hypothesis further states:}
+\begin{enumerate}[label=\alph*)]
+    \item The total time in a system is equal to the sum of its parts.
+    \item The total mass in a system is equal to the sum of its parts.
+    \item The total inertia in a system is equal to the sum of its parts.
+    \item The total energy in a system is equal to the sum of its parts.
+\end{enumerate}
+
+\subsubsection*{Therefore:}
+\begin{enumerate}[label=\alph*)]
+    \item Causality arises. 
+    \item To the extent that space cannot be negative, neither can the pace of time.
+    \item The CCH suggests an infinitely divisible universe.
+\end{enumerate}
+
+\subsection{The Composite Particle Principle}
+ I introduce a principle that may or may not be represented by an analog in particle physics or theoretical physics. The Composite Particle Principle states that ``Space'', particles, clusters of particles, and bodies are synonymous. They differ only by total mass and mass distribution. Everything in the universe, even the universe itself can be considered a particle composed of different densities of materials. Essentially, every system is made of particles and ``space''. The particles are approaching spherical and are relatively more dense. The space is relatively less dense. Each particle in a system contains particles and ``space''. The ``space'' becomes the area where compression can occur, as it represents the less dense region.
+
+\subsection{Significance}
+
+\textbf{\textit{Significance is the relative influence an external force or property has over an observed system. }}When scaling a system within a gravitational field, the field is unchanged; however, due to the change in pace of time at scale factor k, the scaled system perceives gravity differently because a different amount of relative time will be spent in the gravitational field. They feel a different amount of gravity per unit of time. This is why a housefly seems to get airborne with ease. In this example, the gravitational force is less significant to the housefly than it is to a human. The fly will experience far less gravitational force over its lifetime. 
+
+Changes to the properties of particles exhibited at a certain scale can also affect Significance. For example, mass could be a property that emerges with scale. In this case, below a certain scale, gravity might become insignificant to a particle.   
+
+
+ 
+\clearpage
+\section{Scaling }
+
+
+
+\subsection{Scaling Relationships}
+Refer to \autoref{tab:scalerelationships} for derived property scaling relationships for isometric (constant density) and homothetic (isometric with constant mass) systems.
+
+\subsection{Base Properties}
+For both derivations, we begin with the fundamental equations of orbital mechanics:
+\begin{enumerate}[label=\alph*)]
+\item
+Force: 
+\begin{equation}
+F = ma
+\end{equation}
+\item 
+Gravitational Force: 
+\begin{equation}
+F = \frac{GM_1M_2}{r^2}
+\end{equation}
+\item
+Orbital Period: 
+\begin{equation}
+T = 2\pi\sqrt{\frac{r^3}{GM}}
+\end{equation}
+\item 
+Angular Velocity: 
+\begin{equation}
+\omega = \sqrt{\frac{GM}{r^3}}
+\end{equation}
+\item 
+Tangential Velocity: 
+\begin{equation}
+v = \sqrt{\frac{GM}{r}}
+\end{equation}
+\item 
+Linear Velocity:
+\begin{equation}
+v = L/t\frac{GM}{r^2}
+\end{equation}
+\item 
+Acceleration: 
+\begin{equation}
+a = \frac{GM}{r^2}
+\end{equation}
+\item Surface Area: 
+\begin{equation}
+A = 4\pi r^2
+\end{equation}
+\item 
+Density: 
+\begin{equation}
+\rho = \frac{M}{V} = \frac{M}{\frac{4}{3}\pi r^3}
+\end{equation}
+\item 
+Moment of Inertia: 
+\begin{equation}
+I = Mr^2
+\end{equation}
+\item 
+Kinetic Energy: 
+\begin{equation}
+KE = \frac{1}{2}mv^2
+\end{equation}
+\item 
+Potential Energy:
+\begin{equation}
+U = -G(M_1M_2)/r
+\end{equation}
+\item 
+Surface Gravity: 
+\begin{equation}
+g = \frac{GM}{r^2}
+\end{equation}
+\end{enumerate}
+
+\subsection{Isometric Scaling}
+
+Isometric scaling laws reflect "natural" scaling in the universe. By definition, when something scales isometrically, each dimension is changed by scale factor k. For this thought experiment, we presume that objects are scalable but that their fundamental constituents (molecules) do not. 
+
+This distinction is important. If the molecules themselves scale, the relative material properties at different scales would be consistent. Since they do not, we observe material properties changing relative to their scale. For example, the properties of a spring can really only be scaled so far before it fails to perform because it's relative material properties change. The periodicity is static if scaled isometrically, but its relative stiffness, for example, would not scale linearly with isometric scale factor k. So, If I took a mechanical clock and scaled it down in size, it would continue to tell time accurately relative to its scale until its material properties began to cause compromise and then failure. Precision might drift within an order of magnitude, and complete failure might likely result within a few orders of magnitude. These are wildly speculative numbers, but the principles are sound. 
+
+Since molecules don't scale, and thus, scaling a system is akin to building an object from greater (or fewer) building blocks, the system density is naturally preserved when scaling isometrically.
+
+However, if one WERE to scale the molecules as well, the ensuing density still would not change because the empty space between the particles would also scale. 
+
+\textit{Isometrics, in and of itself, is density-preserving.}
+
+\subsubsection{Derivations}
+
+\begin{enumerate}[label=\alph*)]
+\item 
+Orbital Period:
+\begin{equation}
+T' = 2\pi\sqrt{\frac{(kr)^3}{G(k^3M)}} = 2\pi\sqrt{\frac{k^3r^3}{Gk^3M}} = 2\pi\sqrt{\frac{r^3}{GM}} = T
+\end{equation}
+\item 
+Angular Velocity:
+\begin{equation}
+\omega' = \sqrt{\frac{G(k^3M)}{(kr)^3}} = \sqrt{\frac{Gk^3M}{k^3r^3}} = \sqrt{\frac{GM}{r^3}} = \omega
+\end{equation}
+\item 
+Tangential Velocity:
+\begin{equation}
+v' = \sqrt{\frac{G(k^3M)}{kr}} = \sqrt{\frac{Gk^3M}{kr}} = k\sqrt{\frac{GM}{r}} = kv
+\end{equation}
+\item 
+Acceleration:
+\begin{equation}
+a' = \frac{G(k^3M)}{(kr)^2} = \frac{k^3GM}{k^2r^2} = k\frac{GM}{r^2} = ka
+\end{equation}
+\item 
+Surface Area:
+\begin{equation}
+A' = 4\pi(kr)^2 = k^2(4\pi r^2) = k^2A
+\end{equation}
+\item 
+Moment of Inertia:
+\begin{equation}
+I' = (k^3M)(kr)^2 = k^5(Mr^2) = k^5I
+\end{equation}
+\item 
+Kinetic Energy:
+\begin{equation}
+KE' = \frac{1}{2}(k^3m)(kv)^2 = \frac{1}{2}k^3m(k^2v^2) = k^5(\frac{1}{2}mv^2) = k^5KE
+\end{equation}
+\item 
+Potential Energy:
+\begin{equation}
+\begin{aligned}
+U' &= -\frac{3G(k^3 M)^2}{5(kR)} \\
+   &= -\frac{3G(k^6 M^2)}{5kR} \\
+   &= -\frac{3GM^2}{5R} \times \frac{k^6}{k} \\
+   &= -\frac{3GM^2}{5R} \times k^5 \\
+   &= U \times k^5
+\end{aligned}
+\end{equation}
+\item 
+Surface Gravity:
+\begin{equation}
+g' = \frac{G(k^3M)}{(kr)^2} = \frac{k^3GM}{k^2r^2} = k\frac{GM}{r^2} = kg
+\end{equation}
+\item 
+Force:
+\begin{equation}
+F{\prime} = \frac{G(M_1{\prime} M_2{\prime})}{r{\prime}^2}
+= \frac{G(k^3 M_1)(k^3 M_2)}{(k r)^2}
+= k^4 \frac{G(M_1 M_2)}{r^2}
+= k^4 F
+\end{equation}
+\end{enumerate}
+
+\subsubsection{General Isometric Scaling Law}
+For any property $P$ under isometric scaling with constant density ($\rho$):
+\begin{equation}
+P' = P \cdot k^n \text{ where } n \in \{0,1,2,3,4,5\} 
+\end{equation}
+\begin{table*}[h]
+\small
+\caption{Summary of Scaling Relationships as a Function of Linear Scale Factor k}
+\label{tab:scalerelationships}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc}
+\hline
+Property & Isometric Scaling ($\rho$ constant) & $n$ (Isometric) & Homothetic Scaling ($M$ constant) & $n$ (Homothetic) \\
+\hline
+Period ($T$) & $k^0$ & 0 & $k^{3/2}$ & 3/2 \\
+Frequency ($f$) & $k^0$ & 0 & $k^{-3/2}$ & $-3/2$ \\
+Angular Velocity ($\omega$) & $k^0$ & 0 & $k^{-3/2}$ & $-3/2$ \\
+Density ($\rho$) & $k^0$ & 0 & $k^{-3}$ & $-3$ \\
+Length ($r$) & $k^1$ & 1 & $k^1$ & 1 \\
+Tangential Velocity ($v$) & $k^1$ & 1 & $k^{-1/2}$ & $-1/2$ \\
+Acceleration ($a$) & $k^1$ & 1 & $k^{-2}$ & $-2$ \\
+Surface Gravity ($g$) & $k^1$ & 1 & $k^{-2}$ & $-2$ \\
+Surface Area ($A$) & $k^2$ & 2 & $k^2$ & 2 \\
+Mass ($M$) & $k^3$ & 3 & $k^0$ & 0 \\
+Force ($F$) & $k^4$ & 4 & $k^{-2}$ & $-2$ \\
+Moment of Inertia ($I$) & $k^5$ & 5 & $k^2$ & 2 \\
+kinetic Energy (kE) & $k^5$ & 5 & $k^{-1}$ & $-1$ \\
+Potential Energy ($U$) & $k^5$ & 5 & $k^{-1}$ & $-1$ \\
+\hline
+\end{tabular*}
+\end{table*}
+
+\subsubsection*{Property Groups by Scaling Power}
+
+\begin{itemize}
+    \item 
+\textbf{n = 0:}
+\[ T' = T, \quad f' = f, \quad \omega' = \omega, \quad \rho' = \rho \]
+    \item 
+\textbf{n = 1:}
+\[ r' = kr, \quad v' = kv, \quad a' = ka, \quad g' = kg \]
+    \item 
+\textbf{n = 2:}
+\[ A' = k^2A \]
+    \item 
+\textbf{n = 3:}
+\[ M' = k^3M, \quad V'=k^3V \]
+    \item 
+\textbf{n = 4:} 
+\[ F' = k^4F \]
+    \item 
+\textbf{n = 5:}
+\[ I' = k^5I, \quad KE' = k^5KE, \quad U' = k^5U \]
+
+\end{itemize}
+
+\subsubsection{Periodicity of Isometrically Scaled Systems}
+Different periodic systems are scaled isometrically by factor $k$. \autoref{tab:scaling_systems} reveals a pattern. When scaled naturally via isometric scaling, regardless of the system-wide periodic behavior, whether oscillation, rotation, pendulum, strings, or membranes, the period never changes. This suggests a scale-invariant universe.
+
+
+
+
+\subsubsection{Proof of Universal Scale-Time Invariance}
+
+\textbf{Given:} All non-molecular periodic phenomena maintain identical relative properties under isometric scaling, as previously demonstrated.
+
+\textbf{Theorem:} Isometric scaling of a system is observationally equivalent to a corresponding change in the pace of time.
+
+\textbf{Proof:}
+\begin{enumerate}
+    \item IF all temporal properties under isometric scaling by factor k are identical to those produced by adjusting the pace of time by factor f(k)
+        \begin{equation*}
+            T_{scaled} \equiv T_{time-adjusted}
+        \end{equation*}
+
+    \item AND isometric scaling consistently predicts all system properties as functions of k
+        \begin{equation*}
+            \frac{P'}{P} = f(k)
+        \end{equation*}
+        where P represents any physical property
+
+    \item THEN geometric scale and temporal progression are fundamentally equivalent transformations
+        \begin{equation*}
+            k_{geometric} \equiv f(k)_{temporal}
+        \end{equation*}
+
+    \item THEREFORE all observers experience identical relative physics regardless of scale
+        \begin{equation*}
+            \frac{dT_{observed}}{dT_{reference}} \equiv 1
+        \end{equation*}
+
+    \item THEREFORE the universe exhibits complete scale invariance through the equivalence of geometric scaling and temporal progression
+\end{enumerate}
+
+\textbf{Conclusion:} In our universe, geometric scaling is indistinguishable from a corresponding change in the pace of time, resulting in complete scale invariance when viewed from any reference frame.
+
+\subsubsection{Derivation of Period Scaling for Physical Systems}
+We derive the periodicity of various systems to demonstrate that when observed from the scale of the  systems always appear identical regardless of scale. From that frame of reference the period of the scaled system will never change. The material properties will be different at different scales, but the physics will always be the same to the observer at every scale, the space-time equivalence will remain valid.
+\footnotemark \footnotetext{
+Note, from the scale relativity perspective, temporal material constants such as the spring constant, Young's modulus, and the speed of light need to be scaled accordingly. Here's why: Even though Young's modulus is often treated as a "static" material property, our perception of it changes with scale because we view it from a different temporal reference frame. In this example, from a scaled perspective (say, relatively very small): (1) We're operating at a faster relative timescale; (2) The material appears more rigid/brittle because its natural deformation times are "slower" relative to our frame; (3) So the effective Young's modulus we experience would appear higher.} \textit{See note on scaling constants}
+\begin{enumerate}[label=\alph*)]
+\item 
+Orbital System
+\begin{align*}
+T &= 2\pi\sqrt{\frac{r^3}{GM}}\\
+r' &= kr \\
+M' &= k^3M \\
+T' &= 2\pi\sqrt{\frac{(kr)^3}{G(k^3M)}} = T
+\end{align*}
+
+
+\item 
+Simple Pendulum
+\begin{align*}
+T &= 2\pi \sqrt{\frac{L}{g}}\\
+L' &= kL \\
+g' &= kg \footnotemark[\value{footnote}] \\
+T' &= 2\pi \sqrt{\frac{kL}{kg}}\\
+T' &= 2\pi \sqrt{\frac{L}{g}} = T
+\end{align*}
+
+\item 
+Mass-Spring
+\begin{align*}
+T &= 2\pi\sqrt{\frac{m}{k_s}}\\
+m' &= k^3m \\
+k_s' &= k^3k_s \footnotemark[\value{footnote}]\\
+T' &= 2\pi\sqrt{\frac{k^3m}{k^3k_s}} = T
+\end{align*}
+
+\item 
+Physical Pendulum
+\begin{align*}
+T &= 2\pi\sqrt{\frac{I}{Mgh}}\\
+I' &= k^5I \\
+M' &= k^3M \\
+g' &= kg \footnotemark[\value{footnote}]\\
+h' &= kh \\
+T' &= 2\pi\sqrt{\frac{k^5I}{k^3M \cdot kg \cdot kh}} = T
+ \end{align*}
+
+\item 
+Fluid Column
+\begin{align*}
+T &= 2\pi\sqrt{\frac{L}{g}}\\
+L' &= kL \\
+g' &= kg \footnotemark[\value{footnote}] \\
+T' &= 2\pi\sqrt{\frac{kL}{kg}} = T
+\end{align*}
+
+\item String Vibration
+\begin{align*}
+    T &= 2\pi\sqrt{\frac{m}{k_s}} \quad \text{(where $k_s$ is the spring constant)}\\
+    k_s' &= k^3k_s \footnotemark[\value{footnote}] \\
+    T' &= 2\pi\sqrt{\frac{k^3m}{k^3k_s}} \\
+    &= 2\pi\sqrt{\frac{m}{k_s}} = T
+\end{align*}
+
+\item Membrane Vibration
+\begin{align*}
+T &= 2\pi\sqrt{\frac{m}{k_m}} \\
+k_m' &= k^3k_m \text{(membrane stiffness\footnotemark[\value{footnote}])}\\
+T' &= 2\pi\sqrt{\frac{k^3m}{k^3k_m}} \\
+&= 2\pi\sqrt{\frac{m}{k_m}} = T
+\end{align*}
+
+\item 
+Tuning Fork
+\begin{align*}
+T &= 2\pi\sqrt{\frac{I}{\kappa}}\\
+I' &= k^5I \\
+\kappa' &= k^5\kappa \quad \text{(torsional stiffness\footnotemark[\value{footnote}])}   \\
+T' &= 2\pi\sqrt{\frac{k^5I}{k^5\kappa}} = T
+\end{align*}
+\item 
+Electrochemical Oscillator
+\begin{align*}
+T &= \frac{L^2}{D}\\
+L' &= kL \\
+D' &= k^2D \quad \text{(diffusion coefficient\footnotemark[\value{footnote}])}  \\
+T' &= \frac{(kL)^2}{k^2D} = T
+\end{align*}
+\end{enumerate}
+
+\begin{table}[h]
+\small
+\caption{Isometrically Scaled Systems Exhibit Static Relative Temporal Properties when Observed from System Scale}
+\label{tab:scaling_systems}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}l l l}
+\hline
+\textbf{System} & \textbf{Period Formula} & \textbf{Scaling} \\
+\hline
+Orbital & \( T = 2\pi\sqrt{\frac{r^3}{GM}} \) & \( T' = T \) \\
+Simple Pendulum & \( T = 2\pi\sqrt{\frac{L}{g}} \) & \( T' = T \) \\
+Mass-Spring & \( T = 2\pi\sqrt{\frac{m}{k}} \) & \( T' = T \) \\
+Physical Pendulum & \( T = 2\pi\sqrt{\frac{I}{Mgh}} \) & \( T' = T \) \\
+Fluid Column & \( T = 2\pi\sqrt{\frac{L}{g}} \) & \( T' = T \) \\
+String Vibration & \( T = 2L\sqrt{\frac{\rho}{F}} \) & \( T' = T \) \\
+Membrane Vibration & \( T = 2\pi\sqrt{\frac{\rho h}{T}} \) & \( T' = T \) \\
+Tuning Fork & \( T = 2\pi\sqrt{\frac{I}{\kappa}} \) & \( T' = T \) \\
+Electrochemical Oscillator & \( T = \frac{L^2}{D} \) & \( T' = T \) \\
+\hline
+\end{tabular*}
+\end{table}
+
+\subsubsection{Conclusion}
+By deriving each system's scaling properties, we have demonstrated that when viewed from their respective scaled reference frames, all systems maintain their temporal properties (T' = T). This universal behavior emerges from the proper application of fundamental scaling laws and consideration of relative observation frames.
+
+
+
+
+
+
+\subsection{Homothetic Scaling (Constant Mass)}
+Homothetic scaling refers to isometric scaling where mass is held static. Homothetic represents one of two ways of looking at system scaling in our universe. In contrast to isometric, where density is held static, homothetic represents convergence/divergence scaling model operations, which applies to gravitational convergence, condensation, evaporation and similar.
+\subsubsection{Initial Conditions}
+Under homothetic scaling with factor k:
+
+Mass remains constant: $M \rightarrow M$
+
+Lengths: $r \rightarrow kr$
+
+Volume: $V \rightarrow k^3V$
+
+\subsubsection{Homothetic Scaling Derivations}
+The following homothetic scaling laws are derived from an orbital system example:
+\begin{enumerate}[label=\alph*)]
+
+\item Orbital Period:
+\begin{equation}
+T' = 2\pi\sqrt{\frac{(kr)^3}{GM}} = 2\pi\sqrt{\frac{k^3r^3}{GM}} = 2\pi\sqrt{k^3}\sqrt{\frac{r^3}{GM}} = k^{3/2}T
+\end{equation}
+
+\item Angular Velocity:
+\begin{equation}
+\omega' = \sqrt{\frac{GM}{(kr)^3}} = \sqrt{\frac{GM}{k^3r^3}} = \frac{1}{k^{3/2}}\omega
+\end{equation}
+
+\item Tangential Velocity:
+\begin{equation}
+v' = \sqrt{\frac{GM}{kr}} = \frac{1}{\sqrt{k}}v
+\end{equation}
+
+\item Acceleration:
+\begin{equation}
+a' = \frac{GM}{(kr)^2} = \frac{1}{k^2}a
+\end{equation}
+
+\item Surface Area:
+\begin{equation}
+A' = 4\pi(kr)^2 = k^2A
+\end{equation}
+
+\item Density:
+\begin{equation}
+\rho' = \frac{M}{k^3V} = \frac{1}{k^3}\rho
+\end{equation}
+
+\item Moment of Inertia:
+\begin{equation}
+I' = M(kr)^2 = k^2I
+\end{equation}
+
+\item Kinetic Energy:
+\begin{equation}
+KE' = \frac{1}{2}m(v')^2 = \frac{1}{2}m(\frac{v}{\sqrt{k}})^2 = \frac{1}{k}KE
+\end{equation}
+
+\item Potential Energy:
+\begin{equation}
+\begin{aligned}
+U' &= -\frac{GM_1'M_2'}{r'} \\
+&= -\frac{G(M_1)(M_2)}{kr} \\
+&= -\frac{GM_1M_2}{r} \cdot \frac{1}{k} \\
+&= U \cdot \frac{1}{k}
+\end{aligned}
+\end{equation}
+\end{enumerate}
+
+\subsubsection{Conclusions from Homothetic Derivations}
+\textbf{Key observations}:
+\begin{itemize}
+\item 
+Density grows at $\frac{1}{k^3}$ which shows that density increases very quickly as particles converge gravitationally. 
+\item 
+Moment of Inertia grows at $k^2$ which means moment of inertia drops relatively quickly as particles converge gravitationally.
+\item
+Surface area and moment of inertia each scale by $k^2$. This suggests a possible relationship to gravity.
+\end{itemize}
+
+
+
+
+
+
+\subsection{Scales In the Universe of Light}
+Our Universe of Light spans a very discrete range of scales, from subatomic to the known universe. These represent boundaries imposed by light.
+Refer to \autoref{tab:scales} for an informal overview of objects in our universe and their respective broadly estimated radius, mass, and moment of inertia.
+
+\clearpage
+\section{Phenomenon in the Universe of Light}
+\subsection{Dark Matter}
+\textbf{\textit{Dark matter is subatomic matter that exhibits mass but does not have sufficient scale or properties to interact with visible light.}} This probably consists of sub-atomic particles we are familiar with.
+\subsubsection{Dark Sub-matter}
+\textbf{\textit{Dark sub-matter is the hypothetical matter so small and fundamental to our atomic particles that it neither exhibits mass nor interacts with light.}} This most likely consists of particles that are the building blocks of subatomic particles. Sub-subatomic particles are "invisible" either because they have negligible relative significance and/or because they do not exhibit mass as we know it. 
+\subsubsection{Sub-Subatomic Matter could be Responsible for the CMB}
+It seems logical that the presence of these sub-subatomic particles might be detectable as energy, and if so, they might produce an effect similar to the Cosmic Microwave Background (CMB). A mysterious, omnipresent energy "background" whose source is so small in scale that it can not be detected otherwise.
+\subsection{Gravity}
+
+
+\textbf{\textit{Gravity is an object's intrinsic tendency (potential) to collapse inward toward its center of gravity to reduce its moment of inertia and thus attain a lower energy state.}} When an object "falls" into a larger object due to gravity, the potential is relieved when the density gradient within the object has reached equilibrium. That's because greater densities will descend until they reach like densities, which is the lowest moment of inertia configuration. 
+
+\subsubsection{Gravity Predictions}
+\begin{itemize}
+    \item Gravity and the associated curvature of space-time are key manifestations of the space-time equivalence. 
+    \item Gravitational time dilation is an edge case of the law of space-time equivalence, and it can be directly derived from the Space-Time Equivalence.
+\end{itemize}
+
+\subsubsection{Gravitational Waves}
+\textbf{\textit{Gravitational waves represent the propagation of waves of "pressure" across celestial objects. As the wave passes, particles on the celestial scale, compress together and disrupt their collective moment of inertia, which causes a ripple in the pace of time. It's a wave of particle compression, not unlike the other forms of "mechanical" wave conveyance observed in different settings.}}
+
+
+
+\subsection{Black Holes}
+\textbf{\textit{A black hole is the endpoint for converging particles. It represents a threshold of matter in a confined space. It is a maximum particle density, whether particles are defined as molecules, dust particles, planets, or the known universe. Beyond this particle density, molecules collapse into component subatomic particles. In the universe of light, accumulating particles eventually become a black hole.}}
+
+\subsubsection{Black Hole Predictions}
+
+\begin{enumerate}[label=\alph*)]
+\item 
+Black holes are recyclers of scale in the Universe of Light. They transform highly dense material objects into sub-subatomic matter that is emitted at or near the center of gravity. This matter is at a scale where it becomes insignificant to or uninfluenced by the gravity of the black hole and thus is released. These particles likely exit the path toward singularity in a highly energized state, at a high velocity, possibly in a jet-like form, and with a high spin rate. The velocity allows the particles to propagate to a wider region; the spin ultimately becomes the spin of celestial objects. 
+\item 
+The particles emitted will travel a long way, colliding and reacting into subatomic matter and then atomic matter. The particles that don't establish sufficient distance from the center of gravity of the black hole before they react into matter will be drawn back into the black hole, so there will be a "pocket" of invisible sub-subatomic material that might form a dark aura around the black hole, with "shell" of dark matter around it, as particles react into larger and larger particles. Eventually, there will begin to be a visible cloud of atomic matter. I imagine these clouds being nebulae.
+\item 
+Black holes can be self-sustaining cyclic systems, meaning they stay and continue this cycle of consuming the massive and expelling the subatomic. They represent a structure that spans the entire scale domain of the Universe of Light.
+\item 
+Galactic supermassive black holes are a galaxy's recyclers. They consume the supermassive and expel the subatomic dust to become new celestial objects in that system. The balance of galactic constituents and the resulting effects on the moment of inertia affect the different configurations of galaxies.
+    \item Subatomic material being ejected from a black hole would potentially form a condensed column of highly energetic subatomic particles exiting at a high velocity. Not unlike the eye of a tornado, but in reverse.
+    \item The collapse of molecular matter into a black hole represents the collapse of atomic bonds and the separation of electrons from their nuclei. The collapsing of atomic bonds requires significant energy, hence the extreme forces involved in their decomposition. There will be other stages of collapse as the nuclei break and then as each subatomic particle begins to break. There could be stages to the collapse of matter as it journeys toward a singularity to a state insignificant to the black hole.
+    \item The subatomic particles emitted from a black hole will form a multi-composition aura or cloud around the exit point. The inner shell, or in the case of a jet ejection, the region closest to the exit point, will neither resonate with light nor give a complete indication of mass. This will gradually transition to a region of dark matter as sub-sub-atomic particles react and create the sub-atomic particles we know. Then, there will be a visible region of atomic particles like Hydrogen and some helium. Then coagulating to form star systems further away from the exit point. A galaxy will give us a good sense of the region of influence of a black hole.
+    \item dark matter will be detected in the vicinity of black holes. distributed around the center of gravity but possibly traveling a large distance due to their energized state
+    \item highly energized matter on the cusp of visible will also be concentrated in a sphere outside of the inner sphere of dark matter.
+    \item A black hole can eventually exhaust local matter and subside back to a high-density, highly massive object right at its Schwartzchild radius. Conservation of mass and energy seems to make this unlikely or rare.
+    \item Black holes can migrate over time as the matter is added and their center of gravity changes. Depending on many factors.
+    \item subatomic material being ejected from a black hole would potentially form a condensed column of highly energetic subatomic particles exiting at a high velocity. Not unlike the eye of a tornado, but in reverse.
+    \item Black holes are distributed spatially according to scale. The density of the universe is the same at every scale. Just different significant objects make up each scale from our static human-scale perspective.
+    \item Black holes represent an extreme of significance at a particular scale.
+    \item The deep vacuum of space is the closest to the opposite of a black hole. A gap of objects within a scale range. Or a large particle size gradient for a given unit of space.
+    \item Beyond significance, it may as well be another universe to you. That said, there is no such thing as 0 significance. And thus, we are in a single accessible universe, just not yet accessible to us.
+    \item For a black hole to persist, it must stay full of energy or matter, not unlike a siphon. If it consumes everything in its vicinity, it will be depleted. Matter and energy cannot flow out of it faster than it can flow in, or vice versa. 
+\end{enumerate}
+
+
+
+
+
+\subsection{Quantum Phenomenon, Light, and Spatial Scale}
+Because we ultimately all see light from a molecular scale's perspective, a scale that is seemingly unique in its stability and resistance to scalability, our most fundamental measure of space and time, light, is received by all terrestrial beings using the same scale of observation. While one could derive a conclusion about the scalability of atoms simply from the fact that living things have different scales but are all constructed, large or small, with atomic matter at a static scale, there is one stark similarity between all of these organisms: the scale at which they detect light. The perceived uniquely stable appearance of atoms, therefore, is likely a phenomenon associated with the scale at which we detect.
+
+
+\subsection{Quantum behavior is to be expected at that scale}
+Anytime something is observed at our limit of observation, quantum behavior will emerge. Here's why. Classical physics is, in effect, a statistical model based on the behavior of vast quantities of atoms. All detection is done over time, there is no such thing as an instantaneous measurement. So, to add to the fact that one is observing atoms at roughly $10^{23}$ (ten thousand billion billion), we also measure over similarly scaled time frames relative to ours. (i.e., an electron rotates about the nucleus at relativistic speeds. Because it behaves statistically with vast sample sets, classical calculations of objects are accurate to a high degree of precision. 
+
+\begin{mdframed}[linewidth=1pt]
+\subsubsection*{Thought Experiment: Bob the Molecule}
+Bob is a hydrogen H\textsubscript{2} molecule. From our scale, hydrogen molecules always behave very consistently, but when I want to know about Bob specifically, he's hard to capture, and relative to large communities of hydrogen atoms that behave very consistently, he sometimes behaves erratically and mysteriously.
+
+Here's what is going on. Because the underlying deviations in individual behavior of hydrogen atoms are so significant (the standard deviation is large), we can't rely on those models when observing ``Bob,'' the hydrogen molecule.
+
+Bob does, in fact, exist, and at his scale, he has many redeeming and unique characteristics. However, his entire species of hydrogen atom may have evolved and become extinct in the fraction of a second that observation was performed. So all of Bob's unique character is lost to us, completely inaccessible and virtually meaningless, and only the commonality across billions of years of hydrogen atoms at his scale emerges.
+
+To attempt to characterize Bob, an individual, using statistical methods is incongruent, bob does not exist from a statistical perspective. But, because of these same limitations of observation, we often ``think'' we are measuring a single atomic scale object, in actuality, this has only been done in very limited cases. In general, when a quantum of something is measured, it is changed or consumed by the interaction. If not, you weren't looking at a quantum. And herein lies much of the uncertainty, duality, polymorphism, discrete behavior, the spooky, and living dead. 
+\textit{\textbf{We are not observing only one individual at one moment; we are usually measuring things, and we are always measuring them over time.}} For example:
+\begin{itemize}
+    \item If you have Bob in front of you, you measure his height with a ruler, rather than infer it based on a model predicting average heights.
+    \item Statistical models might suggest what to expect from a group similar to Bob, but they cannot capture or replace the exactitude of direct measurements or observations of Bob himself.
+\end{itemize}
+So, whether you try to measure Bob's Height based only on the average person's height, or you are trying to measure the average person's height from Bob's, you get a largely meaningless answer for the context. Quantum phenomena and specific quantum uncertainties emerge when measuring a statistical phenomenon with an insignificant sample size. Because of the large standard deviation, atomic-scale objects need to be observed in very large quantities to exhibit classical behavior. Odd observations were expected. To sum it up metaphorically: it was Schroedinger's great-grandnephew's cat that died. Bob didn't have two left arms, we were mistakenly measuring Suzy and Steve's arms.
+\end{mdframed}
+\subsection{Quantum Phenomenon Emerges for a Few Reasons}
+\subsubsection{Statistically Insignificant Sample Size}
+Many of the unusual behaviors we associate with quantum mechanics are phenomena associated with statistical calculations where either the ``quantum'' behavior is implicit for such systems or the sample size is statistically insignificant. For example, the behavior of a typical hydrogen atom's electron radius can vary widely, and this has a relatively large standard deviation. That means that a typical hydrogen individually is probably less average than you think. 
+
+Quantum uncertainties, dualities, spooky behavior, exclusions, living/dead cats, etc, are manifestations of observing behavior across a statistically insignificant sample set. If the number of quantum objects being measured falls below the threshold of statistical significance, classical behaviors increasingly break down. Quantum behaviors emerge for any statistically insignificant sample set that contains more than one. The behavior of a classical system feels discrete because it is a very accurate and precise statistical aggregation of bulk particle behavior. The behavior of an individual system is discrete. Measuring quantum-scale particles in small quantities >1 produces measurement difficulties (i.e. uncertainties.) 
+
+\subsubsection{Inherent Limitations of Light Perception}
+Limited information is available at the boundary of observability. Because we use chemical mechanisms to detect light, we essentially see light at an atomic level, which presents a boundary of observability for our built-in light detector (our eyes). Thus, the boundaries of our observable universe are the product not just of extreme differences in relative distance and time pace but also of the scale at which we interact with light. Quantum behavior emerges at the edge of observability. 
+
+All terrestrial organisms that "see" light use the same molecular-scale mechanism. This unifies how distinct organisms perceive light because all terrestrial organisms perceive light from the same scale, the molecular scale.
+
+\subsubsection{Observing Across Vast Relative Distances or Scales}
+Certain quantum behaviors, such as duality, are expressed implicitly when observed from vast distances or relative scales. For example, star systems and galaxies are so distant that they take on a relative point-like appearance in our night sky. Similarly, with microscopy, if we view something very ``distant'' in scale, this reduction of a body to a relative point effectively represents that body being reduced to a wave function at great distances, from our perspective. The relative distance me to the sun is many human-lengths but the distance from the sun to me is far fewer when measured in sun-lengths. Does this mean that the distant or very small objects have more detail and predictability up close? Of course, these limitations are emergent phenomena; it's a matter of observational precision.
+
+\begin{table*}[ht]
+\small
+\caption{Roughly Estimated Scales in the Universe of Light}
+\label{tab:scales}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llll}
+\hline
+Object Type & Radius Range (m) & Mass (kg) & Moment of Inertia (kg·m²) \\
+\hline
+Neutrinos & < $\sim$10$^{-22}$ & < 10$^{-36}$ & < $\sim$10$^{-90}$ \\
+Electrons & < 10$^{-18}$ & 10$^{-31}$ & < $\sim$10$^{-78}$ \\
+Quarks & < 10$^{-18}$ & $\sim$10$^{-30}$ to 10$^{-28}$ & $\sim$10$^{-77}$ to 10$^{-73}$ \\
+Muons & < 10$^{-18}$ & 10$^{-28}$ & < $\sim$10$^{-73}$ \\
+Protons & $\sim$10$^{-15}$ & 10$^{-27}$ & $\sim$10$^{-57}$ \\
+Atoms & $\sim$10$^{-10}$ & $\sim$10$^{-27}$ to 10$^{-25}$ & $\sim$10$^{-47}$ \\
+Molecules & $\sim$10$^{-10}$ to 10$^{-9}$ & $\sim$10$^{-27}$ to 10$^{-25}$ & $\sim$10$^{-46}$ to 10$^{-43}$ \\
+Proteins & $\sim$10$^{-9}$ to 10$^{-8}$ & $\sim$10$^{-22}$ to 10$^{-20}$ & $\sim$10$^{-39}$ to 10$^{-35}$ \\
+Viruses & $\sim$10$^{-8}$ to 10$^{-7}$ & $\sim$10$^{-17}$ to 10$^{-15}$ & $\sim$10$^{-31}$ to 10$^{-27}$ \\
+Bacteria & $\sim$10$^{-7}$ to 10$^{-6}$ & $\sim$10$^{-15}$ to 10$^{-12}$ & $\sim$10$^{-27}$ to 10$^{-21}$ \\
+Cells (Human) & $\sim$10$^{-6}$ to 10$^{-5}$ & $\sim$10$^{-12}$ to 10$^{-9}$ & $\sim$10$^{-21}$ to 10$^{-15}$ \\
+Pollen Grains & $\sim$10$^{-6}$ to 10$^{-5}$ & $\sim$10$^{-10}$ to 10$^{-8}$ & $\sim$10$^{-19}$ to 10$^{-15}$ \\
+Salt Crystals & $\sim$10$^{-6}$ to 10$^{-5}$ & $\sim$10$^{-9}$ to 10$^{-7}$ & $\sim$10$^{-19}$ to 10$^{-15}$ \\
+Sand Particles & $\sim$10$^{-5}$ to 10$^{-4}$ & $\sim$10$^{-8}$ to 10$^{-6}$ & $\sim$10$^{-17}$ to 10$^{-13}$ \\
+Dust Grains & $\sim$10$^{-6}$ to 10$^{-4}$ & $\sim$10$^{-6}$ to 10$^{-3}$ & $\sim$10$^{-15}$ to 10$^{-9}$ \\
+Bowling Ball & $\sim$10$^{-1}$ & $\sim$10$^{1}$ & $\sim$10$^{-1}$ \\
+Volkswagen Beetle & $\sim$10$^{0}$ to 10$^{1}$ & $\sim$10$^{3}$ & $\sim$10$^{3}$ to 10$^{5}$ \\
+Meteoroids & $\sim$10$^{-1}$ to 10$^{1}$ & $\sim$10$^{3}$ to 10$^{10}$ & $\sim$10$^{2}$ to 10$^{12}$ \\
+Large Truck & $\sim$10$^{1}$ to 10$^{2}$ & $\sim$10$^{4}$ to 10$^{5}$ & $\sim$10$^{6}$ to 10$^{9}$ \\
+Comets & $\sim$10$^{1}$ to 10$^{2}$ & $\sim$10$^{10}$ to 10$^{14}$ & $\sim$10$^{12}$ to 10$^{18}$ \\
+Large Building & $\sim$10$^{2}$ to 10$^{3}$ & $\sim$10$^{7}$ to 10$^{8}$ & $\sim$10$^{11}$ to 10$^{14}$ \\
+Small Asteroids & $\sim$10$^{1}$ to 10$^{3}$ & $\sim$10$^{10}$ to 10$^{15}$ & $\sim$10$^{12}$ to 10$^{21}$ \\
+Large Asteroids & $\sim$10$^{2}$ to 10$^{4}$ & $\sim$10$^{15}$ to 10$^{20}$ & $\sim$10$^{21}$ to 10$^{29}$ \\
+Moons & $\sim$10$^{4}$ to 10$^{6}$ & $\sim$10$^{19}$ to 10$^{24}$ & $\sim$10$^{27}$ to 10$^{36}$ \\
+Planets & $\sim$10$^{6}$ to 10$^{7}$ & $\sim$10$^{23}$ to 10$^{27}$ & $\sim$10$^{35}$ to 10$^{39}$ \\
+Stars & $\sim$10$^{6}$ to 10$^{9}$ & $\sim$10$^{29}$ to 10$^{32}$ & $\sim$10$^{41}$ to 10$^{49}$ \\
+Black Holes & $\sim$10$^{3}$ to 10$^{12}$ & $\sim$10$^{30}$ to 10$^{36}$ & $\sim$10$^{24}$ to 10$^{60}$ \\
+Solar Systems & $\sim$10$^{12}$ to 10$^{15}$ & $\sim$10$^{30}$ to 10$^{33}$ & $\sim$10$^{55}$ to 10$^{63}$ \\
+Star Clusters & $\sim$10$^{16}$ to 10$^{19}$ & $\sim$10$^{35}$ to 10$^{38}$ & $\sim$10$^{77}$ to 10$^{82}$ \\
+Nebulae & $\sim$10$^{16}$ to 10$^{20}$ & $\sim$10$^{32}$ to 10$^{38}$ & $\sim$10$^{63}$ to 10$^{78}$ \\
+Galaxies & $\sim$10$^{20}$ to 10$^{22}$ & $\sim$10$^{40}$ to 10$^{42}$ & $\sim$10$^{88}$ to 10$^{94}$ \\
+Galaxy Clusters & $\sim$10$^{22}$ to 10$^{24}$ & $\sim$10$^{44}$ to 10$^{46}$ & $\sim$10$^{98}$ to 10$^{104}$ \\
+Superclusters & $\sim$10$^{23}$ to 10$^{25}$ & $\sim$10$^{47}$ to 10$^{48}$ & $\sim$10$^{103}$ to 10$^{106}$ \\
+\hline
+\end{tabular*}
+\end{table*}
+
+\clearpage 
+\section{Predictions of Space-Time Equivalence}
+Hypotheses and predictions of the space-time equivalence:
+\begin{enumerate}
+\item
+The spacetime equivalence states that there is an intrinsic mathematical relationship between the pace of time and the geometry of a system. 
+\item The Space-time equivalence is a universal law that extends infinitely beyond sub-atomic and cosmic. 
+\item Gravity and gravitational time dilation = a static human scale frame of reference perspective on the Space-Time Equivalence.
+\item The curvature of space-time = Space-Time Equivalence
+\item All existing physical temporal-related scaling laws can be directly derived from the Space-Time Equivalence.
+\item Gravitational waves represent the compression of space containing subatomic through celestial particles, resulting in waves of time dilation propagating through space. It's a wave of collective moments of inertia between particles across regions of space.
+\item Gravity is the intrinsic potential for a system to reduce in scale or contract inward toward its center of gravity to reduce the moment of inertia. The rotation and moment of inertia gradient result in matter sorting according to density, much like a centrifuge but in reverse. So the universe is a density gradient from dense objects to the deep of space. A true gradient of density is the lowest moment of inertia state. Gravity is about relieving potential energy by "scaling down" a static mass system to its lowest energy state.
+\item The space-time equivalence suggests a self-similar universe. If observed from the same relative scale inertial frame of reference, the universe always behaves identically. If observed from another scale frame of reference, the observed temporal pace will always reflect the scale factor between the observer and observed systems.
+\item The space-time equivalence suggests that the pace of time is dimensional.
+\item The natural motion of a system will always reflect the standard pace of time for that scale. Objects of the same moment of inertia with more energy applied are still at our scale; they just have unnatural rates of motion. Natural motion typically means a state of rest. However, some systems have implicit motion resulting from other system properties, which is the natural state of motion.
+\item More massive objects will exhibit greater redshift than less massive ones at the same distance. 
+\item The unitless fifth root of the moment of inertia over a moment of inertia of 1 can be used as the numeric ``spatial scale'' of that object.
+\item If we wanted to pair athletes better, we would pair them on a moment of inertia. This would make pairings more balanced and allow athletes with very different physiology to compete with each other.
+\item At every scale, the physics and pace of time appear static from the observer's perspective. To them, larger relative-scale objects pass through time more slowly, and smaller relative-scale, objects observe a faster relative pace of time. Always, at every scale of observation. 
+\item The absolute pace of time can never be negative because the scale can never be negative.
+\item ``Clusters of particles'', ``particles'', and ``space'' are synonymous. They differ only by density.
+\item The boundaries of our observable universe are the product not just of extreme differences in scale and time pace, but also of the scale at which we interact with light. Quantum behavior emerges at the edge of observability. Molecules represent this edge because all terrestrial organisms that ``see'' light see it using a molecular-scale mechanism, uniting how organisms of all scales perceive light.
+\item An organism's eyeball size will tend to stay more consistent over its lifetime to maximize spatial proficiency. We predict that eyeballs would be closer to mature size when they open for the first time than other organs at similar stages of development.
+\item Electrons represent the scale at which the subatomic material's motion is limited by relativistic velocities (the electron's motion). The electron probably more accurately represents a minimum-scale particle that we can resolve directly. Many of the properties of the universe of light likely relate to the rotational spherical nature of the electron-nucleus interaction. They're fast, they interact with light, and they repel each other, they build a relative shell of negative change. 
+\item A shell of negative charge is very different than a point of negative charge. Something akin to this arrangement makes up the electromagnetic field, a spherical rotation of something electrostatic, and a spherical rotation.
+\item The containment causality hypothesis suggests that when a black hole "pokes" into a smaller scale, it is a manifestation of potential drawing that black hole into the smaller scale, not the black hole ``pushing'' into the smaller scale. It's a pull from the lower scale not a push from the larger scale. This requires an explanation. Decompose what exactly this means.
+\item A black hole is the endpoint for converging particles. It represents a threshold of matter in a confined space. It is a maximum mass density, whether molecules, dust particles, planets, or the known universe. Beyond this particle density, molecules collapse into component subatomic particles.
+\item Black holes are cyclic, meaning they stay and continue this cycle of consuming the massive and expelling the subatomic. They represent a structure that spans the entire scale domain of the Universe of Light. Possibly a little further, across the universe of mass.
+\item Black holes are recyclers of matter over the scale range relevant in our Universe of Light. They represent the endpoint for molecular density in our universe, above a threshold density, no matter how the molecules go to that density, they collapse into a black hole. The size of the black hole represents the amount of matter present at that extreme density; along the journey to singularity, objects are progressively ripped down to their constituents until the gravity of the black hole at a much larger scale becomes insignificant. The particles emit at the center of gravity in a highly energetic state, with a high rate of spin and ejection velocity. Being highly energetic, they will behave not unlike molecules in a gas, with a high rate of collision. As they travel a considerable relative distance, they will begin forming more complex structures, eventually reforming atoms, molecules, planets, and stars, eventually repeating the cycle. Their spin eventually becomes the spin of galaxies and the black hole again.
+\item Supermassive black holes at the center of galaxies are the recyclers for that region of space; they live indefinitely and cycle matter down and out into the vicinity to begin building new star systems. They consume objects of sufficient density.
+\item Black holes break massive objects into their constituent smaller-scale particles.
+\item A blue shift might be observed as things of lower and lower energy are viewed through a microscope.
+\item The domains of quantum, classical, and cosmic are all equally correct; they are simply different perspectives on the same physics. Quantum and cosmic are just classical and observed at vast relative scales.
+\end{enumerate}
+
+\section*{Acknowledgments}
+The author gratefully acknowledges the following individuals and institutions for their contributions and support:
+
+\begin{itemize}
+\item To my mother and her infinite confidence, support, and patience. 
+\item To my late father, whose presence continues to guide every step.
+\item To my two sons, may you achieve the impossible. I love you so much.
+\item Metropolitan University of Denver
+\item The University of Colorado, Denver
+\item Dr. Gerhardt Lind
+\item Dr. Ray Hauser
+\item Dr. Branden Kappes
+\item Christian Glatz
+\item Robert Hyta, Esq.
+\item Christian Connolly
+\item Doyce Blair
+\item Racheal and Dustin Blair
+\item Toby Santistevan
+\item Dave Martinez
+\item John Tradeaux
+\item Clement Haydon
+\item Lori Mantia
+\item Michael Batton
+\item Wendy White
+\item Sarah Wooley
+\item Dr. Jay Joliol
+\item Mike Villano
+\end{itemize}
+Special acknowledgments to:
+\begin{itemize}
+\item Johannes Kepler
+\item Niels Bohr
+\item Max Planck
+\item Sir Isaac Newton
+\item Albert Michelson
+\item Edward W. Morley
+\item Hendrik Lorentz
+\item Albert Einstein
+\item Laurent Nottale
+\item Carl Sagan
+\item Stephen Hawking
+\item William Sanford Nye 
+\item Neil deGrasse Tyson
+\end{itemize}
+
+This work is dedicated to truth, science, love, and humanity.  I love all y'all.\\
+
+\textit{Pursue good, for good begets good. You are your own judge of good. Extend trust, starting with yourself. Forget about what everyone else thinks and do what you know, in your heart, to be right.}
+\balance
+%%%REFERENCES%%%
+\bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc} %the RSC's .bst file
+\end{document}

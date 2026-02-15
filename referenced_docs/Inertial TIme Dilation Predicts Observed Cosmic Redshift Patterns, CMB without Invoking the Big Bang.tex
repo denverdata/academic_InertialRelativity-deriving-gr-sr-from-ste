@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RSC Article Template with Section Structure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside,twocolumn,9pt]{extarticle}
+\usepackage[super,sort&compress,comma]{natbib}
+\usepackage[version=3]{mhchem}
+\usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{balance}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,small,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{fnpos}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{droidsans}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage[compact]{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{fix-cm}
+
+\AtBeginEnvironment{thebibliography}{\balance}
+
+\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
+
+\definecolor{cream}{RGB}{222,217,201}
+
+\begin{document}
+
+\pagestyle{fancy}
+\thispagestyle{plain}
+\fancypagestyle{plain}{
+%%%HEADER%%%
+\renewcommand{\headrulewidth}{0pt}
+}
+%%%END OF HEADER%%%
+
+%%%PAGE SETUP - Please do not change any commands within this section%%%
+\makeFNbottom
+\makeatletter
+\renewcommand\LARGE{\@setfontsize\LARGE{15pt}{17}}
+\renewcommand\Large{\@setfontsize\Large{12pt}{14}}
+\renewcommand\large{\@setfontsize\large{10pt}{12}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{7pt}{10}}
+\makeatother
+
+\renewcommand{\thefootnote}{%
+  \ifcase\value{footnote}%
+  \or\dag
+  \or\textit{a}%
+  \else\arabic{footnote}%
+  \fi}
+\renewcommand\footnoterule{\vspace*{1pt}%
+\color{cream}\hrule width 3.5in height 0.4pt \color{black}\vspace*{5pt}}
+\setcounter{secnumdepth}{5}
+
+\makeatletter
+\renewcommand\@biblabel[1]{#1}
+\renewcommand\@makefntext[1]{\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
+\makeatother
+\renewcommand{\figurename}{\small{Fig.}~}
+\titleformat*{\section}{\sffamily\Large}
+\titleformat*{\subsection}{\normalsize}
+\titleformat*{\subsubsection}{\bfseries}
+\setstretch{1.125}%In particular, please do not alter this line.
+\setlength{\skip\footins}{0.8cm}
+\setlength{\footnotesep}{0.25cm}
+\setlength{\jot}{10pt}
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+\titlespacing*{\subsection}{0pt}{15pt}{1pt}
+%%%END OF PAGE SETUP%%%
+
+%%%FOOTER%%%
+\fancyfoot{}
+\fancyfoot[LO,RE]{\vspace{-7.1pt}\includegraphics[height=9pt]{head_foot/LF}}
+\fancyfoot[RO]{\footnotesize{\sffamily{1--\pageref{LastPage} ~\textbar  \hspace{2pt}\thepage}}}
+\fancyfoot[LE]{\footnotesize{\sffamily{\thepage~\textbar\hspace{4.65cm} 1--\pageref{LastPage}}}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\arrayrulewidth}{1pt}
+\setlength{\columnsep}{6.5mm}
+\setlength\bibsep{1pt}
+%%%END OF FOOTER%%%
+
+%%%FIGURE SETUP - please do not change any commands within this section%%%
+\makeatletter
+\newlength{\figrulesep}
+\setlength{\figrulesep}{0.5\textfloatsep}
+
+\newcommand{\topfigrule}{\vspace*{-1pt}%
+\noindent{\color{cream}\rule[-\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\botfigrule}{\vspace*{-2pt}%
+\noindent{\color{cream}\rule[\figrulesep]{\columnwidth}{1.5pt}} }
+
+\newcommand{\dblfigrule}{\vspace*{-1pt}%
+\noindent{\color{cream}\rule[-\figrulesep]{\textwidth}{1.5pt}} }
+
+\makeatother
+%%%END OF FIGURE SETUP%%%
+
+%%%TITLE, AUTHORS AND ABSTRACT%%%
+\twocolumn[
+  \begin{@twocolumnfalse}
+
+  {\noindent\includegraphics[height=30pt]{head_foot/dec}}\\
+  \normalsize\text{}{
+  \hfill\raisebox{0pt}[0pt][0pt]{\includegraphics[height=55pt]{head_foot/RSC_LOGO_CMYK}}\\[1ex]
+}
+
+\vspace{1em}
+\sffamily
+\begin{tabular}{@{}m{4.5cm}@{}p{13.5cm}@{}}
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{Inertial Time Dilation Predicts Observed Cosmic Redshift Patterns}} \\
+ & \noindent\large{Thomas Damon DeGerlia,\footnotemark[1]\textit{\footnotemark[2]}} \\
+\includegraphics{head_foot/dates} & \noindent\normalsize{June 2025 C.E.} \\
+ & \noindent\normalsize{ABSTRACT: The Space-Time equivalence (STE) states that the curvature of space-time arises from relative moment of inertia, and that general relativity is a product of this relationship. Specifically, gravitational time dilation (GTD) is derived directly from Inertial Time Dilation. However, GTD only represents a portion of the time dilation experienced by a system relative to another system, and the complete picture may explain the magnitude and deviation of observed redshift values without invoking expansion of the universe. If confirmed, the relationship between universal expansion and redshift may require reinterpretation.} \\
+\end{tabular}
+
+ \end{@twocolumnfalse}\vspace{0.6cm}
+]%
+%%%END OF TITLE, AUTHORS AND ABSTRACT%%%
+
+%%%FONT SETUP - please do not change any commands within this section
+\renewcommand*\rmdefault{bch}\normalfont\upshape
+\rmfamily
+\vspace{-1cm}
+
+%%%FOOTNOTES%%%
+\footnotetext[1]{Mr. DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S. in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado. He brings over 35 years of multidisciplinary scientific problem-solving experience across chemistry, physical chemistry, artificial intelligence, software engineering, archaeology, forensics, and psychology.}
+\footnotetext[2]{DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
+\setcounter{footnote}{2}
+
+\section{Introduction}
+The Space-Time Equivalence and the underlying principle of Inertial Time Dilation posit that the pace of change in motion is directly related to a system's moment of inertia for every system or subsystem in the universe. Abstracted mathematically from isometric scaling laws, STE can be expressed as Eq.~(\ref{eq:ste}), where $t$ represents the delta time for systems 1 and 2, respectively, and $i$ represents the moment of inertia about the axis that connects the two systems being compared.
+\begin{equation}\label{eq:ste}
+\frac{t_1}{t_2} = \left(\frac{i_2}{i_1}\right)^{1/5}
+\end{equation}
+Gravitational time dilation can be derived directly from the law of Space-Time Equivalence. The principle of Inertial Time Dilation that arises from STE predicts the observed redshift in excess of the gravitational redshift alone because of the relationship between time and inertia. STE reveals that inertia bears the fundamental relationship with space-time and that its curvature is not merely a mass influence, as understood through general relativity.
+
+This study extends the STE framework explored in DeGerlia's recent preprints on inertial density and the broader Universe of Light thought experiment, which develop the theoretical structure that motivates the present redshift analysis.\cite{degerlia2025inertialdensity,degerlia2025universeoflight}
+
+\section{How Density, Mass, Volume, and Inertia Interrelate}
+Systems that are both relatively massive and relatively expansive can achieve extreme moments of inertia. For example, a black hole can have an extreme mass, but because it is very dense, interpreting it as a point mass is a reasonable approximation. By contrast, a galactic cluster contains a variety of extremes in density and distribution, resulting in a greater moment of inertia about the axis of observation. The observed redshift would therefore be considerably greater than what is predicted by general relativity alone, especially in the vicinity of highly variant systems.
+
+The most extreme moments of inertia are achieved through systems with little mass at the axis and almost all matter at the radius. A soap bubble, for example, is a sphere with a very high moment of inertia relative to its mass. A spherical shell is the highest moment of inertia that can be achieved with a uniform spherical configuration. The highest-density distributed uniform system, on the other hand, is viewed slightly differently. A cloud is essentially a low-density object, and low-density objects (objects that display less gravitational effects at the densities of our scale than larger-scale objects like planets, etc.) can be virtually any shape. Objects are therefore free to take on configurations of extreme relative moments of inertia at our scale. A tree has a substantial moment of inertia, but that same tree at a mass of $1\times10^{27}$~kg would be a sphere with a density gradient representing the constituents of the tree. A few orders of magnitude more massive, at the tree's Schwarzschild radius, the tree becomes a uniform sphere. The highest inertia objects are large regions of space that amount to a low-density core and a high-density shell, such as a big celestial gas cloud with stars around the edge.
+
+A vast void of near-scale matter (a ``vacuum'' of space as we know it) bounded by high-density objects also creates an extreme moment of inertia. Under scale relativity an object can be defined as any static region of space or as any static collection of matter. A nebula often consists of a core of ``transparent'' sub-atomic matter (matter too small to absorb visible light energy), with lobed outer portions or appendages that are translucent and cloudy, eventually turning to ``solid-looking'' portions at the outer edges. Nebulae concentrate stars in the outer, cloudy regions. As such, a nebula is likely a relatively high moment-of-inertia celestial object from our perspective, and thus a good candidate for observing extreme inertial redshift. A galactic cluster is as well. These systems very likely represent the kinds of distributions responsible for observed ``little red dots'' (LRDs).
+
+\section{Rule of Thumb Regarding Inertial System Transformation}
+For the purposes of identifying when Inertial Time Dilation is maximized, several useful heuristics apply:
+\begin{itemize}[leftmargin=*,nosep]
+  \item For a given mass, the highest moment of inertia occurs at the lowest radius, which corresponds to the lowest density.
+  \item For a given radius, the highest moment of inertia requires effectively infinite mass, which corresponds to infinite density.
+  \item For a given density, the highest moment of inertia is achieved by configuring that mass density as far as possible from the axis. A bubble therefore represents the highest moment of inertia relative to its mass for a uniformly distributed spherical configuration.
+\end{itemize}
+
+\section{Premise of this Study}
+While GTD describes a portion of the redshift observed between systems, the complete picture can only be understood through Inertial Time Dilation, which states that space-time has a more comprehensive mathematical relationship with the relative moment of inertia (or relative density) of any given system. Inertial Time Dilation intrinsically incorporates the time dilation attributed to GTD under general relativity as a component of the overarching inertial time dilation. This phenomenon is well explored by our team but not yet recognized by mainstream physics, and the inclusion of this principle into the standard model will greatly simplify its interpretation, strengthen its accuracy, and extend its coverage far beyond our current understanding.
+
+The observed redshift is known to exceed what should be observed from GTD alone; after all, that is the motivation for the universal expansion hypothesis. Consequently, there is an inconsistency between expectation and observation. Under the standard model, this inconsistency has been explained through the Big Bang theory, which characterizes the universe as expanding outward from a spatial origin. Many new inconsistencies, however, arise from that hypothesis, including significant localized variations in redshift measurements that conflict with predictions associated with universal expansion. Further, the James Webb Space Telescope has, to date, struggled to detect the predicted primordial universe as hypothesized.
+
+\section{Hypothesis}
+The deviations between observed and expected redshift are very likely to be the effects of Inertial Time Dilation. If so, the standard model could be simplified considerably by eliminating the need for additional explanation via universal expansion. Doing so would also eliminate the mathematical need for constructs such as singularities, beginnings or endings of time and space, and other implications of the Big Bang theory.
+
+Whether or not this proves to be true, we predict no behavior different from what has been observed. If the hypothesis proves true, it would call into question the hypothesis of universal expansion, which would be a departure from established expectations for the origins of the universe---but one that would greatly simplify, expand, and clarify our understanding of the cosmos.
+
+\section{Confirming the Hypothesis}
+The expected observations would be very distinct between universal expansion and gravitational time dilation versus inertial time dilation. Because gravitational time dilation only represents the high-density aspect of the broader inertial time dilation, predictions of time dilation under low-density conditions will always be exceeded by observations. Systems that are both extremely massive and relatively low-density, yet simultaneously expansive, with large surface-area-to-mass ratios (the opposite of a condensed sphere), characterize high-inertia systems.
+
+\section{Validation 1: Redshift}
+Key observational differences follow from the hypothesis:
+\begin{itemize}[leftmargin=*,nosep]
+  \item Universal expansion would exhibit the same rate of redshift everywhere in the universe.
+  \item Inertial Time Dilation would exhibit different redshift depending on the granularity of the measurement and the total moment of inertia of a system.
+  \item A nebula or galactic cluster would exhibit considerably more redshift than expected compared to what we would see around a black hole, neutron star, or massive star where gravitational redshift is expected. A planetary system might exhibit more redshift than expected relative to the massive star itself.
+  \item A galaxy would be observed to exhibit more redshift when viewed along its axis of rotation, and as little as $i^{1/2}$ if observed perpendicular to its axis of rotation. Objects observed along their axis of rotation therefore exhibit the maximum redshift possible for that system, and would exceed what GTD alone predicts.
+  \item Systems with a lower moment of inertia relative to our inertial frame of reference will exhibit a blue shift, generally have a smaller spatial scale, and exhibit faster average motion.
+  \item Massive galactic clusters and similar structures would exhibit a similar degree of inertia to extremely high-mass objects. Thus, we can attribute all observed redshifts, including Little Red Dots and other anomalous observations, to Inertial Time Dilation.
+\end{itemize}
+
+\section{Validation 2: The Primordial Universe}
+The primordial universe, redshift, the beginning of time, and the entire Big Bang can be contrasted as follows:
+\begin{itemize}[leftmargin=*,nosep]
+  \item Under universal expansion, observations near the origin of the Big Bang should reveal a primordial universe with very old structures forming, and we would expect to observe no older structures anywhere else.
+  \item Under Inertial Time Dilation, older structures can appear regardless of viewing location. No matter how far back in time we look, we should see roughly the same structures consistent with the scale being observed. Evidence of a primordial universe would not emerge without contradictory observations. For example, a structure that seems primordial would coexist with objects that appear to be far older.
+\end{itemize}
+
+\section{Verification 3: Observed Singularities}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Universal expansion predicts tangible, real-world examples of singularities.
+  \item Inertial Time Dilation predicts an absence of tangible singularities, infinities, and pre- or post-existence. Observable properties extend in extent and precision without tangible limits, and we continue to expand the extent and precision of observation.
+\end{itemize}
+
+\section{Verification 4: The Cosmic Microwave Background}
+\begin{itemize}[leftmargin=*,nosep]
+  \item The standard model interprets the cosmic microwave background (CMB) as evidence that the universe has a limited scale range, linking the CMB directly to universal expansion.
+  \item Inertial Time Dilation predicts the observed CMB as an artifact of energy detected from particles just beyond the limits of practical observability (i.e., smaller than subatomic and larger than the observable universe). The CMB would be identical at every scale section and at every point in space. Inertial Time Dilation does not rely upon its own conclusion as a premise; because it predicts both observed redshift and observed background energy, competing interpretations lack a logical counterpoint.
+\end{itemize}
+
+\section{Identifying the Moment of Inertia of a Galaxy or Galactic Cluster}
+To calculate the moment of inertia, the angle of observation or influence must first be considered. If one or both of the systems being compared (observed and observer, or system $a$ and system $b$) are not spherical, inertia becomes dimensional, so observations must account for the moment of inertia along the axis of observation. As long as measurements remain dimensional, a high moment of inertia can be abstracted using average density and total mass (or average density and total volume---conceptually similar to the Schwarzschild radius).
+
+To abstract the moment of inertia of a ``gaseous'' distribution of matter, one must determine the average radius of mass about the axis of observation. For a system of uniform density, such as a dense cloud of stars, a galactic cluster's inertia reduces to its average density. Simply take the mass of the distributed system and divide it by the volume of the system to obtain average density. From this, one can estimate the moment of inertia from the density and cross-sectional area about the axis of observation. For a uniform sphere of that density the familiar relation in Eq.~(\ref{eq:uniform-sphere}) applies.
+\begin{equation}\label{eq:uniform-sphere}
+I = \frac{2}{5} M r^{2}
+\end{equation}
+
+Textbook examples motivate the following representative cases:
+\begin{itemize}[leftmargin=*,nosep]
+  \item Galaxies: density, moment of inertia, volume, mass, and overall distribution.
+  \item Galactic clusters: density, moment of inertia, volume, mass, and general distribution.
+\end{itemize}
+
+\section{Calculations and Observational Data Analysis}
+This study recommends targeted analysis of James Webb Space Telescope data to identify the observational signatures described above.
+
+\section{Conclusion}
+From this, we conclude that the STE explanation for the universe is very viable mathematically because:
+\begin{enumerate}[leftmargin=*,nosep]
+  \item it is based on well-established physical principles;
+  \item it correctly predicts the general variation observed; and
+  \item it explains a number of phenomena that the standard model struggles to reconcile.
+\end{enumerate}
+
+\section{Implications}
+If Inertial Time Dilation, STE, and the principles described herein are validated through peer review and rigorous observational and experimental testing, they will motivate a revision of the standard model. Introducing inertial time dilation into the standard model and general relativity would greatly expand our tangible understanding of how space, time, and matter interrelate, offering physics a long-needed opportunity to grow beyond the limitations and mysteries imposed by current models. Importantly, validating Inertial Time Dilation would not, to our knowledge, change any measurement ever recorded; it only affects the interpretation of the measurements already made and the predictions we make in the future.
+
+\nocite{einstein1915,goldstein1980,schwarzschild1916radius,crc2019}
+%%%REFERENCES%%%
+\bibliography{rsc}%You need to replace "rsc" on this line with the name of your .bib file
+\bibliographystyle{rsc}%the RSC's .bst file
+\clearpage
+\end{document}
