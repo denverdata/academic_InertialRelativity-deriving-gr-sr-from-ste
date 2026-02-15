@@ -1,27 +1,17 @@
-\providecommand*{\mcitethebibliography}{\thebibliography}
-\csname @ifundefined\endcsname{endmcitethebibliography}
-{\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{1}
-\providecommand*{\natexlab}[1]{#1}
-\providecommand*{\mciteSetBstSublistMode}[1]{}
-\providecommand*{\mciteSetBstMaxWidthForm}[2]{}
-\providecommand*{\mciteBstWouldAddEndPuncttrue}
-  {\def\EndOfBibitem{\unskip.}}
-\providecommand*{\mciteBstWouldAddEndPunctfalse}
-  {\let\EndOfBibitem\relax}
-\providecommand*{\mciteSetBstMidEndSepPunct}[3]{}
-\providecommand*{\mciteSetBstSublistLabelBeginEnd}[3]{}
-\providecommand*{\EndOfBibitem}{}
-\mciteSetBstSublistMode{f}
-\mciteSetBstMaxWidthForm{subitem}
-{(\emph{\alph{mcitesubitemcount}})}
-\mciteSetBstSublistLabelBeginEnd{\mcitemaxwidthsubitemform\space}
-{\relax}{\relax}
+\begin{thebibliography}{1}
 
-\bibitem[DeGerlia(2025)]{degerlia2025}
-T.~D. DeGerlia, \emph{ResearchHub}, 2025\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\end{mcitethebibliography}
+\bibitem{degerlia2025}
+T.~D. DeGerlia.
+\newblock Introducing inertial density and characterizing the schwarzschild
+  condition as a constant threshold of mass over radius (m/r).
+\newblock {\em ResearchHub}, 2025.
+\newblock DOI: 10.55277/researchhub.0e0cgoor.
+
+\bibitem{degerlia2025universe}
+T.~D. DeGerlia.
+\newblock The universe of light - exploring our universe through the lens of
+  the law of space-time equivalence.
+\newblock {\em ResearchHub}, 2025.
+\newblock DOI: 10.55277/ResearchHub.pi9yjshm.
+
+\end{thebibliography}

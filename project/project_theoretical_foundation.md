@@ -1,6 +1,6 @@
 # Project Theoretical Foundation
 
-This document captures the core objectives and mathematical principles provided by the author for the discovery that general andspecial relativity emerge from what we call "inertial relativity". 
+This document captures the core objectives and mathematical principles provided by the author for the discovery that general and special relativity emerge from what we call "inertial relativity". 
 
 ## Core Objectives
 

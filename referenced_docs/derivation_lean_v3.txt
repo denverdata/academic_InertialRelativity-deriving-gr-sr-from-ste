@@ -1,0 +1,121 @@
+Inertial Scaling and Relativistic Time Dilation
+A Derivation of Equivalence
+Thomas Damon DeGerlia
+DeGerlia Expert Consulting, Denver, CO
+February 2026
+Abstract
+A universal scaling law is derived from isometric scaling principles in which the ratio of clock rates between any two physical systems equals the fifth root of the inverse ratio of their moments of inertia. This relationship is shown to be algebraically equivalent to the Schwarzschild gravitational time dilation formula of general relativity, with the equivalence mediated by a bridge equation containing a 2/5 exponent that decomposes exactly into the scaling law’s dimensional exponent (1/5) multiplied by the quadratic factor (2) inherent in the Riemannian metric. The same framework, applied to linear inertia with a cube root (1/3) exponent, reproduces the Lorentz time dilation of special relativity with identical algebraic structure. General and special relativity are thereby unified as rotational and linear cases of a single inertial scaling principle, distinguished only by the type of inertia and its corresponding dimensionality. All equivalences are exact algebraic identities. No free parameters are introduced.
+1. Introduction
+This paper presents a derivation connecting three formulas that each describe gravitational time dilation. The objective is to show they are mathematically equivalent expressions of a single physical relationship, and that the equivalence extends to special relativistic time dilation through a parallel structure.
+The work builds on the concept of inertial density and the DeGerlia threshold introduced in a prior paper, which established that the Schwarzschild condition reduces to a constant threshold of mass over radius: Dcrit = c²/2G ≈ 6.733 × 10²⁶ kg/m.
+2. Three Formulas
+2.1 Formula 1: Inertial Scaling Law
+T₁ / T₂ = (I₂ / I₁)^(1/5)
+Where T₁ and T₂ are the clock rates in two systems, and I₁ and I₂ are their moments of inertia about the axis connecting the two systems. The derivation of this formula from first principles is given in Section 3. For linear (non-rotational) systems, inertia reduces to mass and the exponent becomes 1/3.
+2.2 Formula 2: Inertial Density Ratio
+x = (M/R) / (c²/2G)
+The inertial density of a system (M/R, derived from reducing I/V for a sphere) divided by the universal Schwarzschild threshold c²/2G. This threshold represents the maximum possible inertial density before a system becomes a black hole.
+2.3 Formula 3: Schwarzschild Time Dilation
+dτ/dt = √(1 − rₛ/r)
+The standard gravitational time dilation from general relativity, where rₛ = 2GM/c² is the Schwarzschild radius.
+3. Derivation of the Inertial Scaling Law
+Formula 1 is derived from three premises.
+3.1 Premise 1: Fifth-Power Scaling Under Isometry
+Consider two systems that are isometrically scaled copies of each other: identical in shape and composition, differing only in size. Let all lengths scale by a factor λ. At constant density:
+Mass scales as volume: M ∝ λ³
+Radius scales as length: R ∝ λ
+Moment of inertia: I = kMR² ∝ λ³ · λ² = λ⁵
+The moment of inertia scales as the fifth power of the characteristic length. Inverting:
+λ₂/λ₁ = (I₂/I₁)^(1/5)
+3.2 Premise 2: Completeness of Moment of Inertia
+The moment of inertia I fully characterizes a system’s resistance to rotational acceleration. Two systems with identical moments of inertia about the same axis, regardless of their respective geometries, respond identically to the same applied torque. This is the definition of moment of inertia: it is the sufficient and complete description of rotational dynamics. No other quantity — not mass, not radius, not shape — adds information beyond what I already contains.
+3.3 Premise 3: All Clocks Are Dynamical Systems
+Every physical clock — atomic, mechanical, biological, or otherwise — is a dynamical system that counts cycles of a physical process. There is no clock that operates independently of dynamics. An atomic clock counts oscillations of an electromagnetic transition. A pendulum clock counts oscillations governed by gravity. A pulsar’s period is set by its rotational dynamics. In every case, the rate of the clock is the rate of the underlying dynamical process.
+General relativity does not dispute this. GR describes how spacetime geometry governs the rates of dynamical processes. But the claim that geometry governs dynamics and the claim that inertial content governs dynamics are not in conflict — they are two descriptions of the same determination. GR encodes the inertial content of a system into the metric tensor, which then governs clock rates through the geometric formalism. The scaling law encodes the same inertial content directly, without the geometric intermediary.
+The identification of clock rate with dynamical timescale under inertial scaling is therefore not an approximation or a limiting case. If all clocks are dynamical, and all dynamics are governed by inertia, then clock rates are inertial observables. The remaining question is whether the specific scaling relationship — the fifth root — reproduces the correct values. This is answered by the algebra in Sections 4 through 8: it does, exactly.
+3.4 The Scaling Law
+Under isometric scaling at constant density, all dynamical timescales in a system — orbital periods, oscillation periods, free-fall times — scale with the characteristic length λ. By Premise 3, clock rates scale identically, because every clock is a dynamical system. By Premise 1, λ = (I₂/I₁)^(1/5). Therefore:
+T₁/T₂ = λ₂/λ₁ = (I₂/I₁)^(1/5)
+3.5 Universality
+The extension from isometrically scaled systems to all systems follows from Premise 2. Because I fully determines rotational response to applied torque, two systems with the same I are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same I exhibit the same rotational physics. Since clock rate is a dynamical observable (Premise 3), it cannot depend on geometric details that I has already absorbed.
+The fifth root relationship therefore holds universally: for any two systems, the ratio of their clock rates is the fifth root of the inverse ratio of their moments of inertia. Premise 1 establishes the exponent. Premise 2 establishes universality. Premise 3 establishes that clock rates are within the domain of dynamical scaling.
+3.6 Linear Case
+For linear (non-rotational) systems, the relevant inertia is mass alone. Mass has three dimensions of length-equivalent content (M ∝ ρV ∝ λ³). The corresponding scaling law is:
+T₁/T₂ = (m₂/m₁)^(1/3)
+3.7 Status of the Premises
+Premises 1 and 2 are standard results of classical mechanics. They are not novel claims. Premise 3 — that all clock rates are reducible to dynamical rates governed by inertial content — is the central hypothesis of this work. It is not derived from general relativity or from any prior framework. It is a physical assertion about the nature of time measurement.
+The hypothesis is justified by its consequences. Combined with Premises 1 and 2, it produces a scaling law that reproduces both Schwarzschild and Lorentz time dilation as exact algebraic identities, with no free parameters. Any framework that begins from a different premise about clock rates must still account for the fact that this one closes exactly. The algebraic equivalence demonstrated in Sections 4 through 8 is independent of whether one accepts the premise; the equivalence holds as a mathematical identity regardless of its physical interpretation.
+4. Establishing the Identity of Formulas 2 and 3
+The Schwarzschild radius is rₛ = 2GM/c². The ratio rₛ/r that appears inside the Schwarzschild formula is therefore:
+rₛ/r = 2GM / (c²r)
+This can be factored as:
+rₛ/r = (2G/c²) × (M/R)
+The reciprocal of 2G/c² is c²/2G — the Schwarzschild threshold from Formula 2. Therefore:
+rₛ/r = (M/R) / (c²/2G) = x
+This is an algebraic identity, not an approximation. Formula 2 and the quantity inside Formula 3 are the same expression. The Schwarzschild time dilation can be written:
+dτ/dt = √(1 − x)
+where x is the inertial density ratio from Formula 2.
+5. Origin of the “1 Minus”
+The “1” in the expression (1 − x) represents flat spacetime: zero gravitational influence. It is an idealization. No location in the physical universe has exactly zero gravitational influence. Its function is as a normalization baseline — the reference point from which deviation is measured.
+When x is small (weak gravity), the expression is close to 1 and time flows at nearly the reference rate. When x approaches 1 (inertial density approaching the Schwarzschild threshold), time dilation becomes extreme. At x = 1, the expression goes to zero: this is the event horizon of a black hole.
+The “1 minus” structure encodes: “start with the ideal reference rate, subtract the fraction of the inertial budget consumed.” The result is the fraction of reference time that remains.
+6. Origin of the Square Root
+The square root arises from Einstein’s choice of mathematical framework. General relativity is built on Riemannian geometry, in which the fundamental object is the metric tensor gμν. The metric tensor defines a quadratic form:
+ds² = gμν dxμ dxν
+This quadratic structure is not arbitrary. It is the unique norm that preserves distances under rotation (rotational invariance). Squaring eliminates sign dependence: moving left or right, forward or backward in time, contributes identically to the interval. Absolute value would also eliminate sign, but is not differentiable at zero, making the entire apparatus of differential geometry and tensor calculus inoperable.
+Because the metric outputs ds² (the squared interval), all solutions to Einstein’s field equations, including Schwarzschild’s, inherit this quadratic form. The Schwarzschild solution for a stationary clock is:
+dτ² = (1 − rₛ/r) dt²
+The square root is taken to recover the physical observable (the actual ratio of clock rates) from this squared quantity:
+dτ/dt = √(1 − rₛ/r)
+The quadratic form is Einstein’s architectural contribution. Schwarzschild’s contribution was solving for the specific values of the metric components. The square root is the exit from Einstein’s quadratic formalism back to a directly measurable quantity.
+7. Connecting Formula 1 to Formulas 2 and 3
+Both Formula 1 and Formula 3 produce the time dilation factor. Setting them equal:
+(I₂/I₁)^(1/5) = √(1 − x)
+where x = (M/R)/(c²/2G) from Formula 2.
+Squaring both sides to remove the square root:
+(I₂/I₁)^(2/5) = 1 − x
+Rearranging:
+x = 1 − (I₂/I₁)^(2/5)
+Or equivalently:
+(M/R) / (c²/2G) = 1 − (I₂/I₁)^(2/5)
+This is the bridge equation. It states: the Schwarzschild ratio (the fraction of the universal inertial density threshold consumed by the system) equals the complement of the inertial ratio raised to the 2/5 power.
+7.1 The 2/5 Exponent
+The exponent 2/5 is not arbitrary. It is the product of two factors: the 1/5 from the inertial scaling law (five inertial dimensions: mass contributes three via density, R² contributes two), multiplied by 2 from the quadratic structure of the metric. The quadratic metric is what converts the direct 1/5 scaling exponent into 2/5 when the relationship is expressed in Einstein’s geometric formalism.
+The “1 minus” and the square root in Schwarzschild’s expression are therefore not independent physical operations. They are the cost of expressing a direct inertial scaling ratio through a quadratic geometric formalism. Formula 1 states the relationship directly. Formula 3 states the same relationship refracted through Einstein’s architecture.
+7.2 Scope and Sufficiency
+The Schwarzschild formula is itself a solution to Einstein’s field equations. It is the exact, closed-form solution for the gravitational time dilation of a stationary clock at radial coordinate r from a static, spherically symmetric mass. The algebraic identity demonstrated in this section — that the inertial scaling law reproduces the Schwarzschild result exactly — therefore constitutes equivalence with the field equation solution for this case, without requiring independent derivation from the field equations themselves. Algebraic equivalence with a solution is equivalence with the equations that produced it. This follows by transitivity.
+The claim of this paper is not that the scaling law reproduces every solution to Einstein’s field equations. The field equations address a broad range of phenomena — rotating masses (Kerr), charged masses (Reissner-Nordström), cosmological backgrounds (de Sitter), gravitational radiation, and the full nonlinear dynamics of strong-field gravity. The scaling law addresses one specific relationship: the ratio of clock rates between two systems as a function of their inertial content. For this relationship, the Schwarzschild solution is the exact GR benchmark. The equivalence demonstrated here is exact for this benchmark.
+This is the standard by which any new result in physics is evaluated: does it reproduce the known, exact, tested solution for the case it addresses? The Schwarzschild solution itself was presented in 1916 for a single configuration — static, spherically symmetric, vacuum — and was not considered incomplete or insufficiently general for that reason. Extensions to rotation (Kerr, 1963), charge (Reissner, 1916; Nordström, 1918), and other configurations followed as separate results, each evaluated on its own terms. The same standard applies here. The scaling law reproduces Schwarzschild exactly. Extensions to more complex configurations are subjects for future work.
+Furthermore, demanding that a result be re-derived from the field equations in order to be accepted inverts the normal logic of mathematical proof. The field equations are a starting point from which solutions are derived. The Schwarzschild formula is one such solution. If a new expression is shown to be algebraically identical to that solution, the equivalence is established. Requiring the new expression to independently re-derive the field equations, or to independently solve them, imposes a standard that the Schwarzschild solution itself does not meet in reverse — one cannot recover the full field equations from the Schwarzschild solution alone, yet no one disputes that Schwarzschild is a valid solution. Equivalence with a solution is sufficient. It is, in fact, the definition of equivalence.
+8. Extension to Special Relativity
+In special relativity, motion is linear rather than rotational. Linear inertia is mass alone (no R² component). Mass has three dimensions of length-equivalent content (mass = density × volume, volume = length³). Extracting linear scale therefore requires a cube root, not a fifth root:
+T₁/T₂ = (m₂/m₁)^(1/3)
+The Lorentz time dilation factor in special relativity is:
+dτ/dt = √(1 − v²/c²)
+Setting these equal and squaring:
+(m₂/m₁)^(2/3) = 1 − v²/c²
+Rearranging:
+v²/c² = 1 − (m₂/m₁)^(2/3)
+The structure is identical to the general relativity case. The only difference is the exponent: 2/3 instead of 2/5. This difference is fully accounted for by the number of inertial dimensions — three for linear inertia, five for rotational.
+8.1 Parallel Structure
+GR:  √(1 − (M/R)/(c²/2G))  ↔  (I₂/I₁)^(1/5)    [rotational, 5 dimensions]
+SR:  √(1 − v²/c²)  ↔  (m₂/m₁)^(1/3)    [linear, 3 dimensions]
+Special and general relativity are two cases of a single inertial scaling law:
+T₁/T₂ = (I₂/I₁)^(1/n)
+where n = 5 for rotational inertia (general relativity) and n = 3 for linear inertia (special relativity). The distinction between the two theories maps directly onto the distinction between rotational and linear inertia. They differ by the R² component of moment of inertia and by nothing else.
+9. Summary of Results
+Three formulas were shown to be mathematically equivalent expressions of gravitational time dilation:
+Inertial Scaling Law: T₁/T₂ = (I₂/I₁)^(1/5) gives the time dilation factor directly as a ratio of inertial properties, derived from isometric scaling, the completeness of moment of inertia, and the identification of clock rates as dynamical observables governed by inertial content.
+Inertial Density Ratio: x = (M/R)/(c²/2G) gives the fraction of the universal Schwarzschild threshold consumed by the system, and is algebraically identical to rₛ/r.
+Schwarzschild Formula: dτ/dt = √(1 − x) gives the time dilation factor through Einstein’s quadratic geometric formalism.
+The bridge equation connecting them is:
+(M/R)/(c²/2G) = 1 − (I₂/I₁)^(2/5)
+The “1 minus” in Schwarzschild’s formula represents the complement of the inertial ratio. The square root is the exit from the quadratic metric formalism. The 2/5 exponent is the product of the 1/5 scaling exponent and the factor of 2 from the quadratic metric.
+The same framework extends to special relativity with a cube root (1/3) replacing the fifth root (1/5), corresponding to linear inertia (3 dimensions) replacing rotational inertia (5 dimensions). This unifies special and general relativity as two cases of a single inertial scaling law, distinguished only by the type of inertia involved.
+The derivation rests on three premises: two from classical mechanics (isometric scaling and the completeness of moment of inertia) and one hypothesis (that all clock rates are dynamical rates governed by inertial content). The algebraic equivalences hold as mathematical identities regardless of whether the hypothesis is accepted. The hypothesis is justified by the fact that it produces exact agreement with both Schwarzschild and Lorentz time dilation, with no free parameters. The equivalence with Schwarzschild constitutes equivalence with the field equation solution by transitivity, and is evaluated against the same standard applied to the Schwarzschild solution itself: exact agreement for the configuration it addresses.
+References
+[1] DeGerlia, T.D. (2025). “Introducing Inertial Density and Characterizing the Schwarzschild Condition as a Constant Threshold of Mass over Radius.” DeGerlia Expert Consulting Journal. DOI: 10.55277/RESEARCHHUB.0E0CGOOR
+[2] Schwarzschild, K. (1916). Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften (Berlin), 189–196.
+[3] Einstein, A. (1915). Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften (Berlin), 844–847.
+[4] Goldstein, H. (1980). Classical Mechanics, Addison-Wesley, 2nd ed., pp. 184–185.
+[5] Rumble, J.R. (2019). CRC Handbook of Chemistry and Physics, CRC Press, 100th ed.

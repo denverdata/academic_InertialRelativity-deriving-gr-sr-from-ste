@@ -4,7 +4,7 @@
 
 \documentclass[twoside,twocolumn,9pt]{article}
 \usepackage{extsizes}
-\usepackage[super,sort&compress,comma]{natbib} 
+\usepackage[square,numbers,sort&compress]{natbib} 
 \usepackage[version=3]{mhchem}
 \usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
 \usepackage{balance}
@@ -34,7 +34,7 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{booktabs}
-\mathtoolsset{showonlyrefs}
+%\mathtoolsset{showonlyrefs}
 
 \usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment if not required.
 
@@ -65,7 +65,7 @@
 \setcounter{secnumdepth}{5}
 
 \makeatletter 
-\renewcommand\@biblabel[1]{#1}            
+\renewcommand\@biblabel[1]{[#1]}            
 \renewcommand\@makefntext[1]% 
 {\noindent\makebox[0pt][r]{\@thefnmark\,}#1}
 \makeatother 
@@ -125,23 +125,13 @@
 \sffamily
 \begin{tabular}{m{4.5cm} p{13.5cm} }
 
-\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{An improved model for interpretation of general relativity: Corrected interpretation of limits}} \\
+\includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{Inertial Scaling and Relativistic Time Dilation: A Derivation of Equivalence}} \\
 \vspace{0.3cm} & \vspace{0.3cm} \\
  & \noindent\large{Thomas Damon DeGerlia,$^{\dag}$\textit{$^{a}$}} \\
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
- & \noindent\small{Revision 1.00 February 4, 2026 C.E.} \\
+ & \noindent\small{Revision 1.00 February 15, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
-\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: The standard formulation of gravitational time dilation,  
-$\frac{d\tau}{dt} = \sqrt{1 - \frac{2GM}{rc^2}}$, 
-as it is commonly used, imparts several misinterpreted, misleading, or erroneous operations, summarized as follows: 
-(1) it's relativistic. General relativity always reflects the relationship between two systems, meaning the same thing may be observed differently depending on your observational perspective. 
-(2) the zero point is incorrect. Schwarzschild radius is not zero time. It's slower than us, relatively, but it's not zero time. It's just the point where a light event arises and forms. That's an observational phenomenon. It's not purely observational. It's a molecular matter phenomenon. It spans from molecules all the way up to black holes, and then the things that contain black holes, like galactic clusters, galaxies, and things like that. 
-(3) the Infinity Point is arbitrarily large, instead of finite 
-n the typical gravitational time dilation calculations an "arbitrarily large" radius is used, which does not represent a finite radius
- that can compared with. 
-(4) Due to these prior misconceptions, the standard interpretation honors the notion that zero time dilation and complete time dilation are attainable states, and as such, a normalization mechanism is used to transform the time dilation to a range from 0 to 1. This normalization, at very least, suggests that 0 and 1 are attainable, which they are not. 
-(5) the standard interpretation considers the schwartschild radius to be the point of complete time dilation, time stoppage, which is an incorrect notion. The Schwarzschild radius is the radius at which the event horizon forms, and we can no longer see light emerging. But it does not in any way suggest that the system stops. Behind the event horizon, the system continues to contract. And its pace of time continues to slow relative to a static observer, until it reaches its limit of 1 at the singularity, r=0. But because this is an asymptotic limit, it will never be reached; it will be approached forever. These three general incorrect observations render the gravitational time dilation formula almost no quantitative value. 
-}
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: A universal scaling law is derived from isometric scaling principles in which the ratio of clock rates between any two physical systems equals the fifth root of the inverse ratio of their moments of inertia. This relationship is shown to be algebraically equivalent to the Schwarzschild gravitational time dilation formula of general relativity, with the equivalence mediated by a bridge equation containing a 2/5 exponent that decomposes exactly into the scaling law's dimensional exponent (1/5) multiplied by the quadratic factor (2) inherent in the Riemannian metric. The same framework, applied to linear inertia with a cube root (1/3) exponent, reproduces the Lorentz time dilation of special relativity with identical algebraic structure. General and special relativity are thereby unified as rotational and linear cases of a single inertial scaling principle, distinguished only by the type of inertia and its corresponding dimensionality. All equivalences are exact algebraic identities. No free parameters are introduced.}
 \end{tabular}
 
  \end{@twocolumnfalse} \vspace{0.6cm}
@@ -155,300 +145,240 @@ n the typical gravitational time dilation calculations an "arbitrarily large" ra
 \vspace{-1cm}
 %%%FOOTNOTES%%%
 \footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
-\footnotetext{\dag~Mr.\ DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S.\ in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado.}
+\footnotetext{\dag~Mr. DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S. in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado.}
+
 \section{Introduction}
+This paper presents a derivation connecting three formulas that each describe gravitational time dilation. The objective is to show they are mathematically equivalent expressions of a single physical relationship, and that the equivalence extends to special relativistic time dilation through a parallel structure.
 
+The work builds on the concept of inertial density and the DeGerlia threshold introduced in a prior paper \cite{degerlia2025}, which established that the Schwarzschild condition reduces to a constant threshold of mass over radius: $D_{crit} = c^2/2G \approx 6.733 \times 10^{26}$ kg/m.
 
-Gravitational time dilation describes how clocks at different gravitational potentials run at different rates. The standard formulation derived from the Schwarzschild metric is:
+\section{Introducing Inertial Relativity}
+\cite{degerlia2025universe, degerlia2025}
 
-gravitational time dilation, $T = \sqrt{1 - \frac{2GM}{rc^2}}$,
+Inertia is relativistic. Meaning that without a comparator, any measurement of it would have no meaning. Something with a moment of inertia $1 \times 10^{20}$ kg/m$^2$ would be very difficult to rotate. But not more difficult than something with $1 \times 10^{30}$ kg/m$^2$.
 
-\noindent where $\tau$ is proper time, $t$ is coordinate time for a distant observer, $r$ is the radial distance from the center of mass, and $r_s = 2GM/c^2$ is the Schwarzschild radius.
+From isometric scaling while maintaining constant density (constructive scaling), we know that a system's clock time relative to a static observing inertial frame of reference is proportional to the single dimension scale factor. So, if one takes a uniform sphere of 1 m in radius and 1 kg of mass and scales it up by a factor of two, the resulting system is 2 kg of mass with a radius of 2 m. That larger scale system has a mass that is the cube of the scale factor multiplied by the original mass, and would have a moment of inertia that is the fifth power of the scale factor times the original moment of inertia. Conservation of momentum gives the best representation of how changes in moment of inertia affect motion. So if our sphere were rotating at one meter per second initially, the scaled system would now be moving half of that (0.5 m/s) because of the $2^5=32\times$ increased moment of inertia.
 
-This formulation rests on a number of concepts that if used incorrectly, can produce significant problems with the results:
+\begin{align}
+l' &= kl \\
+&\quad \text{where } l \text{ is the characteristic length of the system,} \notag \\
+&\quad \text{and } k \text{ is the lineart scale factor} \notag \\
+m' &= k^3 \\
+&\quad \text{where mass is } m \text{ and } k \text{ is linear scale factor} \notag \\
+i' &= k^5i \\
+&\quad \text{where } i \text{ is the moment of inertia about a selected axis;} \notag \\
+&\quad k \text{ is the linear scale factor.} \notag \\
+i_{lin}' &= m' = k^3m \\
+&\quad \text{where } i_{lin} \text{ is linear inertia (mass);} \notag \\
+&\quad k \text{ is the limear scale factor.} \notag
+\end{align}
 
-\begin{enumerate}
-    \item General relativity states that time dilation is always relativistic. It is always a comparison between two physical systems with finite properties. However, the standard gravitational time dilation formula does not require the second radius. It infers an arbitrarily large one, which depending on the mass will be a different radius. To apply any form of 'arbitrarily large' results in a nonsensical reference point. This makes meaningful comparison of two time dilation factors is meaningless or impossible. One must always be comparing two systems with finite properties for a meaningful time dilation factor. A very small fraction can never be interpreted as zero, and a very large number can never be interpreted as infinity. 
-    \item Zero-time dilation and total-time dilation are unattainable states, they are asymptotic limits. It's a gradient through infinity. It approaches infinity on one end and zero on the other. To normalize in a way that legitimizes these very incorrect notions is an injustice to science.  The raw, unnormalized ratio of time paces is the real measure of time dilation. The normalized number is bad for a number of reasons, not the least of which is that it requires you to work with numbers extremely close to 1 or extremely close to 0.  It's not incorrect per se; it is correct, but it sends the wrong signals. which leads me to my next point, which is entirely different but touches on this.
-    \item The point of reference should be improved. Currently, the formula maps the Schwarzschild radius ($r_s$) to a zero-time condition ($T=0$), creating an artificial mathematical boundary at the event horizon. Ideally we can make the point of reference something that is consistent, and something that we understand, like Earth. If we used and reported time dilation relative to clock time at our scale, it would be very simple to say things like, "The pace of time on Mars is twice our pace of time on Earth. It's a factor of two." Hypothetically, of course.
-\end{enumerate}
-If addressed properly, the gravitational time violation figures can be meaningful and accurate. For example, if we always calculated the gravitational time violation relative to Earth, and if we wanted to know the International Space Station, we would simply calculate its gravitational time violation. That would give us its ratio to the surface of the Earth. You would expect a number just slightly over 1 in this case. And conceivably, if we're doing the math right, we should actually get a result that corresponds to the actual observed International Space Station time dilation factor. We perform this experiment below.
-\begin{enumerate}
-\item The coordinate time $t$ references an observer at $r \to \infty$, a theoretical abstraction that cannot be physically instantiated.
-\item T
-\end{enumerate}
+Because every change in length necessarily changes the systems mass, the first two formulas hold only for strict isometric scaling, the third abstracts mass and radius as moment of inertia. As we know, if we have two systems that share moment of inertia about any axis, than an identical torque applied to each system about that same axis, their respective Delta in motion will be identical, regardless of system geometry that arrived at that moment of inertia; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. We demonstrate the validity of the STE herein by demonstrating that general special relativity emerge. from this principle.
 
-Building on the framework of inertial density and DeGerlia Compactness introduced in prior work \cite{degerlia2025}, we propose a reformulation that eliminates these artifacts while preserving correlation with experimental observations in accessible regimes.
+\subsection{The space-time equivalene (STE)}
 
-\section{Problems with the Standard Formulation}
-
-\subsection{The Infinity Reference Problem}
-
-The standard formula expresses time dilation relative to an observer infinitely far from all gravitating masses ($r \to \infty$). However, infinity is not a physical location; strictly speaking, all physical comparisons must be between two finite systems. To use the standard formula in practice, one must effectively select an "arbitrarily large" radius to serve as the proxy for infinity.
-
-This selection introduces a fatal inconsistency. If we calculate the relative time dilation for an object at radius $r$ against two different "arbitrarily large" references, we obtain distinct physical predictions.
-
-\textbf{Proof of Inconsistency (Numeric Example):}
-Consider the Earth ($M \approx 5.972 \times 10^{24}$ kg, $r_s \approx 8.87$ mm). We seek the time dilation factor at the surface, $r = 6,371$ km.
-
-The formula for relative time dilation between $r$ and a reference $r_{ref}$ is:
-\begin{equation}
-\Delta T(r, r_{ref}) = \frac{\sqrt{1 - r_s/r}}{\sqrt{1 - r_s/r_{ref}}}
-\end{equation}
-
-If we attempt to approximate "infinity" with a finite reference:
-
-\textbf{Case A:} Let the "infinity proxy" be $10 \times$ Earth's radius ($r_{ref1} = 6.37 \times 10^7$ m).
-\begin{equation}
-\Delta T_A = \frac{0.999999999303}{0.999999999930} \approx 0.999999999373
-\end{equation}
-
-\textbf{Case B:} Let the "infinity proxy" be $100 \times$ Earth's radius ($r_{ref2} = 6.37 \times 10^8$ m).
-\begin{equation}
-\Delta T_B = \frac{0.999999999303}{0.999999999993} \approx 0.999999999310
-\end{equation}
-
-The results differ in the 10th decimal place. This is not a rounding error; it is a physical difference. The "absolute" time dilation value for Earth in standard GR is undetermined; it floats based on where one arbitrarily places the reference observer. Without a fixed physical benchmark (like Earth itself), the "value" is meaningless.
-
-\subsection{The Zero-Time Boundary Problem}
-
-At $r = r_s$, Equation \ref{eq:standard} yields:
+The relative pace of clock time between any two systems about any two select axes will be equal to 5th root of the inverse ratio of the two systems the moment of inertia about the select axes. \cite{degerlia2025universe}
 
 \begin{equation}
-T = \sqrt{1 - \frac{r_s}{r_s}} = \sqrt{0} = 0
+t_1/t_2=(i_2/i_1)^{(1/5)}
 \end{equation}
+where $i$ is moment of inertia about the axis of observation; $t$ is the clock time of the respective system system 1 and 2.
 
-For $r < r_s$:
+\section{Three Formulas}
 
+\subsection{Formula 1: Inertial Scaling Law}
 \begin{equation}
-T = \sqrt{1 - \frac{r_s}{r}} = \sqrt{\text{negative}} = \text{imaginary}
+T_1 / T_2 = (I_2 / I_1)^{(1/5)}
 \end{equation}
+Where $T_1$ and $T_2$ are the clock rates in two systems, and $I_1$ and $I_2$ are their moments of inertia about the axis connecting the two systems. The derivation of this formula from first principles is given in Section 3. For linear (non-rotational) systems, inertia reduces to mass and the exponent becomes 1/3.
 
-The Schwarzschild radius is the point at which escape velocity equals the speed of light---it defines the event horizon. It is not a point where time stops. Matter continues to exist and evolve inside the horizon; proper time continues for infalling observers. The singularity at $r = 0$, not $r = r_s$, is where general relativity predicts divergent curvature.
-
-By mapping $r_s$ to $T = 0$, the standard formula conflates the event horizon with the singularity and forecloses any calculation of time dilation for $r < r_s$. This is a mathematical artifact of the normalization scheme, not a physical truth.
-
-\subsection{The Relativity of Time Dilation}
-
-Time dilation is inherently relative. There is no universal clock against which absolute time rates can be measured. We can only compare the rate of one clock to another. The standard formula obscures this by presenting individual time dilation factors as if they were absolute quantities, when in fact each factor is implicitly relative to the undefined point at infinity.
-
-\section{Reformulation Using DeGerlia Compactness}
-
-\subsection{DeGerlia Compactness and the Threshold}
-
-DeGerlia Compactness \cite{degerlia2025} is defined as:
-
+\subsection{Formula 2: Inertial Density Ratio}
 \begin{equation}
-D = \frac{m}{r}
+x = (M/R) / (c^2/2G)
 \end{equation}
+The inertial density of a system ($M/R$, derived from reducing $I/V$ for a sphere) divided by the universal Schwarzschild threshold $c^2/2G$. This threshold represents the maximum possible inertial density before a system becomes a black hole.
 
-\noindent with units of kg/m. The DeGerlia Threshold, the compactness at which a spherical system forms an event horizon, is:
-
+\subsection{Formula 3: Schwarzschild Time Dilation}
 \begin{equation}
-D_{crit} = \frac{c^2}{2G} = 6.73295 \times 10^{26} \text{ kg/m}
+d\tau/dt = \sqrt{1 - r_s/r}
 \end{equation}
+The standard gravitational time dilation from general relativity, where $r_s = 2GM/c^2$ is the Schwarzschild radius.
 
-This threshold is derived directly from the Schwarzschild condition $r = r_s = 2Gm/c^2$:
+\section{Derivation of the Inertial Scaling Law}
+Formula 1 is derived from three premises.
 
-\begin{equation}
-D_{crit} = \frac{m}{r_s} = \frac{m}{\frac{2Gm}{c^2}} = \frac{c^2}{2G}
-\end{equation}
-
-\subsection{The Linear Time Dilation Formula}
-
-We propose replacing the normalized formula with a simple ratio:
-
-\begin{equation}
-T = \frac{r}{r_s}
-\label{eq:new}
-\end{equation}
-
-This formula has the following properties:
-
+\subsection{Premise 1: Fifth-Power Scaling Under Isometry}
+Consider two systems that are isometrically scaled copies of each other: identical in shape and composition, differing only in size. Let all lengths scale by a factor $\lambda$. At constant density:
 \begin{itemize}
-\item At $r = 0$: $T = 0$ (the singularity)
-\item At $r = r_s$: $T = 1$ (the event horizon)
-\item At $r = \infty$: $T = \infty$ (flat spacetime limit)
-\item For all $r > 0$: $T$ is real and computable
+\item Mass scales as volume: $M \propto \lambda^3$
+\item Radius scales as length: $R \propto \lambda$
+\item Moment of inertia: $I = kMR^2 \propto \lambda^3 \cdot \lambda^2 = \lambda^5$
 \end{itemize}
-
-The Schwarzschild radius is no longer a boundary where the formula breaks. It is simply the point on the curve where $T = 1$.
-
-\subsection{Expressing Time Dilation in Terms of Inertial Density}
-
-Using the relationship $D = m/r$ and recognizing that at the Schwarzschild radius $D = D_{crit}$:
-
+The moment of inertia scales as the fifth power of the characteristic length. Inverting:
 \begin{equation}
-T = \frac{r}{r_s} = \frac{m/r_s}{m/r} = \frac{D_{crit}}{D_{location}}
+\lambda_2/\lambda_1 = (I_2/I_1)^{(1/5)}
 \end{equation}
 
+\subsection{Premise 2: Completeness of Moment of Inertia}
+The moment of inertia $I$ fully characterizes a system's resistance to rotational acceleration. Two systems with identical moments of inertia about the same axis, regardless of their respective geometries, respond identically to the same applied torque. This is the definition of moment of inertia: it is the sufficient and complete description of rotational dynamics. No other quantity --- not mass, not radius, not shape --- adds information beyond what $I$ already contains.
+
+\subsection{Premise 3: All Clocks Are Dynamical Systems}
+Every physical clock --- atomic, mechanical, biological, or otherwise --- is a dynamical system that counts cycles of a physical process. There is no clock that operates independently of dynamics. An atomic clock counts oscillations of an electromagnetic transition. A pendulum clock counts oscillations governed by gravity. A pulsar's period is set by its rotational dynamics. In every case, the rate of the clock is the rate of the underlying dynamical process.
+
+General relativity does not dispute this. GR describes how spacetime geometry governs the rates of dynamical processes. But the claim that geometry governs dynamics and the claim that inertial content governs dynamics are not in conflict --- they are two descriptions of the same determination. GR encodes the inertial content of a system into the metric tensor, which then governs clock rates through the geometric formalism. The scaling law encodes the same inertial content directly, without the geometric intermediary.
+
+The identification of clock rate with dynamical timescale under inertial scaling is therefore not an approximation or a limiting case. If all clocks are dynamical, and all dynamics are governed by inertia, then clock rates are inertial observables. The remaining question is whether the specific scaling relationship --- the fifth root --- reproduces the correct values. This is answered by the algebra in Sections 4 through 8: it does, exactly.
+
+\subsection{The Scaling Law}
+Under isometric scaling at constant density, all dynamical timescales in a system --- orbital periods, oscillation periods, free-fall times --- scale with the characteristic length $\lambda$. By Premise 3, clock rates scale identically, because every clock is a dynamical system. By Premise 1, $\lambda = (I_2/I_1)^{(1/5)}$. Therefore:
+\begin{equation}
+T_1/T_2 = \lambda_2/\lambda_1 = (I_2/I_1)^{(1/5)}
+\end{equation}
+
+\subsection{Universality}
+The extension from isometrically scaled systems to all systems follows from Premise 2. Because $I$ fully determines rotational response to applied torque, two systems with the same $I$ are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same $I$ exhibit the same rotational physics. Since clock rate is a dynamical observable (Premise 3), it cannot depend on geometric details that $I$ has already absorbed.
+
+The fifth root relationship therefore holds universally: for any two systems, the ratio of their clock rates is the fifth root of the inverse ratio of their moments of inertia. Premise 1 establishes the exponent. Premise 2 establishes universality. Premise 3 establishes that clock rates are within the domain of dynamical scaling.
+
+\subsection{Linear Case}
+For linear (non-rotational) systems, the relevant inertia is mass alone. Mass has three dimensions of length-equivalent content ($M \propto \rho V \propto \lambda^3$). The corresponding scaling law is:
+\begin{equation}
+T_1/T_2 = (m_2/m_1)^{(1/3)}
+\end{equation}
+
+\subsection{Status of the Premises}
+Premises 1 and 2 are standard results of classical mechanics. They are not novel claims. Premise 3 --- that all clock rates are reducible to dynamical rates governed by inertial content --- is the central hypothesis of this work. It is not derived from general relativity or from any prior framework. It is a physical assertion about the nature of time measurement.
+
+The hypothesis is justified by its consequences. Combined with Premises 1 and 2, it produces a scaling law that reproduces both Schwarzschild and Lorentz time dilation as exact algebraic identities, with no free parameters. Any framework that begins from a different premise about clock rates must still account for the fact that this one closes exactly. The algebraic equivalence demonstrated in Sections 4 through 8 is independent of whether one accepts the premise; the equivalence holds as a mathematical identity regardless of its physical interpretation.
+
+\section{Establishing the Identity of Formulas 2 and 3}
+The Schwarzschild radius is $r_s = 2GM/c^2$. The ratio $r_s/r$ that appears inside the Schwarzschild formula is therefore:
+\begin{equation}
+r_s/r = 2GM / (c^2r)
+\end{equation}
+This can be factored as:
+\begin{equation}
+r_s/r = (2G/c^2) \times (M/R)
+\end{equation}
+The reciprocal of $2G/c^2$ is $c^2/2G$ --- the Schwarzschild threshold from Formula 2. Therefore:
+\begin{equation}
+r_s/r = (M/R) / (c^2/2G) = x
+\end{equation}
+This is an algebraic identity, not an approximation. Formula 2 and the quantity inside Formula 3 are the same expression. The Schwarzschild time dilation can be written:
+\begin{equation}
+d\tau/dt = \sqrt{1 - x}
+\end{equation}
+where $x$ is the inertial density ratio from Formula 2.
+
+\section{Origin of the ``1 Minus''}
+The ``1'' in the expression $(1 - x)$ represents flat spacetime: zero gravitational influence. It is an idealization. No location in the physical universe has exactly zero gravitational influence. Its function is as a normalization baseline --- the reference point from which deviation is measured.
+
+When $x$ is small (weak gravity), the expression is close to 1 and time flows at nearly the reference rate. When $x$ approaches 1 (inertial density approaching the Schwarzschild threshold), time dilation becomes extreme. At $x = 1$, the expression goes to zero: this is the event horizon of a black hole.
+
+The ``1 minus'' structure encodes: ``start with the ideal reference rate, subtract the fraction of the inertial budget consumed.'' The result is the fraction of reference time that remains.
+
+\section{Origin of the Square Root}
+The square root arises from Einstein's choice of mathematical framework. General relativity is built on Riemannian geometry, in which the fundamental object is the metric tensor $g_{\mu\nu}$. The metric tensor defines a quadratic form:
+\begin{equation}
+ds^2 = g_{\mu\nu} dx^\mu dx^\nu
+\end{equation}
+This quadratic structure is not arbitrary. It is the unique norm that preserves distances under rotation (rotational invariance). Squaring eliminates sign dependence: moving left or right, forward or backward in time, contributes identically to the interval. Absolute value would also eliminate sign, but is not differentiable at zero, making the entire apparatus of differential geometry and tensor calculus inoperable.
+
+Because the metric outputs $ds^2$ (the squared interval), all solutions to Einstein's field equations, including Schwarzschild's, inherit this quadratic form. The Schwarzschild solution for a stationary clock is:
+\begin{equation}
+d\tau^2 = (1 - r_s/r) dt^2
+\end{equation}
+The square root is taken to recover the physical observable (the actual ratio of clock rates) from this squared quantity:
+\begin{equation}
+d\tau/dt = \sqrt{1 - r_s/r}
+\end{equation}
+The quadratic form is Einstein's architectural contribution. Schwarzschild's contribution was solving for the specific values of the metric components. The square root is the exit from Einstein's quadratic formalism back to a directly measurable quantity.
+
+\section{Connecting Formula 1 to Formulas 2 and 3}
+Both Formula 1 and Formula 3 produce the time dilation factor. Setting them equal:
+\begin{equation}
+(I_2/I_1)^{(1/5)} = \sqrt{1 - x}
+\end{equation}
+where $x = (M/R)/(c^2/2G)$ from Formula 2.
+Squaring both sides to remove the square root:
+\begin{equation}
+(I_2/I_1)^{(2/5)} = 1 - x
+\end{equation}
+Rearranging:
+\begin{equation}
+x = 1 - (I_2/I_1)^{(2/5)}
+\end{equation}
 Or equivalently:
-
 \begin{equation}
-T = \frac{6.73295 \times 10^{26}}{D_{location}}
+(M/R) / (c^2/2G) = 1 - (I_2/I_1)^{(2/5)}
 \end{equation}
+This is the bridge equation. It states: the Schwarzschild ratio (the fraction of the universal inertial density threshold consumed by the system) equals the complement of the inertial ratio raised to the 2/5 power.
 
-Higher DeGerlia Compactness (more compressed system) yields lower $T$ (slower time). The relationship is linear and invertible.
+\subsection{The 2/5 Exponent}
+The exponent 2/5 is not arbitrary. It is the product of two factors: the 1/5 from the inertial scaling law (five inertial dimensions: mass contributes three via density, $R^2$ contributes two), multiplied by 2 from the quadratic structure of the metric. The quadratic metric is what converts the direct 1/5 scaling exponent into 2/5 when the relationship is expressed in Einstein's geometric formalism.
 
-Note that this formulation is the only methodology that permits calculation beyond the event horizon. The standard metric involves the term $(1 - r_s/r)$, which becomes negative for $r < r_s$. By utilizing exclusively the inertial density concept ($D = m/r$), we avoid this mathematical breakdown, ensuring that all radii yield valid, positive time dilation factors.
+The ``1 minus'' and the square root in Schwarzschild's expression are therefore not independent physical operations. They are the cost of expressing a direct inertial scaling ratio through a quadratic geometric formalism. Formula 1 states the relationship directly. Formula 3 states the same relationship refracted through Einstein's architecture.
 
-\subsection{Anchoring to Earth}
+\subsection{Scope and Sufficiency}
+The Schwarzschild formula is itself a solution to Einstein's field equations. It is the exact, closed-form solution for the gravitational time dilation of a stationary clock at radial coordinate $r$ from a static, spherically symmetric mass. The algebraic identity demonstrated in this section --- that the inertial scaling law reproduces the Schwarzschild result exactly --- therefore constitutes equivalence with the field equation solution for this case, without requiring independent derivation from the field equations themselves. Algebraic equivalence with a solution is equivalence with the equations that produced it. This follows by transitivity.
 
-Since time dilation is relative, we require a reference point. We select Earth's surface:
+The claim of this paper is not that the scaling law reproduces every solution to Einstein's field equations. The field equations address a broad range of phenomena --- rotating masses (Kerr), charged masses (Reissner-Nordström), cosmological backgrounds (de Sitter), gravitational radiation, and the full nonlinear dynamics of strong-field gravity. The scaling law addresses one specific relationship: the ratio of clock rates between two systems as a function of their inertial content. For this relationship, the Schwarzschild solution is the exact GR benchmark. The equivalence demonstrated here is exact for this benchmark.
 
-\begin{align}
-r_{Earth} &= 6.371 \times 10^{6} \text{ m}\\
-M_{Earth} &= 5.972 \times 10^{24} \text{ kg}\\
-r_{s,Earth} &= \frac{2GM_{Earth}}{c^2} = 8.870 \times 10^{-3} \text{ m}\\
-D_{Earth} &= \frac{M_{Earth}}{r_{Earth}} = 9.374 \times 10^{17} \text{ kg/m}\\
-T_{Earth} &= \frac{r_{Earth}}{r_{s,Earth}} = 7.184 \times 10^{8}
-\end{align}
+This is the standard by which any new result in physics is evaluated: does it reproduce the known, exact, tested solution for the case it addresses? The Schwarzschild solution itself was presented in 1916 for a single configuration --- static, spherically symmetric, vacuum --- and was not considered incomplete or insufficiently general for that reason. Extensions to rotation (Kerr, 1963), charge (Reissner, 1916; Nordström, 1918), and other configurations followed as separate results, each evaluated on its own terms. The same standard applies here. The scaling law reproduces Schwarzschild exactly. Extensions to more complex configurations are subjects for future work.
 
-All time dilation values are expressed as ratios to $T_{Earth}$:
+Furthermore, demanding that a result be re-derived from the field equations in order to be accepted inverts the normal logic of mathematical proof. The field equations are a starting point from which solutions are derived. The Schwarzschild formula is one such solution. If a new expression is shown to be algebraically identical to that solution, the equivalence is established. Requiring the new expression to independently re-derive the field equations, or to independently solve them, imposes a standard that the Schwarzschild solution itself does not meet in reverse --- one cannot recover the full field equations from the Schwarzschild solution alone, yet no one disputes that Schwarzschild is a valid solution. Equivalence with a solution is sufficient. It is, in fact, the definition of equivalence.
 
+\section{Extension to Special Relativity}
+In special relativity, motion is linear rather than rotational. Linear inertia is mass alone (no $R^2$ component). Mass has three dimensions of length-equivalent content (mass = density $\times$ volume, volume = length$^3$). Extracting linear scale therefore requires a cube root, not a fifth root:
 \begin{equation}
-\frac{T_{location}}{T_{Earth}} = \frac{D_{Earth}}{D_{location}} = \frac{9.374 \times 10^{17}}{D_{location}}
-\label{eq:relative}
+T_1/T_2 = (m_2/m_1)^{(1/3)}
 \end{equation}
-
-\begin{itemize}
-\item Ratio $< 1$: slower time than Earth (higher compactness)
-\item Ratio $= 1$: Earth surface
-\item Ratio $> 1$: faster time than Earth (lower compactness)
-\end{itemize}
-
-\section{Example Calculations}
-
-\subsection{Earth at its Schwarzschild Radius}
-
-If Earth were compressed to its Schwarzschild radius ($r = 8.870 \times 10^{-3}$ m):
-
-\begin{align}
-D &= \frac{5.972 \times 10^{24}}{8.870 \times 10^{-3}} = 6.733 \times 10^{26} \text{ kg/m} \approx D_{crit}\\
-T &= 1\\
-\frac{T}{T_{Earth}} &= \frac{1}{7.184 \times 10^{8}} = 1.392 \times 10^{-9}
-\end{align}
-
-Time at Earth's Schwarzschild radius runs at $1.392 \times 10^{-9}$ the pace of time at Earth's surface.
-
-\subsection{Comparison at $\frac{4}{3}r_s$ and $\frac{2}{3}r_s$}
-
-The standard formula gives $T = 0.5$ at $r = \frac{4}{3}r_s$ (sometimes called ``half-time'') and fails entirely at $r = \frac{2}{3}r_s$.
-
-Using the new formula:
-
-At $r = \frac{4}{3}r_s$:
+The Lorentz time dilation factor in special relativity is:
 \begin{equation}
-T = \frac{\frac{4}{3}r_s}{r_s} = \frac{4}{3} = 1.333
+d\tau/dt = \sqrt{1 - v^2/c^2}
 \end{equation}
-
-At $r = \frac{2}{3}r_s$:
+Setting these equal and squaring:
 \begin{equation}
-T = \frac{\frac{2}{3}r_s}{r_s} = \frac{2}{3} = 0.667
+(m_2/m_1)^{(2/3)} = 1 - v^2/c^2
 \end{equation}
-
-The ratio between them:
+Rearranging:
 \begin{equation}
-\frac{T_{4/3}}{T_{2/3}} = \frac{1.333}{0.667} = 2
+v^2/c^2 = 1 - (m_2/m_1)^{(2/3)}
 \end{equation}
+The structure is identical to the general relativity case. The only difference is the exponent: 2/3 instead of 2/5. This difference is fully accounted for by the number of inertial dimensions --- three for linear inertia, five for rotational.
 
-Time at $\frac{4}{3}r_s$ runs at exactly twice the rate of time at $\frac{2}{3}r_s$. The relationship is linear.
+\subsection{Parallel Structure}
+GR:  $\sqrt{1 - (M/R)/(c^2/2G)}  \leftrightarrow  (I_2/I_1)^{(1/5)}$    [rotational, 5 dimensions]
 
-\subsection{Hypothetical Neutron Star}
+SR:  $\sqrt{1 - v^2/c^2}  \leftrightarrow  (m_2/m_1)^{(1/3)}$    [linear, 3 dimensions]
 
-Using the neutron star from \cite{degerlia2025} with $m = 1.000 \times 10^{30}$ kg and $r = 1.980 \times 10^{3}$ m:
+Special and general relativity are two cases of a single inertial scaling law:
+\begin{equation}
+T_1/T_2 = (I_2/I_1)^{(1/n)}
+\end{equation}
+where $n = 5$ for rotational inertia (general relativity) and $n = 3$ for linear inertia (special relativity). The distinction between the two theories maps directly onto the distinction between rotational and linear inertia. They differ by the $R^2$ component of moment of inertia and by nothing else.
 
-\begin{align}
-D &= \frac{1.000 \times 10^{30}}{1.980 \times 10^{3}} = 5.051 \times 10^{26} \text{ kg/m}\\
-\frac{T}{T_{Earth}} &= \frac{9.374 \times 10^{17}}{5.051 \times 10^{26}} = 1.856 \times 10^{-9}
-\end{align}
+\section{Summary of Results}
+Three formulas were shown to be mathematically equivalent expressions of gravitational time dilation:
+Inertial Scaling Law: $T_1/T_2 = (I_2/I_1)^{(1/5)}$ gives the time dilation factor directly as a ratio of inertial properties, derived from isometric scaling, the completeness of moment of inertia, and the identification of clock rates as dynamical observables governed by inertial content.
 
-Time at the neutron star surface runs at $1.856 \times 10^{-9}$ the pace of Earth time.
+Inertial Density Ratio: $x = (M/R)/(c^2/2G)$ gives the fraction of the universal Schwarzschild threshold consumed by the system, and is algebraically identical to $r_s/r$.
 
-\subsection{Below the Schwarzschild Radius}
+Schwarzschild Formula: $d\tau/dt = \sqrt{1 - x}$ gives the time dilation factor through Einstein's quadratic geometric formalism.
 
-For a system at $r = 0.5 \cdot r_s$:
+The bridge equation connecting them is:
+\begin{equation}
+(M/R)/(c^2/2G) = 1 - (I_2/I_1)^{(2/5)}
+\end{equation}
+The ``1 minus'' in Schwarzschild's formula represents the complement of the inertial ratio. The square root is the exit from the quadratic metric formalism. The 2/5 exponent is the product of the 1/5 scaling exponent and the factor of 2 from the quadratic metric.
 
-\begin{align}
-T &= \frac{0.5 \cdot r_s}{r_s} = 0.5\\
-\frac{T}{T_{Earth}} &= \frac{0.5}{7.184 \times 10^{8}} = 6.96 \times 10^{-10}
-\end{align}
+The same framework extends to special relativity with a cube root (1/3) replacing the fifth root (1/5), corresponding to linear inertia (3 dimensions) replacing rotational inertia (5 dimensions). This unifies special and general relativity as two cases of a single inertial scaling law, distinguished only by the type of inertia involved.
 
-For a system at $r = 0.1 \cdot r_s$:
-
-\begin{align}
-T &= 0.1\\
-\frac{T}{T_{Earth}} &= \frac{0.1}{7.184 \times 10^{8}} = 1.392 \times 10^{-10}
-\end{align}
-
-The formula continues to produce real, computable values for all $r > 0$.
-
-\section{Comparison of Formulations}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{lcc}
-\toprule
-\textbf{Location} & \textbf{Standard Formula} & \textbf{New Formula ($T$)}\\
-\midrule
-$r = 2r_s$ & $\sqrt{0.5} = 0.707$ & $2$\\
-$r = \frac{4}{3}r_s$ & $\sqrt{0.25} = 0.5$ & $1.333$\\
-$r = r_s$ & $0$ & $1$\\
-$r = \frac{2}{3}r_s$ & imaginary & $0.667$\\
-$r = 0.5r_s$ & imaginary & $0.5$\\
-$r = 0.1r_s$ & imaginary & $0.1$\\
-$r \to 0$ & undefined & $\to 0$\\
-\bottomrule
-\end{tabular}
-\caption{Comparison of standard and reformulated time dilation values}
-\label{tab:comparison}
-\end{table}
-
-The standard formula produces values between 0 and 1 for the region $r_s < r < \infty$, normalized against fictional endpoints. The new formula produces values from 0 to $\infty$ across the full range $0 < r < \infty$, with no normalization artifacts.
-
-\section{Discussion}
-
-\subsection{Correlation with Observations}
-
-All experimental measurements of gravitational time dilation occur in weak-field regimes far above the Schwarzschild radius. In these regimes, both formulations yield consistent relative comparisons between finite locations. The GPS system, for example, corrects for the time dilation difference between Earth's surface and satellite altitude---a ratio that both formulations compute identically.
-
-The divergence between formulations becomes significant only near and below the Schwarzschild radius, a regime not directly accessible to current experiments.
-
-\subsection{Conceptual Clarity}
-
-The reformulation provides several conceptual advantages:
-
-\begin{enumerate}
-\item \textbf{No fictional reference points}: All calculations reference measurable locations.
-\item \textbf{Linear relationship}: Time dilation scales linearly with radius, simplifying intuition and computation.
-\item \textbf{Continuous domain}: The formula applies for all $r > 0$ without discontinuities or imaginary values.
-\item \textbf{Explicit relativity}: By anchoring to Earth, the formulation makes explicit that time dilation is always relative to some reference.
-\end{enumerate}
-
-\subsection{Physical Interpretation}
-
-The Schwarzschild radius marks where escape velocity equals $c$
-
-a communication boundary, not a time boundary. The reformulation treats it accordingly: as a point on a continuous curve ($T = 1$) rather than an edge where time ``stops.''
-
-The singularity at $r = 0$ remains the point where $T \to 0$, consistent with the expectation that general relativity breaks down at this point.
-
-\section{Conclusion}
-
-The standard gravitational time dilation formula contains normalization artifacts that limit its domain and obscure its relational nature. By reformulating time dilation in terms of DeGerlia Compactness, we obtain a linear model that:
-
-\begin{enumerate}
-\item Eliminates the undefined infinity reference
-\item Removes the false zero-time boundary at the Schwarzschild radius
-\item Extends to all radii $r > 0$ with real, computable values
-\item Makes explicit the relational nature of time dilation through a defined empirical reference (Earth)
-\end{enumerate}
-
-The formula $T = r/r_s$, combined with the reference value $T_{Earth} = 7.184 \times 10^{8}$, provides a complete framework for computing relative time dilation across any gravitational environment, including regimes where the classical formula fails.
+The derivation rests on three premises: two from classical mechanics (isometric scaling and the completeness of moment of inertia) and one hypothesis (that all clock rates are dynamical rates governed by inertial content). The algebraic equivalences hold as mathematical identities regardless of whether the hypothesis is accepted. The hypothesis is justified by the fact that it produces exact agreement with both Schwarzschild and Lorentz time dilation, with no free parameters. The equivalence with Schwarzschild constitutes equivalence with the field equation solution by transitivity, and is evaluated against the same standard applied to the Schwarzschild solution itself: exact agreement for the configuration it addresses.
 
 %%%REFERENCES%%%
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
-\bibliographystyle{rsc} %the RSC's .bst file
+\bibliographystyle{unsrt} %Numeric style [1]
 \balance
 \clearpage
 \end{document}
