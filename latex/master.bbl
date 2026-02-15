@@ -14,4 +14,22 @@ T.~D. DeGerlia.
 \newblock {\em ResearchHub}, 2025.
 \newblock DOI: 10.55277/ResearchHub.pi9yjshm.
 
+\bibitem{goldstein1980}
+H.~Goldstein.
+\newblock {\em Classical Mechanics}.
+\newblock Addison-Wesley, 2nd edition, 1980.
+
+\bibitem{einstein1915}
+A.~Einstein.
+\newblock Die feldgleichungen der gravitation.
+\newblock {\em Sitzungsberichte der Königlich Preußischen Akademie der
+  Wissenschaften (Berlin)}, pages 844--847, 1915.
+
+\bibitem{schwarzschild1916radius}
+K.~Schwarzschild.
+\newblock Über das gravitationsfeld eines massenpunktes nach der einsteinschen
+  theorie.
+\newblock {\em Sitzungsberichte der Königlich Preußischen Akademie der
+  Wissenschaften (Berlin)}, pages 189--196, 1916.
+
 \end{thebibliography}
