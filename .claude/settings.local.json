@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pdflatex:*)"
+      "Bash(pdflatex:*)",
+      "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && latexmk -pdf master.tex 2>&1)"
     ]
   }
 }

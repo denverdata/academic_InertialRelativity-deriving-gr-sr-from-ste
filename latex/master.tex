@@ -133,6 +133,8 @@
  \vspace{0.3cm} & \vspace{0.3cm} \\
 \includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE), states that there is a universal mathematical relationship between space, time, and matter: The ratio of clock rates between any two physical systems about ANY resxpecrtive axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes. We've demonstrated this universality by arriving at General Realtivity calculations with exact precision utilizing only principles of relativistic inertia [ref]. This paper closes the loop by demonstrtating Inertial Relativity's mathematical relationship with General and Special Relativity. We demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we will demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the exact same time dilation, one at the extremes of velocity and the other at the extremes of mass, thus unifying the two under a single universal framework: The Theory of Inertial Relativity.}
 
+\end{tabular}
+
  \end{@twocolumnfalse} \vspace{0.6cm}
 
   ]
@@ -156,8 +158,8 @@ Inertia is relativistic. Meaning that without a comparator, any measurement of i
 
 \subsection{The space-time equivalence (STE)}
 The STE is the core universal equivalence stated by Inertial Relativity.
-\begin{equation}
-T_1/T_2 = (I_2/I_1)^{(1/5)}                                                                         
+\begin{equation} \label{eq:ste}
+T_1/T_2 = (I_2/I_1)^{(1/5)}
 \end{equation}
 where $T_1$ and $T_2$ are the clock rates in two systems, and $I_1$ and $I_2$ are their moments of inertia about the axis connecting the two systems.
 For linear (non-rotational) systems, inertia reduces to mass and the exponent becomes 1/3:
@@ -246,31 +248,7 @@ d\tau/dt = \sqrt{1 - x}
 \end{equation}
 where $x$ is the inertial density ratio from Formula 2.
 
-\section{Origin of the ``1 Minus''}
-The ``1'' in the expression $(1 - x)$ represents flat spacetime: zero gravitational influence. It is an idealization. No location in the physical universe has exactly zero gravitational influence. Its function is as a normalization baseline --- the reference point from which deviation is measured.
-
-When $x$ is small (weak gravity), the expression is close to 1 and time flows at nearly the reference rate. When $x$ approaches 1 (inertial density approaching the Schwarzschild threshold), time dilation becomes extreme. At $x = 1$, the expression goes to zero: this is the event horizon of a black hole.
-
-The ``1 minus'' structure encodes: ``start with the ideal reference rate, subtract the fraction of the inertial budget consumed.'' The result is the fraction of reference time that remains.
-
-\section{Origin of the Square Root}
-The square root arises from Einstein's choice of mathematical framework. General relativity is built on Riemannian geometry \cite{einstein1915}, in which the fundamental object is the metric tensor $g_{\mu\nu}$. The metric tensor defines a quadratic form:
-\begin{equation}
-ds^2 = g_{\mu\nu} dx^\mu dx^\nu
-\end{equation}
-This quadratic structure is not arbitrary. It is the unique norm that preserves distances under rotation (rotational invariance). Squaring eliminates sign dependence: moving left or right, forward or backward in time, contributes identically to the interval. Absolute value would also eliminate sign, but is not differentiable at zero, making the entire apparatus of differential geometry and tensor calculus inoperable.
-
-Because the metric outputs $ds^2$ (the squared interval), all solutions to Einstein's field equations, including Schwarzschild's, inherit this quadratic form. The Schwarzschild solution for a stationary clock is \cite{schwarzschild1916radius}:
-\begin{equation}
-d\tau^2 = (1 - r_s/r) dt^2
-\end{equation}
-The square root is taken to recover the physical observable (the actual ratio of clock rates) from this squared quantity:
-\begin{equation}
-d\tau/dt = \sqrt{1 - r_s/r}
-\end{equation}
-The quadratic form is Einstein's architectural contribution. Schwarzschild's contribution was solving for the specific values of the metric components. The square root is the exit from Einstein's quadratic formalism back to a directly measurable quantity.
-
-\section{Connecting Formula 1 to Formulas 2 and 3}
+\section{Connecting Inertial Relativity with General Relativity.}
 Both Formula 1 and Formula 3 produce the time dilation factor. Setting them equal:
 \begin{equation}
 (I_2/I_1)^{(1/5)} = \sqrt{1 - x}
@@ -290,7 +268,7 @@ Or equivalently:
 \end{equation}
 This is the bridge equation. It states: the Schwarzschild ratio (the fraction of the universal inertial density threshold consumed by the system) equals the complement of the inertial ratio raised to the 2/5 power.
 
-\section{Extension to Special Relativity}
+\section{Connecting Inertial Relativity to Special Relativity}
 In special relativity, motion is linear rather than rotational. Linear inertia is mass alone (no $R^2$ component). Mass has three dimensions of length-equivalent content (mass = density $\times$ volume, volume = length$^3$). Extracting linear scale therefore requires a cube root, corresponding to the linear scaling relationship established in Eq. (\ref{eq:linear}).
 The Lorentz time dilation factor in special relativity is:
 \begin{equation} 
@@ -317,7 +295,7 @@ T_1/T_2 = (I_2/I_1)^{(1/n)}
 \end{equation}
 where $n = 5$ for rotational inertia (general relativity) and $n = 3$ for linear inertia (special relativity). The distinction between the two theories maps directly onto the distinction between rotational and linear inertia. They differ by the $R^2$ component of moment of inertia and by nothing else.
 
-\section{Summary of Results}
+\section{Analysis and Conclusion}
 Three formulas were shown to be mathematically equivalent expressions of gravitational time dilation:
 
 Inertial Scaling Law:
