@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex master"] 1772044815.61866 "master.aux" "master.bbl" "master" 1772044817.14829 0
+["bibtex master"] 1772044815.61866 "master.aux" "master.bbl" "master" 1772045303.41458 0
   "./rsc.bib" 1771178748.40591 1420 3b8dc49d2358074fb96da75aa0865ab1 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "master.aux" 1772044816.76755 2859 dc7c8c224819c438c00686c42105361b "pdflatex"
+  "master.aux" 1772045302.99564 2859 dc7c8c224819c438c00686c42105361b "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1772044815.73092 "master.tex" "master.pdf" "master" 1772044817.14842 0
+["pdflatex"] 1772045301.92549 "master.tex" "master.pdf" "master" 1772045303.41469 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -35,6 +35,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecss1200.tfm" 1136768653 3584 db562fb1d1c474cc55f0ce8a1dd94fe7 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecss1440.tfm" 1136768653 3584 861af00b50f6fb3ae4544a29a04a7577 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecsx1440.tfm" 1136768653 3584 9bd2baa3a21be3460ad52867ca0084f1 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt0900.tfm" 1136768653 1536 ae7aab2f8a4bc9edfce2899f53ba88c3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -55,6 +56,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb" 1215737283 94269 4665f0d253cc3cca9439f89dbf2b9f33 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb" 1215737283 95792 fb800ffa2babe7bd5fafc1817d8f1313 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb" 1215737283 148301 cb90e68db88ca98c49afbaaab3ac1967 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb" 1215737283 170827 2e4b634de7b58578eae1dc93e51dfe48 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb" 1136849748 33709 b09d2e140b7e807d3a97058263ab6693 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1136849748 46026 6dab18b61c907687b520c72847215a68 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1136849748 45458 a3faba884469519614ca56ba5f6b1de1 ""
@@ -106,6 +108,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty" 1717359999 5275 b64d8404d74d2860b9c6558239dd0784 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo" 1717359999 8448 358bf3de18513f057a13bdc6e6770c41 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmss.fd" 1705352648 2641 f059c00335e1e219508c90dedd0f4e3a ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd" 1705352648 2443 790016d75def8d3127df5c216a45abcc ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty" 1579038678 6078 f1cb470c9199e7110a27851508ed7a5c ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
@@ -190,10 +193,10 @@
   "head_foot/RSC_LOGO_CMYK.pdf" 1758679034.72975 3882 1c275bdec27de50f33adb025e8e539e9 ""
   "head_foot/dates.pdf" 1758679034.95232 3060 15458cf08a6acf8816b20dec25e4dbd0 ""
   "head_foot/dec.pdf" 1758679034.6162 7421 f4b27393c7ca5b921d84f648393f46e8 ""
-  "master.aux" 1772044816.76755 2859 dc7c8c224819c438c00686c42105361b "pdflatex"
+  "master.aux" 1772045302.99564 2859 dc7c8c224819c438c00686c42105361b "pdflatex"
   "master.bbl" 1772044815.72763 310 167f62b3dd2418b328b3f97da2725768 "bibtex master"
-  "master.out" 1772044816.76852 3071 b7162bf71f784a8562111f8fb44a236f "pdflatex"
-  "master.tex" 1772044801.97527 19477 abf81c6d66f60810910ef5ff4339001a ""
+  "master.out" 1772045302.99622 3071 b7162bf71f784a8562111f8fb44a236f "pdflatex"
+  "master.tex" 1772045291.92314 19672 2b97cb2ad462ad507009006f3b4f9af0 ""
   (generated)
   "master.aux"
   "master.log"
