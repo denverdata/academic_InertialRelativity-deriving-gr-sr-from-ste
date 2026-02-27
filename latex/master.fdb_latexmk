@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex master"] 1772044815.61866 "master.aux" "master.bbl" "master" 1772045303.41458 0
-  "./rsc.bib" 1771178748.40591 1420 3b8dc49d2358074fb96da75aa0865ab1 ""
+["bibtex master"] 1772158068.97726 "master.aux" "master.bbl" "master" 1772158070.52136 0
+  "./rsc.bib" 1772046054.69565 1611 af234034a61b0e3329919b892466db71 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "master.aux" 1772045302.99564 2859 dc7c8c224819c438c00686c42105361b "pdflatex"
+  "master.aux" 1772158070.1663 3414 1891506b909d3bb6cca5fe44770f00b4 "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1772045301.92549 "master.tex" "master.pdf" "master" 1772045303.41469 0
+["pdflatex"] 1772158069.12029 "master.tex" "master.pdf" "master" 1772158070.52152 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -193,10 +193,11 @@
   "head_foot/RSC_LOGO_CMYK.pdf" 1758679034.72975 3882 1c275bdec27de50f33adb025e8e539e9 ""
   "head_foot/dates.pdf" 1758679034.95232 3060 15458cf08a6acf8816b20dec25e4dbd0 ""
   "head_foot/dec.pdf" 1758679034.6162 7421 f4b27393c7ca5b921d84f648393f46e8 ""
-  "master.aux" 1772045302.99564 2859 dc7c8c224819c438c00686c42105361b "pdflatex"
-  "master.bbl" 1772044815.72763 310 167f62b3dd2418b328b3f97da2725768 "bibtex master"
-  "master.out" 1772045302.99622 3071 b7162bf71f784a8562111f8fb44a236f "pdflatex"
-  "master.tex" 1772045291.92314 19672 2b97cb2ad462ad507009006f3b4f9af0 ""
+  "master.aux" 1772158070.1663 3414 1891506b909d3bb6cca5fe44770f00b4 "pdflatex"
+  "master.bbl" 1772158069.11858 1287 4431998ee09ce791b11f5041d9df014e "bibtex master"
+  "master.out" 1772158070.16716 2677 d556d181662fb435c82d605b0f0fe89f "pdflatex"
+  "master.tex" 1772158040.82167 22805 745068edbb12adb271076a363edb0fab ""
+  "ste_example.pdf" 1772083542.74443 29998 394aa540a887dcdc11583f8253114f0c ""
   (generated)
   "master.aux"
   "master.log"

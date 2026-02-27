@@ -1,0 +1,224 @@
+Inertial Relativity: Demonstrating the Nature of, and Connection between, Special and General Relativity
+
+Thomas Damon DeGerlia Originally published: February 6, 2026 C.E. Revision 1.00 February 15, 2026 C.E.
+
+ABSTRACT
+
+Inertial Relativity and its key formula the Space-Time Equivalence (STE), states that there is a universal mathematical relationship between space, time, and matter: The ratio of clock rates between any two physical systems about ANY respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes. We've demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by demonstrating Inertial Relativity's mathematical relationship with General and Special Relativity. We demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we will demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the exact same time dilation, one at the extremes of velocity and the other at the extremes of mass, thus unifying the two under a single universal framework: The Theory of Inertial Relativity.
+
+
+1. INTRODUCTION
+
+This paper presents a mathematical derivation connecting The space-time equivalence (STE), General Relativity, and Special Relativity. The work in this paper builds on the Space-time Equivalence (STE). We then build upon DeGerlia's immediate prior work introducing the concept of inertial density and predicting time dilation calculations with exact precision, introduced in a prior paper, which established that the Schwarzschild condition reduces to a constant threshold of mass over radius: D_crit = c²/2G ≈ 6.733 × 10²⁶ kg/m, about the "axis of observation" (the line connecting the observer to the observed).
+
+
+2. INERTIAL RELATIVITY
+
+Inertial Relativity is a principle introduced by the author in a prior paper "the Universe of Light". From that work, Inertial Relativity is hypothesized to be the overarching relativity from which general and special relativity belong. Inertia is relativistic. Meaning that without a comparator, any measurement of it would have no meaning. For example, something with a moment of inertia 1 × 10²⁰ kg/m² might be perceived as difficult to rotate. But not more difficult than something with 1 × 10³⁰ kg/m². However, the concept of relativism also says that how something is observed is influenced by the frame of observation.
+
+
+  2.1 The space-time equivalence (STE)
+
+The STE is the core universal equivalence stated by Inertial Relativity.
+
+    T1/T2 = (I2/I1)^(1/5)
+
+where T1 and T2 are the clock rates in two systems, and I1 and I2 are their moments of inertia about the axis connecting the two systems. For linear (non-rotational) systems, inertia reduces to mass and the exponent becomes 1/3:
+
+    T1/T2 = (M2/M1)^(1/3)
+
+where T1 and T2 are the clock rates in two systems, and M1 and M2 are their respective masses.
+
+
+  2.2 Universality of the STE
+
+
+    2.2.1 Rotational Inertia (MR²)
+
+From isometric scaling while maintaining constant density (constructive scaling), we know that a system's clock time relative to a static observing inertial frame of reference is proportional to the single dimension scale factor.
+
+The extension from isometrically scaled systems to all systems follows from the mass and radius independence of inertia. Because I fully determines rotational response to applied torque, two systems with the same I are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same I exhibit the same rotational physics.
+
+
+    2.2.2 Linear Inertia (M)
+
+The linear component of inertia reduces to mass, resulting in an inverse cube relationship with clock time.
+
+    T1/T2 = (M2/M1)^(1/3)
+
+
+  2.3 STE Example
+
+If one takes a uniform sphere of 1 m in radius and 1 kg of mass and scales it up by a factor of two, the resulting system is 8 kg of mass with a radius of 2 m. Moment of inertia of the initial system is I = (2/5)mr². That larger scale system has a mass that is the cube of the scale factor multiplied by the original mass (k³·M), and would have a moment of inertia that is the fifth power of the scale factor times the original moment of inertia. The inertial scale factor is k = 2. Conservation of momentum gives the best representation of how changes in moment of inertia affect motion. The moment of inertia for the scaled system calculates to k⁵·I, resulting in the predicted factor of two to the fifth power, or 32. If our sphere were rotating at one meter per second initially, the scaled system would now be moving half of that (0.5 m/s) resulting from the 32x increased moment of inertia.
+
+[diagram]
+
+
+  2.4 Inertial Density
+
+The inertial density of a system (M/R, derived from reducing I/V for a sphere) divided by the universal Schwarzschild threshold c²/2G. This threshold represents the Inertial Density at which the system becomes a black hole. The Schwarzschild condition reduces to a constant threshold of mass over mean radius about an axis: D_crit = c²/2G ≈ 6.733 × 10²⁶ kg/m.
+
+    dτ/dt = sqrt(1 - D/D_crit)
+
+
+3. ISOMETRIC SCALING LAWS
+
+    L' = k·L
+
+where L is the characteristic length of the system, and k is the linear scale factor.
+
+    M' = k³·M
+
+where M is mass and k is the linear scale factor.
+
+    I' = k⁵·I
+
+where I is the moment of inertia about a selected axis, and k is the linear scale factor.
+
+    I_lin' = M' = k³·M
+
+where I_lin is linear inertia (mass) and k is the linear scale factor.
+
+Because every change in length necessarily changes the system's mass, the first two formulas hold only for strict isometric scaling; the third abstracts mass and radius as moment of inertia. As we know, if we have two systems that share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry that arrived at that moment of inertia — absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. We demonstrate the validity of the STE herein by demonstrating that general and special relativity emerge from this principle.
+
+
+  3.1 The Scaling Law
+
+Under isometric scaling at constant density, all dynamical timescales in a system — orbital periods, oscillation periods, free-fall times — scale with the linear scale factor k. By Premise 3, clock rates scale identically, because every clock is a dynamical system. By Premise 1, k = (I2/I1)^(1/5). This yields the Scaling Law established in the STE equation above.
+
+
+  3.2 Universality
+
+The extension from isometrically scaled systems to all systems follows from Premise 2. Because I fully determines rotational response to applied torque, two systems with the same I are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same I exhibit the same rotational physics. Since clock rate is a dynamical observable (Premise 3), it cannot depend on geometric details that I has already absorbed.
+
+The fifth root relationship therefore holds universally: for any two systems, the ratio of their clock rates is the fifth root of the inverse ratio of their moments of inertia. Premise 1 establishes the exponent. Premise 2 establishes universality. Premise 3 establishes that clock rates are within the domain of dynamical scaling.
+
+
+  3.3 Linear Case
+
+For linear (non-rotational) systems, the relevant inertia is mass alone. Mass has three dimensions of length-equivalent content (M ∝ ρV ∝ k³). The corresponding scaling law is:
+
+    T1/T2 = (M2/M1)^(1/3)
+
+
+4. ESTABLISHING THE IDENTITY OF FORMULAS 2 AND 3
+
+The Schwarzschild radius is r_s = 2GM/c². The ratio r_s/r that appears inside the Schwarzschild formula is therefore:
+
+    r_s/r = 2GM/(c²r)
+
+This can be factored as:
+
+    r_s/r = (2G/c²) × (M/R)
+
+The reciprocal of 2G/c² is c²/2G — the Schwarzschild threshold from Formula 2. Therefore:
+
+    r_s/r = (M/R)/(c²/2G) = x
+
+This is an algebraic identity, not an approximation. Formula 2 and the quantity inside Formula 3 are the same expression. The Schwarzschild time dilation can be written:
+
+    dτ/dt = sqrt(1 - x)
+
+where x is the inertial density ratio from Formula 2.
+
+
+5. CONNECTING INERTIAL RELATIVITY WITH GENERAL RELATIVITY
+
+Both Formula 1 and Formula 3 produce the time dilation factor. Setting them equal:
+
+    (I2/I1)^(1/5) = sqrt(1 - x)
+
+where x = (M/R)/(c²/2G) from Formula 2. Squaring both sides to remove the square root:
+
+    (I2/I1)^(2/5) = 1 - x
+
+Rearranging:
+
+    x = 1 - (I2/I1)^(2/5)
+
+Or equivalently:
+
+    (M/R)/(c²/2G) = 1 - (I2/I1)^(2/5)
+
+This is the bridge equation. It states: the Schwarzschild ratio (the fraction of the universal inertial density threshold consumed by the system) equals the complement of the inertial ratio raised to the 2/5 power.
+
+
+6. CONNECTING INERTIAL RELATIVITY TO SPECIAL RELATIVITY
+
+In special relativity, motion is linear rather than rotational. Linear inertia is mass alone (no R² component). Mass has three dimensions of length-equivalent content (mass = density × volume, volume = length³). Extracting linear scale therefore requires a cube root, corresponding to the linear scaling relationship established above. The Lorentz time dilation factor in special relativity is:
+
+    dτ/dt = sqrt(1 - v²/c²)
+
+Setting these equal and squaring:
+
+    (M2/M1)^(2/3) = 1 - v²/c²
+
+Rearranging:
+
+    v²/c² = 1 - (M2/M1)^(2/3)
+
+The structure is identical to the general relativity case. The only difference is the exponent: 2/3 instead of 2/5. This difference is fully accounted for by the number of inertial dimensions — three for linear inertia, five for rotational.
+
+
+  6.1 Parallel Structure
+
+GR:  sqrt(1 - (M/R)/(c²/2G))  ↔  (I2/I1)^(1/5)    [rotational, 5 dimensions]
+
+SR:  sqrt(1 - v²/c²)           ↔  (M2/M1)^(1/3)    [linear, 3 dimensions]
+
+Special and general relativity are two cases of a single inertial scaling law:
+
+    T1/T2 = (I2/I1)^(1/n)
+
+where n = 5 for rotational inertia (general relativity) and n = 3 for linear inertia (special relativity). The distinction between the two theories maps directly onto the distinction between rotational and linear inertia. They differ by the R² component of moment of inertia and by nothing else.
+
+
+7. ANALYSIS AND CONCLUSION
+
+Three formulas were shown to be mathematically equivalent expressions of gravitational time dilation:
+
+Inertial Scaling Law:
+
+    T1/T2 = (I2/I1)^(1/5)
+
+gives the time dilation factor directly as a ratio of inertial properties, derived from isometric scaling, the completeness of moment of inertia, and the identification of clock rates as dynamical observables governed by inertial content.
+
+Inertial Density Ratio:
+
+    x = (M/R)/(c²/2G)
+
+gives the fraction of the universal Schwarzschild threshold consumed by the system, and is algebraically identical to r_s/r.
+
+Schwarzschild Formula:
+
+    dτ/dt = sqrt(1 - x)
+
+gives the time dilation factor through Einstein's quadratic geometric formalism.
+
+The bridge equation connecting them is:
+
+    (M/R)/(c²/2G) = 1 - (I2/I1)^(2/5)
+
+The "1 minus" in Schwarzschild's formula represents the complement of the inertial ratio. The square root is the exit from the quadratic metric formalism. The 2/5 exponent is the product of the 1/5 scaling exponent and the factor of 2 from the quadratic metric.
+
+The same framework extends to special relativity with a cube root (1/3) replacing the fifth root (1/5), corresponding to linear inertia (3 dimensions) replacing rotational inertia (5 dimensions). This unifies special and general relativity as two cases of a single inertial scaling law, distinguished only by the type of inertia involved.
+
+The derivation rests on three premises: two from classical mechanics (isometric scaling and the completeness of moment of inertia) and one hypothesis (that all clock rates are dynamical rates governed by inertial content). The algebraic equivalences hold as mathematical identities regardless of whether the hypothesis is accepted. The hypothesis is justified by the fact that it produces exact agreement with both Schwarzschild and Lorentz time dilation, with no free parameters. The equivalence with Schwarzschild constitutes equivalence with the field equation solution by transitivity, and is evaluated against the same standard applied to the Schwarzschild solution itself: exact agreement for the configuration it addresses.
+
+
+REFERENCES
+
+[1]  T. D. DeGerlia. The universe of light - exploring our universe through the
+     lens of the law of space-time equivalence. ResearchHub, 2025.
+     DOI: 10.55277/ResearchHub.pi9yjshm.
+[2]  T. D. DeGerlia. Introducing inertial density and characterizing the
+     Schwarzschild condition as a constant threshold of mass over radius (M/R).
+     ResearchHub, 2025. DOI: 10.55277/researchhub.0e0cgoor.
+[3]  A. Einstein. Die Feldgleichungen der Gravitation. Sitzungsberichte der
+     Königlich Preußischen Akademie der Wissenschaften (Berlin), pp. 844–847,
+     1915.
+[4]  A. Einstein. Zur Elektrodynamik bewegter Körper. Annalen der Physik,
+     vol. 17, pp. 891–921, 1905.
+[5]  H. Goldstein. Classical Mechanics. Addison-Wesley, 2nd edition, 1980. [6]  K. Schwarzschild. Über das Gravitationsfeld eines Massenpunktes nach der
+     Einsteinschen Theorie. Sitzungsberichte der Königlich Preußischen Akademie
+     der Wissenschaften (Berlin), pp. 189–196, 1916.

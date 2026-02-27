@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# export-reader — Generate a plain-text reading copy from master.tex.
+#
+# Usage:
+#   ./export-reader            → writes master_plain.txt
+#   ./export-reader --stdout   → prints to stdout
+#
+# Run from the project root (same directory as this script).
+set -euo pipefail
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+python3 "$DIR/extract_text.py" "$@"
