@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex master"] 1772189151.34235 "master.aux" "master.bbl" "master" 1772189152.8054 0
+["bibtex master"] 1772200675.28034 "master.aux" "master.bbl" "master" 1772200677.01822 0
   "./rsc.bib" 1772046054.69565 1611 af234034a61b0e3329919b892466db71 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "master.aux" 1772189152.44219 3414 69e975726a027338af3e0d22d9753f1d "pdflatex"
+  "master.aux" 1772200676.6484 3414 69e975726a027338af3e0d22d9753f1d "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1772189151.45455 "master.tex" "master.pdf" "master" 1772189152.80555 0
+["pdflatex"] 1772200675.43483 "master.tex" "master.pdf" "master" 1772200677.01836 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -193,9 +193,9 @@
   "head_foot/RSC_LOGO_CMYK.pdf" 1758679034.72975 3882 1c275bdec27de50f33adb025e8e539e9 ""
   "head_foot/dates.pdf" 1758679034.95232 3060 15458cf08a6acf8816b20dec25e4dbd0 ""
   "head_foot/dec.pdf" 1758679034.6162 7421 f4b27393c7ca5b921d84f648393f46e8 ""
-  "master.aux" 1772189152.44219 3414 69e975726a027338af3e0d22d9753f1d "pdflatex"
-  "master.bbl" 1772189151.45156 1287 4431998ee09ce791b11f5041d9df014e "bibtex master"
-  "master.out" 1772189152.44317 2677 d556d181662fb435c82d605b0f0fe89f "pdflatex"
+  "master.aux" 1772200676.6484 3414 69e975726a027338af3e0d22d9753f1d "pdflatex"
+  "master.bbl" 1772200675.43364 1287 4431998ee09ce791b11f5041d9df014e "bibtex master"
+  "master.out" 1772200676.64902 2677 d556d181662fb435c82d605b0f0fe89f "pdflatex"
   "master.tex" 1772189130.83206 23959 377735ae42c9b8e72be902ad432a8a16 ""
   "ste_example.pdf" 1772083542.74443 29998 394aa540a887dcdc11583f8253114f0c ""
   (generated)
