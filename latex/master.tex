@@ -369,29 +369,21 @@ General relativity addresses the rotational case, where inertia is moment of ine
 
 \section{Analysis and Conclusion}
 
-All formulations of relativistic time dilation derive the same linear scale factor $k$:
-
-Inertial Scaling Law:
+The Space-Time Equivalence states that time dilation is:
 \begin{equation}
-k = (I_2/I_1)^{1/5}
+\frac{d\tau}{dt} = \sqrt{1 - k}
 \end{equation}
-gives the time dilation factor directly as a ratio of inertial properties.
-
-DeGerlia Compactness:
+where $k$ is the linear scale factor derived from inertia. Substituting the gravitational case ($k = r_s/R$) directly produces Schwarzschild time dilation:
 \begin{equation}
-k = D/D_{crit}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{r_s}{R}}
 \end{equation}
-gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
-
-Schwarzschild Formula \cite{schwarzschild1916radius}:
+Substituting the linear case ($k = v^2/c^2$) directly produces Lorentz time dilation:
 \begin{equation}
-d\tau/dt = \sqrt{1 - k}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}}
 \end{equation}
-is the Schwarzschild time dilation, derived from the Einstein field equations \cite{einstein1915}.
+Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
 
-In the linear case (special relativity), the $R^2$ component of moment of inertia is absent, so inertia reduces to mass and the fifth root becomes a cube root. General and special relativity are the same inertial scaling law applied to two types of inertia.
-
-The algebraic equivalences are mathematical identities: the STE produces Schwarzschild and Lorentz time dilation exactly, with no free parameters. The equivalence with the Schwarzschild solution constitutes equivalence with the Einstein field equations by transitivity.
+The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. In the gravitational case, mass is static and the STE reduces to a ratio of radii. In the velocity case, the $R^2$ component of moment of inertia is absent and the STE reduces to a ratio of masses. General and special relativity are the same equivalence applied to two types of inertia --- rotational and linear --- differing only by the $R^2$ component of moment of inertia. The equivalence with the Schwarzschild solution constitutes equivalence with the Einstein field equations by transitivity.
 
 \section*{Data Availability}
 The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
