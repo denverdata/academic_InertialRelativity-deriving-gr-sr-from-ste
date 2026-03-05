@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(pdflatex:*)",
-      "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && latexmk -pdf master.tex 2>&1)"
+      "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && latexmk -pdf master.tex 2>&1)",
+      "Bash(python3:*)",
+      "WebFetch(domain:mathworld.wolfram.com)"
     ]
   }
 }
