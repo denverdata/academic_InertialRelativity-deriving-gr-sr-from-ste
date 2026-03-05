@@ -185,11 +185,12 @@ where $L$ is the characteristic length of the system and $k$ is the linear scale
 \begin{equation}
 M' = k^3 M
 \end{equation}
-where mass is $M$ and $k$ is the linear scale factor.
+where $M$ is the mass and $k$ is the linear scale factor.
 
 \begin{equation}
 R' = kR
 \end{equation}
+where $R$ is the mean radius about the selected axis.
 
 \begin{equation}
 I' = k^5 I
@@ -230,7 +231,7 @@ D_{crit} = \frac{c^2}{2G} = 6.73295 \times 10^{26} \text{ kg/m}
 \end{equation}
 The ratio of a system's DeGerlia Compactness to this threshold gives the time dilation directly:
 \begin{equation}
-d\tau/dt = \sqrt{1 - D/D_{crit}}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{D}{D_{crit}}}
 \end{equation}
 
 \section{The Space-Time Equivalence (STE)}
@@ -238,7 +239,7 @@ The STE is the core universal equivalence stated by Inertial Relativity \cite{de
 \begin{equation} \label{eq:td_k}
 \frac{d\tau}{dt} = \sqrt{1 - k}
 \end{equation}
-where $k$ is the linear scale factor derived from inertia. In the general case:
+where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia. In the general case:
 \begin{equation} \label{eq:ste}
 k = \left(\frac{I_2}{I_1}\right)^{1/5}
 \end{equation}
@@ -248,6 +249,7 @@ For linear (non-rotational) systems, the $R^2$ component of moment of inertia is
 \begin{equation} \label{eq:linear}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
+where $M_1$ and $M_2$ are the masses of the two systems.
 
 These equations reveal the following about time:
 \begin{itemize}
@@ -267,7 +269,15 @@ These equations reveal the following about time:
 At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small that is. It also demonstrates that the basic gravitational time dilation model accommodates for distorted black holes such as the Kerr singularity. The STE states that the relative pace of time for any system about any axis is determined by its moment of inertia about that same axis. The more inertia a system has about that axis, the slower its clock runs relative to a system with less inertia. This is consistent with the notion that time is a measure of change, and inertia resists change. Therefore, the more inertia a system has, the less it changes over a given period of time, and thus the slower its system clock runs relative to a system with less inertia. This law applies to any system whose mass is distributed over some region of space --- requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space.
 
 \subsection{STE Example}
-If one takes a uniform sphere of 1 m in radius and 1 kg of mass and scales it up by a factor of two, the resulting system is 8 kg of mass with a radius of 2 m. Moment of inertia of the initial system is $\frac{2}{5} \cdot 1\,\text{kg} \cdot (1\,\text{m})^2 = 0.4\,\text{kg\,m}^2$. That larger scale system has a mass that is the cube of the scale factor multiplied by the original mass $2^3 \cdot 1\,\text{kg} = 8\,\text{kg}$, and would have a moment of inertia that is the fifth power of the scale factor times the original moment of inertia. The inertial scale factor is $k^5 = 2^5 = 32$. Conservation of momentum gives the best representation of how changes in moment of inertia affect motion. The moment of inertia for the scaled system calculates to $\frac{2}{5}(8\,\text{kg})(2\,\text{m})^2 = \frac{2}{5} \cdot 8\,\text{kg} \cdot 4\,\text{m}^2 = 0.4(32)$, resulting in the predicted factor of two to the fifth power, or 32. If our sphere were rotating at one meter per second initially, the scaled system would now be moving half of that (0.5 m/s) resulting from the $2^5 = 32\times$ increased moment of inertia.
+If one takes a uniform sphere of 1 m in radius and 1 kg of mass and scales it up by a factor of two, the resulting system is 8 kg of mass with a radius of 2 m. Moment of inertia of the initial system is:
+\[
+\frac{2}{5} \cdot 1\,\text{kg} \cdot (1\,\text{m})^2 = 0.4\,\text{kg\,m}^2
+\]
+That larger scale system has a mass that is the cube of the scale factor multiplied by the original mass $2^3 \cdot 1\,\text{kg} = 8\,\text{kg}$, and would have a moment of inertia that is the fifth power of the scale factor times the original moment of inertia. The inertial scale factor is $k^5 = 2^5 = 32$. Conservation of momentum gives the best representation of how changes in moment of inertia affect motion. The moment of inertia for the scaled system calculates to:
+\[
+\frac{2}{5}(8\,\text{kg})(2\,\text{m})^2 = \frac{2}{5} \cdot 8\,\text{kg} \cdot 4\,\text{m}^2 = 0.4(32)
+\]
+resulting in the predicted factor of two to the fifth power, or 32. If our sphere were rotating at one meter per second initially, the scaled system would now be moving half of that (0.5 m/s) resulting from the $2^5 = 32\times$ increased moment of inertia.
 
 \begin{figure}[h]
 \centering
@@ -280,19 +290,22 @@ Schwarzschild gravitational time dilation \cite{schwarzschild1916radius}:
 \begin{equation} \label{eq:schwarzschild}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{r_s}{R}}
 \end{equation}
+where $r_s = 2GM/c^2$ is the Schwarzschild radius and $R$ is the radial distance from the center of mass.
 
 Lorentz time dilation \cite{einstein1905}:
 \begin{equation} \label{eq:lorentz}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}}
 \end{equation}
+where $v$ is the velocity of the moving frame and $c$ is the speed of light.
 
 These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the gravitational case and $k = v^2/c^2$ in the velocity case.
 
-\section{Raw Time Dilation}
-
-\begin{equation}
-\mathrm{RTD} = \sqrt{k}, \qquad \mathrm{RTD}^2 = k
-\end{equation}
+%% TODO: Raw Time Dilation section — needs introductory text and variable definitions
+%\section{Raw Time Dilation}
+%
+%\begin{equation}
+%\mathrm{RTD} = \sqrt{k}, \qquad \mathrm{RTD}^2 = k
+%\end{equation}
 
 \section{Expressions of Relative Inertial Linear Scale}
 
@@ -337,7 +350,11 @@ The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\re
 \begin{equation}
 k = \frac{v^2}{c^2}
 \end{equation}
-From $v^2 = 2GM/r$ and $r_s = 2GM/c^2$:
+From:
+\[
+v^2 = \frac{2GM}{r}, \qquad r_s = \frac{2GM}{c^2}
+\]
+it follows that:
 \begin{equation}
 \frac{v^2}{c^2} = \frac{r_s}{r}
 \end{equation}
