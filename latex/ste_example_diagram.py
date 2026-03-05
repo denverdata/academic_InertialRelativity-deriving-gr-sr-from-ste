@@ -8,96 +8,106 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots(figsize=(11, 8))
+# ── Global style: serif fonts to match the paper ────────────────────────────
+plt.rcParams.update({
+    'font.family': 'serif',
+    'font.serif': ['Times New Roman', 'DejaVu Serif', 'Computer Modern Roman'],
+    'mathtext.fontset': 'cm',
+    'font.size': 9,
+})
+
+fig, ax = plt.subplots(figsize=(7.0, 4.2))
 ax.set_aspect('equal')
 ax.axis('off')
 
-# ── colours ───────────────────────────────────────────────────────────────────
-C_SMALL = '#4C8EC2'   # blue
-C_LARGE = '#C25B4C'   # red-orange
-C_ARROW = '#444444'
-C_TEXT  = '#222222'
+# ── Colours ──────────────────────────────────────────────────────────────────
+C_FILL  = '#e8e8e8'
+C_EDGE  = '#333333'
+C_TEXT  = '#000000'
+C_DIM   = '#555555'
+C_NOTE  = '#444444'
 
-# ── geometry ──────────────────────────────────────────────────────────────────
-r_small = 1.0
-r_large = 2.0
-cx_small = 2.5
-cx_large = 8.0
-cy = 5.0      # sphere centres — sits high to leave room for labels and formula
+# ── Geometry ─────────────────────────────────────────────────────────────────
+r1 = 0.65
+r2 = 1.15
+cx1 = 1.4
+cx2 = 5.3
+cy  = 2.8
 
-# ── spheres ───────────────────────────────────────────────────────────────────
-ax.add_patch(plt.Circle((cx_small, cy), r_small,
-             color=C_SMALL, alpha=0.22, zorder=2))
-ax.add_patch(plt.Circle((cx_large, cy), r_large,
-             color=C_LARGE, alpha=0.22, zorder=2))
-ax.add_patch(plt.Circle((cx_small, cy), r_small,
-             fill=False, edgecolor=C_SMALL, lw=2.0, zorder=3))
-ax.add_patch(plt.Circle((cx_large, cy), r_large,
-             fill=False, edgecolor=C_LARGE, lw=2.0, zorder=3))
+# ── Spheres ──────────────────────────────────────────────────────────────────
+for cx, r in [(cx1, r1), (cx2, r2)]:
+    ax.add_patch(plt.Circle((cx, cy), r,
+                 facecolor=C_FILL, edgecolor=C_EDGE, lw=1.0, zorder=2))
+    ax.plot(cx, cy, 'o', color=C_EDGE, ms=2, zorder=3)
 
-# ── radius arrows (from centre to right edge) ─────────────────────────────────
-ax.annotate('', xy=(cx_small + r_small, cy), xytext=(cx_small, cy),
-            arrowprops=dict(arrowstyle='->', color=C_SMALL, lw=1.5))
-ax.text(cx_small + r_small / 2, cy + 0.18, 'r = 1 m',
-        ha='center', va='bottom', fontsize=11, color=C_SMALL)
+# ── Radius dimension lines ──────────────────────────────────────────────────
+for cx, r, label in [(cx1, r1, r'$R = 1\;\mathrm{m}$'),
+                      (cx2, r2, r'$R = 2\;\mathrm{m}$')]:
+    ax.annotate('', xy=(cx + r, cy), xytext=(cx, cy),
+                arrowprops=dict(arrowstyle='-|>', color=C_DIM, lw=0.8,
+                                mutation_scale=8))
+    ax.text(cx + r / 2, cy + 0.10, label,
+            ha='center', va='bottom', fontsize=8, color=C_TEXT)
 
-ax.annotate('', xy=(cx_large + r_large, cy), xytext=(cx_large, cy),
-            arrowprops=dict(arrowstyle='->', color=C_LARGE, lw=1.5))
-ax.text(cx_large + r_large / 2, cy + 0.18, 'r = 2 m',
-        ha='center', va='bottom', fontsize=11, color=C_LARGE)
+# ── System labels above each sphere ─────────────────────────────────────────
+ax.text(cx1, cy + r1 + 0.18, 'System 1', ha='center', va='bottom',
+        fontsize=9, fontweight='bold', color=C_TEXT)
+ax.text(cx2, cy + r2 + 0.18, 'System 2', ha='center', va='bottom',
+        fontsize=9, fontweight='bold', color=C_TEXT)
 
-# ── label blocks below each sphere ────────────────────────────────────────────
-ax.text(cx_small, cy - r_small - 0.55,
-        'm = 1 kg\n'
-        'r = 1 m\n'
-        'I = 0.4 kg\u00b7m\u00b2\n'
-        'T\u2081  (reference)',
-        ha='center', va='top', fontsize=11, color=C_SMALL,
-        linespacing=1.9, family='monospace')
+# ── Property tables — aligned at the same vertical level ─────────────────────
+prop_y_top = 1.15      # both property blocks start at same height
+line_h = 0.30
 
-ax.text(cx_large, cy - r_large - 0.55,
-        'm = 8 kg    (\u00d7k\u00b3 = \u00d78)\n'
-        'r = 2 m    (\u00d7k  = \u00d72)\n'
-        'I = 12.8 kg\u00b7m\u00b2  (\u00d7k\u2075 = \u00d732)\n'
-        'T\u2082 = T\u2081/2   (clock half-speed)',
-        ha='center', va='top', fontsize=11, color=C_LARGE,
-        linespacing=1.9, family='monospace')
+# System 1
+p1_lines = [
+    r'$M = 1\;\mathrm{kg}$',
+    r'$I = 0.4\;\mathrm{kg\cdot m^2}$',
+]
+for i, txt in enumerate(p1_lines):
+    ax.text(cx1, prop_y_top - i * line_h, txt,
+            ha='center', va='center', fontsize=8, color=C_TEXT)
 
-# ── scale-factor arrow — arcs through the gap between the spheres ─────────────
-# Endpoints are in the gap (outside both spheres) at mid-height.
-arrow_y = cy + 0.7   # 5.7 — well inside the gap and clear of sphere surfaces
-gap_left  = cx_small + r_small + 0.3   # 3.8
-gap_right = cx_large - r_large - 0.3   # 5.7
+# System 2 (value + scaling note)
+p2_lines = [
+    (r'$M = 8\;\mathrm{kg}$',                 r'$(\times k^3)$'),
+    (r'$I = 12.8\;\mathrm{kg\cdot m^2}$',     r'$(\times k^5)$'),
+]
+for i, (val, note) in enumerate(p2_lines):
+    y = prop_y_top - i * line_h
+    ax.text(cx2 - 0.10, y, val, ha='right', va='center',
+            fontsize=8, color=C_TEXT)
+    ax.text(cx2 + 0.05, y, note, ha='left', va='center',
+            fontsize=7.5, color=C_NOTE)
 
-ax.annotate('',
-            xy=(gap_right, arrow_y),
-            xytext=(gap_left, arrow_y),
-            arrowprops=dict(arrowstyle='->', color=C_ARROW, lw=2.0,
-                            connectionstyle='arc3,rad=-0.4'))
+# ── Transformation arrow between spheres ─────────────────────────────────────
+arr_y = cy + 0.12
+arr_x1 = cx1 + r1 + 0.18
+arr_x2 = cx2 - r2 - 0.18
 
-# Label sits above the arc's peak, horizontally centred in the gap.
-# Arc peak is roughly at arrow_y + 0.4 × gap_width / 2 ≈ 6.1.
-# Placing the label at 6.9 keeps it above the small-sphere top (6.0) and
-# well clear of the large sphere (nearest point ≈ 3.3 radii away).
-mid_x = (cx_small + cx_large) / 2   # 5.25
-ax.text(mid_x, arrow_y + 1.2,
-        'scale factor  k = 2',
-        ha='center', va='center', fontsize=13, color=C_ARROW,
-        fontweight='bold')
+ax.annotate('', xy=(arr_x2, arr_y), xytext=(arr_x1, arr_y),
+            arrowprops=dict(arrowstyle='->', color=C_TEXT, lw=1.2))
 
-# ── STE formula box ───────────────────────────────────────────────────────────
-ax.text(mid_x, 0.3,
-        r'$\dfrac{T_1}{T_2} = \left(\dfrac{I_2}{I_1}\right)^{1/5}'
-        r'= 32^{1/5} = 2 \quad\Rightarrow\quad T_2 = T_1/2$',
-        ha='center', va='bottom', fontsize=13, color=C_TEXT,
-        bbox=dict(boxstyle='round,pad=0.55', facecolor='#f8f8f8',
-                  edgecolor='#aaaaaa', lw=1.4))
+ax.text((arr_x1 + arr_x2) / 2, arr_y + 0.15,
+        r'$k = 2$', ha='center', va='bottom',
+        fontsize=9, fontweight='bold', color=C_TEXT)
 
-# ── axis limits (tuned to equal-aspect 11 × 8 figure) ─────────────────────────
-ax.set_xlim(0.0, 11.0)
-ax.set_ylim(-0.4, 8.4)
+# ── STE equation centred at the bottom ───────────────────────────────────────
+eq_x = (cx1 + cx2) / 2
+eq_y = 0.10
+ax.text(eq_x, eq_y,
+        r'$k = \left(\dfrac{I_2}{I_1}\right)^{\!1/5}'
+        r'= \left(\dfrac{12.8}{0.4}\right)^{\!1/5}'
+        r'= 32^{1/5} = 2$',
+        ha='center', va='bottom', fontsize=9.5, color=C_TEXT,
+        bbox=dict(boxstyle='round,pad=0.4', facecolor='#f5f5f5',
+                  edgecolor='#999999', lw=0.8))
 
-plt.tight_layout(pad=0.3)
-plt.savefig('ste_example.pdf', dpi=200, bbox_inches='tight')
-plt.savefig('ste_example.png', dpi=200, bbox_inches='tight')
+# ── Axis limits ──────────────────────────────────────────────────────────────
+ax.set_xlim(-0.3, 7.3)
+ax.set_ylim(-0.3, 4.5)
+
+plt.tight_layout(pad=0.2)
+plt.savefig('ste_example.pdf', dpi=300, bbox_inches='tight')
+plt.savefig('ste_example.png', dpi=300, bbox_inches='tight')
 print('Saved ste_example.pdf and ste_example.png')
