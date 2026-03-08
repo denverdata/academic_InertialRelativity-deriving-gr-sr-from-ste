@@ -4,7 +4,12 @@
       "Bash(pdflatex:*)",
       "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && latexmk -pdf master.tex 2>&1)",
       "Bash(python3:*)",
-      "WebFetch(domain:mathworld.wolfram.com)"
+      "WebFetch(domain:mathworld.wolfram.com)",
+      "WebSearch",
+      "WebFetch(domain:www.researchhub.com)",
+      "WebFetch(domain:ui.adsabs.harvard.edu)",
+      "WebFetch(domain:archive.org)",
+      "WebFetch(domain:en.wikipedia.org)"
     ]
   }
 }
