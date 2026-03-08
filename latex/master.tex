@@ -399,12 +399,13 @@ The STE produces both Schwarzschild and Lorentz time dilation exactly, with no f
 The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
 
 \appendix
-\section{The General STE} \label{app:general_ste}
+\section{Utilizing STE Across Different Conditions} \label{app:general_ste}
+
+The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the isometric degree of homogeneity for characteristic length of the quantity being compared. The specific exponents used throughout this paper --- $1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$ --- each emerge from the value of $L$ for that quantity.
 
 \begin{equation}
 k = \left(\frac{I_2}{I_1}\right)^{1/L} = \left(\frac{m_2 r_2^2}{m_1 r_1^2}\right)^{1/L}
 \end{equation}
-where $L$ is the isometric degree of homogeneity for characteristic length.
 
 \textbf{Scaling reference --- isometric scaling at static density:}
 
@@ -440,13 +441,19 @@ k = \left(\frac{I_2}{I_1}\right)^{1/L} = \left(\frac{m_s r_2^2}{m_s r_1^2}\right
 k = \left(\frac{I_2}{I_1}\right)^{1/L} = \left(\frac{m_2 r_s^2}{m_1 r_s^2}\right)^{1/L} = \left(\frac{m_2}{m_1}\right)^{1/3}
 \end{equation}
 
+\textbf{Case 3 --- Constant Density} $(\rho_1 = \rho_2,\ m \propto r^3)$
+
+\begin{equation}
+k = \left(\frac{r_2^3 r_2^2}{r_1^3 r_1^2}\right)^{1/5} = \left(\frac{r_2^5}{r_1^5}\right)^{1/5} = \frac{r_2}{r_1}
+\end{equation}
+
 \textbf{General Case} $(m_1 \neq m_2,\ r_1 \neq r_2)$
 
 \begin{equation}
 k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{m_2 r_2^2}{m_1 r_1^2}\right)^{1/5}
 \end{equation}
 
-\subsection*{Verification}
+\section{Verification} \label{app:verification}
 
 The general case decomposes exactly into its mass and radius contributions:
 
