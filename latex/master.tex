@@ -242,7 +242,7 @@ k = \left(\frac{I_2}{I_1}\right)^{1/5}
 \end{equation}
 where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention.
 
-When radius is shared between two systems, the STE reduces to (see Appendix~\ref{app:general_ste}):
+When radius is shared between two systems, the STE reduces to (see \ref{app:general_ste}):
 \begin{equation} \label{eq:linear}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
@@ -300,7 +300,7 @@ These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the grav
 
 \section{Expressions of Relative Inertial Linear Scale}
 
-The parameter $k$ is always the linear scale factor between two systems about their respective selected axes. Because $k$ is determined by inertia, it is always an inertial ratio. What varies across the expressions below is which components of inertia are already known or fixed (see Appendix~\ref{app:general_ste} for the general derivation).
+The parameter $k$ is always the linear scale factor between two systems about their respective selected axes. Because $k$ is determined by inertia, it is always an inertial ratio. What varies across the expressions below is which components of inertia are already known or fixed (see \ref{app:general_ste} for the general derivation).
 
 Each expression of $k$ below derives from the STE (Equation~\ref{eq:ste}), where $I_1$ and $I_2$ are the moments of inertia of two systems about their respective selected axes. Substituting the moment of inertia for a uniform sphere, $I = \frac{2}{5}MR^2$:
 \begin{equation} \label{eq:k_expanded}
@@ -313,7 +313,7 @@ k = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 From here, each derivation applies specific constraints and solves.
 
 \subsection{Static Mass (Gravitational)}
-From Equation~\ref{eq:k_simplified}, when $M_1 = M_2$, the STE reduces to (see Appendix~\ref{app:general_ste} for derivation):
+From Equation~\ref{eq:k_simplified}, when $M_1 = M_2$, the STE reduces to (see \ref{app:general_ste} for derivation):
 \begin{equation}
 k = \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
 \end{equation}
@@ -331,14 +331,14 @@ k = \frac{D}{D_{crit}}
 \end{equation}
 
 \subsection{Static Radius (Linear)}
-From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the STE reduces to (see Appendix~\ref{app:general_ste}):
+From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the STE reduces to (see \ref{app:general_ste}):
 \begin{equation}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
 This is Equation~\ref{eq:linear}. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since gravitational time dilation is equivalently expressed as $r_s/R$ or $v^2/c^2$ \cite{schwarzschild1916radius}, the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \subsection{Constant Density (Isometric)}
-When density is held constant, $M \propto R^3$, and the STE reduces to a pure linear scale ratio (see Appendix~\ref{app:general_ste}):
+When density is held constant, $M \propto R^3$, and the STE reduces to a pure linear scale ratio (see \ref{app:general_ste}):
 \begin{equation}
 k = \left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5} = \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \end{equation}
@@ -372,12 +372,10 @@ Substituting the linear case ($k = v^2/c^2$) directly produces Lorentz time dila
 \]
 Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
 
-The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (Appendix~\ref{app:general_ste}), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct — subjects to be developed in subsequent work.
-
-\section*{Data Availability}
-The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
+The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (\ref{app:general_ste}), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct — subjects to be developed in subsequent work.
 
 \appendix
+\renewcommand{\thesection}{Appendix~\Alph{section}}
 \section{Special-Case Derivations and Verification} \label{app:general_ste}
 
 The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \cite{euler1755}, then verifies the general case through decomposition and numerical example.
@@ -473,6 +471,9 @@ k = k_{\text{mass}} \times k_{\text{radius}} = 0.01 \times 0.39811 = 0.003981
 \]
 
 Both paths produce identical results: $d\tau/dt = \sqrt{1 - 0.003981} = 0.998007$, confirming that the general STE is internally consistent.
+
+\section*{Data Availability}
+The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
 
 %%%REFERENCES%%%
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
