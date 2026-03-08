@@ -378,9 +378,11 @@ The STE produces both Schwarzschild and Lorentz time dilation exactly, with no f
 The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
 
 \appendix
-\section{Utilizing STE Across Different Conditions} \label{app:general_ste}
+\section{Special-Case Derivations and Verification} \label{app:general_ste}
 
-The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity \cite{euler1755} of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
+The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \cite{euler1755}, then verifies the general case through decomposition and numerical example.
+
+The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
 
 \begin{equation}
 k = \left(\frac{I_2}{I_1}\right)^{1/L} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}
@@ -432,9 +434,9 @@ k = \left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5} = \left(\frac{R_2^5}{R_1^
 k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 \end{equation}
 
-\section{Verification} \label{app:verification}
+\textbf{Verification of Internal Consistency}
 
-To confirm internal consistency, we verify that the general STE decomposes exactly into its special-case components applied sequentially. If the general form is consistent, computing $k$ directly from $(I_2/I_1)^{1/5}$ must produce the same result as computing the mass and radius contributions independently and multiplying them.
+To confirm that the general case is consistent with the special cases derived above, we verify that computing $k$ directly from $(I_2/I_1)^{1/5}$ produces the same result as computing the mass contribution (static radius, $L=3$) and radius contribution (static mass, $L=2$) independently and multiplying them.
 
 Starting from $I \propto MR^2$:
 \begin{align}
