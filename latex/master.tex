@@ -161,21 +161,21 @@ Inertia is relativistic, meaning that without a comparator, any measurement of i
 \end{quote}
 This illustrates that we understand what spatial scale means. We know what relative scale means; we know what it's like to be bigger than something or to be smaller than something. We understand the experience of growing or watching something grow; we know what it is like to change scale relative to something else.
 
+A system, in this context, is any collection of mass and spatial extent you choose to define. It need not be spherical, uniform, high density, or even massive. A system may be a planet, a uniform sphere, a supermassive black hole, a disc galaxy, a cube, a cubic sample of a cumulus cloud, or a system consisting of a hydrogen proton and a single electron.
+
 \subsection{Rotational Inertia}
-Moment of inertia for a system is distinct about every axis in the system. For any given axis, the moment of inertia dictates how torque translates into rotational motion. Moment of inertia is defined as:
+Moment of inertia for a system is distinct about every axis in the system. For any given axis, the moment of inertia dictates how an applied torque translates into a delta in rotational motion. Moment of inertia is defined as:
 \begin{equation}
 I = \sum_i m_i r_i^2
 \end{equation} 
-where $r_i$ is the perpendicular distance from each mass element $m_i$ to the chosen axis. Just as mass governs how a body responds to linear force ($F = ma$), moment of inertia governs how it responds to torque ($\tau = I\alpha$).
+where $r_i$ is the perpendicular distance from each mass element $m_i$ to the chosen axis. Just as mass governs how a system responds to linear force ($F = ma$), moment of inertia governs how it responds to torque ($\tau = I\alpha$).
 
 \subsection{Linear Inertia}
 Linear inertia is mass:
 \begin{equation}
 M = \sum_i m_i
 \end{equation}
-where $m_i$ are the constituent mass elements.
-
-A body, in this context, is any system of mass you choose to define. Linear inertia is the resistance of a body to changes in its linear velocity, quantified entirely by its mass ($F = ma$). It is dimensional in the sense that it acts along a specific vector, the direction of the applied force, but unlike moment of inertia, it is isotropic: mass offers the same resistance to acceleration regardless of which direction that vector points.
+where $m_i$ are the constituent mass elements. Linear inertia defines how an applied force translates into a delta in translational motion. It is quantified entirely by mass ($F = ma$). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
 
 \subsection{Isometric Scaling}
 Isometric scaling is the uniform scaling of a system in all spatial dimensions while maintaining constant density. Under isometric scaling, every length in the system scales by the same factor $k$:
@@ -199,12 +199,12 @@ I' = k^5 I
 \end{equation}
 where $I$ is the moment of inertia about a selected axis; $k$ is the linear scale factor.
 
-Because every change in length necessarily changes the system's mass, the first two formulas hold only for strict isometric scaling; the third abstracts mass and radius as moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry that arrived at that moment of inertia; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
+Because every change in length necessarily changes the system's mass, the first two formulas hold only for strict isometric scaling; the third , however, abstracts mass and radius as moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
 
 \subsection{Universality}
 The extension from isometrically scaled systems to all systems follows from the nature of moment of inertia itself. Because $I$ fully determines rotational response to applied torque, two systems with the same $I$ are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same $I$ exhibit the same rotational physics.
 
-The fifth root relationship therefore holds universally: for any two systems, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia. Isometric scaling establishes the exponent (Equation~\ref{eq:inertia_scaling}). The completeness of $I$ as a dynamical quantity establishes universality. The dynamical nature of clock rate places it within the domain of inertial scaling.
+The fifth root relationship therefore holds universally: for any two systems abput any two respective axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those same axes. Isometric scaling establishes the exponent (Equation~\ref{eq:inertia_scaling}).
 
 \subsection{Inertial Density}
 
@@ -231,22 +231,29 @@ The ratio of a system's DeGerlia Compactness to this threshold gives the time di
 \frac{d\tau}{dt} = \sqrt{1 - \frac{D}{D_{crit}}}
 \end{equation}
 
-\section{The Space-Time Equivalence (STE)}
-The STE is the core universal equivalence stated by Inertial Relativity \cite{degerlia2025universe}. Time dilation is always:
-\begin{equation} \label{eq:td_k}
-\frac{d\tau}{dt} = \sqrt{1 - k}
-\end{equation}
-where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia. In the general case:
+\section{The Space-Time Equivalence (STE)}{fix this}
+The STE is the core universal equivalence stated by Inertial Relativity \cite{degerlia2025universe}:
+
 \begin{equation} \label{eq:ste}
 k = \left(\frac{I_2}{I_1}\right)^{1/5}
 \end{equation}
 where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention.
 
 When radius is shared between two systems, the STE reduces to (see \ref{app:general_ste}):
+
+
+
+
 \begin{equation} \label{eq:linear}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
 where $M_1$ and $M_2$ are the masses of the two systems.
+
+Time dilation is always:
+\begin{equation} \label{eq:td_k}
+\frac{d\tau}{dt} = \sqrt{1 - k}
+\end{equation}
+where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia:
 
 \subsection{Properties of Time}
 The STE reveals the following properties of time:
@@ -313,13 +320,13 @@ k = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 From here, each derivation applies specific constraints and solves.
 
 \subsection{Static Mass (Gravitational)}
-From Equation~\ref{eq:k_simplified}, when $M_1 = M_2$, the STE reduces to (see \ref{app:general_ste} for derivation):
+From Equation~\ref{eq:k_simplified}, setting $M_1 = M_2 = M$ and $R_2 = r_s$:
 \begin{equation}
-k = \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
+k = \left(\frac{M r_s^2}{M \cdot R_1^2}\right)^{1/5}
 \end{equation}
-Setting $R_2 = r_s$:
+where $M$ is the shared mass, $r_s$ is the Schwarzschild radius, and $R$ is the mean radius of the system about the selected axis.
 \begin{equation}
-k = \frac{r_s}{R}
+k = \left(\frac{r_s^5}{R^5}\right)^{1/5} = \frac{r_s}{R}
 \end{equation}
 This is equivalently expressed through inertial density \cite{degerlia2025} or DeGerlia Compactness, since $P \propto M/R$ and $D = M/R$. When mass is static, the ratio of either quantity reduces to the ratio of mean radii about the selected axis:
 \begin{equation}
