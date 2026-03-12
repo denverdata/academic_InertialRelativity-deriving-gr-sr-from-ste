@@ -179,17 +179,17 @@ where $m_i$ are the constituent mass elements. Linear inertia defines how an app
 
 \subsection{Isometric Scaling}
 Isometric scaling is the uniform scaling of a system in all spatial dimensions while maintaining constant density. Under isometric scaling, every length in the system scales by the same factor $k$:
-\begin{equation}
+\begin{equation} \label{eq:length_scaling}
 \ell' = k\ell
 \end{equation}
 where $\ell$ is the characteristic length of the system and $k$ is the linear scale factor. Isometric scaling of a system by a factor of $k$ results in the following changes to mass, radius, and moment of inertia:
 
-\begin{equation}
+\begin{equation} \label{eq:mass_scaling}
 M' = k^3 M
 \end{equation}
 where $M$ is the mass and $k$ is the linear scale factor.
 
-\begin{equation}
+\begin{equation} \label{eq:radius_scaling}
 R' = kR
 \end{equation}
 where $R$ is the mean radius about the selected axis.
@@ -199,12 +199,12 @@ I' = k^5 I
 \end{equation}
 where $I$ is the moment of inertia about a selected axis; $k$ is the linear scale factor.
 
-Because every change in length necessarily changes the system's mass, the first two formulas hold only for strict isometric scaling; the third , however, abstracts mass and radius as moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
+Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
 
 \subsection{Universality}
 The extension from isometrically scaled systems to all systems follows from the nature of moment of inertia itself. Because $I$ fully determines rotational response to applied torque, two systems with the same $I$ are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same $I$ exhibit the same rotational physics.
 
-The fifth root relationship therefore holds universally: for any two systems abput any two respective axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those same axes. Isometric scaling establishes the exponent (Equation~\ref{eq:inertia_scaling}).
+The fifth root relationship therefore holds universally: for any two systems about any two respective axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those same axes. Isometric scaling establishes the exponent (Equation~\ref{eq:inertia_scaling}).
 
 \subsection{Inertial Density}
 
@@ -273,20 +273,25 @@ The STE states that the relative pace of time for any system about any axis is d
 At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small that is. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space. The per-axis nature of the STE suggests natural extension to asymmetric systems such as the Kerr singularity \cite{kerr1963}, a topic for future investigation.
 
 \subsection{STE Example}
-If one takes a uniform sphere of 1 m in radius and 1 kg of mass and scales it up by a factor of two, the resulting system is 8 kg of mass with a radius of 2 m. Moment of inertia of the initial system is:
+Consider a uniform sphere of radius 1\,m and mass 1\,kg scaled isometrically by a factor of two, producing a second sphere of radius 2\,m and mass $2^3 = 8$\,kg. Their moments of inertia are:
 \[
-\frac{2}{5} \cdot 1\,\text{kg} \cdot (1\,\text{m})^2 = 0.4\,\text{kg\,m}^2
+I_1 = \tfrac{2}{5}(8\,\text{kg})(2\,\text{m})^2 = 12.8\,\text{kg\,m}^2
+\qquad
+I_2 = \tfrac{2}{5}(1\,\text{kg})(1\,\text{m})^2 = 0.4\,\text{kg\,m}^2
 \]
-That larger scale system has a mass that is the cube of the scale factor multiplied by the original mass $2^3 \cdot 1\,\text{kg} = 8\,\text{kg}$, and would have a moment of inertia that is the fifth power of the scale factor times the original moment of inertia. The inertial scale factor is $k^5 = 2^5 = 32$. The moment of inertia for the scaled system calculates to:
+The ratio $I_1/I_2 = 32 = 2^5$ confirms that moment of inertia scales as $k^5$ under isometric scaling. Designating the larger sphere as the observer (System~1) and the smaller as the observed (System~2), the STE yields:
 \[
-\frac{2}{5}(8\,\text{kg})(2\,\text{m})^2 = \frac{2}{5} \cdot 8\,\text{kg} \cdot 4\,\text{m}^2 = 0.4(32)
+k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{0.4}{12.8}\right)^{1/5} = \left(\frac{1}{32}\right)^{1/5} = 0.5
 \]
-resulting in the predicted factor of two to the fifth power, or 32. Velocities scale inversely with $k$: if the sphere had a surface velocity of one meter per second initially, the scaled system would have a surface velocity of $1/k = 0.5$ m/s.
+recovering the linear scale factor between the two systems. The resulting time dilation is:
+\[
+\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.5} \approx 0.707
+\]
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{ste_example.pdf}
-\caption{Isometric scaling of a uniform sphere by factor $k=2$. Mass scales as $k^3$, moment of inertia as $k^5$, and the clock rate ratio follows directly from the STE.}
+\caption{Two uniform spheres related by isometric scaling. The STE recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
 \end{figure}
 
 \section{General and Special Relativity}
