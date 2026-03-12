@@ -4,7 +4,7 @@
 
 \documentclass[twoside,twocolumn,9pt]{article}
 \usepackage{extsizes}
-\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage[authoryear,square]{natbib}
 \usepackage[version=3]{mhchem}
 \usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
 \usepackage{soul}
@@ -132,7 +132,7 @@
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
  & \noindent\small{Revision 2.00 March 8, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
-\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\cite{degerlia2025universe} state that there is a universal mathematical relationship between time and the spatial distribution of matter: \ul{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} In our prior paper \cite{degerlia2025}, we demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by exploring Inertial Relativity's mathematical relationship with General and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.}
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\citep{degerlia2025universe} state that there is a universal mathematical relationship between time and the spatial distribution of matter: \ul{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} In our prior paper \citep{degerlia2025}, we demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by exploring Inertial Relativity's mathematical relationship with General and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.}
 
 \end{tabular}
 
@@ -147,13 +147,11 @@
 \vspace{-1cm}
 %%%FOOTNOTES%%%
 \footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
-\footnotetext{\dag~Mr. DeGerlia, principal of DeGerlia Expert Consulting, holds a B.S. in chemistry and mathematics from Metropolitan State University of Denver and has completed graduate work in chemistry and software engineering at the University of Colorado.}
-
 \section{Introduction}
-This paper presents a mathematical derivation connecting the Space-Time Equivalence (STE)\cite{degerlia2025universe}, General Relativity\cite{einstein1915}, and Special Relativity\cite{einstein1905}. We build upon DeGerlia's prior work introducing the concept of Inertial Density and predicting time dilation calculations with exact precision\cite{degerlia2025}, which established that the Schwarzschild condition reduces to a constant threshold of mass over mean radius, the DeGerlia Threshold ($D_{crit} = 6.73295 \times 10^{26}$ kg/m), about the selected axis. From these demonstrations, the mathematical equivalence between the STE, General Relativity, and Special Relativity is established, unifying the two theories under a single framework: Inertial Relativity.
+This paper presents a mathematical derivation connecting the Space-Time Equivalence (STE)\citep{degerlia2025universe}, General Relativity\citep{einstein1915}, and Special Relativity\citep{einstein1905}. We build upon DeGerlia's prior work introducing the concept of Inertial Density and predicting time dilation calculations with exact precision\citep{degerlia2025}, which established that the Schwarzschild condition reduces to a constant threshold of mass over mean radius, the DeGerlia Threshold ($D_{crit} = 6.73295 \times 10^{26}$ kg/m), about the selected axis. From these demonstrations, the mathematical equivalence between the STE, General Relativity, and Special Relativity is established, unifying the two theories under a single framework: Inertial Relativity.
 
 \section{Inertial Relativity}
-Inertial Relativity is a principle introduced by the author in a prior paper "The Universe of Light" \cite{degerlia2025universe}. In that work, we hypothesized that General and Special Relativity emerge from Inertial Relativity. This paper demonstrates that equivalence.
+Inertial Relativity is a principle introduced by the author in a prior paper "The Universe of Light" \citep{degerlia2025universe}. In that work, we hypothesized that General and Special Relativity emerge from Inertial Relativity. This paper demonstrates that equivalence.
 
 Inertia is relativistic, meaning that without a comparator, any measurement of it would have no meaning. For example, something with a moment of inertia $1 \times 10^{20}$ kg\,m$^2$ might be perceived as difficult to rotate, but not more difficult than something with $1 \times 10^{30}$ kg\,m$^2$. However, the concept of relativity also says that how something is observed is influenced by the frame of observation. Consider for a moment, the following statement that exemplifies our nuanced understanding of the concept of relative scale:
 \begin{quote}
@@ -208,7 +206,7 @@ The fifth root relationship therefore holds universally: for any two systems abo
 
 \subsection{Inertial Density}
 
-Inertial density $P$ is the moment of inertia of a system divided by its volume \cite{degerlia2025}:
+Inertial density $P$ is the moment of inertia of a system divided by its volume \citep{degerlia2025}:
 \begin{equation}
 P = I/V
 \end{equation}
@@ -218,11 +216,11 @@ For a uniform sphere, substituting $I = \frac{2}{5}MR^2$ and $V = \frac{4}{3}\pi
 \begin{equation}
 P = \frac{M}{R} \times \frac{3}{10\pi}
 \end{equation}
-Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in \cite{degerlia2025}: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.} Because $P$ is defined relative to a selected axis, it can be evaluated per axis directly rather than requiring a full tensor treatment when the quantity varies by direction.
+Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in \citep{degerlia2025}: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.} Because $P$ is defined relative to a selected axis, it can be evaluated per axis directly rather than requiring a full tensor treatment when the quantity varies by direction.
 
-\textbf{DeGerlia Compactness} $D = M/R$ \cite{degerlia2025} is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over mean radius ratio for a system about the selected axis.
+\textbf{DeGerlia Compactness} $D = M/R$ \citep{degerlia2025} is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over mean radius ratio for a system about the selected axis.
 
-Setting $R = r_s$ (the Schwarzschild condition) \cite{schwarzschild1916radius} and solving yields the \textbf{DeGerlia Threshold}: the universal constant of DeGerlia Compactness at which a system undergoes gravitational collapse:
+Setting $R = r_s$ (the Schwarzschild condition) \citep{schwarzschild1916radius} and solving yields the \textbf{DeGerlia Threshold}: the universal constant of DeGerlia Compactness at which a system undergoes gravitational collapse:
 \begin{equation}
 D_{crit} = \frac{c^2}{2G} = 6.73295 \times 10^{26} \text{ kg/m}
 \end{equation}
@@ -232,7 +230,7 @@ The ratio of a system's DeGerlia Compactness to this threshold gives the time di
 \end{equation}
 
 \section{The Space-Time Equivalence (STE)}
-The STE is the core universal equivalence stated by Inertial Relativity \cite{degerlia2025universe}:
+The STE is the core universal equivalence stated by Inertial Relativity \citep{degerlia2025universe}:
 
 \begin{equation} \label{eq:ste}
 k = \left(\frac{I_2}{I_1}\right)^{1/5}
@@ -267,7 +265,7 @@ The STE reveals the following properties of time:
 \subsection{Physical Interpretation}
 The STE states that the relative pace of time for any system about any axis is determined by its moment of inertia about that same axis. The more inertia a system has about that axis, the slower its clock runs relative to a system with less inertia. This is consistent with the notion that time is a measure of change, and inertia resists change. Therefore, the more inertia a system has, the less it changes over a given period of time, and thus the slower its system clock runs relative to a system with less inertia.
 
-At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small that is. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space. The per-axis nature of the STE suggests natural extension to asymmetric systems such as the Kerr singularity \cite{kerr1963}, a topic for future investigation.
+At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small that is. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space. The per-axis nature of the STE suggests natural extension to asymmetric systems such as the Kerr singularity \citep{kerr1963}, a topic for future investigation.
 
 \subsection{STE Example}
 Consider a uniform sphere of radius 1\,m and mass 1\,kg scaled isometrically by a factor of two, producing a second sphere of radius 2\,m and mass $2^3 = 8$\,kg. Their moments of inertia are:
@@ -292,13 +290,13 @@ recovering the linear scale factor between the two systems. The resulting time d
 \end{figure}
 
 \section{General and Special Relativity}
-Schwarzschild gravitational time dilation \cite{schwarzschild1916radius}:
+Schwarzschild gravitational time dilation \citep{schwarzschild1916radius}:
 \begin{equation} \label{eq:schwarzschild}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{r_s}{R}}
 \end{equation}
 where $r_s = 2GM/c^2$ is the Schwarzschild radius and $R$ is the mean radius about the selected axis.
 
-Lorentz time dilation \cite{einstein1905}:
+Lorentz time dilation \citep{einstein1905}:
 \begin{equation} \label{eq:lorentz}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}}
 \end{equation}
@@ -330,7 +328,7 @@ where $M$ is the shared mass, $r_s$ is the Schwarzschild radius, and $R$ is the 
 \begin{equation}
 k = \left(\frac{r_s^5}{R^5}\right)^{1/5} = \frac{r_s}{R}
 \end{equation}
-This is equivalently expressed through inertial density \cite{degerlia2025} or DeGerlia Compactness, since $P \propto M/R$ and $D = M/R$. When mass is static, the ratio of either quantity reduces to the ratio of mean radii about the selected axis:
+This is equivalently expressed through inertial density \citep{degerlia2025} or DeGerlia Compactness, since $P \propto M/R$ and $D = M/R$. When mass is static, the ratio of either quantity reduces to the ratio of mean radii about the selected axis:
 \begin{equation}
 k = \frac{P_1}{P_2} = \frac{D_1}{D_2} = \frac{R_2}{R_1} = \frac{r_s}{R}
 \end{equation}
@@ -344,7 +342,7 @@ From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the STE reduces to (see \
 \begin{equation}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
-This is Equation~\ref{eq:linear}. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since gravitational time dilation is equivalently expressed as $r_s/R$ or $v^2/c^2$ \cite{schwarzschild1916radius}, the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
+This is Equation~\ref{eq:linear}. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since gravitational time dilation is equivalently expressed as $r_s/R$ or $v^2/c^2$ \citep{schwarzschild1916radius}, the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \subsection{Constant Density (Isometric)}
 When density is held constant, $M \propto R^3$, and the STE reduces to a pure linear scale ratio (see \ref{app:general_ste}):
@@ -387,7 +385,7 @@ The STE produces both Schwarzschild and Lorentz time dilation exactly, with no f
 \renewcommand{\thesection}{Appendix~\Alph{section}}
 \section{Special-Case Derivations} \label{app:general_ste}
 
-The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \cite{euler1755}, then verifies the general case through decomposition and numerical example.
+The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{euler1755}, then verifies the general case through decomposition and numerical example.
 
 The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
 
@@ -485,7 +483,7 @@ The complete source materials for this paper, including all \LaTeX{} source file
 
 %%%REFERENCES%%%
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
-\bibliographystyle{unsrt} %Numeric style [1]
+\bibliographystyle{plainnat} %Author-year style (Last, Year)
 \balance
 \clearpage
 \end{document}
