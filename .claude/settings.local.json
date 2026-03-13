@@ -9,7 +9,12 @@
       "WebFetch(domain:www.researchhub.com)",
       "WebFetch(domain:ui.adsabs.harvard.edu)",
       "WebFetch(domain:archive.org)",
-      "WebFetch(domain:en.wikipedia.org)"
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && pdflatex master.tex && bibtex master && pdflatex master.tex && pdflatex master.tex 2>&1 | tail -20)",
+      "Bash(wait && cat /private/tmp/claude-501/-Users-tomdegerlia-Develop-academic-academic-InertialRelativity-deriving-gr-sr-from-ste/79b7ff1c-baf6-4d44-8510-20cc68fce2cb/tasks/byihb1xi3.output | tail -30)",
+      "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && rm -f master.bbl master.aux && pdflatex -interaction=nonstopmode master.tex 2>&1 | tail -5)",
+      "Bash(bibtex master:*)",
+      "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && latexmk -c 2>&1)"
     ]
   }
 }
