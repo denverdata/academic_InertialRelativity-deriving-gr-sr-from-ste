@@ -75,7 +75,7 @@
 \subsectionfont{\normalsize}
 \subsubsectionfont{\bf}
 \setstretch{1.125} %In particular, please do not alter this line.
-\setlength{\skip\footins}{0.8cm}
+\setlength{\skip\footins}{0.4cm}
 \setlength{\footnotesep}{0.25cm}
 \setlength{\jot}{10pt}
 \titlespacing*{\section}{0pt}{4pt}{4pt}
@@ -132,7 +132,7 @@
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
  & \noindent\small{Revision 2.00 March 8, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
-\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\citep{degerlia2025universe} state that there is a universal mathematical relationship between time and the spatial distribution of matter: \ul{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} In our prior paper \citep{degerlia2025}, we demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by exploring Inertial Relativity's mathematical relationship with General and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.}
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\citep{degerlia2025universe} hypothesize that there is a universal mathematical relationship between time and the spatial distribution of matter: \ul{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} In our prior paper \citep{degerlia2025}, we demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by exploring Inertial Relativity's mathematical relationship with General and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.}
 
 \end{tabular}
 
@@ -148,7 +148,7 @@
 %%%FOOTNOTES%%%
 \footnotetext{$^{a}$~DeGerlia Expert Consulting, 3000 Lawrence Street, Denver, CO, United States of America. E-mail: tom.degerlia@tomdegerlia.com}
 \section{Introduction}
-This paper presents a mathematical derivation connecting the Space-Time Equivalence (STE)\citep{degerlia2025universe}, General Relativity\citep{einstein1915}, and Special Relativity\citep{einstein1905}. We build upon DeGerlia's prior work introducing the concept of Inertial Density and predicting time dilation calculations with exact precision\citep{degerlia2025}, which established that the Schwarzschild condition reduces to a constant threshold of mass over mean radius, the DeGerlia Threshold ($D_{crit} = 6.73295 \times 10^{26}$ kg/m), about the selected axis. From these demonstrations, the mathematical equivalence between the STE, General Relativity, and Special Relativity is established, unifying the two theories under a single framework: Inertial Relativity.
+This paper presents a mathematical derivation connecting the Space-Time Equivalence (STE), General Relativity\citep{einstein1915}, and Special Relativity\citep{einstein1905}. We build upon DeGerlia's prior work introducing the concept of Inertial Density and predicting time dilation calculations with exact precision\citep{degerlia2025}, which established that the Schwarzschild condition reduces to a constant threshold of mass over mean radius, the DeGerlia Threshold ($D_{crit} = 6.73295 \times 10^{26}$ kg/m), about the selected axis. From these demonstrations, the mathematical equivalence between the STE, General Relativity, and Special Relativity is established, unifying the two theories under a single framework: Inertial Relativity.
 
 \section{Inertial Relativity}
 Inertial Relativity is a principle introduced by the author in a prior paper "The Universe of Light." In that work, we hypothesized that General and Special Relativity emerge from Inertial Relativity. This paper demonstrates that equivalence.
@@ -197,6 +197,7 @@ I' = k^5 I
 \end{equation}
 where $I$ is the moment of inertia about a selected axis; $k$ is the linear scale factor.
 
+\subsection{Inertia Abstracts Mass and Radius}
 Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
 
 \subsection{Universality}
@@ -227,6 +228,10 @@ D_{crit} = \frac{c^2}{2G} = 6.73295 \times 10^{26} \text{ kg/m}
 The ratio of a system's DeGerlia Compactness to this threshold gives the time dilation directly:
 \begin{equation}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{D}{D_{crit}}}
+\end{equation}
+Substituting $D = M/R$:
+\begin{equation}
+\frac{d\tau}{dt} = \sqrt{1 - \frac{M}{R \cdot D_{crit}}}
 \end{equation}
 
 \section{The Space-Time Equivalence (STE)}
@@ -296,7 +301,7 @@ Schwarzschild gravitational time dilation \citep{schwarzschild1916radius}:
 \end{equation}
 where $r_s = 2GM/c^2$ is the Schwarzschild radius and $R$ is the mean radius about the selected axis.
 
-Lorentz time dilation \citep{einstein1905}:
+Lorentz time dilation:
 \begin{equation} \label{eq:lorentz}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}}
 \end{equation}
