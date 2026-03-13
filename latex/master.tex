@@ -437,8 +437,19 @@ k = \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\f
 \textbf{Case 3: Constant Density} $(M \propto R^3,\ R_1 > R_2)$
 
 \begin{equation}
-k = \underbrace{\left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5}}_{L=5} = \underbrace{\left(\frac{R_2^5}{R_1^5}\right)^{1/5}}_{L=5} = \underbrace{\frac{R_2}{R_1}}_{L=1}
+k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5} = \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \end{equation}
+
+\textbf{Case 3 Confirmation:} STE (Equation~\ref{eq:ste}):
+\begin{equation}
+\left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{k^5 I_1}{I_1}\right)^{1/5} = \left(k^5\right)^{1/5} = k
+\end{equation}
+
+\textbf{Case 3 Confirmation 2:} Under isometric scaling, $M_2 = k^3 M_1,\ R_2 = k R_1$:
+\begin{align}
+k &= \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{k^3 M_1 \cdot (k R_1)^2}{M_1 R_1^2}\right)^{1/5} \notag \\
+  &= \left(\frac{k^3 M_1 \cdot k^2 R_1^2}{M_1 R_1^2}\right)^{1/5} = \left(k^5\right)^{1/5} = k
+\end{align}
 
 \textbf{General Case} $(M_1 \neq M_2,\ R_1 \neq R_2,\ M_1 \neq R_1^3,\ M_2 \neq R_2^3)$
 
