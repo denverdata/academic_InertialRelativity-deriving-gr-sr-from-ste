@@ -477,12 +477,35 @@ k &= \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{k^5 I_1}{I_1}\right)^{1/5} = \left(k^5\right)^{1/5} = k
 \end{equation}
 
+\begin{mdframed}
+\textbf{Example (Case 3):} Two constant-density systems ($\rho = 10^{6}$\,kg/m$^3$): $S_1 = \{M_1 = 10^{30}\,\text{kg},\ R_1 = 10^{8}\,\text{m}\}$, $S_2 = \{M_2 = 10^{27}\,\text{kg},\ R_2 = 10^{7}\,\text{m}\}$:
+\[
+k = \frac{R_2}{R_1} = \frac{10^{7}}{10^{8}} = 0.1
+\]
+\[
+\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.1} = 0.94868
+\]
+\textbf{Confirmation:} Gravitational time dilation via full STE with $I_1 = M_1 R_1^2 = 10^{46}$, $I_2 = M_2 R_2^2 = 10^{41}$:
+\begin{align}
+\frac{d\tau}{dt} &= \sqrt{1 - \left(\frac{I_2}{I_1}\right)^{1/5}} = \sqrt{1 - \left(\frac{10^{41}}{10^{46}}\right)^{1/5}} \notag \\
+&= \sqrt{1 - 0.1} = 0.94868 \notag
+\end{align}
+\end{mdframed}
+
 \textbf{Case 4: Constant Inertia} $(M_1 R_1^2 = M_2 R_2^2)$
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} \notag \\
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = (1)^{1/5} = 1
 \end{align}
+
+\begin{mdframed}
+\textbf{Example (Case 4):} $S_1 = \{M_1 = 10^{30}\,\text{kg},\ R_1 = 10^{8}\,\text{m}\}$, $S_2 = \{M_2 = 10^{32}\,\text{kg},\ R_2 = 10^{7}\,\text{m}\}$. Both have $I = MR^2 = 10^{46}$\,kg$\cdot$m$^2$:
+\[
+k = \left(\frac{10^{46}}{10^{46}}\right)^{1/5} = 1
+\]
+No time dilation occurs when inertia is conserved.
+\end{mdframed}
 
 \textbf{General Case} $(M_1 \neq M_2,\ R_1 \neq R_2,\ M_1 \neq R_1^3,\ M_2 \neq R_2^3)$
 
