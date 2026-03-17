@@ -424,31 +424,35 @@ $I \propto MR^2$ where $R$ is the mean radius about the selected axis.
 
 \textbf{Case 1: Static Mass} $(M_1 = M_2,\ R_1 > R_2)$
 
-\begin{equation}
-k = \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M R_2^2}{M R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^2}{R_1^2}\right)^{1/2}}_{L=2} = \underbrace{\frac{R_2}{R_1}}_{L=1}
-\end{equation}
+\begin{align}
+k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M R_2^2}{M R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^2}{R_1^2}\right)^{1/L}}_{L=2} \notag \\
+k &= \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
+\end{align}
 
 \textbf{Case 2: Static Radius} $(R_1 = R_2,\ M_1 > M_2)$
 
-\begin{equation}
-k = \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R^2}{M_1 R^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/3}}_{L=3}
-\end{equation}
+\begin{align}
+k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R^2}{M_1 R^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/L}}_{L=3} \notag \\
+k &= \left(\frac{M_2}{M_1}\right)^{1/3}
+\end{align}
 
 \textbf{Case 3: Constant Density} $(M \propto R^3,\ R_1 > R_2)$
 
-\begin{equation}
-k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5} = \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
-\end{equation}
+\begin{align}
+k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^5}{R_1^5}\right)^{1/L}}_{L=5} \notag \\
+k &= \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
+\end{align}
 
 \textbf{Case 3 Confirmation:} STE (Equation~\ref{eq:ste}):
 \begin{equation}
 \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{k^5 I_1}{I_1}\right)^{1/5} = \left(k^5\right)^{1/5} = k
 \end{equation}
 
-\textbf{Case 3 Confirmation 2:} Under isometric scaling, $M_2 = k^3 M_1,\ R_2 = k R_1$:
+\textbf{Case 4: Constant Inertia} $(M_1 R_1^2 = M_2 R_2^2)$
+
 \begin{align}
-k &= \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{k^3 M_1 \cdot (k R_1)^2}{M_1 R_1^2}\right)^{1/5} \notag \\
-  &= \left(\frac{k^3 M_1 \cdot k^2 R_1^2}{M_1 R_1^2}\right)^{1/5} = \left(k^5\right)^{1/5} = k
+k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} \notag \\
+k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = (1)^{1/5} = 1
 \end{align}
 
 \textbf{General Case} $(M_1 \neq M_2,\ R_1 \neq R_2,\ M_1 \neq R_1^3,\ M_2 \neq R_2^3)$
@@ -497,11 +501,34 @@ k = k_{\text{mass}} \times k_{\text{radius}} = 0.01 \times 0.39811 = 0.003981
 
 Both paths produce identical results: $d\tau/dt = \sqrt{1 - 0.003981} = 0.998007$, confirming that the general STE is internally consistent.
 
+\balance
+
+\section{Scaling Behaviour Across Systems} \label{app:scaling_table}
+
+See Table~\ref{tab:scaling_behaviour}.
+
+\begin{table*}[b]
+\centering
+\caption{Scaling behaviour across systems}
+\label{tab:scaling_behaviour}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+System & M (kg) & R (m) & I (kg$\cdot$m$^2$) & M Scale & R Scale & Ratio & $\sqrt[5]{\text{Ratio}}$ & $t_0/t_f$ \\
+\hline
+1 & $1.00\times10^{3}$ & $1.00\times10^{0}$ & $4.00\times10^{2}$ & --- & --- & --- & --- & $1 - 7.42\times10^{-25}$ \\
+2 & $1.00\times10^{15}$ & $1.00\times10^{4}$ & $4.00\times10^{22}$ & $1.00\times10^{12}$ & $1.00\times10^{4}$ & $1.00\times10^{20}$ & $1.00\times10^{4}$ & $1 - 7.42\times10^{-17}$ \\
+3 & $1.00\times10^{15}$ & $1.00\times10^{6}$ & $4.00\times10^{26}$ & $1.00\times10^{0}$ & $1.00\times10^{2}$ & $1.00\times10^{4}$ & $3.98\times10^{0}$ & $1 - 7.42\times10^{-19}$ \\
+4 & $1.00\times10^{21}$ & $1.00\times10^{6}$ & $4.00\times10^{32}$ & $1.00\times10^{6}$ & $1.00\times10^{0}$ & $1.00\times10^{6}$ & $1.58\times10^{1}$ & $1 - 7.42\times10^{-13}$ \\
+5 & $1.00\times10^{21}$ & $1.00\times10^{-5}$ & $4.00\times10^{10}$ & $1.00\times10^{0}$ & $1.00\times10^{-11}$ & $1.00\times10^{-22}$ & $3.98\times10^{-5}$ & $9.25\times10^{-1}$ \\
+6 & $1.00\times10^{3}$ & $1.00\times10^{0}$ & $4.00\times10^{2}$ & $1.00\times10^{-18}$ & $1.00\times10^{5}$ & $1.00\times10^{-8}$ & $2.51\times10^{-2}$ & $1 - 7.42\times10^{-25}$ \\
+\hline
+\end{tabular}
+\end{table*}
+
 \section*{Data Availability}
 The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
 
 %%%REFERENCES%%%
-\balance
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
 \bibliographystyle{plainnat} %Author-year style (Last, Year)
 \clearpage
