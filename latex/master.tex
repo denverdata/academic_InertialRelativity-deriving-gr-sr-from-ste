@@ -455,16 +455,15 @@ k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 
 \begin{mdframed}
 \textbf{Example (Case 2):} Two systems at the same radius ($R = 10^{8}$\,m), with $M_1 = 10^{30}$\,kg and $M_2 = 10^{24}$\,kg, both at rest:
-\[
-k = \left(\frac{10^{24}}{10^{30}}\right)^{1/3} = \left(10^{-6}\right)^{1/3} = 10^{-2} = 0.01
-\]
-\[
-\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.01} = 0.99499
-\]
+\begin{align}
+\frac{d\tau}{dt} &= \sqrt{1 - k} = \sqrt{1 - \left(\frac{M_2}{M_1}\right)^{1/3}} \notag \\
+&= \sqrt{1 - \left(\frac{10^{24}}{10^{30}}\right)^{1/3}} = \sqrt{1 - 0.01} = 0.99499 \notag
+\end{align}
 \textbf{Confirmation:} Gravitational time dilation:
 \begin{align}
-\frac{d\tau}{dt} &= \sqrt{1 - \left(\frac{M_2}{M_1}\right)^{1/3}} = \sqrt{1 - \left(\frac{10^{24}}{10^{30}}\right)^{1/3}} \notag \\
-&= \sqrt{1 - 0.01} = 0.99499 \notag
+\frac{d\tau}{dt} &= \sqrt{1 - \left(\frac{2GM_2/c^2}{2GM_1/c^2}\right)^{1/3}} \notag \\
+&= \sqrt{1 - \left(\frac{2 \times 6.674 \times 10^{-11} \times 10^{24}}{2 \times 6.674 \times 10^{-11} \times 10^{30}}\right)^{1/3}} \notag \\
+&= \sqrt{1 - (10^{-6})^{1/3}} = \sqrt{1 - 0.01} = 0.99499 \notag
 \end{align}
 \end{mdframed}
 
@@ -484,9 +483,11 @@ k = \frac{R_2}{R_1} = \frac{10^{7}}{10^{8}} = 0.1
 \frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.1} = 0.94868
 \]
 \textbf{Confirmation:} Gravitational time dilation:
-\[
-\frac{d\tau}{dt} = \sqrt{1 - \frac{R_2}{R_1}} = \sqrt{1 - \frac{10^{7}}{10^{8}}} = \sqrt{1 - 0.1} = 0.94868
-\]
+\begin{align}
+\frac{d\tau}{dt} &= \sqrt{1 - \left(\frac{2GM_2/c^2}{2GM_1/c^2}\right)^{1/3}} \notag \\
+&= \sqrt{1 - \left(\frac{2 \times 6.674 \times 10^{-11} \times 10^{27}}{2 \times 6.674 \times 10^{-11} \times 10^{30}}\right)^{1/3}} \notag \\
+&= \sqrt{1 - (10^{-3})^{1/3}} = \sqrt{1 - 0.1} = 0.94868 \notag
+\end{align}
 \end{mdframed}
 
 \textbf{Case 4: Constant Inertia} $(M_1 R_1^2 = M_2 R_2^2)$
@@ -510,6 +511,23 @@ No time dilation occurs when inertia is conserved.
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/L}}_{L=5} \cdot \underbrace{\left(\frac{R_2}{R_1}\right)^{2/L}}_{L=5} \notag \\
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5}
 \end{align}
+
+\begin{mdframed}
+\textbf{Example (General Case):} $S_1 = \{M_1 = 10^{27}\,\text{kg},\ R_1 = 10^{8}\,\text{m}\}$ (Saturn-like), $S_2 = \{M_2 = 10^{24}\,\text{kg},\ R_2 = 10^{7}\,\text{m}\}$ (Mars-like):
+\begin{align}
+k &= \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5} = \left(\frac{10^{24}}{10^{27}}\right)^{1/5} \cdot \left(\frac{10^{7}}{10^{8}}\right)^{2/5} \notag \\
+&= 10^{-0.6} \times 10^{-0.4} = 10^{-1} = 0.1 \notag
+\end{align}
+\[
+\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.1} = 0.94868
+\]
+\textbf{Confirmation:} Gravitational time dilation:
+\begin{align}
+\frac{d\tau}{dt} &= \sqrt{1 - \left(\frac{2GM_2/c^2}{2GM_1/c^2}\right)^{1/3}} \notag \\
+&= \sqrt{1 - \left(\frac{2 \times 6.674 \times 10^{-11} \times 10^{24}}{2 \times 6.674 \times 10^{-11} \times 10^{27}}\right)^{1/3}} \notag \\
+&= \sqrt{1 - (10^{-3})^{1/3}} = \sqrt{1 - 0.1} = 0.94868 \notag
+\end{align}
+\end{mdframed}
 
 \textbf{Verification of Internal Consistency}
 
