@@ -439,7 +439,9 @@ k = \frac{R_2}{R_1} = \frac{2953}{6.957 \times 10^{8}} = 4.24 \times 10^{-6}
 \]
 \textbf{Confirmation:} GR time dilation at the surface relative to a distant observer:
 \begin{align}
-\frac{d\tau}{dt} &= \sqrt{1 - \frac{r_s}{R}} = \sqrt{1 - \frac{2953}{6.957 \times 10^{8}}} \notag \\
+\frac{d\tau}{dt} &= \sqrt{1 - \frac{2GM}{Rc^2}} \notag \\
+&= \sqrt{1 - \frac{2 \times 6.674 \times 10^{-11} \times 1.989 \times 10^{30}}{6.957 \times 10^{8} \times (2.998 \times 10^{8})^2}} \notag \\
+&= \sqrt{1 - \frac{2.655 \times 10^{20}}{6.253 \times 10^{25}}} \notag \\
 &= \sqrt{1 - 4.24 \times 10^{-6}} = 0.999997878 \notag
 \end{align}
 \end{mdframed}
@@ -460,9 +462,10 @@ k = \left(\frac{10^{24}}{10^{30}}\right)^{1/3} = \left(10^{-6}\right)^{1/3} = 10
 \frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.01} = 0.99499
 \]
 \textbf{Confirmation:} Gravitational time dilation:
-\[
-\frac{d\tau}{dt} = \sqrt{1 - \left(\frac{M_2}{M_1}\right)^{1/3}} = \sqrt{1 - \left(\frac{10^{24}}{10^{30}}\right)^{1/3}} = \sqrt{1 - 0.01} = 0.99499
-\]
+\begin{align}
+\frac{d\tau}{dt} &= \sqrt{1 - \left(\frac{M_2}{M_1}\right)^{1/3}} = \sqrt{1 - \left(\frac{10^{24}}{10^{30}}\right)^{1/3}} \notag \\
+&= \sqrt{1 - 0.01} = 0.99499 \notag
+\end{align}
 \end{mdframed}
 
 \textbf{Case 3: Constant Density} $(M \propto R^3,\ R_1 > R_2)$
@@ -505,7 +508,7 @@ No time dilation occurs when inertia is conserved.
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/L}}_{L=5} \cdot \underbrace{\left(\frac{R_2}{R_1}\right)^{2/L}}_{L=5} \notag \\
-k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1} \cdot \frac{R_2^2}{R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5}
+k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5}
 \end{align}
 
 \textbf{Verification of Internal Consistency}
@@ -516,7 +519,6 @@ Starting from $I \propto MR^2$:
 \begin{align}
 k &= \left(\frac{I_2}{I_1}\right)^{1/5} \notag \\
   &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} \notag \\
-  &= \left(\frac{M_2}{M_1} \cdot \frac{R_2^2}{R_1^2}\right)^{1/5} \notag \\
   &= \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5} \notag \\
   &= k_{\text{mass}} \times k_{\text{radius}}
 \end{align}
