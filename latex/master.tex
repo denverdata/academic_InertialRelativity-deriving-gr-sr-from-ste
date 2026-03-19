@@ -459,9 +459,9 @@ k = \left(\frac{10^{24}}{10^{30}}\right)^{1/3} = \left(10^{-6}\right)^{1/3} = 10
 \[
 \frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 0.01} = 0.99499
 \]
-\textbf{Confirmation:} SR time dilation with equivalent $\beta^2 = k = 0.01$, i.e.\ $v = 0.1c$:
+\textbf{Confirmation:} Gravitational time dilation:
 \[
-\frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}} = \sqrt{1 - 0.01} = 0.99499
+\frac{d\tau}{dt} = \sqrt{1 - \left(\frac{M_2}{M_1}\right)^{1/3}} = \sqrt{1 - \left(\frac{10^{24}}{10^{30}}\right)^{1/3}} = \sqrt{1 - 0.01} = 0.99499
 \]
 \end{mdframed}
 
@@ -471,11 +471,6 @@ k = \left(\frac{10^{24}}{10^{30}}\right)^{1/3} = \left(10^{-6}\right)^{1/3} = 10
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^5}{R_1^5}\right)^{1/L}}_{L=5} \notag \\
 k &= \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \end{align}
-
-\textbf{Case 3 Confirmation:} STE (Equation~\ref{eq:ste}):
-\begin{equation}
-\left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{k^5 I_1}{I_1}\right)^{1/5} = \left(k^5\right)^{1/5} = k
-\end{equation}
 
 \begin{mdframed}
 \textbf{Example (Case 3):} Two constant-density systems ($\rho = 10^{6}$\,kg/m$^3$): $S_1 = \{M_1 = 10^{30}\,\text{kg},\ R_1 = 10^{8}\,\text{m}\}$, $S_2 = \{M_2 = 10^{27}\,\text{kg},\ R_2 = 10^{7}\,\text{m}\}$:
@@ -508,9 +503,10 @@ No time dilation occurs when inertia is conserved.
 
 \textbf{General Case} $(M_1 \neq M_2,\ R_1 \neq R_2,\ M_1 \neq R_1^3,\ M_2 \neq R_2^3)$
 
-\begin{equation}
-k = \underbrace{\left(\frac{I_2}{I_1}\right)^{1/5}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}}_{L=5}
-\end{equation}
+\begin{align}
+k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/L}}_{L=5} \cdot \underbrace{\left(\frac{R_2}{R_1}\right)^{2/L}}_{L=5} \notag \\
+k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1} \cdot \frac{R_2^2}{R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5}
+\end{align}
 
 \textbf{Verification of Internal Consistency}
 
@@ -521,7 +517,6 @@ Starting from $I \propto MR^2$:
 k &= \left(\frac{I_2}{I_1}\right)^{1/5} \notag \\
   &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} \notag \\
   &= \left(\frac{M_2}{M_1} \cdot \frac{R_2^2}{R_1^2}\right)^{1/5} \notag \\
-  &= \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2^2}{R_1^2}\right)^{1/5} \notag \\
   &= \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5} \notag \\
   &= k_{\text{mass}} \times k_{\text{radius}}
 \end{align}
