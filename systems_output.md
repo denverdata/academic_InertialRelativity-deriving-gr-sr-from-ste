@@ -2,7 +2,7 @@
 
 
 ## System 1
-Mass: 1.989e30 kg, Radius: 6.957e8 m
+Mass: 1.98900e30 kg, Radius: 6.95700e8 m
 
 ```
 Name: Sphere from CLI parameters
@@ -29,11 +29,11 @@ Frequency from 1N·m Torque (1s): 4.13315175e-49 Hz
 Velocity from 1N·m Torque (1s): 1.80668826e-39 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 4.24626499217393292603093358907400039385236732000000e-6
+**Derived:** k = 1 - GTD² = 4.24626e-6
 
 
 ## System 2
-Mass: 1.989e30 kg, Radius: 2953 m
+Mass: 1.98900e30 kg, Radius: 2.95300e3 m
 
 ```
 Name: Sphere from CLI parameters
@@ -60,11 +60,11 @@ Frequency from 1N·m Torque (1s): 2.29402667e-38 Hz
 Velocity from 1N·m Torque (1s): 4.25639357e-34 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.00000000000000000000000000000000000000000000000000e+0
+**Derived:** k = 1 - GTD² = 1.00000e0
 
 
 ## System 3
-Mass: 1e30 kg, Radius: 1e8 m
+Mass: 1.00000e30 kg, Radius: 1.00000e8 m
 
 ```
 Name: Sphere from CLI parameters
@@ -91,11 +91,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+**Derived:** k = 1 - GTD² = 1.48523e-5
 
 
 ## System 4
-Mass: 1e24 kg, Radius: 1e8 m
+Mass: 1.00000e24 kg, Radius: 1.00000e8 m
 
 ```
 Name: Sphere from CLI parameters
@@ -122,11 +122,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-41 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-32 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739600000000000e-11
+**Derived:** k = 1 - GTD² = 1.48523e-11
 
 
 ## System 5
-Mass: 1e30 kg, Radius: 1e8 m
+Mass: 1.00000e30 kg, Radius: 1.00000e8 m
 
 ```
 Name: Sphere from CLI parameters
@@ -153,11 +153,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+**Derived:** k = 1 - GTD² = 1.48523e-5
 
 
 ## System 6
-Mass: 1e27 kg, Radius: 1e7 m
+Mass: 1.00000e27 kg, Radius: 1.00000e7 m
 
 ```
 Name: Sphere from CLI parameters
@@ -184,11 +184,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-42 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-34 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723060000000e-7
+**Derived:** k = 1 - GTD² = 1.48523e-7
 
 
 ## System 7
-Mass: 1e30 kg, Radius: 1e8 m
+Mass: 1.00000e30 kg, Radius: 1.00000e8 m
 
 ```
 Name: Sphere from CLI parameters
@@ -215,11 +215,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+**Derived:** k = 1 - GTD² = 1.48523e-5
 
 
 ## System 8
-Mass: 1e32 kg, Radius: 1e7 m
+Mass: 1.00000e32 kg, Radius: 1.00000e7 m
 
 ```
 Name: Sphere from CLI parameters
@@ -246,11 +246,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-39 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548300e-2
+**Derived:** k = 1 - GTD² = 1.48523e-2
 
 
 ## System 9
-Mass: 1e30 kg, Radius: 1e8 m
+Mass: 1.00000e30 kg, Radius: 1.00000e8 m
 
 ```
 Name: Sphere from CLI parameters
@@ -277,11 +277,11 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+**Derived:** k = 1 - GTD² = 1.48523e-5
 
 
 ## System 10
-Mass: 1e20 kg, Radius: 1e7 m
+Mass: 1.00000e20 kg, Radius: 1.00000e7 m
 
 ```
 Name: Sphere from CLI parameters
@@ -308,4 +308,4 @@ Frequency from 1N·m Torque (1s): 3.97887358e-35 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-27 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461700000000000000e-14
+**Derived:** k = 1 - GTD² = 1.48523e-14

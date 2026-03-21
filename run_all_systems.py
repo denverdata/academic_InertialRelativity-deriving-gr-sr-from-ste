@@ -44,8 +44,16 @@ def generate_output(output_path):
     for num, mass, radius in SYSTEMS:
         sphere = UniformSphere(radius=radius, mass=mass, name='Sphere from CLI parameters')
 
+        # Format inputs to 6 significant figures
+        m_float = float(mass)
+        m_base, m_exp = f'{m_float:.5e}'.split('e')
+        mass_fmt = f'{m_base}e{int(m_exp)}'
+        r_float = float(radius)
+        r_base, r_exp = f'{r_float:.5e}'.split('e')
+        radius_fmt = f'{r_base}e{int(r_exp)}'
+
         output_lines.append(f'\n## System {num}')
-        output_lines.append(f'Mass: {mass} kg, Radius: {radius} m')
+        output_lines.append(f'Mass: {mass_fmt} kg, Radius: {radius_fmt} m')
         output_lines.append('')
 
         # Capture print_properties output
@@ -62,8 +70,16 @@ def generate_output(output_path):
         gtd = sphere._properties['gravitational_time_dilation']
         k = Decimal('1') - gtd * gtd
 
+        # Format k to 6 significant figures in scientific notation
+        k_float = float(k)
+        if k_float == 0:
+            k_formatted = '0.00000e0'
+        else:
+            k_base, k_exp = f'{k_float:.5e}'.split('e')
+            k_formatted = f'{k_base}e{int(k_exp)}'
+
         output_lines.append('')
-        output_lines.append(f"**Derived:** k = 1 - GTD² = {k:.50e}")
+        output_lines.append(f"**Derived:** k = 1 - GTD² = {k_formatted}")
         output_lines.append('')
 
     with open(output_path, 'w') as f:
