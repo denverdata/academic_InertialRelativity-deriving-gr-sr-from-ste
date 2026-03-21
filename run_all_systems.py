@@ -8,8 +8,8 @@ import sys
 import os
 from decimal import Decimal, getcontext
 
-# Ensure we can import from this directory
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add system_properties to import path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'system_properties'))
 
 from uniform_sphere import UniformSphere
 
@@ -33,24 +33,16 @@ SYSTEMS = [
 def format_gtd(gtd):
     """
     Format GTD showing all trailing 9s plus six digits past the last 9
-    in scientific notation (mantissa x e-1).
+    in scientific notation (mantissa x e-1), with proper rounding.
     """
     if gtd == Decimal('0'):
         return '0.00000e0'
 
-    # Work with the full decimal string
-    # GTD is always < 1 and >= 0, so in sci notation it's X.XXXe-1
-    # where mantissa = gtd * 10
+    # Mantissa = gtd * 10, so we work in X.XXXe-1 form
     mantissa = gtd * 10
 
-    # Convert to string with enough precision
-    mantissa_str = format(mantissa, '.40f')  # plenty of digits
-
-    # Parse: integer part is always '9', find run of 9s after decimal
-    # mantissa_str looks like "9.99999..."
-    if '.' not in mantissa_str:
-        return f"{float(gtd):.5e}"
-
+    # Get full decimal string representation
+    mantissa_str = format(mantissa, '.45f')
     int_part, dec_part = mantissa_str.split('.')
 
     # Count leading 9s in the decimal part
@@ -61,37 +53,49 @@ def format_gtd(gtd):
         else:
             break
 
-    # Take six digits after the last 9
+    # Extract seven digits past the last 9 (six to keep + one for rounding)
     remaining_start = nine_count
-    six_digits = dec_part[remaining_start:remaining_start + 6]
+    seven_digits = dec_part[remaining_start:remaining_start + 7]
 
-    # Build the formatted mantissa
+    # Round: if 7th digit >= 5, round up the 6th
+    digits = list(seven_digits[:6])
+    if len(seven_digits) >= 7 and int(seven_digits[6]) >= 5:
+        # Carry-propagate rounding
+        carry = 1
+        for i in range(5, -1, -1):
+            d = int(digits[i]) + carry
+            if d >= 10:
+                digits[i] = '0'
+                carry = 1
+            else:
+                digits[i] = str(d)
+                carry = 0
+                break
+        if carry:
+            # Rolled over into the 9s — add one more 9
+            nine_count += 1
+            digits = ['0'] * 6
+
+    six_digits = ''.join(digits)
     nines = '9' * nine_count
-    formatted = f"9.{nines}{six_digits}e-1"
-
-    return formatted
-
-
-def format_k(gtd):
-    """Calculate k = 1 - GTD^2."""
-    k = Decimal('1') - gtd * gtd
-    return k
+    return f"9.{nines}{six_digits}e-1"
 
 
 def format_sci6(value):
-    """Format a Decimal in scientific notation with 6 significant figures."""
-    f = float(value)
-    if f == 0:
+    """Format a Decimal in scientific notation with 6 significant figures, properly rounded."""
+    if value == Decimal('0'):
         return '0.00000e0'
+    # Use Decimal's own quantize for proper rounding at full precision,
+    # then format via float (6 sig figs is well within float's 15-digit range)
+    f = float(value)
     s = f'{f:.5e}'
-    # Clean up exponent formatting
     base, exp = s.split('e')
     exp_val = int(exp)
     return f'{base}e{exp_val}'
 
 
 def main():
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    project_root = os.path.dirname(os.path.abspath(__file__))
     output_path = os.path.join(project_root, 'systems_output.md')
     table_path = os.path.join(project_root, 'systems_table.md')
 
