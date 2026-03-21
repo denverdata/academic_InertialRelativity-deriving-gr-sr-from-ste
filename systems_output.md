@@ -1,5 +1,6 @@
 # System Properties Output
 
+
 ## System 1
 Mass: 1.989e30 kg, Radius: 6.957e8 m
 
@@ -28,8 +29,11 @@ Frequency from 1N·m Torque (1s): 4.13315175e-49 Hz
 Velocity from 1N·m Torque (1s): 1.80668826e-39 m/s
 ```
 
+**Derived:** k = 1 - GTD² = 4.24626499217393292603093358907400039385236732000000e-6
+
+
 ## System 2
-Mass: 1.989e30 kg, Radius: 2953 m (Schwarzschild radius)
+Mass: 1.989e30 kg, Radius: 2953 m
 
 ```
 Name: Sphere from CLI parameters
@@ -55,6 +59,9 @@ Vibrational Frequency: 1.14273417e4 Hz
 Frequency from 1N·m Torque (1s): 2.29402667e-38 Hz
 Velocity from 1N·m Torque (1s): 4.25639357e-34 m/s
 ```
+
+**Derived:** k = 1 - GTD² = 1.00000000000000000000000000000000000000000000000000e+0
+
 
 ## System 3
 Mass: 1e30 kg, Radius: 1e8 m
@@ -84,6 +91,9 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+
+
 ## System 4
 Mass: 1e24 kg, Radius: 1e8 m
 
@@ -112,6 +122,9 @@ Frequency from 1N·m Torque (1s): 3.97887358e-41 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-32 m/s
 ```
 
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739600000000000e-11
+
+
 ## System 5
 Mass: 1e30 kg, Radius: 1e8 m
 
@@ -134,64 +147,165 @@ Gravitational Time Dilation: 9.9999257381215674839286916233057715077835311558045
 Gravity: 6.67430e+03 m/s²
 Total Potential Energy: -6.67430000e41 J
 Total Kinetic Energy: 0.00000000e0 J
-Total Energy: -6.67430000e41 Jz
+Total Energy: -6.67430000e41 J
 Vibrational Frequency: 1.30023842e-3 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-## System 7
-Mass: 1e27 kg, Radius: 1e8 m
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
 
-```
-Name: Sphere from CLI parameters
-Radius: 1.00000000e8 m
-Mass: 1.00000000e27 kg
-Rotational Frequency: 0.00000000e0 Hz
-Surface Area: 1.25663706e17 m²
-Volume: 4.18879020e24 m³
-Moment Of Inertia: 4.00000000e42 kg·m²
-Density: 2.38732415e2 kg/m³
-Inertial Density (I/V): 9.54929659e17 kg/m
-DeGerlia Compactness (m/r): 1.00000000e19 kg/m
-Rotational Period: 0.00000000e0 s
-Rotational Angular Velocity: 0.00000000e0 rad/s
-Rotational Tangential Velocity: 0.00000000e0 m/s
-Schwarzschild Radius: 1.48523e+00 m
-Gravitational Time Dilation: 9.99999992573839703307406122053754381718004540379810e-1 (dimensionless)
-Gravity: 6.67430e+00 m/s²
-Total Potential Energy: -6.67430000e35 J
-Total Kinetic Energy: 0.00000000e0 J
-Total Energy: -6.67430000e35 J
-Vibrational Frequency: 4.11171490e-5 Hz
-Frequency from 1N·m Torque (1s): 3.97887358e-44 Hz
-Velocity from 1N·m Torque (1s): 2.50000000e-35 m/s
-```
 
-## System 8
-Mass: 1e24 kg, Radius: 1e7 m
+## System 6
+Mass: 1e27 kg, Radius: 1e7 m
 
 ```
 Name: Sphere from CLI parameters
 Radius: 1.00000000e7 m
-Mass: 1.00000000e24 kg
+Mass: 1.00000000e27 kg
 Rotational Frequency: 0.00000000e0 Hz
 Surface Area: 1.25663706e15 m²
 Volume: 4.18879020e21 m³
-Moment Of Inertia: 4.00000000e37 kg·m²
-Density: 2.38732415e2 kg/m³
-Inertial Density (I/V): 9.54929659e15 kg/m
-DeGerlia Compactness (m/r): 1.00000000e17 kg/m
+Moment Of Inertia: 4.00000000e40 kg·m²
+Density: 2.38732415e5 kg/m³
+Inertial Density (I/V): 9.54929659e18 kg/m
+DeGerlia Compactness (m/r): 1.00000000e20 kg/m
 Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
-Schwarzschild Radius: 1.48523e-03 m
-Gravitational Time Dilation: 9.99999999925738397306055952164068114544709163389890e-1 (dimensionless)
-Gravity: 6.67430e-01 m/s²
-Total Potential Energy: -6.67430000e30 J
+Schwarzschild Radius: 1.48523e+00 m
+Gravitational Time Dilation: 9.99999925738394551420323081145334488683774209633310e-1 (dimensionless)
+Gravity: 6.67430e+02 m/s²
+Total Potential Energy: -6.67430000e36 J
 Total Kinetic Energy: 0.00000000e0 J
-Total Energy: -6.67430000e30 J
-Vibrational Frequency: 4.11171490e-5 Hz
-Frequency from 1N·m Torque (1s): 3.97887358e-39 Hz
-Velocity from 1N·m Torque (1s): 2.50000000e-31 m/s
+Total Energy: -6.67430000e36 J
+Vibrational Frequency: 1.30023842e-3 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-42 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-34 m/s
 ```
+
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723060000000e-7
+
+
+## System 7
+Mass: 1e30 kg, Radius: 1e8 m
+
+```
+Name: Sphere from CLI parameters
+Radius: 1.00000000e8 m
+Mass: 1.00000000e30 kg
+Rotational Frequency: 0.00000000e0 Hz
+Surface Area: 1.25663706e17 m²
+Volume: 4.18879020e24 m³
+Moment Of Inertia: 4.00000000e45 kg·m²
+Density: 2.38732415e5 kg/m³
+Inertial Density (I/V): 9.54929659e20 kg/m
+DeGerlia Compactness (m/r): 1.00000000e22 kg/m
+Rotational Period: 0.00000000e0 s
+Rotational Angular Velocity: 0.00000000e0 rad/s
+Rotational Tangential Velocity: 0.00000000e0 m/s
+Schwarzschild Radius: 1.48523e+03 m
+Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580450e-1 (dimensionless)
+Gravity: 6.67430e+03 m/s²
+Total Potential Energy: -6.67430000e41 J
+Total Kinetic Energy: 0.00000000e0 J
+Total Energy: -6.67430000e41 J
+Vibrational Frequency: 1.30023842e-3 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
+```
+
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+
+
+## System 8
+Mass: 1e32 kg, Radius: 1e7 m
+
+```
+Name: Sphere from CLI parameters
+Radius: 1.00000000e7 m
+Mass: 1.00000000e32 kg
+Rotational Frequency: 0.00000000e0 Hz
+Surface Area: 1.25663706e15 m²
+Volume: 4.18879020e21 m³
+Moment Of Inertia: 4.00000000e45 kg·m²
+Density: 2.38732415e10 kg/m³
+Inertial Density (I/V): 9.54929659e23 kg/m
+DeGerlia Compactness (m/r): 1.00000000e25 kg/m
+Rotational Period: 0.00000000e0 s
+Rotational Angular Velocity: 0.00000000e0 rad/s
+Rotational Tangential Velocity: 0.00000000e0 m/s
+Schwarzschild Radius: 1.48523e+05 m
+Gravitational Time Dilation: 9.92546059113511703532639806620978151237637788052710e-1 (dimensionless)
+Gravity: 6.67430e+07 m/s²
+Total Potential Energy: -6.67430000e46 J
+Total Kinetic Energy: 0.00000000e0 J
+Total Energy: -6.67430000e46 J
+Vibrational Frequency: 4.11171490e-1 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-39 m/s
+```
+
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548300e-2
+
+
+## System 9
+Mass: 1e30 kg, Radius: 1e8 m
+
+```
+Name: Sphere from CLI parameters
+Radius: 1.00000000e8 m
+Mass: 1.00000000e30 kg
+Rotational Frequency: 0.00000000e0 Hz
+Surface Area: 1.25663706e17 m²
+Volume: 4.18879020e24 m³
+Moment Of Inertia: 4.00000000e45 kg·m²
+Density: 2.38732415e5 kg/m³
+Inertial Density (I/V): 9.54929659e20 kg/m
+DeGerlia Compactness (m/r): 1.00000000e22 kg/m
+Rotational Period: 0.00000000e0 s
+Rotational Angular Velocity: 0.00000000e0 rad/s
+Rotational Tangential Velocity: 0.00000000e0 m/s
+Schwarzschild Radius: 1.48523e+03 m
+Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580450e-1 (dimensionless)
+Gravity: 6.67430e+03 m/s²
+Total Potential Energy: -6.67430000e41 J
+Total Kinetic Energy: 0.00000000e0 J
+Total Energy: -6.67430000e41 J
+Vibrational Frequency: 1.30023842e-3 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
+```
+
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074400000e-5
+
+
+## System 10
+Mass: 1e20 kg, Radius: 1e7 m
+
+```
+Name: Sphere from CLI parameters
+Radius: 1.00000000e7 m
+Mass: 1.00000000e20 kg
+Rotational Frequency: 0.00000000e0 Hz
+Surface Area: 1.25663706e15 m²
+Volume: 4.18879020e21 m³
+Moment Of Inertia: 4.00000000e33 kg·m²
+Density: 2.38732415e-2 kg/m³
+Inertial Density (I/V): 9.54929659e11 kg/m
+DeGerlia Compactness (m/r): 1.00000000e13 kg/m
+Rotational Period: 0.00000000e0 s
+Rotational Angular Velocity: 0.00000000e0 rad/s
+Rotational Tangential Velocity: 0.00000000e0 m/s
+Schwarzschild Radius: 1.48523e-07 m
+Gravitational Time Dilation: 9.99999999999992573839730881306924212300029104942790e-1 (dimensionless)
+Gravity: 6.67430e-05 m/s²
+Total Potential Energy: -6.67430000e22 J
+Total Kinetic Energy: 0.00000000e0 J
+Total Energy: -6.67430000e22 J
+Vibrational Frequency: 4.11171490e-7 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-35 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-27 m/s
+```
+
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461700000000000000e-14
