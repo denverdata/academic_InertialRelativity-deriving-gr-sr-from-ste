@@ -15,9 +15,10 @@ from contextlib import redirect_stdout
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'system_properties'))
 
 from uniform_sphere import UniformSphere
+import constants
 
-# Set high precision for derived calculations
-getcontext().prec = 50
+# Override precision after import (constants.py sets it to 50)
+getcontext().prec = 100
 
 # Define all systems: (number, mass, radius)
 SYSTEMS = [
@@ -31,6 +32,7 @@ SYSTEMS = [
     (8,  '1e32',     '1e7'),
     (9,  '1e30',     '1e8'),
     (10, '1e20',     '1e7'),
+    (11, '1e32',     '1e6'),
 ]
 
 
@@ -66,20 +68,23 @@ def generate_output(output_path):
         output_lines.append(props_output.rstrip())
         output_lines.append('```')
 
-        # Derived calculations — output below the code block
-        gtd = sphere._properties['gravitational_time_dilation']
-        k = Decimal('1') - gtd * gtd
-
-        # Format k to 6 significant figures in scientific notation
-        k_float = float(k)
-        if k_float == 0:
-            k_formatted = '0.00000e0'
+        # Recompute GTD at 100-digit precision for k calculation
+        # (the tool computes at 50 digits, which loses precision in 1 - GTD²)
+        r = Decimal(radius)
+        m = Decimal(mass)
+        G = Decimal('6.67430e-11')
+        c = Decimal('299792458')
+        td_term = Decimal('2') * G * m / (r * c * c)
+        td_factor = Decimal('1') - td_term
+        if td_factor > Decimal('0'):
+            gtd_hp = td_factor.sqrt()
         else:
-            k_base, k_exp = f'{k_float:.5e}'.split('e')
-            k_formatted = f'{k_base}e{int(k_exp)}'
+            gtd_hp = Decimal('0')
+        k = Decimal('1') - gtd_hp * gtd_hp
 
         output_lines.append('')
-        output_lines.append(f"**Derived:** k = 1 - GTD² = {k_formatted}")
+        output_lines.append(f"**Derived:** GTD (100-digit) = {gtd_hp:.50e}")
+        output_lines.append(f"**Derived:** k = 1 - GTD² = {k:.50e}")
         output_lines.append('')
 
     with open(output_path, 'w') as f:
@@ -170,7 +175,8 @@ def build_table(output_path, table_path):
         mass = re.search(r'Mass:\s+([\d.eE+\-]+)\s+kg', body)
         moi = re.search(r'Moment Of Inertia:\s+([\d.eE+\-]+)\s+kg', body)
         rs = re.search(r'Schwarzschild Radius:\s+([\d.eE+\-]+)\s+m', body)
-        gtd = re.search(r'Gravitational Time Dilation:\s+([\d.eE+\-]+(?:\s*\(dimensionless\))?)', body)
+        # Read GTD from the derived high-precision line, not the code block
+        gtd = re.search(r'GTD \(100-digit\) = ([\d.eE+\-]+)', body)
         k_match = re.search(r'k = 1 - GTD² = ([\d.eE+\-]+)', body)
 
         table_rows.append({

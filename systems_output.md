@@ -19,7 +19,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 2.95413e+03 m
-Gravitational Time Dilation: 9.99997876865250062450340793771892112664988094642810e-1 (dimensionless)
+Gravitational Time Dilation: 9.99997876865250062450340793771892112664988094642806e-1 (dimensionless)
 Gravity: 2.74281e+02 m/s²
 Total Potential Energy: -3.79536271e41 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -29,7 +29,8 @@ Frequency from 1N·m Torque (1s): 4.13315175e-49 Hz
 Velocity from 1N·m Torque (1s): 1.80668826e-39 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 4.24626e-6
+**Derived:** GTD (100-digit) = 9.99997876865250062450340793771892112664988094642806e-1
+**Derived:** k = 1 - GTD² = 4.24626499217393292603093358907400039385236733184732e-6
 
 
 ## System 2
@@ -60,7 +61,8 @@ Frequency from 1N·m Torque (1s): 2.29402667e-38 Hz
 Velocity from 1N·m Torque (1s): 4.25639357e-34 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.00000e0
+**Derived:** GTD (100-digit) = 0.00000000000000000000000000000000000000000000000000e+50
+**Derived:** k = 1 - GTD² = 1.00000000000000000000000000000000000000000000000000e+0
 
 
 ## System 3
@@ -81,7 +83,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e+03 m
-Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580450e-1 (dimensionless)
+Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580444e-1 (dimensionless)
 Gravity: 6.67430e+03 m/s²
 Total Potential Energy: -6.67430000e41 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -91,7 +93,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-5
+**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
 
 
 ## System 4
@@ -112,7 +115,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e-03 m
-Gravitational Time Dilation: 9.99999999992573839730853760569968948273989358418270e-1 (dimensionless)
+Gravitational Time Dilation: 9.99999999992573839730853760569968948273989358418264e-1 (dimensionless)
 Gravity: 6.67430e-03 m/s²
 Total Potential Energy: -6.67430000e29 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -122,7 +125,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-41 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-32 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-11
+**Derived:** GTD (100-digit) = 9.99999999992573839730853760569968948273989358418264e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-11
 
 
 ## System 5
@@ -143,7 +147,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e+03 m
-Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580450e-1 (dimensionless)
+Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580444e-1 (dimensionless)
 Gravity: 6.67430e+03 m/s²
 Total Potential Energy: -6.67430000e41 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -153,7 +157,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-5
+**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
 
 
 ## System 6
@@ -174,7 +179,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e+00 m
-Gravitational Time Dilation: 9.99999925738394551420323081145334488683774209633310e-1 (dimensionless)
+Gravitational Time Dilation: 9.99999925738394551420323081145334488683774209633305e-1 (dimensionless)
 Gravity: 6.67430e+02 m/s²
 Total Potential Energy: -6.67430000e36 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -184,7 +189,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-42 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-34 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-7
+**Derived:** GTD (100-digit) = 9.99999925738394551420323081145334488683774209633305e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-7
 
 
 ## System 7
@@ -205,7 +211,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e+03 m
-Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580450e-1 (dimensionless)
+Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580444e-1 (dimensionless)
 Gravity: 6.67430e+03 m/s²
 Total Potential Energy: -6.67430000e41 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -215,7 +221,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-5
+**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
 
 
 ## System 8
@@ -236,7 +243,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e+05 m
-Gravitational Time Dilation: 9.92546059113511703532639806620978151237637788052710e-1 (dimensionless)
+Gravitational Time Dilation: 9.92546059113511703532639806620978151237637788052707e-1 (dimensionless)
 Gravity: 6.67430e+07 m/s²
 Total Potential Energy: -6.67430000e46 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -246,7 +253,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-39 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-2
+**Derived:** GTD (100-digit) = 9.92546059113511703532639806620978151237637788052707e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-2
 
 
 ## System 9
@@ -267,7 +275,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e+03 m
-Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580450e-1 (dimensionless)
+Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580444e-1 (dimensionless)
 Gravity: 6.67430e+03 m/s²
 Total Potential Energy: -6.67430000e41 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -277,7 +285,8 @@ Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-5
+**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
 
 
 ## System 10
@@ -298,7 +307,7 @@ Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
 Schwarzschild Radius: 1.48523e-07 m
-Gravitational Time Dilation: 9.99999999999992573839730881306924212300029104942790e-1 (dimensionless)
+Gravitational Time Dilation: 9.99999999999992573839730881306924212300029104942786e-1 (dimensionless)
 Gravity: 6.67430e-05 m/s²
 Total Potential Energy: -6.67430000e22 J
 Total Kinetic Energy: 0.00000000e0 J
@@ -308,4 +317,37 @@ Frequency from 1N·m Torque (1s): 3.97887358e-35 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-27 m/s
 ```
 
-**Derived:** k = 1 - GTD² = 1.48523e-14
+**Derived:** GTD (100-digit) = 9.99999999999992573839730881306924212300029104942786e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-14
+
+
+## System 11
+Mass: 1.00000e32 kg, Radius: 1.00000e6 m
+
+```
+Name: Sphere from CLI parameters
+Radius: 1.00000000e6 m
+Mass: 1.00000000e32 kg
+Rotational Frequency: 0.00000000e0 Hz
+Surface Area: 1.25663706e13 m²
+Volume: 4.18879020e18 m³
+Moment Of Inertia: 4.00000000e43 kg·m²
+Density: 2.38732415e13 kg/m³
+Inertial Density (I/V): 9.54929659e24 kg/m
+DeGerlia Compactness (m/r): 1.00000000e26 kg/m
+Rotational Period: 0.00000000e0 s
+Rotational Angular Velocity: 0.00000000e0 rad/s
+Rotational Tangential Velocity: 0.00000000e0 m/s
+Schwarzschild Radius: 1.48523e+05 m
+Gravitational Time Dilation: 9.22755002488540665599197394005668975086003564547310e-1 (dimensionless)
+Gravity: 6.67430e+09 m/s²
+Total Potential Energy: -6.67430000e47 J
+Total Kinetic Energy: 0.00000000e0 J
+Total Energy: -6.67430000e47 J
+Vibrational Frequency: 1.30023842e1 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-45 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
+```
+
+**Derived:** GTD (100-digit) = 9.22755002488540665599197394005668975086003564547310e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-1
