@@ -22,8 +22,8 @@ getcontext().prec = 100
 
 # Define all systems: (number, mass, radius)
 SYSTEMS = [
-    (1,  '1.989e30', '6.957e8'),
-    (2,  '1.989e30', '2953'),
+    (1,  '1.98892e30', '6.95700e8'),
+    (2,  '1.98892e30', 'r_s'),
     (3,  '1e30',     '1e8'),
     (4,  '1e24',     '1e8'),
     (5,  '1e30',     '1e8'),
@@ -41,22 +41,17 @@ def generate_output(output_path):
     Step 1: Run each system through UniformSphere, compute derived values,
     and write everything to systems_output.md.
     """
-    output_lines = ['# System Properties Output\n']
-
+    # First pass: run all systems, collect data
+    system_data = []
+    G = constants.G
+    c = constants.SPEED_OF_LIGHT
     for num, mass, radius in SYSTEMS:
+        # If radius is 'r_s', compute Schwarzschild radius from mass
+        if radius == 'r_s':
+            m_dec = Decimal(mass)
+            rs_dec = Decimal('2') * G * m_dec / (c * c)
+            radius = str(rs_dec)
         sphere = UniformSphere(radius=radius, mass=mass, name='Sphere from CLI parameters')
-
-        # Format inputs to 6 significant figures
-        m_float = float(mass)
-        m_base, m_exp = f'{m_float:.5e}'.split('e')
-        mass_fmt = f'{m_base}e{int(m_exp)}'
-        r_float = float(radius)
-        r_base, r_exp = f'{r_float:.5e}'.split('e')
-        radius_fmt = f'{r_base}e{int(r_exp)}'
-
-        output_lines.append(f'\n## System {num}')
-        output_lines.append(f'Mass: {mass_fmt} kg, Radius: {radius_fmt} m')
-        output_lines.append('')
 
         # Capture print_properties output
         f = io.StringIO()
@@ -64,16 +59,9 @@ def generate_output(output_path):
             sphere.print_properties()
         props_output = f.getvalue()
 
-        output_lines.append('```')
-        output_lines.append(props_output.rstrip())
-        output_lines.append('```')
-
         # Recompute GTD at 100-digit precision for k calculation
-        # (the tool computes at 50 digits, which loses precision in 1 - GTD²)
         r = Decimal(radius)
         m = Decimal(mass)
-        G = Decimal('6.67430e-11')
-        c = Decimal('299792458')
         td_term = Decimal('2') * G * m / (r * c * c)
         td_factor = Decimal('1') - td_term
         if td_factor > Decimal('0'):
@@ -82,9 +70,59 @@ def generate_output(output_path):
             gtd_hp = Decimal('0')
         k = Decimal('1') - gtd_hp * gtd_hp
 
+        p = sphere._properties
+        system_data.append({
+            'num': num,
+            'mass': mass,
+            'radius': radius,
+            'props_output': props_output,
+            'gtd_hp': gtd_hp,
+            'k': k,
+            'radius_raw': float(radius),
+            'mass_raw': float(mass),
+            'moi_raw': float(p['moment_of_inertia']),
+            'rs_raw': float(p['schwarzschild_radius']),
+        })
+
+    # Second pass: compute ratios and write output
+    output_lines = ['# System Properties Output\n']
+
+    for idx, sd in enumerate(system_data):
+        prev_idx = (idx - 1) % len(system_data)
+        prev = system_data[prev_idx]
+
+        r_ratio = sd['radius_raw'] / prev['radius_raw']
+        m_ratio = sd['mass_raw'] / prev['mass_raw']
+        i_ratio = sd['moi_raw'] / prev['moi_raw']
+        m_ratio_cbrt = m_ratio ** (1.0/3.0)
+        i_ratio_5rt = i_ratio ** (1.0/5.0)
+        rs_over_r = sd['rs_raw'] / sd['radius_raw']
+
+        # Format inputs to 6 significant figures
+        m_float = float(sd['mass'])
+        m_base, m_exp = f'{m_float:.5e}'.split('e')
+        mass_fmt = f'{m_base}e{int(m_exp)}'
+        r_float = float(sd['radius'])
+        r_base, r_exp = f'{r_float:.5e}'.split('e')
+        radius_fmt = f'{r_base}e{int(r_exp)}'
+
+        output_lines.append(f'\n## System {sd["num"]}')
+        output_lines.append(f'Mass: {mass_fmt} kg, Radius: {radius_fmt} m')
         output_lines.append('')
-        output_lines.append(f"**Derived:** GTD (100-digit) = {gtd_hp:.50e}")
-        output_lines.append(f"**Derived:** k = 1 - GTD² = {k:.50e}")
+
+        output_lines.append('```')
+        output_lines.append(sd['props_output'].rstrip())
+        output_lines.append('```')
+
+        output_lines.append('')
+        output_lines.append(f"**Derived:** GTD (100-digit) = {sd['gtd_hp']:.50e}")
+        output_lines.append(f"**Derived:** k = 1 - GTD² = {sd['k']:.50e}")
+        output_lines.append(f"**Derived:** R/R_prev = {format_sci6(str(r_ratio))}")
+        output_lines.append(f"**Derived:** M/M_prev = {format_sci6(str(m_ratio))}")
+        output_lines.append(f"**Derived:** I/I_prev = {format_sci6(str(i_ratio))}")
+        output_lines.append(f"**Derived:** (M/M_prev)^(1/3) = {format_sci6(str(m_ratio_cbrt))}")
+        output_lines.append(f"**Derived:** (I/I_prev)^(1/5) = {format_sci6(str(i_ratio_5rt))}")
+        output_lines.append(f"**Derived:** r_s/R = {format_sci6(str(rs_over_r))}")
         output_lines.append('')
 
     with open(output_path, 'w') as f:
@@ -179,6 +217,13 @@ def build_table(output_path, table_path):
         gtd = re.search(r'GTD \(100-digit\) = ([\d.eE+\-]+)', body)
         k_match = re.search(r'k = 1 - GTD² = ([\d.eE+\-]+)', body)
 
+        r_ratio = re.search(r'R/R_prev = ([\d.eE+\-]+)', body)
+        m_ratio = re.search(r'M/M_prev = ([\d.eE+\-]+)', body)
+        i_ratio = re.search(r'I/I_prev = ([\d.eE+\-]+)', body)
+        m_cbrt = re.search(r'\(M/M_prev\)\^\(1/3\) = ([\d.eE+\-]+)', body)
+        i_5rt = re.search(r'\(I/I_prev\)\^\(1/5\) = ([\d.eE+\-]+)', body)
+        rs_over_r = re.search(r'r_s/R = ([\d.eE+\-]+)', body)
+
         table_rows.append({
             'num': num,
             'radius': format_sci6(radius.group(1)),
@@ -187,17 +232,23 @@ def build_table(output_path, table_path):
             'rs': format_sci6(rs.group(1)),
             'gtd': format_gtd_from_raw(gtd.group(1)),
             'k': format_sci6(k_match.group(1)),
+            'r_ratio': r_ratio.group(1),
+            'm_ratio': m_ratio.group(1),
+            'i_ratio': i_ratio.group(1),
+            'm_cbrt': m_cbrt.group(1),
+            'i_5rt': i_5rt.group(1),
+            'rs_over_r': rs_over_r.group(1),
         })
 
     # Write table
-    header = '| System | Radius (m) | Mass (kg) | Moment of Inertia (kg·m²) | r_s (m) | GTD | k |'
-    sep = '|----------|------------|-----------|----------------------------|------------|-------------------------------|------------|'
+    header = '| System | Radius (m) | Mass (kg) | Moment of Inertia (kg·m²) | r_s (m) | r_s/R | GTD | k | R/R_prev | M/M_prev | (M/M)^1/3 | I/I_prev | (I/I)^1/5 |'
+    sep = '|----------|------------|-----------|----------------------------|------------|----------|-------------------------------|------------|----------|----------|-----------|----------|-----------|'
     with open(table_path, 'w') as f:
         f.write('# System Properties Summary\n\n')
         f.write(header + '\n')
         f.write(sep + '\n')
         for row in table_rows:
-            f.write(f"| System {row['num']} | {row['radius']} | {row['mass']} | {row['moi']} | {row['rs']} | {row['gtd']} | {row['k']} |\n")
+            f.write(f"| System {row['num']} | {row['radius']} | {row['mass']} | {row['moi']} | {row['rs']} | {row['rs_over_r']} | {row['gtd']} | {row['k']} | {row['r_ratio']} | {row['m_ratio']} | {row['m_cbrt']} | {row['i_ratio']} | {row['i_5rt']} |\n")
 
 
 def main():
