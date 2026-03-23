@@ -8,28 +8,28 @@ import sys
 import os
 import re
 import io
+import math
 from decimal import Decimal, getcontext
 from contextlib import redirect_stdout
 
-# Add system_properties to import path
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'system_properties'))
 
-from uniform_sphere import UniformSphere
-import constants
+from system_properties.uniform_sphere import UniformSphere  # noqa: E402
+from system_properties import constants  # noqa: E402
 
 # Override precision after import (constants.py sets it to 50)
 getcontext().prec = 100
 
 # Define all systems: (number, mass, radius)
 SYSTEMS = [
-    (1,  '1.98892e30', '6.95700e8'),
-    (2,  '1.98892e30', 'r_s'),
+    (1,  '1.98847e30', '6.96342e8'),
+    (2,  '1.98847e30', '3.93779e3'),
     (3,  '1e30',     '1e8'),
     (4,  '1e24',     '1e8'),
     (5,  '1e30',     '1e8'),
     (6,  '1e27',     '1e7'),
-    (7,  '1e30',     '1e8'),
-    (8,  '1e32',     '1e7'),
+    (7,  '1e33',     '1e7'),
+    (8,  '1e31',     '1e5'),
     (9,  '1e30',     '1e8'),
     (10, '1e20',     '1e7'),
     (11, '1e32',     '1e6'),
@@ -43,14 +43,7 @@ def generate_output(output_path):
     """
     # First pass: run all systems, collect data
     system_data = []
-    G = constants.G
-    c = constants.SPEED_OF_LIGHT
     for num, mass, radius in SYSTEMS:
-        # If radius is 'r_s', compute Schwarzschild radius from mass
-        if radius == 'r_s':
-            m_dec = Decimal(mass)
-            rs_dec = Decimal('2') * G * m_dec / (c * c)
-            radius = str(rs_dec)
         sphere = UniformSphere(radius=radius, mass=mass, name='Sphere from CLI parameters')
 
         # Capture print_properties output
@@ -59,29 +52,21 @@ def generate_output(output_path):
             sphere.print_properties()
         props_output = f.getvalue()
 
-        # Recompute GTD at 100-digit precision for k calculation
-        r = Decimal(radius)
-        m = Decimal(mass)
-        td_term = Decimal('2') * G * m / (r * c * c)
-        td_factor = Decimal('1') - td_term
-        if td_factor > Decimal('0'):
-            gtd_hp = td_factor.sqrt()
-        else:
-            gtd_hp = Decimal('0')
-        k = Decimal('1') - gtd_hp * gtd_hp
-
         p = sphere._properties
+        gtd = p['gravitational_time_dilation']
+        k = Decimal('1') - gtd * gtd
+
         system_data.append({
             'num': num,
             'mass': mass,
             'radius': radius,
             'props_output': props_output,
-            'gtd_hp': gtd_hp,
+            'gtd': gtd,
             'k': k,
-            'radius_raw': float(radius),
-            'mass_raw': float(mass),
-            'moi_raw': float(p['moment_of_inertia']),
-            'rs_raw': float(p['schwarzschild_radius']),
+            'radius_dec': Decimal(radius),
+            'mass_dec': Decimal(mass),
+            'moi_dec': p['moment_of_inertia'],
+            'rs_dec': p['schwarzschild_radius'],
         })
 
     # Second pass: compute ratios and write output
@@ -91,12 +76,16 @@ def generate_output(output_path):
         prev_idx = (idx - 1) % len(system_data)
         prev = system_data[prev_idx]
 
-        r_ratio = sd['radius_raw'] / prev['radius_raw']
-        m_ratio = sd['mass_raw'] / prev['mass_raw']
-        i_ratio = sd['moi_raw'] / prev['moi_raw']
-        m_ratio_cbrt = m_ratio ** (1.0/3.0)
-        i_ratio_5rt = i_ratio ** (1.0/5.0)
-        rs_over_r = sd['rs_raw'] / sd['radius_raw']
+        r_ratio = sd['radius_dec'] / prev['radius_dec']
+        m_ratio = sd['mass_dec'] / prev['mass_dec']
+        i_ratio = sd['moi_dec'] / prev['moi_dec']
+        gtd_ratio = sd['gtd'] / prev['gtd']
+        m_ratio_cbrt = m_ratio ** (Decimal('1') / Decimal('3'))
+        i_ratio_5rt = i_ratio ** (Decimal('1') / Decimal('5'))
+        rs_over_r = sd['rs_dec'] / sd['radius_dec']
+        prev_rs_over_r = prev['rs_dec'] / prev['radius_dec']
+        rs_r_ratio = rs_over_r / prev_rs_over_r
+        k_over_k_prev = sd['k'] / prev['k'] if prev['k'] != 0 else Decimal('Infinity')
 
         # Format inputs to 6 significant figures
         m_float = float(sd['mass'])
@@ -114,38 +103,34 @@ def generate_output(output_path):
         output_lines.append(sd['props_output'].rstrip())
         output_lines.append('```')
 
-        output_lines.append('')
-        output_lines.append(f"**Derived:** GTD (100-digit) = {sd['gtd_hp']:.50e}")
-        output_lines.append(f"**Derived:** k = 1 - GTD² = {sd['k']:.50e}")
-        output_lines.append(f"**Derived:** R/R_prev = {format_sci6(str(r_ratio))}")
-        output_lines.append(f"**Derived:** M/M_prev = {format_sci6(str(m_ratio))}")
-        output_lines.append(f"**Derived:** I/I_prev = {format_sci6(str(i_ratio))}")
-        output_lines.append(f"**Derived:** (M/M_prev)^(1/3) = {format_sci6(str(m_ratio_cbrt))}")
-        output_lines.append(f"**Derived:** (I/I_prev)^(1/5) = {format_sci6(str(i_ratio_5rt))}")
-        output_lines.append(f"**Derived:** r_s/R = {format_sci6(str(rs_over_r))}")
+        output_lines.append(f"**Derived:** k = 1 - GTD² = {sd['k']:.50e}  ")
+        output_lines.append(f"**Derived:** R/R_prev = {r_ratio:.50e}  ")
+        output_lines.append(f"**Derived:** M/M_prev = {m_ratio:.50e}  ")
+        output_lines.append(f"**Derived:** I/I_prev = {i_ratio:.50e}  ")
+        output_lines.append(f"**Derived:** (M/M_prev)^(1/3) = {m_ratio_cbrt:.50e}  ")
+        output_lines.append(f"**Derived:** (I/I_prev)^(1/5) = {i_ratio_5rt:.50e}  ")
+        output_lines.append(f"**Derived:** GTD/GTD_prev = {gtd_ratio:.50e}  ")
+        output_lines.append(f"**Derived:** r_s/R = {rs_over_r:.50e}  ")
+        output_lines.append(f"**Derived:** (r_s/R)/(r_s/R)_prev = {rs_r_ratio:.50e}  ")
+        output_lines.append(f"**Derived:** k/k_prev = {k_over_k_prev:.50e}")
         output_lines.append('')
 
     with open(output_path, 'w') as f:
         f.write('\n'.join(output_lines))
 
 
-def format_gtd_from_raw(raw_gtd_str):
-    """
-    Format a raw GTD string (from systems_output.md) showing all trailing 9s
-    plus six digits past the last 9, in scientific notation, with rounding.
-    """
-    # Parse the raw value — strip the "(dimensionless)" suffix
-    val_str = raw_gtd_str.split()[0]
+
+def format_gtd(val_str):
+    """Format GTD: show the leading digit and all 9s, plus six digits past the last 9."""
+    val_str = val_str.split()[0]
     gtd = Decimal(val_str)
-
-    if gtd == Decimal('0'):
-        return '0.00000e0'
-
-    # Mantissa = gtd * 10, so we work in X.XXXe-1 form
-    mantissa = gtd * 10
-    mantissa_str = format(mantissa, '.45f')
-    _, dec_part = mantissa_str.split('.')
-
+    # Get the scientific notation: X.XXXeN
+    sign, digits, exponent = gtd.normalize().as_tuple()
+    # Convert to string with plenty of digits
+    gtd_str = format(gtd, '.45e')
+    # Split into coefficient and exponent
+    coeff, exp = gtd_str.split('e')
+    integer_part, dec_part = coeff.split('.')
     # Count leading 9s in the decimal part
     nine_count = 0
     for ch in dec_part:
@@ -153,31 +138,10 @@ def format_gtd_from_raw(raw_gtd_str):
             nine_count += 1
         else:
             break
-
-    # Extract seven digits past the last 9 (six to keep + one for rounding)
-    remaining_start = nine_count
-    seven_digits = dec_part[remaining_start:remaining_start + 7]
-
-    # Round: if 7th digit >= 5, round up the 6th
-    digits = list(seven_digits[:6])
-    if len(seven_digits) >= 7 and int(seven_digits[6]) >= 5:
-        carry = 1
-        for i in range(5, -1, -1):
-            d = int(digits[i]) + carry
-            if d >= 10:
-                digits[i] = '0'
-                carry = 1
-            else:
-                digits[i] = str(d)
-                carry = 0
-                break
-        if carry:
-            nine_count += 1
-            digits = ['0'] * 6
-
-    six_digits = ''.join(digits)
+    # Show six digits past the last 9
+    six_digits = dec_part[nine_count:nine_count + 6]
     nines = '9' * nine_count
-    return f"9.{nines}{six_digits}e-1"
+    return f"{integer_part}.{nines}{six_digits}e{int(exp)}"
 
 
 def format_sci6(val_str):
@@ -208,47 +172,57 @@ def build_table(output_path, table_path):
         num = sections[i]
         body = sections[i + 1]
 
-        # Parse fields from the code block
-        radius = re.search(r'Radius:\s+([\d.eE+\-]+)\s+m', body)
-        mass = re.search(r'Mass:\s+([\d.eE+\-]+)\s+kg', body)
-        moi = re.search(r'Moment Of Inertia:\s+([\d.eE+\-]+)\s+kg', body)
-        rs = re.search(r'Schwarzschild Radius:\s+([\d.eE+\-]+)\s+m', body)
-        # Read GTD from the derived high-precision line, not the code block
-        gtd = re.search(r'GTD \(100-digit\) = ([\d.eE+\-]+)', body)
-        k_match = re.search(r'k = 1 - GTD² = ([\d.eE+\-]+)', body)
-
-        r_ratio = re.search(r'R/R_prev = ([\d.eE+\-]+)', body)
-        m_ratio = re.search(r'M/M_prev = ([\d.eE+\-]+)', body)
-        i_ratio = re.search(r'I/I_prev = ([\d.eE+\-]+)', body)
-        m_cbrt = re.search(r'\(M/M_prev\)\^\(1/3\) = ([\d.eE+\-]+)', body)
-        i_5rt = re.search(r'\(I/I_prev\)\^\(1/5\) = ([\d.eE+\-]+)', body)
-        rs_over_r = re.search(r'r_s/R = ([\d.eE+\-]+)', body)
+        # Parse fields from the code block and derived lines
+        def get(pattern: str, text: str) -> str:
+            match = re.search(pattern, text)
+            if match is None:
+                raise ValueError(f"System {num}: pattern not found: {pattern}")
+            return match.group(1)
 
         table_rows.append({
             'num': num,
-            'radius': format_sci6(radius.group(1)),
-            'mass': format_sci6(mass.group(1)),
-            'moi': format_sci6(moi.group(1)),
-            'rs': format_sci6(rs.group(1)),
-            'gtd': format_gtd_from_raw(gtd.group(1)),
-            'k': format_sci6(k_match.group(1)),
-            'r_ratio': r_ratio.group(1),
-            'm_ratio': m_ratio.group(1),
-            'i_ratio': i_ratio.group(1),
-            'm_cbrt': m_cbrt.group(1),
-            'i_5rt': i_5rt.group(1),
-            'rs_over_r': rs_over_r.group(1),
+            'radius': format_sci6(get(r'Radius:\s+([\d.eE+\-]+)\s+m', body)),
+            'mass': format_sci6(get(r'Mass:\s+([\d.eE+\-]+)\s+kg', body)),
+            'moi': format_sci6(get(r'Moment Of Inertia:\s+([\d.eE+\-]+)\s+kg', body)),
+            'rs': format_sci6(get(r'Schwarzschild Radius:\s+([\d.eE+\-]+)\s+m', body)),
+            'D': format_sci6(get(r'DeGerlia Compactness \(m/r\):\s+([\d.eE+\-]+)', body)),
+            'D_over_Dcrit': format_sci6(str(float(get(r'DeGerlia Compactness \(m/r\):\s+([\d.eE+\-]+)', body)) / 6.73295e26)),
+            'gtd': format_gtd(get(r'Gravitational Time Dilation:\s+([\d.eE+\-]+)', body)),
+            'k': format_sci6(get(r'k = 1 - GTD² = ([\d.eE+\-]+)', body)),
+            'r_ratio': format_sci6(get(r'R/R_prev = ([\d.eE+\-]+)', body)),
+            'm_ratio': format_sci6(get(r'M/M_prev = ([\d.eE+\-]+)', body)),
+            'i_ratio': format_sci6(get(r'I/I_prev = ([\d.eE+\-]+)', body)),
+            'm_cbrt': format_sci6(get(r'\(M/M_prev\)\^\(1/3\) = ([\d.eE+\-]+)', body)),
+            'i_5rt': format_sci6(get(r'\(I/I_prev\)\^\(1/5\) = ([\d.eE+\-]+)', body)),
+            'rs_over_r': format_sci6(get(r'r_s/R = ([\d.eE+\-]+)', body)),
+            'gtd_ratio': format_gtd(get(r'GTD/GTD_prev = ([\d.eE+\-]+)', body)),
+            'k_ratio': format_sci6(get(r'\(r_s/R\)/\(r_s/R\)_prev = ([\d.eE+\-]+)', body)),
+            'k_over_k_prev': format_sci6(get(r'k/k_prev = ([\d.eE+\-]+)', body)),
         })
 
+    # Compute 1 - D/D_crit and ITD = sqrt((1 - D/D_crit) / (1 - D/D_crit)_prev)
+    for row in table_rows:
+        val = float(row['D_over_Dcrit'])
+        row['one_minus_D_Dcrit'] = format_sci6(str(1.0 - val))
+        row['one_minus_D_Dcrit_raw'] = 1.0 - val
+    for idx, row in enumerate(table_rows):
+        prev_idx = (idx - 1) % len(table_rows)
+        prev_val = table_rows[prev_idx]['one_minus_D_Dcrit_raw']
+        cur_val = row['one_minus_D_Dcrit_raw']
+        if prev_val != 0:
+            row['ITD'] = format_gtd(str(math.sqrt(cur_val / prev_val)))
+        else:
+            row['ITD'] = 'Inf'
+
     # Write table
-    header = '| System | Radius (m) | Mass (kg) | Moment of Inertia (kg·m²) | r_s (m) | r_s/R | GTD | k | R/R_prev | M/M_prev | (M/M)^1/3 | I/I_prev | (I/I)^1/5 |'
-    sep = '|----------|------------|-----------|----------------------------|------------|----------|-------------------------------|------------|----------|----------|-----------|----------|-----------|'
+    header = '| System | Radius (m) | Mass (kg) | Moment of Inertia (kg·m²) | D = m/r (kg/m) | r_s (m) | GTD | ITD | k_s = r_s/R | k_D = D/D_crit | k_G = 1 - GTD^2 | 1 - D/D_crit | GTD/GTD_prev | k/k_prev | (r_s/R)/(r_s/R)_prev | R/R_prev | M/M_prev | (M/M)^1/3 | I/I_prev | (I/I)^1/5 |'
+    sep = '|----------|------------|-----------|----------------------------|----------------|------------|-------------------------------|-------------------------------|----------|----------|----------|------------|------------|----------|----------|----------|----------|-----------|----------|-----------|'
     with open(table_path, 'w') as f:
         f.write('# System Properties Summary\n\n')
         f.write(header + '\n')
         f.write(sep + '\n')
         for row in table_rows:
-            f.write(f"| System {row['num']} | {row['radius']} | {row['mass']} | {row['moi']} | {row['rs']} | {row['rs_over_r']} | {row['gtd']} | {row['k']} | {row['r_ratio']} | {row['m_ratio']} | {row['m_cbrt']} | {row['i_ratio']} | {row['i_5rt']} |\n")
+            f.write(f"| System {row['num']} | {row['radius']} | {row['mass']} | {row['moi']} | {row['D']} | {row['rs']} | {row['gtd']} | {row['ITD']} | {row['rs_over_r']} | {row['D_over_Dcrit']} | {row['k']} | {row['one_minus_D_Dcrit']} | {row['gtd_ratio']} | {row['k_over_k_prev']} | {row['k_ratio']} | {row['r_ratio']} | {row['m_ratio']} | {row['m_cbrt']} | {row['i_ratio']} | {row['i_5rt']} |\n")
 
 
 def main():

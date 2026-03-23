@@ -16,7 +16,10 @@
       "Bash(bibtex master:*)",
       "Bash(cd /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex && latexmk -c 2>&1)",
       "Bash(git -C /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste add latex/master.tex latex/master.pdf)",
-      "Bash(git -C:*)"
+      "Bash(git -C:*)",
+      "Bash(pip3 install:*)",
+      "Bash(open:*)",
+      "Bash(osascript -e 'tell application \"\"Preview\"\" to quit')"
     ]
   }
 }

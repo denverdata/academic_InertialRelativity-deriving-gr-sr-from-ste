@@ -2,79 +2,81 @@
 
 
 ## System 1
-Mass: 1.98892e30 kg, Radius: 6.95700e8 m
+Mass: 1.98847e30 kg, Radius: 6.96342e8 m
 
 ```
 Name: Sphere from CLI parameters
-Radius: 6.95700000e8 m
-Mass: 1.98892000e30 kg
+Radius: 6.96342000e8 m
+Mass: 1.98847000e30 kg
 Rotational Frequency: 0.00000000e0 Hz
-Surface Area: 6.08210440e18 m²
-Volume: 1.41044001e27 m³
-Moment Of Inertia: 3.85053711e47 kg·m²
-Density: 1.41014151e3 kg/m³
-Inertial Density (I/V): 2.73002544e20 kg/m
-DeGerlia Compactness (m/r): 2.85887595e21 kg/m
+Surface Area: 6.09333485e18 m²
+Volume: 1.41434833e27 m³
+Moment Of Inertia: 3.85677422e47 kg·m²
+Density: 1.40592665e3 kg/m³
+Inertial Density (I/V): 2.72689135e20 kg/m
+DeGerlia Compactness (m/r): 2.85559395e21 kg/m
 Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
-Schwarzschild Radius: 2.95401e+03 m
-Gravitational Time Dilation: 9.99997876950645215942639037971966551493156112217234e-1 (dimensionless)
-Gravity: 2.74270e+02 m/s²
-Total Potential Energy: -3.79505741e41 J
+Schwarzschild Radius: 2.95334e+03 m
+Gravitational Time Dilation: 9.99997879387920365435887887063495259122160914153638e-1 (dimensionless)
+Gravity: 2.73703e+02 m/s²
+Total Potential Energy: -3.78984300e41 J
 Total Kinetic Energy: 0.00000000e0 J
-Total Energy: -3.79505741e41 J
-Vibrational Frequency: 9.99306347e-5 Hz
-Frequency from 1N·m Torque (1s): 4.13331799e-49 Hz
-Velocity from 1N·m Torque (1s): 1.80676093e-39 m/s
+Total Energy: -3.78984300e41 J
+Vibrational Frequency: 9.97811786e-5 Hz
+Frequency from 1N·m Torque (1s): 4.12663366e-49 Hz
+Velocity from 1N·m Torque (1s): 1.80550367e-39 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99997876950645215942639037971966551493156112217234e-1
-**Derived:** k = 1 - GTD² = 4.24609420222955187292179207339419852354994994150718e-6
-**Derived:** R/R_prev = 6.95700e2
-**Derived:** M/M_prev = 1.98892e-2
-**Derived:** I/I_prev = 9.62634e3
-**Derived:** (M/M_prev)^(1/3) = 2.70940e-1
-**Derived:** (I/I_prev)^(1/5) = 6.26170e0
-**Derived:** r_s/R = 4.24609e-6
+**Derived:** k = 1 - GTD² = 4.24121966227353593219498951360341506939962176699248e-6  
+**Derived:** R/R_prev = 6.96342000000000000000000000000000000000000000000000e+2  
+**Derived:** M/M_prev = 1.98847000000000000000000000000000000000000000000000e-2  
+**Derived:** I/I_prev = 9.64193555081485080000000000000000000000000000000000e+3  
+**Derived:** (M/M_prev)^(1/3) = 2.70919135470482582345012948430115544263900021454704e-1  
+**Derived:** (I/I_prev)^(1/5) = 6.26372734314383206574217386468133521510293666283159e+0  
+**Derived:** GTD/GTD_prev = 1.08370897658757363278749220926271755803335331679507e+0  
+**Derived:** r_s/R = 4.24121966227353593219498951360341506939962176699248e-6  
+**Derived:** (r_s/R)/(r_s/R)_prev = 2.85559394665265056538310198149759744493366765181477e-5  
+**Derived:** k/k_prev = 2.85559394665265056538310198149759744493366765181477e-5
 
 
 ## System 2
-Mass: 1.98892e30 kg, Radius: 2.95401e3 m
+Mass: 1.98847e30 kg, Radius: 3.93779e3 m
 
 ```
 Name: Sphere from CLI parameters
-Radius: 2.95400774e3 m
-Mass: 1.98892000e30 kg
+Radius: 3.93779000e3 m
+Mass: 1.98847000e30 kg
 Rotational Frequency: 0.00000000e0 Hz
-Surface Area: 1.09656182e8 m²
-Volume: 1.07975070e11 m³
-Moment Of Inertia: 6.94225502e36 kg·m²
-Density: 1.84201779e19 kg/m³
-Inertial Density (I/V): 6.42949804e25 kg/m
-DeGerlia Compactness (m/r): 6.73295461e26 kg/m
+Surface Area: 1.94856531e8 m²
+Volume: 2.55768034e11 m³
+Moment Of Inertia: 1.23334375e37 kg·m²
+Density: 7.77450556e18 kg/m³
+Inertial Density (I/V): 4.82211844e25 kg/m
+DeGerlia Compactness (m/r): 5.04971062e26 kg/m
 Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
-Schwarzschild Radius: 2.95401e+03 m
-Gravitational Time Dilation: 0.00000000000000000000000000000000000000000000000000e+50 (dimensionless)
-Gravity: 1.52125e+13 m/s²
-Total Potential Energy: -8.93776075e46 J
+Schwarzschild Radius: 2.95334e+03 m
+Gravitational Time Dilation: 5.00000791797087369690630800779776604147174377924075e-1 (dimensionless)
+Gravity: 8.55893e+12 m/s²
+Total Potential Energy: -6.70179684e46 J
 Total Kinetic Energy: 0.00000000e0 J
-Total Energy: -8.93776075e46 J
-Vibrational Frequency: 1.14212650e4 Hz
-Frequency from 1N·m Torque (1s): 2.29255397e-38 Hz
-Velocity from 1N·m Torque (1s): 4.25511268e-34 m/s
+Total Energy: -6.70179684e46 J
+Vibrational Frequency: 7.41999628e3 Hz
+Frequency from 1N·m Torque (1s): 1.29043458e-38 Hz
+Velocity from 1N·m Torque (1s): 3.19277573e-34 m/s
 ```
-
-**Derived:** GTD (100-digit) = 0.00000000000000000000000000000000000000000000000000e+50
-**Derived:** k = 1 - GTD² = 1.00000000000000000000000000000000000000000000000000e+0
-**Derived:** R/R_prev = 4.24609e-6
-**Derived:** M/M_prev = 1.00000e0
-**Derived:** I/I_prev = 1.80293e-11
-**Derived:** (M/M_prev)^(1/3) = 1.00000e0
-**Derived:** (I/I_prev)^(1/5) = 7.09898e-3
-**Derived:** r_s/R = 1.00000e0
+**Derived:** k = 1 - GTD² = 7.49999208202285687681802073721968224881436394645493e-1  
+**Derived:** R/R_prev = 5.65496551981641205040052158278547035795629159234974e-6  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** I/I_prev = 3.19786350303125033502886080165734614899815111962784e-11  
+**Derived:** (M/M_prev)^(1/3) = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** (I/I_prev)^(1/5) = 7.96107993356354267329983241533875397998911033109760e-3  
+**Derived:** GTD/GTD_prev = 5.00001852107054787565845764828325098092391190900618e-1  
+**Derived:** r_s/R = 7.49999208202285687681802073721968224881436394645493e-1  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.76835737812326203276457099032706162593739127784874e+5  
+**Derived:** k/k_prev = 1.76835737812326203276457099032706162593739127784874e+5
 
 
 ## System 3
@@ -104,15 +106,16 @@ Vibrational Frequency: 1.30023842e-3 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
-**Derived:** R/R_prev = 3.38523e4
-**Derived:** M/M_prev = 5.02785e-1
-**Derived:** I/I_prev = 5.76182e8
-**Derived:** (M/M_prev)^(1/3) = 7.95172e-1
-**Derived:** (I/I_prev)^(1/5) = 5.65083e1
-**Derived:** r_s/R = 1.48523e-5
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5  
+**Derived:** R/R_prev = 2.53949550382321048100584337915429720731679444561543e+4  
+**Derived:** M/M_prev = 5.02899213968528567189849482265259219399840078049958e-1  
+**Derived:** I/I_prev = 3.24321584632320409096002849035046816152192352995817e+8  
+**Derived:** (M/M_prev)^(1/3) = 7.95231642198494896242438201325813367428224055115364e-1  
+**Derived:** (I/I_prev)^(1/5) = 5.03726931330879918370366090158495373987470743176576e+1  
+**Derived:** GTD/GTD_prev = 1.99998198046449964947307969782259183769204830254581e+0  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-5  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.98031149577313210659451739276931510156049626094434e-5  
+**Derived:** k/k_prev = 1.98031149577313210659451739276931510156049626094434e-5
 
 
 ## System 4
@@ -142,15 +145,16 @@ Vibrational Frequency: 1.30023842e-6 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-41 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-32 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99999999992573839730853760569968948273989358418264e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-11
-**Derived:** R/R_prev = 1.00000e0
-**Derived:** M/M_prev = 1.00000e-6
-**Derived:** I/I_prev = 1.00000e-6
-**Derived:** (M/M_prev)^(1/3) = 1.00000e-2
-**Derived:** (I/I_prev)^(1/5) = 6.30957e-2
-**Derived:** r_s/R = 1.48523e-11
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-11  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e-6  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e-6  
+**Derived:** (M/M_prev)^(1/3) = 1.00000000000000000000000000000000000000000000000000e-2  
+**Derived:** (I/I_prev)^(1/5) = 6.30957344480193249434360136622343864672945257188229e-2  
+**Derived:** GTD/GTD_prev = 1.00000742623556571161719493131987388323335953694615e+0  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-11  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e-6  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e-6
 
 
 ## System 5
@@ -180,15 +184,16 @@ Vibrational Frequency: 1.30023842e-3 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
-**Derived:** R/R_prev = 1.00000e0
-**Derived:** M/M_prev = 1.00000e6
-**Derived:** I/I_prev = 1.00000e6
-**Derived:** (M/M_prev)^(1/3) = 1.00000e2
-**Derived:** (I/I_prev)^(1/5) = 1.58489e1
-**Derived:** r_s/R = 1.48523e-5
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e+6  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e+6  
+**Derived:** (M/M_prev)^(1/3) = 1.00000000000000000000000000000000000000000000000000e+2  
+**Derived:** (I/I_prev)^(1/5) = 1.58489319246111348520210137339150701326944213382504e+1  
+**Derived:** GTD/GTD_prev = 9.99992573819582853514009436435527194904852292815226e-1  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-5  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e+6  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e+6
 
 
 ## System 6
@@ -218,91 +223,94 @@ Vibrational Frequency: 1.30023842e-3 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-42 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-34 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99999925738394551420323081145334488683774209633305e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-7
-**Derived:** R/R_prev = 1.00000e-1
-**Derived:** M/M_prev = 1.00000e-3
-**Derived:** I/I_prev = 1.00000e-5
-**Derived:** (M/M_prev)^(1/3) = 1.00000e-1
-**Derived:** (I/I_prev)^(1/5) = 1.00000e-1
-**Derived:** r_s/R = 1.48523e-7
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-7  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e-1  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e-3  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e-5  
+**Derived:** (M/M_prev)^(1/3) = 1.00000000000000000000000000000000000000000000000000e-1  
+**Derived:** (I/I_prev)^(1/5) = 1.00000000000000000000000000000000000000000000000000e-1  
+**Derived:** GTD/GTD_prev = 1.00000735198083499372810314223942599146939393999793e+0  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-7  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e-2  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e-2
 
 
 ## System 7
-Mass: 1.00000e30 kg, Radius: 1.00000e8 m
-
-```
-Name: Sphere from CLI parameters
-Radius: 1.00000000e8 m
-Mass: 1.00000000e30 kg
-Rotational Frequency: 0.00000000e0 Hz
-Surface Area: 1.25663706e17 m²
-Volume: 4.18879020e24 m³
-Moment Of Inertia: 4.00000000e45 kg·m²
-Density: 2.38732415e5 kg/m³
-Inertial Density (I/V): 9.54929659e20 kg/m
-DeGerlia Compactness (m/r): 1.00000000e22 kg/m
-Rotational Period: 0.00000000e0 s
-Rotational Angular Velocity: 0.00000000e0 rad/s
-Rotational Tangential Velocity: 0.00000000e0 m/s
-Schwarzschild Radius: 1.48523e+03 m
-Gravitational Time Dilation: 9.99992573812156748392869162330577150778353115580444e-1 (dimensionless)
-Gravity: 6.67430e+03 m/s²
-Total Potential Energy: -6.67430000e41 J
-Total Kinetic Energy: 0.00000000e0 J
-Total Energy: -6.67430000e41 J
-Vibrational Frequency: 1.30023842e-3 Hz
-Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
-Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
-```
-
-**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
-**Derived:** R/R_prev = 1.00000e1
-**Derived:** M/M_prev = 1.00000e3
-**Derived:** I/I_prev = 1.00000e5
-**Derived:** (M/M_prev)^(1/3) = 1.00000e1
-**Derived:** (I/I_prev)^(1/5) = 1.00000e1
-**Derived:** r_s/R = 1.48523e-5
-
-
-## System 8
-Mass: 1.00000e32 kg, Radius: 1.00000e7 m
+Mass: 1.00000e33 kg, Radius: 1.00000e7 m
 
 ```
 Name: Sphere from CLI parameters
 Radius: 1.00000000e7 m
-Mass: 1.00000000e32 kg
+Mass: 1.00000000e33 kg
 Rotational Frequency: 0.00000000e0 Hz
 Surface Area: 1.25663706e15 m²
 Volume: 4.18879020e21 m³
-Moment Of Inertia: 4.00000000e45 kg·m²
-Density: 2.38732415e10 kg/m³
-Inertial Density (I/V): 9.54929659e23 kg/m
-DeGerlia Compactness (m/r): 1.00000000e25 kg/m
+Moment Of Inertia: 4.00000000e46 kg·m²
+Density: 2.38732415e11 kg/m³
+Inertial Density (I/V): 9.54929659e24 kg/m
+DeGerlia Compactness (m/r): 1.00000000e26 kg/m
 Rotational Period: 0.00000000e0 s
 Rotational Angular Velocity: 0.00000000e0 rad/s
 Rotational Tangential Velocity: 0.00000000e0 m/s
-Schwarzschild Radius: 1.48523e+05 m
-Gravitational Time Dilation: 9.92546059113511703532639806620978151237637788052707e-1 (dimensionless)
-Gravity: 6.67430e+07 m/s²
+Schwarzschild Radius: 1.48523e+06 m
+Gravitational Time Dilation: 9.22755002488540665599197394005668975086003564547310e-1 (dimensionless)
+Gravity: 6.67430e+08 m/s²
+Total Potential Energy: -6.67430000e48 J
+Total Kinetic Energy: 0.00000000e0 J
+Total Energy: -6.67430000e48 J
+Vibrational Frequency: 1.30023842e0 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-48 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-40 m/s
+```
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-1  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e+6  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e+6  
+**Derived:** (M/M_prev)^(1/3) = 1.00000000000000000000000000000000000000000000000000e+2  
+**Derived:** (I/I_prev)^(1/5) = 1.58489319246111348520210137339150701326944213382504e+1  
+**Derived:** GTD/GTD_prev = 9.22755071013813674903149693873116735055154584462270e-1  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-1  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e+6  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e+6
+
+
+## System 8
+Mass: 1.00000e31 kg, Radius: 1.00000e5 m
+
+```
+Name: Sphere from CLI parameters
+Radius: 1.00000000e5 m
+Mass: 1.00000000e31 kg
+Rotational Frequency: 0.00000000e0 Hz
+Surface Area: 1.25663706e11 m²
+Volume: 4.18879020e15 m³
+Moment Of Inertia: 4.00000000e40 kg·m²
+Density: 2.38732415e15 kg/m³
+Inertial Density (I/V): 9.54929659e24 kg/m
+DeGerlia Compactness (m/r): 1.00000000e26 kg/m
+Rotational Period: 0.00000000e0 s
+Rotational Angular Velocity: 0.00000000e0 rad/s
+Rotational Tangential Velocity: 0.00000000e0 m/s
+Schwarzschild Radius: 1.48523e+04 m
+Gravitational Time Dilation: 9.22755002488540665599197394005668975086003564547310e-1 (dimensionless)
+Gravity: 6.67430e+10 m/s²
 Total Potential Energy: -6.67430000e46 J
 Total Kinetic Energy: 0.00000000e0 J
 Total Energy: -6.67430000e46 J
-Vibrational Frequency: 4.11171490e-1 Hz
-Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
-Velocity from 1N·m Torque (1s): 2.50000000e-39 m/s
+Vibrational Frequency: 1.30023842e2 Hz
+Frequency from 1N·m Torque (1s): 3.97887358e-42 Hz
+Velocity from 1N·m Torque (1s): 2.50000000e-36 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.92546059113511703532639806620978151237637788052707e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-2
-**Derived:** R/R_prev = 1.00000e-1
-**Derived:** M/M_prev = 1.00000e2
-**Derived:** I/I_prev = 1.00000e0
-**Derived:** (M/M_prev)^(1/3) = 4.64159e0
-**Derived:** (I/I_prev)^(1/5) = 1.00000e0
-**Derived:** r_s/R = 1.48523e-2
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-1  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e-2  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e-2  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e-6  
+**Derived:** (M/M_prev)^(1/3) = 2.15443469003188372175929356651935049525934494219211e-1  
+**Derived:** (I/I_prev)^(1/5) = 6.30957344480193249434360136622343864672945257188229e-2  
+**Derived:** GTD/GTD_prev = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-1  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e+0  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e+0
 
 
 ## System 9
@@ -332,15 +340,16 @@ Vibrational Frequency: 1.30023842e-3 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-47 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99992573812156748392869162330577150778353115580444e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5
-**Derived:** R/R_prev = 1.00000e1
-**Derived:** M/M_prev = 1.00000e-2
-**Derived:** I/I_prev = 1.00000e0
-**Derived:** (M/M_prev)^(1/3) = 2.15443e-1
-**Derived:** (I/I_prev)^(1/5) = 1.00000e0
-**Derived:** r_s/R = 1.48523e-5
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-5  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e+3  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e-1  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e+5  
+**Derived:** (M/M_prev)^(1/3) = 4.64158883361277889241007635091944657655134912501124e-1  
+**Derived:** (I/I_prev)^(1/5) = 1.00000000000000000000000000000000000000000000000000e+1  
+**Derived:** GTD/GTD_prev = 1.08370322687529972622485140707712626338284100759868e+0  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-5  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e-4  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e-4
 
 
 ## System 10
@@ -370,15 +379,16 @@ Vibrational Frequency: 4.11171490e-7 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-35 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-27 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.99999999999992573839730881306924212300029104942786e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-14
-**Derived:** R/R_prev = 1.00000e-1
-**Derived:** M/M_prev = 1.00000e-10
-**Derived:** I/I_prev = 1.00000e-12
-**Derived:** (M/M_prev)^(1/3) = 4.64159e-4
-**Derived:** (I/I_prev)^(1/5) = 3.98107e-3
-**Derived:** r_s/R = 1.48523e-14
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-14  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e-1  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e-10  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e-12  
+**Derived:** (M/M_prev)^(1/3) = 4.64158883361277889241007635091944657655134912501124e-4  
+**Derived:** (I/I_prev)^(1/5) = 3.98107170553497250770252305087752043487677037297380e-3  
+**Derived:** GTD/GTD_prev = 1.00000742624298450081939423707560267894735949824543e+0  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-14  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e-9  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e-9
 
 
 ## System 11
@@ -408,12 +418,13 @@ Vibrational Frequency: 1.30023842e1 Hz
 Frequency from 1N·m Torque (1s): 3.97887358e-45 Hz
 Velocity from 1N·m Torque (1s): 2.50000000e-38 m/s
 ```
-
-**Derived:** GTD (100-digit) = 9.22755002488540665599197394005668975086003564547310e-1
-**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-1
-**Derived:** R/R_prev = 1.00000e-1
-**Derived:** M/M_prev = 1.00000e12
-**Derived:** I/I_prev = 1.00000e10
-**Derived:** (M/M_prev)^(1/3) = 1.00000e4
-**Derived:** (I/I_prev)^(1/5) = 1.00000e2
-**Derived:** r_s/R = 1.48523e-1
+**Derived:** k = 1 - GTD² = 1.48523205382373310037190573047701461739723074548325e-1  
+**Derived:** R/R_prev = 1.00000000000000000000000000000000000000000000000000e-1  
+**Derived:** M/M_prev = 1.00000000000000000000000000000000000000000000000000e+12  
+**Derived:** I/I_prev = 1.00000000000000000000000000000000000000000000000000e+10  
+**Derived:** (M/M_prev)^(1/3) = 1.00000000000000000000000000000000000000000000000000e+4  
+**Derived:** (I/I_prev)^(1/5) = 1.00000000000000000000000000000000000000000000000000e+2  
+**Derived:** GTD/GTD_prev = 9.22755002488547518125735004978005042829089768184630e-1  
+**Derived:** r_s/R = 1.48523205382373310037190573047701461739723074548325e-1  
+**Derived:** (r_s/R)/(r_s/R)_prev = 1.00000000000000000000000000000000000000000000000000e+13  
+**Derived:** k/k_prev = 1.00000000000000000000000000000000000000000000000000e+13
