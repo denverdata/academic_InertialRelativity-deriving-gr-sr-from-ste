@@ -367,7 +367,7 @@ This is the full STE (Equation~\ref{eq:ste}). The static-mass and static-radius 
 
 From Equation~\ref{eq:td_k}, time dilation is always $d\tau/dt = \sqrt{1-k}$, and $k$ is always the linear scale factor between two systems. In all cases, $k$ reduces to a ratio of characteristic lengths. The Schwarzschild and Lorentz results are not independent discoveries; they are the same expression evaluated under different physical constraints on the same underlying parameter $k$.
 
-When mass is shared between systems, $k = R_2/R_1$, and the STE reduces exactly to Schwarzschild time dilation. When radius is shared, $k = (M_2/M_1)^{1/3}$, and it reduces exactly to Lorentz time dilation. When density is shared, $k = R_2/R_1$ directly. When neither mass, radius, nor density is shared between systems, the full STE applies: $k = (I_2/I_1)^{1/5}$. All three special-case forms reduce to a ratio of characteristic lengths under their respective conditions. Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
+When mass is static across two systems, $k = MR_2^2/MR_1^2$ simplifies to $k = R_2^2/R_1^2$  $M/M$ cancels and the STE reduces exactly to Schwarzschild time dilation where $r_2$ is $R_S$. When radius is static and cancels, STE simplifies to $k = (M_2/M_1)^{1/3}$. When one is working with a linear system where inertia is represented by mass alone, it similarly reduces exactly to $k = (M_2/M_1)^{1/3}$. Lorentz time dilation, where $k = v^2/c^2$, is the same expression evaluated under the constraint that mass is static. When density is shared, $k = R_2/R_1$ directly. When neither mass, radius, nor density is shared between systems, the full STE applies: $k = (I_2/I_1)^{1/5}$. All three special-case forms reduce to a ratio of characteristic lengths under their respective conditions. Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
 
 \section{Analysis and Conclusion}
 
@@ -430,19 +430,18 @@ k &= \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 1):} Compress the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m) to its Schwarzschild radius $R_2 = r_s = 2953$\,m, holding mass constant:
+\textbf{Example (Case 1):} Compress the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m) to $R_2 = \tfrac{4}{3}r_s = 3937$\,m, holding mass constant:
 \[
-k = \frac{R_2}{R_1} = \frac{2953}{6.957 \times 10^{8}} = 4.24 \times 10^{-6}
+k = \frac{R_2}{R_1} = \frac{3937}{6.957 \times 10^{8}} = 5.66 \times 10^{-6}
 \]
 \[
-\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 4.24 \times 10^{-6}} = 0.999997878
+\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 5.66 \times 10^{-6}} = 0.999997172
 \]
-\textbf{Confirmation:} GR time dilation at the surface relative to a distant observer:
+\textbf{Confirmation:} GR time dilation ratio between the two surfaces:
 \begin{align}
-\frac{d\tau}{dt} &= \sqrt{1 - \frac{2GM}{Rc^2}} \notag \\
-&= \sqrt{1 - \frac{2 \times 6.674 \times 10^{-11} \times 1.989 \times 10^{30}}{6.957 \times 10^{8} \times (2.998 \times 10^{8})^2}} \notag \\
-&= \sqrt{1 - \frac{2.655 \times 10^{20}}{6.253 \times 10^{25}}} \notag \\
-&= \sqrt{1 - 4.24 \times 10^{-6}} = 0.999997878 \notag
+\frac{d\tau_2 / dt}{d\tau_1 / dt} &= \frac{\sqrt{1 - \frac{2GM}{R_2 c^2}}}{\sqrt{1 - \frac{2GM}{R_1 c^2}}} \notag \\
+&= \frac{\sqrt{1 - \frac{2.655 \times 10^{20}}{3.539 \times 10^{20}}}}{\sqrt{1 - \frac{2.655 \times 10^{20}}{6.253 \times 10^{25}}}} = \frac{\sqrt{1 - 0.75}}{\sqrt{1 - 4.24 \times 10^{-6}}} \notag \\
+&= \frac{0.5}{0.999997879} = 0.500001 \notag
 \end{align}
 \end{mdframed}
 

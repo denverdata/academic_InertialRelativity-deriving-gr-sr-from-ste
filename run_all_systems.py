@@ -215,7 +215,7 @@ def build_table(output_path, table_path):
             row['ITD'] = 'Inf'
 
     # Write table
-    header = '| System | Radius (m) | Mass (kg) | Moment of Inertia (kg·m²) | D = m/r (kg/m) | r_s (m) | GTD | ITD | k_s = r_s/R | k_D = D/D_crit | k_G = 1 - GTD^2 | 1 - D/D_crit | GTD/GTD_prev | k/k_prev | (r_s/R)/(r_s/R)_prev | R/R_prev | M/M_prev | (M/M)^1/3 | I/I_prev | (I/I)^1/5 |'
+    header = '| System | Radius (m) | Mass (kg) | Moment of Inertia (kg·m²) | D = m/r (kg/m) | r_s (m) | GTD | ITD = ((1 - k_D)/(1 - k_D_prev))^1/2 | k_s = r_s/R | k_D = D/D_crit | k_G = 1 - GTD^2 | 1 - D/D_crit | GTD/GTD_prev | k/k_prev | (r_s/R)/(r_s/R)_prev | R/R_prev | M/M_prev | (M/M)^1/3 | I/I_prev | (I/I)^1/5 |'
     sep = '|----------|------------|-----------|----------------------------|----------------|------------|-------------------------------|-------------------------------|----------|----------|----------|------------|------------|----------|----------|----------|----------|-----------|----------|-----------|'
     with open(table_path, 'w') as f:
         f.write('# System Properties Summary\n\n')
