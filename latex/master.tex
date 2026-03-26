@@ -4,7 +4,7 @@
 
 \documentclass[twoside,twocolumn,9pt]{article}
 \usepackage{extsizes}
-\usepackage[authoryear,square]{natbib}
+\usepackage[super,sort&compress,comma]{natbib}
 \usepackage[version=3]{mhchem}
 \usepackage[left=1.5cm, right=1.5cm, top=1.785cm, bottom=2.0cm]{geometry}
 \usepackage{soul}
@@ -423,7 +423,7 @@ $\ell_a/\ell_b$ & Length & 1 \\
 
 $I \propto MR^2$ where $R$ is the mean radius about the selected axis.
 
-\textbf{Case 1: Static Mass} $(M_1 = M_2,\ R_1 > R_2)$
+\subsubsection*{Case 1: Static Mass $(M_1 = M_2,\ R_1 > R_2)$}
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M R_2^2}{M R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^2}{R_1^2}\right)^{1/L}}_{L=2} \notag \\
@@ -445,7 +445,7 @@ k = \frac{R_2}{R_1} = \frac{2954}{6.957 \times 10^{8}} = 4.24608 \times 10^{-6}
 \end{align}
 \end{mdframed}
 
-\textbf{Case 2: Static Radius} $(R_1 = R_2,\ M_1 > M_2)$
+\subsubsection*{Case 2: Static Radius $(R_1 = R_2,\ M_1 > M_2)$}
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R^2}{M_1 R^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/L}}_{L=3} \notag \\
@@ -471,7 +471,7 @@ k_2 &= k_1 \cdot k^3 = 1.48523 \times 10^{-5} \times (0.01)^3 \notag \\
 \end{align}
 \end{mdframed}
 
-\textbf{Case 3: Constant Density} $(M \propto R^3,\ R_1 > R_2)$
+\subsubsection*{Case 3: Constant Density $(M \propto R^3,\ R_1 > R_2)$}
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{R_2^5}{R_1^5}\right)^{1/L}}_{L=5} \notag \\
@@ -479,28 +479,25 @@ k &= \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 3):} When two systems share the same density, mass scales as $R^3$ and the STE reduces to a pure radius ratio. $S_1$: $M_1 = 10^{30}$\,kg, $R_1 = 10^{8}$\,m. $S_2$: $M_2 = 10^{27}$\,kg, $R_2 = 10^{7}$\,m. Both at $\rho = 10^{6}$\,kg/m$^3$.
-
-Compactness $D = M/R$; $k = D/D_{\text{crit}}$ where $D_{\text{crit}} = 6.73295 \times 10^{26}$\,kg/m:
+\textbf{Example (Case 3):} $S_1$: $M_1 = 10^{30}$\,kg, $R_1 = 10^{8}$\,m. $S_2$: $M_2 = 10^{27}$\,kg, $R_2 = 10^{7}$\,m. Both at $\rho = 10^{6}$\,kg/m$^3$. Starting from the STE with constant density ($M \propto R^3$, $L = 5$):
 \begin{align}
-D_1 &= \frac{M_1}{R_1} = \frac{10^{30}}{10^{8}} = 10^{22} \notag \\
-k_1 &= \frac{10^{22}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-5} \notag \\
-D_2 &= \frac{M_2}{R_2} = \frac{10^{27}}{10^{7}} = 10^{20} \notag \\
-k_2 &= \frac{10^{20}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-7} \notag \\
-\frac{d\tau}{dt} &= \sqrt{\frac{1 - k_1}{1 - k_2}} = \sqrt{\frac{1 - 1.48523 \times 10^{-5}}{1 - 1.48523 \times 10^{-7}}} \notag \\
-&= 0.99999264807 \notag
+k &= \frac{R_2}{R_1} = \frac{10^{7}}{10^{8}} = 0.1 \notag
 \end{align}
-\textbf{Confirmation:} Gravitational time dilation ratio:
+Since $D = M/R \propto R^2$ at constant density, $k_2/k_1 = (R_2/R_1)^2 = k^2$ where $k_i = D_i/D_{crit}$:
 \begin{align}
-\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{2 \times 6.67430 \times 10^{-11} \times 10^{30}}{10^{8} \times (2.99792 \times 10^{8})^2}}}{\sqrt{1 - \frac{2 \times 6.67430 \times 10^{-11} \times 10^{27}}{10^{7} \times (2.99792 \times 10^{8})^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{1.33486 \times 10^{20}}{8.98755 \times 10^{24}}}}{\sqrt{1 - \frac{1.33486 \times 10^{17}}{8.98755 \times 10^{23}}}} = \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-7}}} \notag \\
-&= \frac{0.99999257381}{0.999999925738} \notag \\
-&= 0.99999264807 \notag
+k_1 &= \frac{M_1/R_1}{D_{crit}} = \frac{10^{30}/10^{8}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-5} \notag \\
+k_2 &= k_1 \cdot k^2 = 1.48523 \times 10^{-5} \times (0.1)^2 \notag \\
+&= 1.48523 \times 10^{-5} \times 10^{-2} = 1.48523 \times 10^{-7} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}} = \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-7}}} = 0.99999264807 \notag
+\end{align}
+\textbf{Confirmation:} Since $D_{crit} = c^2/2G$, we have $D/D_{crit} = 2GM/Rc^2$. Gravitational time dilation:
+\begin{align}
+\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} = \frac{\sqrt{1 - \frac{D_1}{D_{crit}}}}{\sqrt{1 - \frac{D_2}{D_{crit}}}} \notag \\
+&= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-7}}} = 0.99999264807 \notag
 \end{align}
 \end{mdframed}
 
-\textbf{Case 4: Constant Inertia} $(M_1 R_1^2 = M_2 R_2^2)$
+\subsubsection*{Case 4: Constant Inertia $(M_1 R_1^2 = M_2 R_2^2)$}
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} \notag \\
@@ -508,14 +505,14 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = (1)^{1/5} = 1
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 4):} When two systems have equal moment of inertia, no component of the STE differs between them. $S_1$: $M_1 = 10^{30}$\,kg, $R_1 = 10^{8}$\,m. $S_2$: $M_2 = 10^{32}$\,kg, $R_2 = 10^{7}$\,m. Both have $I = MR^2 = 10^{46}$\,kg$\cdot$m$^2$:
+\textbf{Example (Case 4):} $S_1$: $M_1 = 10^{30}$\,kg, $R_1 = 10^{8}$\,m. $S_2$: $M_2 = 10^{32}$\,kg, $R_2 = 10^{7}$\,m. Both have $I = MR^2 = 10^{46}$\,kg$\cdot$m$^2$. Starting from the STE:
 \[
-k = \left(\frac{10^{46}}{10^{46}}\right)^{1/5} = 1
+k = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{10^{46}}{10^{46}}\right)^{1/5} = 1
 \]
-No time dilation occurs when inertia is conserved.
+When inertia is conserved, $k = 1$ and no relative time dilation exists between the two systems.
 \end{mdframed}
 
-\textbf{General Case} $(M_1 \neq M_2,\ R_1 \neq R_2,\ M_1 \neq R_1^3,\ M_2 \neq R_2^3)$
+\subsubsection*{General Case $(M_1 \neq M_2,\ R_1 \neq R_2,\ M_1 \neq R_1^3,\ M_2 \neq R_2^3)$}
 
 \begin{align}
 k &= \underbrace{\left(\frac{I_2}{I_1}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}}_{L=5} = \underbrace{\left(\frac{M_2}{M_1}\right)^{1/L}}_{L=5} \cdot \underbrace{\left(\frac{R_2}{R_1}\right)^{2/L}}_{L=5} \notag \\
@@ -523,94 +520,32 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\righ
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (General Case):} When both mass and radius differ between two systems, no component cancels. $S_1$: $M_1 = 10^{27}$\,kg, $R_1 = 10^{8}$\,m. $S_2$: $M_2 = 10^{24}$\,kg, $R_2 = 10^{7}$\,m.
-
-Compactness $D = M/R$; $k = D/D_{\text{crit}}$ where $D_{\text{crit}} = 6.73295 \times 10^{26}$\,kg/m:
+\textbf{Example (General Case):} $S_1$: $M_1 = 10^{27}$\,kg, $R_1 = 10^{8}$\,m. $S_2$: $M_2 = 10^{24}$\,kg, $R_2 = 10^{7}$\,m. Starting from the STE:
 \begin{align}
-D_1 &= \frac{M_1}{R_1} = \frac{10^{27}}{10^{8}} = 10^{19} \notag \\
-k_1 &= \frac{10^{19}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-8} \notag \\
-D_2 &= \frac{M_2}{R_2} = \frac{10^{24}}{10^{7}} = 10^{17} \notag \\
-k_2 &= \frac{10^{17}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-10} \notag \\
-\frac{d\tau}{dt} &= \sqrt{\frac{1 - k_1}{1 - k_2}} = \sqrt{\frac{1 - 1.48523 \times 10^{-8}}{1 - 1.48523 \times 10^{-10}}} \notag \\
+k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{10^{24} \cdot (10^{7})^2}{10^{27} \cdot (10^{8})^2}\right)^{1/5} \notag \\
+&= \left(\frac{10^{38}}{10^{43}}\right)^{1/5} = (10^{-5})^{1/5} = 0.1 \notag
+\end{align}
+Normalizing each system to $D_{crit} = 6.73295 \times 10^{26}$\,kg/m, where $k_i = D_i/D_{crit}$ and $D = M/R$:
+\begin{align}
+k_1 &= \frac{M_1/R_1}{D_{crit}} = \frac{10^{27}/10^{8}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-8} \notag \\
+k_2 &= \frac{M_2/R_2}{D_{crit}} = \frac{10^{24}/10^{7}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-10} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}} = \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} \notag \\
 &= 0.99999999264810 \notag
 \end{align}
-\textbf{Confirmation:} Gravitational time dilation ratio:
+\textbf{Confirmation:} Since $D_{crit} = c^2/2G$, we have $D/D_{crit} = 2GM/Rc^2$. Gravitational time dilation:
 \begin{align}
-\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{2 \times 6.67430 \times 10^{-11} \times 10^{27}}{10^{8} \times (2.99792 \times 10^{8})^2}}}{\sqrt{1 - \frac{2 \times 6.67430 \times 10^{-11} \times 10^{24}}{10^{7} \times (2.99792 \times 10^{8})^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{1.33486 \times 10^{17}}{8.98755 \times 10^{24}}}}{\sqrt{1 - \frac{1.33486 \times 10^{14}}{8.98755 \times 10^{23}}}} = \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} \notag \\
-&= \frac{0.99999999257385}{0.9999999999257385} \notag \\
-&= 0.99999999264810 \notag
+\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} = \frac{\sqrt{1 - \frac{D_1}{D_{crit}}}}{\sqrt{1 - \frac{D_2}{D_{crit}}}} \notag \\
+&= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} = 0.99999999264810 \notag
 \end{align}
 \end{mdframed}
 
-\textbf{Verification of Internal Consistency}
-
-To confirm that the general case is consistent with the special cases derived above, we verify that computing $k$ directly from $(I_2/I_1)^{1/5}$ produces the same result as computing the mass contribution (static radius, $L=3$) and radius contribution (static mass, $L=2$) independently and multiplying them.
-
-Starting from $I \propto MR^2$:
-\begin{align}
-k &= \left(\frac{I_2}{I_1}\right)^{1/5} \notag \\
-  &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} \notag \\
-  &= \left(\frac{M_2}{M_1}\right)^{1/5} \cdot \left(\frac{R_2}{R_1}\right)^{2/5} \notag \\
-  &= k_{\text{mass}} \times k_{\text{radius}}
-\end{align}
-
-Computed independently for $S_1 = \{M=10^{30}\,\text{kg},\ R=10^{8}\,\text{m}\}$, $S_2 = \{M=10^{20}\,\text{kg},\ R=10^{7}\,\text{m}\}$:
-
-\textbf{Direct, general form:}
-\[
-k = \left(\frac{10^{20} \cdot (10^{7})^2}{10^{30} \cdot (10^{8})^2}\right)^{1/5} = \left(10^{-12}\right)^{1/5} = 10^{-2.4} = 0.003981
-\]
-
-\textbf{Two-step, mass and radius contributions:}
-
-Step 1, mass contribution:
-\[
-k_{\text{mass}} = \left(\frac{10^{20}}{10^{30}}\right)^{1/5} = \left(10^{-10}\right)^{1/5} = 10^{-2} = 0.01
-\]
-
-Step 2, radius contribution:
-\[
-k_{\text{radius}} = \left(\frac{10^{7}}{10^{8}}\right)^{2/5} = \left(10^{-1}\right)^{2/5} = 10^{-0.4} = 0.39811
-\]
-
-Product:
-\[
-k = k_{\text{mass}} \times k_{\text{radius}} = 0.01 \times 0.39811 = 0.003981
-\]
-
-Both paths produce identical results: $d\tau/dt = \sqrt{1 - 0.003981} = 0.998007$, confirming that the general STE is internally consistent.
-
 \balance
-
-\section{Scaling Behaviour Across Systems} \label{app:scaling_table}
-
-See Table~\ref{tab:scaling_behaviour}.
-
-\begin{table*}[b]
-\centering
-\caption{Scaling behaviour across systems}
-\label{tab:scaling_behaviour}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-\hline
-System & M (kg) & R (m) & I (kg$\cdot$m$^2$) & M Scale & R Scale & Ratio & $\sqrt[5]{\text{Ratio}}$ & $t_0/t_f$ \\
-\hline
-1 & $1.00\times10^{3}$ & $1.00\times10^{0}$ & $4.00\times10^{2}$ & --- & --- & --- & --- & $1 - 7.42\times10^{-25}$ \\
-2 & $1.00\times10^{15}$ & $1.00\times10^{4}$ & $4.00\times10^{22}$ & $1.00\times10^{12}$ & $1.00\times10^{4}$ & $1.00\times10^{20}$ & $1.00\times10^{4}$ & $1 - 7.42\times10^{-17}$ \\
-3 & $1.00\times10^{15}$ & $1.00\times10^{6}$ & $4.00\times10^{26}$ & $1.00\times10^{0}$ & $1.00\times10^{2}$ & $1.00\times10^{4}$ & $3.98\times10^{0}$ & $1 - 7.42\times10^{-19}$ \\
-4 & $1.00\times10^{21}$ & $1.00\times10^{6}$ & $4.00\times10^{32}$ & $1.00\times10^{6}$ & $1.00\times10^{0}$ & $1.00\times10^{6}$ & $1.58\times10^{1}$ & $1 - 7.42\times10^{-13}$ \\
-5 & $1.00\times10^{21}$ & $1.00\times10^{-5}$ & $4.00\times10^{10}$ & $1.00\times10^{0}$ & $1.00\times10^{-11}$ & $1.00\times10^{-22}$ & $3.98\times10^{-5}$ & $9.25\times10^{-1}$ \\
-6 & $1.00\times10^{3}$ & $1.00\times10^{0}$ & $4.00\times10^{2}$ & $1.00\times10^{-18}$ & $1.00\times10^{5}$ & $1.00\times10^{-8}$ & $2.51\times10^{-2}$ & $1 - 7.42\times10^{-25}$ \\
-\hline
-\end{tabular}
-\end{table*}
 
 \section*{Data Availability}
 The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.
 
 %%%REFERENCES%%%
 \bibliography{rsc} %You need to replace "rsc" on this line with the name of your .bib file
-\bibliographystyle{plainnat} %Author-year style (Last, Year)
+\bibliographystyle{rsc} %the RSC's .bst file
 \clearpage
 \end{document}
