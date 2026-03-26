@@ -453,23 +453,21 @@ k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 2):} When two systems share the same radius, the STE compares linear inertia (mass) alone. $S_1$: $M_1 = 10^{30}$\,kg, $R = 10^{8}$\,m. $S_2$: $M_2 = 10^{24}$\,kg at the same radius, both at rest.
-Compactness $D = M/R$; time dilation parameter $k = D/D_{\text{crit}}$ where $D_{\text{crit}} = 6.73295 \times 10^{26}$\,kg/m:
+\textbf{Example (Case 2):} $S_1$: $M_1 = 10^{30}$\,kg, $S_2$: $M_2 = 10^{24}$\,kg, both at $R = 10^{8}$\,m. Starting from the STE with static radius ($R_1 = R_2$, $L = 3$):
 \begin{align}
-D_1 &= \frac{M_1}{R} = \frac{10^{30}}{10^{8}} = 10^{22} \notag \\
-k_1 &= \frac{10^{22}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-5} \notag \\
-D_2 &= \frac{M_2}{R} = \frac{10^{24}}{10^{8}} = 10^{16} \notag \\
-k_2 &= \frac{10^{16}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-11} \notag \\
-\frac{d\tau}{dt} &= \sqrt{\frac{1 - k_1}{1 - k_2}} = \sqrt{\frac{1 - 1.48523 \times 10^{-5}}{1 - 1.48523 \times 10^{-11}}} \notag \\
-&= 0.9999925737 \notag
+k &= \left(\frac{M_2}{M_1}\right)^{1/3} = \left(\frac{10^{24}}{10^{30}}\right)^{1/3} = (10^{-6})^{1/3} = 0.01 \notag
 \end{align}
-\textbf{Confirmation:} Gravitational time dilation ratio:
+Since $k = (k_2/k_1)^{1/3}$ where $k_i = D_i/D_{crit}$ and $D = M/R$:
 \begin{align}
-\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{Rc^2}}}{\sqrt{1 - \frac{2GM_2}{Rc^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{2 \times 6.67430 \times 10^{-11} \times 10^{30}}{10^{8} \times (2.99792 \times 10^{8})^2}}}{\sqrt{1 - \frac{2 \times 6.67430 \times 10^{-11} \times 10^{24}}{10^{8} \times (2.99792 \times 10^{8})^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{1.33486 \times 10^{20}}{8.98755 \times 10^{24}}}}{\sqrt{1 - \frac{1.33486 \times 10^{14}}{8.98755 \times 10^{24}}}} = \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-11}}} \notag \\
-&= \frac{0.99999257381}{0.99999999999257} \notag \\
-&= 0.99999257382 \notag
+k_1 &= \frac{M_1/R}{D_{crit}} = \frac{10^{30}/10^{8}}{6.73295 \times 10^{26}} = 1.48523 \times 10^{-5} \notag \\
+k_2 &= k_1 \cdot k^3 = 1.48523 \times 10^{-5} \times (0.01)^3 \notag \\
+&= 1.48523 \times 10^{-5} \times 10^{-6} = 1.48523 \times 10^{-11} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}} = \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-11}}} = 0.9999925737 \notag
+\end{align}
+\textbf{Confirmation:} Since $D_{crit} = c^2/2G$, we have $D/D_{crit} = 2GM/Rc^2$. Gravitational time dilation:
+\begin{align}
+\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{Rc^2}}}{\sqrt{1 - \frac{2GM_2}{Rc^2}}} = \frac{\sqrt{1 - \frac{D_1}{D_{crit}}}}{\sqrt{1 - \frac{D_2}{D_{crit}}}} \notag \\
+&= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-11}}} = 0.9999925737 \notag
 \end{align}
 \end{mdframed}
 
