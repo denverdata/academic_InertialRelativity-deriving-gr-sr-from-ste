@@ -31,7 +31,8 @@
       "WebFetch(domain:www.scirp.org)",
       "WebFetch(domain:assets.cambridge.org)",
       "Bash(latexmk:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(jobs -l)"
     ]
   }
 }
