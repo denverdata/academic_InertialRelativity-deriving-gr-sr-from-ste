@@ -10,7 +10,6 @@
 \usepackage{soul}
 \usepackage{balance}
 \usepackage{mathptmx}
-\usepackage{siunitx}
 \usepackage{sectsty}
 \usepackage{graphicx}
 \usepackage{lastpage}
@@ -30,7 +29,6 @@
 \usepackage[nobreak=false]{mdframed}
 \allowdisplaybreaks
 \usepackage{makecell}
-\usepackage{array} % Include in the preamble for vertical
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -129,11 +127,13 @@
 
 \includegraphics{head_foot/DOI} & \noindent\LARGE{\textbf{Deriving Relativistic Time from Inertia: A Unified Origin of the Lorentz and Schwarzschild Metrics}} \\
 \vspace{0.3cm} & \vspace{0.3cm} \\
- & \noindent\large{Thomas Damon DeGerlia,$^{\dag}$\textit{$^{a}$}} \\
+ & \noindent\large{Thomas Damon DeGerlia\textit{$^{a}$}} \\
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
- & \noindent\small{Revision 2.10 March 24, 2026 C.E.} \\
+ & \noindent\small{Revision 2.20 March 26, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
-\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\citep{degerlia202501} hypothesize that there is a universal mathematical relationship between time and the spatial distribution of matter: \ul{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} In our prior paper \citep{degerlia202505}, we demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by exploring Inertial Relativity's mathematical relationship with General and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.}
+\includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\citep{degerlia202501} hypothesize that there is a universal mathematical relationship between time and the spatial distribution of matter: \textit{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} In our prior paper \citep{degerlia202505}, we demonstrated this universality by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper closes the loop by exploring Inertial Relativity's mathematical relationship with General and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Via this exploration, we show that Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.} \\
+ & \vspace{0.3cm} \\
+ & \noindent\small{\textbf{Keywords:} modern physics, inertial relativity, space-time equivalence, time dilation, general relativity, special relativity, moment of inertia, unification}
 
 \end{tabular}
 
@@ -154,16 +154,11 @@ This paper presents a mathematical derivation connecting the Space-Time Equivale
 \section{Inertial Relativity}
 Inertial Relativity is a principle introduced by the author in a prior paper "The Universe of Light" \citep{degerlia202501}. In that work, we hypothesize that General and Special Relativity emerge from Inertial Relativity. This paper demonstrates that equivalence.
 
-Inertia is relativistic, meaning that without a comparator, any measurement of it would have no meaning. For example, something with a moment of inertia $1 \times 10^{20}$ kg\,m$^2$ might be perceived as difficult to rotate, but not more difficult than something with $1 \times 10^{30}$ kg\,m$^2$. However, the concept of relativity also says that how something is observed is influenced by the frame of observation. Consider for a moment, the following statement that exemplifies our nuanced understanding of the concept of relative scale:
-\begin{quote}
-``When we were little, adults were big. Now that we're grown up, children seem small.''
-\end{quote}
-This illustrates that we understand what spatial scale means. We know what relative scale means; we know what it's like to be bigger than something or to be smaller than something. We understand the experience of growing or watching something grow; we know what it is like to change scale relative to something else.
-
-A system, in this context, is any collection of mass and spatial extent you choose to define. It need not be spherical, uniform, high density, or even massive. A system may be a planet, a uniform sphere, a supermassive black hole, a disc galaxy, a cube, a cubic sample of a cumulus cloud, or a system consisting of a hydrogen proton and a single electron.
+Inertia is relativistic, meaning that without a comparator, any measurement of it would have no meaning. For example, something with a moment of inertia $1 \times 10^{20}$ kg\,m$^2$ might be perceived as difficult to rotate, but not more difficult than something with $1 \times 10^{30}$ kg\,m$^2$. However, the concept of relativity also says that how something is observed is influenced by the frame of observation.
+A system, in this context, is any collection of mass and spatial extent one chooses to define. It need not be spherical, uniform, high density, or even massive. A system may be a planet, a uniform sphere, a supermassive black hole, a disc galaxy, a cube, a cubic sample of a cumulus cloud, or a system consisting of a hydrogen proton and a single electron.
 
 \subsection{Rotational Inertia}
-Moment of inertia for a system is distinct about every axis in the system. For any given axis, the moment of inertia dictates how an applied torque translates into a delta in rotational motion. Moment of inertia is defined as:
+Moment of inertia for a system is distinct about every axis in the system. For any given axis, the moment of inertia dictates how an applied torque translates into angular acceleration. Moment of inertia is defined as:
 \begin{equation}
 I = \sum_i m_i r_i^2
 \end{equation} 
@@ -174,7 +169,7 @@ Linear inertia is mass:
 \begin{equation}
 M = \sum_i m_i
 \end{equation}
-where $m_i$ are the constituent mass elements. Linear inertia defines how an applied force translates into a delta in translational motion. It is quantified entirely by mass ($F = ma$). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
+where $m_i$ are the constituent mass elements. Linear inertia defines how an applied force translates into translational acceleration. It is quantified entirely by mass ($F = ma$). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
 
 \subsection{Isometric Scaling}
 Isometric scaling is the uniform scaling of a system in all spatial dimensions while maintaining constant density. Under isometric scaling, every length in the system scales by the same factor $k$:
@@ -199,7 +194,7 @@ I' = k^5 I
 where $I$ is the moment of inertia about a selected axis; $k$ is the linear scale factor.
 
 \subsection{Inertia Abstracts Mass and Radius}
-Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; absolutely independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
+Because every change in length necessarily changes the system's mass, Equations~\ref{eq:length_scaling}--\ref{eq:radius_scaling} hold only for strict isometric scaling; Equation~\ref{eq:inertia_scaling}, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
 
 \subsection{Universality}
 The extension from isometrically scaled systems to all systems follows from the nature of moment of inertia itself. Because $I$ fully determines rotational response to applied torque, two systems with the same $I$ are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same $I$ exhibit the same rotational physics.
@@ -250,12 +245,12 @@ k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
 where $M_1$ and $M_2$ are the masses of the two systems.
 
-\subsection{Relating Linear Scale Vector $k$ to General Relativity}
+\subsection{Relating Linear Scale Factor $k$ to General Relativity}
 Time dilation is always:
 \begin{equation} \label{eq:td_k}
 \frac{d\tau}{dt} = \sqrt{1 - k}
 \end{equation}
-where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia:
+where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia (Equations~\ref{eq:ste} and~\ref{eq:linear}). Every expression of time dilation in this paper takes this form; only the physical constraint determining $k$ changes.
 
 \subsection{Properties of Time}
 The STE reveals the following properties of time:
@@ -265,14 +260,14 @@ The STE reveals the following properties of time:
 \item Time is dimensional in three spatial dimensions
 \item Time is multimodal: both linear and rotational
 \item Time is dynamic for every system or subsystem
-\item Time applies to all systems, not only uniform or spherically symmetric ones
+\item Time dilation applies to all systems, not only uniform or spherically symmetric ones
 \item Time is universally and precisely determined by the spatial distribution of matter in the system, as captured by inertia, about and along every axis, whether or not in motion or being observed
 \end{itemize}
 
 \subsection{Physical Interpretation}
 The STE states that the relative pace of time for any system about any axis is determined by its moment of inertia about that same axis. The more inertia a system has about that axis, the slower its clock runs relative to a system with less inertia. This is consistent with the notion that time is a measure of change, and inertia resists change. Therefore, the more inertia a system has, the less it changes over a given period of time, and thus the slower its system clock runs relative to a system with less inertia.
 
-At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small that is. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space. The per-axis nature of the STE extends to asymmetric systems such as the Kerr metric \citep{kerr1963}, a topic for future investigation.
+At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space. The per-axis nature of the STE extends to asymmetric systems such as the Kerr metric \citep{kerr1963}, a topic for future investigation.
 
 \subsection{STE Example}
 Consider a uniform sphere of radius 1\,m and mass 1\,kg scaled isometrically by a factor of two, producing a second sphere of radius 2\,m and mass $2^3 = 8$\,kg. Their moments of inertia are:
@@ -314,7 +309,7 @@ These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the grav
 
 \section{Expressions of Relative Inertial Linear Scale}
 
-The parameter $k$ is always the linear scale factor between two systems about their respective selected axes. Because $k$ is determined by relative inertia, it is fundamentally an inertial ratio. The various scenarios, such as special relativity, gravitational time dilation, etc., are all directly derived from this inertia ratio. In the case of general relativity, we simply set $M_1$ and $M_2$ equal and set $R_2$ to the Schwarzschild radius (see Appendix A: Special-Case Derivations).
+The parameter $k$ is always the linear scale factor between two systems about their respective selected axes. Because $k$ is determined by relative inertia, it is fundamentally an inertial ratio. The various scenarios, such as special relativity, gravitational time dilation, etc., are all directly derived from this inertia ratio. In the case of general relativity, we simply set $M_1$ and $M_2$ equal and set $R_2$ to the Schwarzschild radius (see Appendix~\ref{app:general_ste}).
 
 Each expression of $k$ below derives from the STE (Equation~\ref{eq:ste}), where $I_1$ and $I_2$ are the moments of inertia of two systems about their respective selected axes. Substituting the moment of inertia for a uniform sphere, $I = \frac{2}{5}MR^2$:
 \begin{equation} \label{eq:k_expanded}
@@ -329,11 +324,11 @@ From here, each derivation applies specific constraints and solves.
 \subsection{Static Mass (Gravitational)}
 From Equation~\ref{eq:k_simplified}, setting $M_1 = M_2 = M$ and $R_2 = r_s$:
 \begin{equation}
-k = \left(\frac{M r_s^2}{M \cdot R_1^2}\right)^{1/5}
+k = \left(\frac{M r_s^2}{M \cdot R_1^2}\right)^{1/5} = \left(\frac{r_s^2}{R^2}\right)^{1/5}
 \end{equation}
-where $M$ is the shared mass, $r_s$ is the Schwarzschild radius, and $R$ is the mean radius of the system about the selected axis.
+where $r_s$ is the Schwarzschild radius and $R$ is the mean radius of the system about the selected axis. When mass cancels, the degree of homogeneity of the remaining quantity ($R^2$) is $L = 2$, so the exponent reduces from $1/5$ to $1/2$ (see Appendix~\ref{app:general_ste}):
 \begin{equation}
-k = \left(\frac{r_s^5}{R^5}\right)^{1/5} = \frac{r_s}{R}
+k = \left(\frac{r_s^2}{R^2}\right)^{1/2} = \frac{r_s}{R}
 \end{equation}
 This is equivalently expressed through inertial density or DeGerlia Compactness, since $P \propto M/R$ and $D = M/R$. When mass is static, the ratio of either quantity reduces to the ratio of mean radii about the selected axis:
 \begin{equation}
@@ -345,14 +340,14 @@ k = \frac{D}{D_{crit}}
 \end{equation}
 
 \subsection{Static Radius (Linear)}
-From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the STE reduces to (see \ref{app:general_ste}):
+From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the STE reduces to (see Appendix~\ref{app:general_ste}):
 \begin{equation}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
-This is Equation~\ref{eq:linear}. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is a ratio of two lengths with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
+This is Equation~\ref{eq:linear}. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \subsection{Constant Density (Isometric)}
-When density is held constant, $M \propto R^3$, and the STE reduces to a pure linear scale ratio (see \ref{app:general_ste}):
+When density is held constant, $M \propto R^3$, and the STE reduces to a pure linear scale ratio (see Appendix~\ref{app:general_ste}):
 \begin{equation}
 k = \left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5} = \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \end{equation}
@@ -368,7 +363,7 @@ This is the full STE (Equation~\ref{eq:ste}). The static-mass and static-radius 
 
 From Equation~\ref{eq:td_k}, time dilation is always $d\tau/dt = \sqrt{1-k}$, and $k$ is always the linear scale factor between two systems. In all cases, $k$ reduces to a ratio of characteristic lengths. The Schwarzschild and Lorentz results are not independent discoveries; they are the same expression evaluated under different physical constraints on the same underlying parameter $k$.
 
-When mass is static across two systems, $k = MR_2^2/MR_1^2$ simplifies to $k = R_2^2/R_1^2$  $M/M$ cancels and the STE reduces exactly to Schwarzschild time dilation where $r_2$ is $R_S$. When radius is static and cancels, STE simplifies to $k = (M_2/M_1)^{1/3}$. When one is working with a linear system where inertia is represented by mass alone, it similarly reduces exactly to $k = (M_2/M_1)^{1/3}$. Lorentz time dilation uses $k = v^2/c^2$, which is itself a ratio of two lengths (velocity being distance per unit time, the shared time unit cancels); in the gravitational case, $v^2/c^2 = r_s/R$ directly. When density is shared, $k = R_2/R_1$ directly. When neither mass, radius, nor density is shared between systems, the full STE applies: $k = (I_2/I_1)^{1/5}$. All three special-case forms reduce to a ratio of characteristic lengths under their respective conditions. Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
+As derived in Sections 5.1--5.4, each physical constraint yields a specific expression for $k$: static mass produces $r_s/R$, static radius produces $(M_2/M_1)^{1/3}$, constant density produces $R_2/R_1$, and the unconstrained general case retains the full $(I_2/I_1)^{1/5}$. In every case, $k$ reduces to a ratio of characteristic lengths. The velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are connected directly through the escape velocity identity ($v^2/c^2 = r_s/R$). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
 
 \section{Analysis and Conclusion}
 
@@ -386,13 +381,13 @@ Substituting the linear case ($k = v^2/c^2$) directly produces Lorentz time dila
 \]
 Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
 
-The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (\ref{app:general_ste}), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct — subjects to be developed in subsequent work.
+The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (Appendix~\ref{app:general_ste}), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct, subjects to be developed in subsequent work.
 
 \appendix
 \renewcommand{\thesection}{Appendix~\Alph{section}}
 \section{Special-Case Derivations} \label{app:general_ste}
 
-The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{euler1755}, then verifies the general case through decomposition and numerical example.
+The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{widder1961}, then verifies the general case through decomposition and numerical example.
 
 The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
 
@@ -431,7 +426,7 @@ k &= \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. $S_1$ has the mass and mean radius of the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m). $S_2$ is the same mass compressed to just above the Schwarzschild radius ($r_s = 2953.34$\,m), at $R_2 = 2954$\,m.
+\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. $S_1$ has the mass and mean radius of the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m). $S_2$ is the same mass compressed to just above the Schwarzschild radius ($r_s = 2953.34$\,m), at $R_2 = 2954$\,m. $R_2$ is chosen above $r_s$ because at $R = r_s$ the system is at gravitational collapse, where $d\tau/dt = 0$; the comparison requires a physical, non-collapsed system.
 \[
 k = \frac{R_2}{R_1} = \frac{2954}{6.957 \times 10^{8}} = 4.24608 \times 10^{-6}
 \]
@@ -540,6 +535,12 @@ k_2 &= \frac{M_2/R_2}{D_{crit}} = \frac{10^{24}/10^{7}}{6.73295 \times 10^{26}} 
 \end{mdframed}
 
 \balance
+
+\section*{Acknowledgments}
+This work was conducted independently and received no external funding.
+
+\section*{Conflicts of Interest}
+The author declares no competing interests.
 
 \section*{Data Availability}
 The complete source materials for this paper, including all \LaTeX{} source files, derivation documents, and revision history, are publicly available at: \url{https://github.com/denverdata/academic_InertialRelativity-deriving-gr-sr-from-ste}.

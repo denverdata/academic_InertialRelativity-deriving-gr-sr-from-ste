@@ -19,7 +19,17 @@
       "Bash(git -C:*)",
       "Bash(pip3 install:*)",
       "Bash(open:*)",
-      "Bash(osascript -e 'tell application \"\"Preview\"\" to quit')"
+      "Bash(osascript -e 'tell application \"\"Preview\"\" to quit')",
+      "Bash(LC_ALL=C grep -Pn '[^\\\\x00-\\\\x7E]' /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/latex/master.tex)",
+      "WebFetch(domain:proofwiki.org)",
+      "WebFetch(domain:shop.elsevier.com)",
+      "WebFetch(domain:www.sciencedirect.com)",
+      "WebFetch(domain:www.cambridge.org)",
+      "WebFetch(domain:dokumen.pub)",
+      "WebFetch(domain:link.springer.com)",
+      "WebFetch(domain:books.google.com)",
+      "WebFetch(domain:www.scirp.org)",
+      "WebFetch(domain:assets.cambridge.org)"
     ]
   }
 }
