@@ -35,7 +35,8 @@
       "Bash(jobs -l)",
       "Bash(detex master.tex)",
       "Read(//tmp/**)",
-      "Bash(pandoc master.tex -f latex -t plain -o /tmp/pandoc_plain.txt)"
+      "Bash(cd:*)",
+      "Bash(brew uninstall:*)"
     ]
   }
 }

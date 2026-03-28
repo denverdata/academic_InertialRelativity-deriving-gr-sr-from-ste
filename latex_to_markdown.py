@@ -222,7 +222,8 @@ def latex_math_to_text(math):
 def clean_inline(text):
     """Convert LaTeX inline markup to Markdown, with math spelled out."""
     # Convert inline math $...$ to spoken text FIRST (before braces are stripped)
-    text = re.sub(r'\$([^$]+)\$', lambda m: latex_math_to_text(m.group(0)), text)
+    # Add spaces around the result so it doesn't concatenate with adjacent text
+    text = re.sub(r'\$([^$]+)\$', lambda m: ' ' + latex_math_to_text(m.group(0)) + ' ', text)
 
     # Strip comments
     text = re.sub(r'(?<!\\)%[^\n]*', '', text)
@@ -245,8 +246,17 @@ def clean_inline(text):
     # Citations: strip entirely for readable output
     text = re.sub(r'\\(?:citep?|citet)\{[^}]*\}', '', text)
 
-    # Cross-references
-    text = re.sub(r'\\ref\{([^}]*)\}', r'§\1', text)
+    # Cross-references: replace with descriptive names
+    ref_names = {
+        'app:general_ste': 'Appendix A',
+    }
+    def _resolve_ref(m):
+        key = m.group(1)
+        if key in ref_names:
+            return ref_names[key]
+        # Strip 'eq:' prefix, replace underscores with spaces
+        return key.replace('eq:', '').replace('_', ' ')
+    text = re.sub(r'\\ref\{([^}]*)\}', _resolve_ref, text)
     text = re.sub(r'\\label\{[^}]*\}', '', text)
 
     # Drop footnotes
@@ -289,14 +299,6 @@ def clean_inline(text):
 
     # Collapse whitespace (but not newlines)
     text = re.sub(r'[ \t]+', ' ', text)
-
-    # Spell out units for reader
-    text = text.replace('kgtimesmsquared', 'kilogram meters squared')
-    text = text.replace('kg/m', 'kilograms per meter')
-    text = re.sub(r'msquared', 'meters squared', text)
-    text = re.sub(r'mcubed', 'meters cubed', text)
-    text = re.sub(r'\bkg\b', 'kilograms', text)
-    text = text.replace('\\LaTeX', 'LaTeX')
 
     return text.strip()
 
@@ -571,6 +573,29 @@ def process_body(src):
 
 # ── main ────────────────────────────────────────────────────────────────────
 
+def spell_out_units(text):
+    """Final pass: spell out unit abbreviations on plain text.
+    This runs AFTER all LaTeX is stripped, so the input is clean text."""
+    # Multi-word unit patterns first (longer matches before shorter)
+    text = re.sub(r'\bkg m squared\b', 'kilogram meters squared', text)
+    text = re.sub(r'\bkg m cubed\b', 'kilogram meters cubed', text)
+    text = re.sub(r'\bkg times m squared\b', 'kilogram meters squared', text)
+    text = re.sub(r'\bkg times m cubed\b', 'kilogram meters cubed', text)
+    text = re.sub(r'\bkg/m cubed\b', 'kilograms per meter cubed', text)
+    text = re.sub(r'\bkg/m squared\b', 'kilograms per meter squared', text)
+    text = re.sub(r'\bkg/m\b', 'kilograms per meter', text)
+    text = re.sub(r'\bm/s squared\b', 'meters per second squared', text)
+    text = re.sub(r'\bm/s\b', 'meters per second', text)
+    # Standalone kg (not part of a word)
+    text = re.sub(r'\bkg\b', 'kilograms', text)
+    # Standalone "m" as meters: after a number, after "power", or before a closing paren/period/comma
+    text = re.sub(r'(\d)\s+m\b(?!\s*sub|\s*over|\s*times|\s*=|\s*prime)', r'\1 meters', text)
+    text = re.sub(r'(power)\s+m\b(?!\s*sub|\s*over|\s*times|\s*=|\s*prime)', r'\1 meters', text)
+    # LaTeX command that survived
+    text = text.replace('\\LaTeX', 'LaTeX')
+    return text
+
+
 def main():
     to_stdout = '--stdout' in sys.argv
     src = open(TEX).read()
@@ -615,6 +640,9 @@ def main():
 
     # Clean up excessive blank lines
     text = re.sub(r'\n{3,}', '\n\n', text)
+
+    # Final pass: spell out units on clean plain text
+    text = spell_out_units(text)
 
     if to_stdout:
         print(text)

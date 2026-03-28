@@ -1,6 +1,6 @@
 Deriving Relativistic Time from Inertia: A Unified Origin of the Lorentz and Schwarzschild Metrics
 
-Thomas Damon DeGerlia
+Thomas Damon DeGerliaa
 Originally published: February 6, 2026 C.E.
 Revision 2.20 March 26, 2026 C.E.
 
@@ -10,13 +10,13 @@ Inertial Relativity and its key formula the Space-Time Equivalence (STE) hypothe
 
 Section 1: Introduction
 
-This paper presents a mathematical derivation connecting the Space-Time Equivalence (STE), General Relativity, and Special Relativity. We build upon DeGerlia's prior work introducing the concept of Inertial Density and predicting time dilation calculations with exact precision, which established that the Schwarzschild condition reduces to a constant threshold of mass over mean radius, the DeGerlia Threshold (D sub crit = 6.73295 times 10 to the 26 kilograms per meter), about the selected axis. From these demonstrations, the mathematical equivalence between the STE, General Relativity, and Special Relativity is established, unifying the two theories under a single framework: Inertial Relativity.
+This paper presents a mathematical derivation connecting the Space-Time Equivalence (STE), General Relativity, and Special Relativity. We build upon DeGerlia's prior work introducing the concept of Inertial Density and predicting time dilation calculations with exact precision, which established that the Schwarzschild condition reduces to a constant threshold of mass over mean radius, the DeGerlia Threshold ( D sub crit = 6.73295 times 10 to the 26 kilograms per meter), about the selected axis. From these demonstrations, the mathematical equivalence between the STE, General Relativity, and Special Relativity is established, unifying the two theories under a single framework: Inertial Relativity.
 
 Section 2: Inertial Relativity
 
 Inertial Relativity is a principle introduced by the author in a prior paper "The Universe of Light". In that work, we hypothesize that General and Special Relativity emerge from Inertial Relativity. This paper demonstrates that equivalence.
 
-Inertia is relativistic, meaning that without a comparator, any measurement of it would have no meaning. For example, something with a moment of inertia 1 times 10 to the 20 kilograms meters squared might be perceived as difficult to rotate, but not more difficult than something with 1 times 10 to the 30 kilograms meters squared. However, the concept of relativity also says that how something is observed is influenced by the frame of observation. A system, in this context, is any collection of mass and spatial extent one chooses to define. It need not be spherical, uniform, high density, or even massive. A system may be a planet, a uniform sphere, a supermassive black hole, a disc galaxy, a cube, a cubic sample of a cumulus cloud, or a system consisting of a hydrogen proton and a single electron.
+Inertia is relativistic, meaning that without a comparator, any measurement of it would have no meaning. For example, something with a moment of inertia 1 times 10 to the 20 kilogram meters squared might be perceived as difficult to rotate, but not more difficult than something with 1 times 10 to the 30 kilogram meters squared. However, the concept of relativity also says that how something is observed is influenced by the frame of observation. A system, in this context, is any collection of mass and spatial extent one chooses to define. It need not be spherical, uniform, high density, or even massive. A system may be a planet, a uniform sphere, a supermassive black hole, a disc galaxy, a cube, a cubic sample of a cumulus cloud, or a system consisting of a hydrogen proton and a single electron.
 
 Section 2.1: Rotational Inertia
 
@@ -24,7 +24,7 @@ Moment of inertia for a system is distinct about every axis in the system. For a
 
     I = the sum over i of m sub i r sub i squared
 
-where r sub i is the perpendicular distance from each mass element m sub i to the chosen axis. Just as mass governs how a system responds to linear force (F = m a), moment of inertia governs how it responds to torque (tau = Ialpha).
+where r sub i is the perpendicular distance from each mass element m sub i to the chosen axis. Just as mass governs how a system responds to linear force ( F = m a ), moment of inertia governs how it responds to torque ( tau = Ialpha ).
 
 Section 2.2: Linear Inertia
 
@@ -32,7 +32,7 @@ Linear inertia is mass:
 
     M = the sum over i of m sub i
 
-where m sub i are the constituent mass elements. Linear inertia defines how an applied force translates into translational acceleration. It is quantified entirely by mass (F = m a). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
+where m sub i are the constituent mass elements. Linear inertia defines how an applied force translates into translational acceleration. It is quantified entirely by mass ( F = m a ). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
 
 Section 2.3: Isometric Scaling
 
@@ -56,13 +56,13 @@ where I is the moment of inertia about a selected axis; k is the linear scale fa
 
 Section 2.4: Inertia Abstracts Mass and Radius
 
-Because every change in length necessarily changes the system's mass, Equations §eq:length_scaling–§eq:radius_scaling hold only for strict isometric scaling; Equation §eq:inertia_scaling, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
+Because every change in length necessarily changes the system's mass, Equations length scaling–radius scaling hold only for strict isometric scaling; Equation inertia scaling, however, abstracts mass and radius into moment of inertia. If two systems share moment of inertia about any axis, then an identical torque applied to each system about that same axis will produce identical changes in motion, regardless of the system geometry; independent of mass and radius individually. The moment of inertia alone dictates how a system interacts with time about a particular axis. From this, we can conclude the following formula is universal and is not bound in any way to isometric scaling. The derivations that follow demonstrate that General and Special Relativity emerge from this principle.
 
 Section 2.5: Universality
 
 The extension from isometrically scaled systems to all systems follows from the nature of moment of inertia itself. Because I fully determines rotational response to applied torque, two systems with the same I are dynamically indistinguishable regardless of geometry. A thin shell and a solid sphere with the same I exhibit the same rotational physics.
 
-The fifth root relationship therefore holds universally: for any two systems about any two respective axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those same axes. Isometric scaling establishes the exponent (Equation §eq:inertia_scaling).
+The fifth root relationship therefore holds universally: for any two systems about any two respective axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those same axes. Isometric scaling establishes the exponent (Equation inertia scaling).
 
 Section 2.6: Inertial Density
 
@@ -76,7 +76,7 @@ For a uniform sphere, substituting I = 2 over 5M R squared and V = 4 over 3pi R 
 
     P = M over R times 3 over 10pi
 
-Just as ordinary density (rho = M/V) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: mass and density are to linear motion as moment of inertia and inertial density are to rotational motion. Because P is defined relative to a selected axis, it can be evaluated per axis directly rather than requiring a full tensor treatment when the quantity varies by direction.
+Just as ordinary density ( rho = M/V ) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: mass and density are to linear motion as moment of inertia and inertial density are to rotational motion. Because P is defined relative to a selected axis, it can be evaluated per axis directly rather than requiring a full tensor treatment when the quantity varies by direction.
 
 DeGerlia Compactness D = M/R is a simplified analog to inertial density, related to P by the geometric factor 3/10pi, and represents the mass over mean radius ratio for a system about the selected axis.
 
@@ -100,7 +100,7 @@ The STE is the core universal equivalence stated by Inertial Relativity:
 
 where I sub 1 and I sub 2 are the moments of inertia of any two systems about any respective axes. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention.
 
-In the linear context, inertia is M and the linear inertia version of the STE applies (see §app:general_ste). Special Relativity describes linear inertia:
+In the linear context, inertia is M and the linear inertia version of the STE applies (see Appendix A). Special Relativity describes linear inertia:
 
     k = the quantity of M sub 2 over M sub 1, to the 1-third
 
@@ -112,7 +112,7 @@ Time dilation is always:
 
     dtau over dt = the square root of the quantity 1 - k
 
-where dtau/dt is the ratio of proper time to coordinate time and k is the linear scale factor derived from inertia (Equations §eq:ste and §eq:linear). Every expression of time dilation in this paper takes this form; only the physical constraint determining k changes.
+where dtau/dt is the ratio of proper time to coordinate time and k is the linear scale factor derived from inertia (Equations ste and linear). Every expression of time dilation in this paper takes this form; only the physical constraint determining k changes.
 
 Section 3.2: Properties of Time
 
@@ -134,10 +134,10 @@ At any given time, any system is always undergoing some degree of rotation and s
 
 Section 3.4: STE Example
 
-Consider a uniform sphere of radius 1 m and mass 1 kilograms scaled isometrically by a factor of two, producing a second sphere of radius 2 m and mass 2 cubed = 8 kilograms. Their moments of inertia are:
+Consider a uniform sphere of radius 1 meters and mass 1 kilograms scaled isometrically by a factor of two, producing a second sphere of radius 2 meters and mass 2 cubed = 8 kilograms. Their moments of inertia are:
 
-    I sub 1 = 2 over 58 kg2 m squared = 12.8 kilogram meters squared
-    I sub 2 = 2 over 51 kg1 m squared = 0.4 kilogram meters squared
+    I sub 1 = 2 over 58 kg2 meters squared = 12.8 kilogram meters squared
+    I sub 2 = 2 over 51 kg1 meters squared = 0.4 kilogram meters squared
 
 The ratio I sub 1/I sub 2 = 32 = 2 to the fifth power confirms that moment of inertia scales as k to the fifth power under isometric scaling. Designating the larger sphere as the observer (System 1) and the smaller as the observed (System 2), the STE yields:
 
@@ -161,13 +161,13 @@ Lorentz time dilation:
 
 where v is the velocity of the moving frame and c is the speed of light.
 
-These are the same form as Equation §eq:td_k, where k = r sub s/R in the gravitational case and k = v squared/c squared in the velocity case. The two expressions are equivalent: the escape velocity at radius R is v squared = 2G M/R, so v squared/c squared = 2G M/R c squared = r sub s/R.
+These are the same form as Equation td k, where k = r sub s/R in the gravitational case and k = v squared/c squared in the velocity case. The two expressions are equivalent: the escape velocity at radius R is v squared = 2G M/R, so v squared/c squared = 2G M/R c squared = r sub s/R.
 
 Section 5: Expressions of Relative Inertial Linear Scale
 
-The parameter k is always the linear scale factor between two systems about their respective selected axes. Because k is determined by relative inertia, it is fundamentally an inertial ratio. The various scenarios, such as special relativity, gravitational time dilation, etc., are all directly derived from this inertia ratio. In the case of general relativity, we simply set M sub 1 and M sub 2 equal and set R sub 2 to the Schwarzschild radius (see §app:general_ste).
+The parameter k is always the linear scale factor between two systems about their respective selected axes. Because k is determined by relative inertia, it is fundamentally an inertial ratio. The various scenarios, such as special relativity, gravitational time dilation, etc., are all directly derived from this inertia ratio. In the case of general relativity, we simply set M sub 1 and M sub 2 equal and set R sub 2 to the Schwarzschild radius (see Appendix A).
 
-Each expression of k below derives from the STE (Equation §eq:ste), where I sub 1 and I sub 2 are the moments of inertia of two systems about their respective selected axes. Substituting the moment of inertia for a uniform sphere, I = 2 over 5M R squared:
+Each expression of k below derives from the STE (Equation ste), where I sub 1 and I sub 2 are the moments of inertia of two systems about their respective selected axes. Substituting the moment of inertia for a uniform sphere, I = 2 over 5M R squared:
 
     k = the quantity of 2 over 5M sub 2 R sub 2 squared over 2 over 5M sub 1 R sub 1 squared, to the 1-fifth
 
@@ -179,11 +179,11 @@ From here, each derivation applies specific constraints and solves.
 
 Section 5.1: Static Mass (Gravitational)
 
-From Equation §eq:k_simplified, setting M sub 1 = M sub 2 = M and R sub 2 = r sub s:
+From Equation k simplified, setting M sub 1 = M sub 2 = M and R sub 2 = r sub s:
 
     k = the quantity of M r sub s squared over M times R sub 1 squared, to the 1-fifth = r sub s squared over R squared to the 1-fifth
 
-where r sub s is the Schwarzschild radius and R is the mean radius of the system about the selected axis. When mass cancels, the degree of homogeneity of the remaining quantity (R squared) is L = 2, so the exponent reduces from 1/5 to 1/2 (see §app:general_ste):
+where r sub s is the Schwarzschild radius and R is the mean radius of the system about the selected axis. When mass cancels, the degree of homogeneity of the remaining quantity ( R squared ) is L = 2, so the exponent reduces from 1/5 to 1/2 (see Appendix A):
 
     k = the quantity of r sub s squared over R squared, to the 1-second = r sub s over R
 
@@ -197,15 +197,15 @@ When compared against the DeGerlia Threshold D sub crit = 6.73295 times 10 to th
 
 Section 5.2: Static Radius (Linear)
 
-From Equation §eq:k_simplified, when R sub 1 = R sub 2, the STE reduces to (see §app:general_ste):
+From Equation k simplified, when R sub 1 = R sub 2, the STE reduces to (see Appendix A):
 
     k = the quantity of M sub 2 over M sub 1, to the 1-third
 
-This is Equation §eq:linear. The Lorentz factor (Equation §eq:lorentz) has the same form as Equation §eq:td_k, with k = v squared/c squared. Since velocity is distance per unit time, v squared/c squared is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: v squared/c squared = r sub s/R via the escape velocity identity, so the velocity-based k of special relativity and the radius-based k of general relativity are the same length ratio.
+This is Equation linear. The Lorentz factor (Equation lorentz) has the same form as Equation td k, with k = v squared/c squared. Since velocity is distance per unit time, v squared/c squared is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: v squared/c squared = r sub s/R via the escape velocity identity, so the velocity-based k of special relativity and the radius-based k of general relativity are the same length ratio.
 
 Section 5.3: Constant Density (Isometric)
 
-When density is held constant, M is proportional to R cubed, and the STE reduces to a pure linear scale ratio (see §app:general_ste):
+When density is held constant, M is proportional to R cubed, and the STE reduces to a pure linear scale ratio (see Appendix A):
 
     k = the quantity of R sub 2 cubed R sub 2 squared over R sub 1 cubed R sub 1 squared, to the 1-fifth = R sub 2 to the fifth power over R sub 1 to the fifth power to the 1-fifth = R sub 2 over R sub 1
 
@@ -215,37 +215,37 @@ When both mass and radius differ between two systems, no component cancels:
 
     k = the quantity of I sub 2 over I sub 1, to the 1-fifth = M sub 2 R sub 2 squared over M sub 1 R sub 1 squared to the 1-fifth
 
-This is the full STE (Equation §eq:ste). The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of this formula, each arising when one component of inertia is held constant. The general case applies to any two systems without constraint.
+This is the full STE (Equation ste). The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of this formula, each arising when one component of inertia is held constant. The general case applies to any two systems without constraint.
 
 Section 6: Unification of GR and SR
 
-From Equation §eq:td_k, time dilation is always dtau/dt = the square root of the quantity 1-k, and k is always the linear scale factor between two systems. In all cases, k reduces to a ratio of characteristic lengths. The Schwarzschild and Lorentz results are not independent discoveries; they are the same expression evaluated under different physical constraints on the same underlying parameter k.
+From Equation td k, time dilation is always dtau/dt = the square root of the quantity 1-k, and k is always the linear scale factor between two systems. In all cases, k reduces to a ratio of characteristic lengths. The Schwarzschild and Lorentz results are not independent discoveries; they are the same expression evaluated under different physical constraints on the same underlying parameter k.
 
-As derived in Sections 5.1–5.4, each physical constraint yields a specific expression for k: static mass produces r sub s/R, static radius produces the quantity of M sub 2/M sub 1, to the 1-third, constant density produces R sub 2/R sub 1, and the unconstrained general case retains the full the quantity of I sub 2/I sub 1, to the 1-fifth. In every case, k reduces to a ratio of characteristic lengths. The velocity-based k of special relativity and the radius-based k of general relativity are connected directly through the escape velocity identity (v squared/c squared = r sub s/R). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
+As derived in Sections 5.1–5.4, each physical constraint yields a specific expression for k: static mass produces r sub s/R, static radius produces the quantity of M sub 2/M sub 1, to the 1-third, constant density produces R sub 2/R sub 1, and the unconstrained general case retains the full the quantity of I sub 2/I sub 1, to the 1-fifth. In every case, k reduces to a ratio of characteristic lengths. The velocity-based k of special relativity and the radius-based k of general relativity are connected directly through the escape velocity identity ( v squared/c squared = r sub s/R ). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
 
 Section 7: Analysis and Conclusion
 
-The Space-Time Equivalence (Equation §eq:td_k) states that time dilation is:
+The Space-Time Equivalence (Equation td k) states that time dilation is:
 
     dtau over dt = the square root of the quantity 1 - k
 
-where k is the linear scale factor derived from inertia. Substituting the gravitational case (k = r sub s/R) directly produces Schwarzschild time dilation (Equation §eq:schwarzschild):
+where k is the linear scale factor derived from inertia. Substituting the gravitational case ( k = r sub s/R ) directly produces Schwarzschild time dilation (Equation schwarzschild):
 
     dtau over dt = the square root of the quantity 1 - r sub s over R
 
-Substituting the linear case (k = v squared/c squared) directly produces Lorentz time dilation (Equation §eq:lorentz):
+Substituting the linear case ( k = v squared/c squared ) directly produces Lorentz time dilation (Equation lorentz):
 
     dtau over dt = the square root of the quantity 1 - v squared over c squared
 
 Equivalently, k = D/D sub crit gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to r sub s/R.
 
-The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (§app:general_ste), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct, subjects to be developed in subsequent work.
+The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (Appendix A), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct, subjects to be developed in subsequent work.
 
 Appendix A: Special-Case Derivations
 
 The main text presents four expressions of k under different physical conditions (Sections 5.1–5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from 1/5 to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions, then verifies the general case through decomposition and numerical example.
 
-The fundamental form of the STE is k = the quantity of I sub 2/I sub 1, to the 1/L, where L is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor k, a quantity with degree of homogeneity L scales as k to the L. The specific exponents used throughout this paper (1/5 for moment of inertia, 1/3 for mass, 1/2 for R squared) each emerge from the value of L for that quantity.
+The fundamental form of the STE is k = the quantity of I sub 2/I sub 1, to the 1/L, where L is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor k, a quantity with degree of homogeneity L scales as k to the L. The specific exponents used throughout this paper ( 1/5 for moment of inertia, 1/3 for mass, 1/2 for R squared ) each emerge from the value of L for that quantity.
 
     k = the quantity of I sub 2 over I sub 1, to the 1/L = M sub 2 R sub 2 squared over M sub 1 R sub 1 squared to the 1/L
 
@@ -256,7 +256,7 @@ Case 1: Static Mass M sub 1 = M sub 2,\ R sub 1 > R sub 2
     k = the quantity of I sub 2 over I sub 1, to the 1/L sub L=5 = M R sub 2 squared over M R sub 1 squared to the 1/L sub L=5 = R sub 2 squared over R sub 1 squared to the 1/L sub L=2
     k = the quantity of R sub 2 squared over R sub 1 squared, to the 1-second = R sub 2 over R sub 1
 
-Example (Case 1): Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. S sub 1 has the mass and mean radius of the Sun (M = 1.989 times 10 to the 30 kilograms, R sub 1 = 6.957 times 10 to the eighth power m). S sub 2 is the same mass compressed to just above the Schwarzschild radius (r sub s = 2953.34 m), at R sub 2 = 2954 m. R sub 2 is chosen above r sub s because at R = r sub s the system is at gravitational collapse, where dtau/dt = 0; the comparison requires a physical, non-collapsed system.
+Example (Case 1): Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. S sub 1 has the mass and mean radius of the Sun ( M = 1.989 times 10 to the 30 kilograms, R sub 1 = 6.957 times 10 to the eighth power meters). S sub 2 is the same mass compressed to just above the Schwarzschild radius ( r sub s = 2953.34 meters), at R sub 2 = 2954 meters. R sub 2 is chosen above r sub s because at R = r sub s the system is at gravitational collapse, where dtau/dt = 0; the comparison requires a physical, non-collapsed system.
 
     k = R sub 2 over R sub 1 = 2954 over 6.957 times 10 to the eighth power = 4.24608 times 10 to the negative 6
 
@@ -272,7 +272,7 @@ Case 2: Static Radius R sub 1 = R sub 2,\ M sub 1 > M sub 2
     k = the quantity of I sub 2 over I sub 1, to the 1/L sub L=5 = M sub 2 R squared over M sub 1 R squared to the 1/L sub L=5 = M sub 2 over M sub 1 to the 1/L sub L=3
     k = the quantity of M sub 2 over M sub 1, to the 1-third
 
-Example (Case 2): S sub 1: M sub 1 = 10 to the 30 kilograms, S sub 2: M sub 2 = 10 to the 24 kilograms, both at R = 10 to the eighth power m. Starting from the STE with static radius (R sub 1 = R sub 2, L = 3):
+Example (Case 2): S sub 1: M sub 1 = 10 to the 30 kilograms, S sub 2: M sub 2 = 10 to the 24 kilograms, both at R = 10 to the eighth power meters. Starting from the STE with static radius ( R sub 1 = R sub 2, L = 3 ):
 
     k = the quantity of M sub 2 over M sub 1, to the 1-third = 10 to the 24 over 10 to the 30 to the 1-third = 10 to the negative 6 to the 1-third = 0.01
 
@@ -293,7 +293,7 @@ Case 3: Constant Density M is proportional to R cubed,\ R sub 1 > R sub 2
     k = the quantity of I sub 2 over I sub 1, to the 1/L sub L=5 = M sub 2 R sub 2 squared over M sub 1 R sub 1 squared to the 1/L sub L=5 = R sub 2 cubed R sub 2 squared over R sub 1 cubed R sub 1 squared to the 1/L sub L=5 = R sub 2 to the fifth power over R sub 1 to the fifth power to the 1/L sub L=5
     k = the quantity of R sub 2 to the fifth power over R sub 1 to the fifth power, to the 1-fifth = R sub 2 over R sub 1
 
-Example (Case 3): S sub 1: M sub 1 = 10 to the 30 kilograms, R sub 1 = 10 to the eighth power m. S sub 2: M sub 2 = 10 to the 27 kilograms, R sub 2 = 10 to the seventh power m. Both at rho = 10 to the sixth power kilograms per metercubed. Starting from the STE with constant density (M is proportional to R cubed, L = 5):
+Example (Case 3): S sub 1: M sub 1 = 10 to the 30 kilograms, R sub 1 = 10 to the eighth power meters. S sub 2: M sub 2 = 10 to the 27 kilograms, R sub 2 = 10 to the seventh power meters. Both at rho = 10 to the sixth power kilograms per meter cubed. Starting from the STE with constant density ( M is proportional to R cubed, L = 5 ):
 
     k = R sub 2 over R sub 1 = 10 to the seventh power over 10 to the eighth power = 0.1
 
@@ -314,7 +314,7 @@ Case 4: Constant Inertia M sub 1 R sub 1 squared = M sub 2 R sub 2 squared
     k = the quantity of I sub 2 over I sub 1, to the 1/L sub L=5 = M sub 2 R sub 2 squared over M sub 1 R sub 1 squared to the 1/L sub L=5
     k = the quantity of M sub 2 R sub 2 squared over M sub 1 R sub 1 squared, to the 1-fifth = 1 to the 1-fifth = 1
 
-Example (Case 4): S sub 1: M sub 1 = 10 to the 30 kilograms, R sub 1 = 10 to the eighth power m. S sub 2: M sub 2 = 10 to the 32 kilograms, R sub 2 = 10 to the seventh power m. Both have I = M R squared = 10 to the 46 kilogram meters squared. Starting from the STE:
+Example (Case 4): S sub 1: M sub 1 = 10 to the 30 kilograms, R sub 1 = 10 to the eighth power meters. S sub 2: M sub 2 = 10 to the 32 kilograms, R sub 2 = 10 to the seventh power meters. Both have I = M R squared = 10 to the 46 kilogram meters squared. Starting from the STE:
 
     k = the quantity of M sub 2 R sub 2 squared over M sub 1 R sub 1 squared, to the 1-fifth = 10 to the 46 over 10 to the 46 to the 1-fifth = 1
 
@@ -325,7 +325,7 @@ General Case M sub 1 not equal to M sub 2,\ R sub 1 not equal to R sub 2,\ M sub
     k = the quantity of I sub 2 over I sub 1, to the 1/L sub L=5 = M sub 2 R sub 2 squared over M sub 1 R sub 1 squared to the 1/L sub L=5 = M sub 2 over M sub 1 to the 1/L sub L=5 times R sub 2 over R sub 1 to the 2/L sub L=5
     k = the quantity of M sub 2 R sub 2 squared over M sub 1 R sub 1 squared, to the 1-fifth = M sub 2 over M sub 1 to the 1-fifth times R sub 2 over R sub 1 to the 2-fifth
 
-Example (General Case): S sub 1: M sub 1 = 10 to the 27 kilograms, R sub 1 = 10 to the eighth power m. S sub 2: M sub 2 = 10 to the 24 kilograms, R sub 2 = 10 to the seventh power m. Starting from the STE:
+Example (General Case): S sub 1: M sub 1 = 10 to the 27 kilograms, R sub 1 = 10 to the eighth power meters. S sub 2: M sub 2 = 10 to the 24 kilograms, R sub 2 = 10 to the seventh power meters. Starting from the STE:
 
     k = the quantity of M sub 2 R sub 2 squared over M sub 1 R sub 1 squared, to the 1-fifth = 10 to the 24 times 10 to the seventh power squared over 10 to the 27 times 10 to the eighth power squared to the 1-fifth
     = the quantity of 10 to the 38 over 10 to the 43, to the 1-fifth = 10 to the negative 5 to the 1-fifth = 0.1
