@@ -1,6 +1,6 @@
 Deriving Relativistic Time from Inertia: A Unified Origin of the Lorentz and Schwarzschild Metrics
 
-Thomas Damon DeGerliaa
+Thomas Damon DeGerlia
 Originally published: February 6, 2026 C.E.
 Revision 2.20 March 26, 2026 C.E.
 
