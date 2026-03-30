@@ -250,7 +250,7 @@ Time dilation is always:
 \begin{equation} \label{eq:td_k}
 \frac{d\tau}{dt} = \sqrt{1 - k}
 \end{equation}
-where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia (Equations~\ref{eq:ste} and~\ref{eq:linear}). Every expression of time dilation in this paper takes this form; only the physical constraint determining $k$ changes.
+where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia (Equations~\ref{eq:ste} and~\ref{eq:linear}). Every expression of time dilation takes this form; it is always an abstracted characteristic length scale factor k derived from the 1/5 root of the ratio of the respective moments of inertia of the two compared systems about the selected axes.
 
 \subsection{Properties of Time}
 The STE reveals the following properties of time:
@@ -426,7 +426,7 @@ k &= \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. $S_1$ has the mass and mean radius of the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m). $S_2$ is the same mass compressed to just above the Schwarzschild radius ($r_s = 2953.34$\,m), at $R_2 = 2954$\,m. $R_2$ is chosen above $r_s$ because at $R = r_s$ the system is at gravitational collapse, where $d\tau/dt = 0$; the comparison requires a physical, non-collapsed system.
+\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. $S_1$ has the mass and mean radius of the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m). $S_2$ is the same mass compressed to just above the Schwarzschild radius ($r_s = 2953.34$\,m), at $R_2 = 2954$\,m. $R_2$ is chosen just above $r_s$ to describe a dense yet non-collapsed system for comparison. 
 \[
 k = \frac{R_2}{R_1} = \frac{2954}{6.957 \times 10^{8}} = 4.24608 \times 10^{-6}
 \]
@@ -459,9 +459,10 @@ k_2 &= k_1 \cdot k^3 = 1.48523 \times 10^{-5} \times (0.01)^3 \notag \\
 &= 1.48523 \times 10^{-5} \times 10^{-6} = 1.48523 \times 10^{-11} \notag \\
 \frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}} = \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-11}}} = 0.9999925737 \notag
 \end{align}
-\textbf{Confirmation:} Since $D_{crit} = c^2/2G$, we have $D/D_{crit} = 2GM/Rc^2$. Gravitational time dilation:
+\textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
-\frac{d\tau_1 / dt}{d\tau_2 / dt} &= \frac{\sqrt{1 - \frac{2GM_1}{Rc^2}}}{\sqrt{1 - \frac{2GM_2}{Rc^2}}} = \frac{\sqrt{1 - \frac{D_1}{D_{crit}}}}{\sqrt{1 - \frac{D_2}{D_{crit}}}} \notag \\
+\frac{d\tau}{dt} &= \frac{d\tau_1 / dt}{d\tau_2 / dt} = \frac{\sqrt{1 - \frac{2GM_1}{Rc^2}}}{\sqrt{1 - \frac{2GM_2}{Rc^2}}} \notag \\
+&= \frac{\sqrt{1 - \frac{2(6.674 \times 10^{-11})(10^{30})}{(10^{8})(8.988 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.674 \times 10^{-11})(10^{24})}{(10^{8})(8.988 \times 10^{16})}}} \notag \\
 &= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-11}}} = 0.9999925737 \notag
 \end{align}
 \end{mdframed}
