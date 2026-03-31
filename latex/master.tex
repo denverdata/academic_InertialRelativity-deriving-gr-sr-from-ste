@@ -453,8 +453,8 @@ k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 = \left(\frac{1 \times 10^{24}}{1 \times 10^{30}}\right)^{1/3}
 = (1 \times 10^{-6})^{1/3}
-= 1 \times 10^{-2}
-= 1.00000 \times 10^{-2} \notag
+= 1 \times 10^{-2} \notag \\
+&= 1.00000 \times 10^{-2} \notag
 \end{align}
 Since $k = (k_2/k_1)^{1/3}$ where $k_i = D_i/D_{crit}$ and $D = M/R$:
 \begin{align}
@@ -533,29 +533,33 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = (1)^{1/5} = 1
 \begin{mdframed}
 \textbf{Example (Case 4):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{32}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both have $I = MR^2 = 1 \times 10^{46}$\,kg$\cdot$m$^2$. Starting from the STE:
 \begin{align}
+I_1 &= M_1 R_1^2 = (1 \times 10^{30})(1 \times 10^{8})^2 = 1 \times 10^{46} \notag \\
+I_2 &= M_2 R_2^2 = (1 \times 10^{32})(1 \times 10^{7})^2 = 1 \times 10^{46} \notag \\
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 = \left(\frac{1 \times 10^{46}}{1 \times 10^{46}}\right)^{1/5}
 = 1 \notag
 \end{align}
-Since $D = M/R$, $k_2/k_1 = \left(\frac{M_2/R_2}{M_1/R_1}\right) = 1 \times 10^{3}$ where $k_i = D_i/D_{crit}$:
+Since $k = (k_2/k_1)^{1/5}$ where $k_i = D_i/D_{crit}$ and $D = M/R$:
 \begin{align}
 k_1 &= \frac{M_1/R_1}{D_{crit}}
 = \frac{1 \times 10^{30}/1 \times 10^{8}}{6.73295 \times 10^{26}}
 = 1.48523 \times 10^{-5} \notag \\
-k_2 &= \frac{M_2/R_2}{D_{crit}}
-= \frac{1 \times 10^{32}/1 \times 10^{7}}{6.73295 \times 10^{26}}
-= 1.48523 \times 10^{-2} \notag \\
-\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}}
-= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-2}}}
-= 1.00750 \times 10^{0} \notag
+k_2 &= k_1 \cdot k^5
+= 1.48523 \times 10^{-5} \times (1)^5 \notag \\
+&= 1.48523 \times 10^{-5} \times 1
+= 1.48523 \times 10^{-5} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}}
+= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-5}}}
+= 1
+= 1.00000 \times 10^{0} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
-\frac{d\tau}{dt} &= \frac{d\tau_1 / dt}{d\tau_2 / dt}
-= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{8})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{32})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
-&= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-2}}}
-= 1.00750 \times 10^{0} \notag
+\frac{d\tau}{dt} &= \frac{d\tau_2 / dt}{d\tau_1 / dt}
+= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} \notag \\
+&= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-5}}}
+= 1
+= 1.00000 \times 10^{0} \notag
 \end{align}
 \end{mdframed}
 
@@ -572,8 +576,8 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\righ
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 = \left(\frac{(1 \times 10^{24}) \cdot (1 \times 10^{7})^2}{(1 \times 10^{27}) \cdot (1 \times 10^{8})^2}\right)^{1/5} \notag \\
 &= \left(\frac{1 \times 10^{38}}{1 \times 10^{43}}\right)^{1/5}
-= (1 \times 10^{-5})^{1/5}
-= 1 \times 10^{-1}
+= (1 \times 10^{-5})^{1/5} \notag \\
+&= 1 \times 10^{-1}
 = 1.00000 \times 10^{-1} \notag
 \end{align}
 Since $D = M/R$, $k_2/k_1 = \left(\frac{M_2/R_2}{M_1/R_1}\right) = 1 \times 10^{-2} = k^2$ where $k_i = D_i/D_{crit}$:
@@ -584,18 +588,20 @@ k_1 &= \frac{M_1/R_1}{D_{crit}}
 k_2 &= k_1 \cdot k^2
 = 1.48523 \times 10^{-8} \times (1.00000 \times 10^{-1})^2 \notag \\
 &= 1.48523 \times 10^{-8} \times 1.00000 \times 10^{-2}
-= 1.48523 \times 10^{-10} \notag \\
+= 1.48523 \times 10^{-10} \notag
+\end{align}
+\begin{align}
 \frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}}
-= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}}
-= 9.9999999264810 \times 10^{-1} \notag
+= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} \notag \\
+&= 9.9999999264810 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
 \frac{d\tau}{dt} &= \frac{d\tau_1 / dt}{d\tau_2 / dt}
 = \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
 &= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{27})}{(1 \times 10^{8})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{24})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
-&= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}}
-= 9.9999999264810 \times 10^{-1} \notag
+&= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} \notag \\
+&= 9.9999999264810 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
 
