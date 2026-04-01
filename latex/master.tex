@@ -428,17 +428,17 @@ k &= \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at arbitrarily large radius, where there is no time dilation. Under the STE, this is a static-mass comparison between two uniform spheres. $S_1$ has the mass and mean radius of the Sun ($M = 1.989 \times 10^{30}$\,kg, $R_1 = 6.957 \times 10^{8}$\,m). $S_2$ is the same mass compressed to just above the Schwarzschild radius ($r_s = 2953.34$\,m), at $R_2 = 2954$\,m. $R_2$ is chosen just above $r_s$ to describe a dense yet non-collapsed system for comparison. 
+\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at the Schwarzschild radius, where time dilation is zero. This is a static-mass comparison between two uniform spheres. $S_1$: $M = 1.9885 \times 10^{30}$\,kg, $R_1 = 6.9570 \times 10^{8}$\,m. $S_2$: same mass at $R_2 = r_s = 2953.38$\,m.
 \[
-k = \frac{R_2}{R_1} = \frac{2954}{6.957 \times 10^{8}} = 4.24608 \times 10^{-6}
+k = \frac{r_s}{R_1} = \frac{2953.38}{6.9570 \times 10^{8}} = 4.24520 \times 10^{-6}
 \]
 \[
-\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 4.24608 \times 10^{-6}} = 0.99999787696
+\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 4.24520 \times 10^{-6}} = 0.99999787740
 \]
 \textbf{Confirmation:} Schwarzschild gravitational time dilation at $R_1$:
 \begin{align}
-\frac{d\tau}{dt} &= \sqrt{1 - \frac{2GM}{R_1 c^2}} = \sqrt{1 - \frac{2.65504 \times 10^{20}}{6.25295 \times 10^{25}}} \notag \\
-&= \sqrt{1 - 4.24605 \times 10^{-6}} = 0.99999787697 \notag
+\frac{d\tau}{dt} &= \sqrt{1 - \frac{2GM}{R_1 c^2}} = \sqrt{1 - \frac{2.65437 \times 10^{20}}{6.25264 \times 10^{25}}} \notag \\
+&= \sqrt{1 - 4.24520 \times 10^{-6}} = 0.99999787740 \notag
 \end{align}
 \end{mdframed}
 
@@ -499,7 +499,7 @@ k &= \left(\frac{R_2^5}{R_1^5}\right)^{1/5}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 3):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{27}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both at $\rho = 1 \times 10^{6}$\,kg/m$^3$. Starting from the STE with constant density ($M \propto R^3$, $L = 5$):
+\textbf{Example (Case 3):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{27}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both at $\rho = 2.38732 \times 10^{5}$\,kg/m$^3$. Starting from the STE with constant density ($M \propto R^3$, $L = 5$):
 \begin{align}
 k &= \frac{R_2}{R_1}
 = \frac{1 \times 10^{7}}{1 \times 10^{8}}
@@ -581,37 +581,35 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\righ
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (General Case):} $S_1$: $M_1 = 1 \times 10^{27}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{24}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Starting from the STE:
+\textbf{Example (General Case):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = \frac{4}{3} r_s = 1.98031 \times 10^{-7}$\,m. Starting from the STE:
 \begin{align}
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
-= \left(\frac{(1 \times 10^{24}) \cdot (1 \times 10^{7})^2}{(1 \times 10^{27}) \cdot (1 \times 10^{8})^2}\right)^{1/5} \notag \\
-&= \left(\frac{1 \times 10^{38}}{1 \times 10^{43}}\right)^{1/5}
-= (1 \times 10^{-5})^{1/5} \notag \\
-&= 1 \times 10^{-1}
-= 1.00000 \times 10^{-1} \notag
+= \left(\frac{(1 \times 10^{20}) \cdot (1.98031 \times 10^{-7})^2}{(1 \times 10^{30}) \cdot (1 \times 10^{7})^2}\right)^{1/5} \notag \\
+&= \left(\frac{3.92163 \times 10^{6}}{1 \times 10^{44}}\right)^{1/5}
+= (3.92163 \times 10^{-38})^{1/5} \notag \\
+&= 3.30136 \times 10^{-8} \notag
 \end{align}
-Since $D = M/R$, $k_2/k_1 = \left(\frac{M_2/R_2}{M_1/R_1}\right) = 1 \times 10^{-2} = k^2$ where $k_i = D_i/D_{crit}$:
+Since $k_i = D_i/D_{crit}$ and $D = M/R$:
 \begin{align}
 k_1 &= \frac{M_1/R_1}{D_{crit}}
-= \frac{1 \times 10^{27}/1 \times 10^{8}}{6.73295 \times 10^{26}}
-= 1.48523 \times 10^{-8} \notag \\
-k_2 &= k_1 \cdot k^2
-= 1.48523 \times 10^{-8} \times (1.00000 \times 10^{-1})^2 \notag \\
-&= 1.48523 \times 10^{-8} \times 1.00000 \times 10^{-2}
-= 1.48523 \times 10^{-10} \notag
+= \frac{1 \times 10^{30}/1 \times 10^{7}}{6.73295 \times 10^{26}}
+= 1.48523 \times 10^{-4} \notag \\
+k_2 &= \frac{M_2/R_2}{D_{crit}}
+= \frac{1 \times 10^{20}/1.98031 \times 10^{-7}}{6.73295 \times 10^{26}}
+= 7.50000 \times 10^{-1} \notag
 \end{align}
 \begin{align}
-\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_1}}{\sqrt{1 - k_2}}
-= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} \notag \\
-&= 9.9999999264810 \times 10^{-1} \notag
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}}
+= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
+&= 5.00037 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
-\frac{d\tau}{dt} &= \frac{d\tau_1 / dt}{d\tau_2 / dt}
-= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{27})}{(1 \times 10^{8})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{24})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
-&= \frac{\sqrt{1 - 1.48523 \times 10^{-8}}}{\sqrt{1 - 1.48523 \times 10^{-10}}} \notag \\
-&= 9.9999999264810 \times 10^{-1} \notag
+\frac{d\tau}{dt} &= \frac{d\tau_2 / dt}{d\tau_1 / dt}
+= \frac{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}}{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}} \notag \\
+&= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
+&= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
+&= 5.00037 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
 
