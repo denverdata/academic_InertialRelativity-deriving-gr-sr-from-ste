@@ -159,14 +159,14 @@ A system, in this context, is any collection of mass and spatial extent one choo
 
 \subsection{Rotational Inertia}
 Moment of inertia for a system is distinct about every axis in the system. For any given axis, the moment of inertia dictates how an applied torque translates into angular acceleration. Moment of inertia is defined as:
-\begin{equation}
+\begin{equation} \label{eq:moi}
 I = \sum_i m_i r_i^2
-\end{equation} 
+\end{equation}
 where $r_i$ is the perpendicular distance from each mass element $m_i$ to the chosen axis. Just as mass governs how a system responds to linear force ($F = ma$), moment of inertia governs how it responds to torque ($\tau = I\alpha$).
 
 \subsection{Linear Inertia}
 Linear inertia is mass:
-\begin{equation}
+\begin{equation} \label{eq:mass}
 M = \sum_i m_i
 \end{equation}
 where $m_i$ are the constituent mass elements. Linear inertia defines how an applied force translates into translational acceleration. It is quantified entirely by mass ($F = ma$). It is dimensional, operating along a specific spatial vector, but unlike moment of inertia, it is isotropic: mass offers the same resistance to changes in motion regardless of the direction of the vector.
@@ -274,7 +274,8 @@ The STE reveals the following properties of time:
 \subsection{Physical Interpretation}
 The STE states that the relative pace of time for any system about any axis is determined by its moment of inertia about that same axis. The more inertia a system has about that axis, the slower its clock runs relative to a system with less inertia. This is consistent with the notion that time is a measure of change, and inertia resists change. Therefore, the more inertia a system has, the less it changes over a given period of time, and thus the slower its system clock runs relative to a system with less inertia.
 
-At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar space. The per-axis nature of the STE extends to asymmetric systems such as the Kerr metric \citep{kerr1963}, a topic for future investigation.
+t any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar spacee. Even an assymmetric black hole described by the Kerr metric \citep{kerr1963}, a topic for future investigation.
+
 
 \subsection{STE Example}
 Consider a uniform sphere of radius 1\,m and mass 1\,kg scaled isometrically by a factor of two, producing a second sphere of radius 2\,m and mass $2^3 = 8$\,kg. Their moments of inertia are:
@@ -388,7 +389,9 @@ Substituting the linear case ($k = v^2/c^2$) directly produces Lorentz time dila
 \]
 Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
 
-The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (\ref{app:general_ste}), which is required whenever both mass and radius differ between systems. Because the STE operates on moment of inertia, a quantity defined for any mass distribution about any axis, its applicability is not limited to the symmetric cases treated here. Exploration of asymmetric and higher-order systems is deferred to future work. The framework further suggests that the relationship between time and inertia may hold without bound in both scale and precision, with implications for the unification of phenomena conventionally treated as distinct, subjects to be developed in subsequent work.
+The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (\ref{app:general_ste}), which is required whenever both mass and radius differ between systems.
+
+The STE describes time dilation as the 5th root of the relative moment of inertia or the cube root of the relative system mass between any two systems along or about any respective axes. The relative pace of time emerges from the relative moment of inertia or inertia between any two systems. dimensional representation of relative inertia that is applicable to arbitrary mass distributions without geometric constraint. These properties are intrinsic to inertia, the quantity from which both Schwarzschild and Lorentz time dilation are here derived, identifying the inertia as the determinant of spacetime curvature. Causality is intrinsic to this framework: both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}), so the temporal properties of any system are wholly determined by its constituent matter, establishing that causality propagates exclusively from component to system. The symmetric cases treated here are a subset of the framework's domain; asymmetric and higher-order systems, including the Kerr metric, are natural extensions to be developed in subsequent work.
 
 \appendix
 \renewcommand{\thesection}{Appendix~\Alph{section}}
