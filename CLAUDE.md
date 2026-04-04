@@ -21,18 +21,29 @@ cd latex && latexmk -c
 
 Python utilities (run from repo root):
 ```bash
-# Generate appendix table (outputs latex/system_table.tex)
-cd latex && python3 generate_table.py
-
-# Generate STE isometric scaling diagram (outputs latex/ste_example.pdf)
-cd latex && python3 ste_example_diagram.py
-
 # Run all 11 system calculations (outputs systems_output.md, systems_table.md)
 python3 run_all_systems.py
 
-# Extract plain-text reading copy from LaTeX (outputs master_plain.txt)
+# Generate appendix table (outputs latex/system_table.tex)
+cd latex && python3 generate_table.py
+
+# Generate STE isometric scaling diagram (outputs latex/ste_example.pdf + .png)
+cd latex && python3 ste_example_diagram.py
+
+# Extract plain-text reading copy (outputs master_plain.txt)
 python3 extract_text.py
+# or use the wrapper script:
+./export-reader
+
+# Convert LaTeX to Markdown reading copy (outputs latex/full.md)
+python3 latex_to_markdown.py
+# or print to stdout:
+python3 latex_to_markdown.py --stdout
 ```
+
+### Data Pipeline
+
+`run_all_systems.py` → `systems_output.md` / `systems_table.md` → `latex/generate_table.py` → `latex/system_table.tex` → included via `\input{}` in `master.tex`
 
 ## Repository Structure
 
@@ -43,14 +54,19 @@ python3 extract_text.py
 | `latex/rsc.bst` | RSC bibliography style file — do not modify |
 | `latex/master_template.tex` | Original unmodified RSC template — do not use as content source |
 | `latex/master_backup.tex` | Backup of prior revision |
+| `latex/master_AIRCC.tex` | Alternative submission format (AIRCC venue) |
+| `latex/academia/` | Alternative submission format (Academia.edu journal) |
 | `latex/generate_table.py` | Generates `system_table.tex` appendix table from example systems |
 | `latex/ste_example_diagram.py` | Generates `ste_example.pdf` isometric scaling diagram |
-| `referenced_docs/derivation_lean_v3.txt` | Canonical content source for the derivation — serves as literal content source for the paper |
+| `latex_to_markdown.py` | Converts `master.tex` to Markdown reading copy (`latex/full.md`) |
+| `extract_text.py` | Converts `master.tex` to plain-text reading copy (`master_plain.txt`) |
+| `export-reader` | Shell wrapper for `extract_text.py` |
+| `referenced_docs/derivation_lean_v3.txt` | Canonical content source for the derivation — literal content source for the paper |
 | `referenced_docs/*.pdf` | Author's prior published works (source for page numbers in bib) |
 | `project/project_theoretical_foundation.md` | Author's stated objectives, core formulas, and final document requirements |
+| `review/pre_publication_review.md` | Peer review notes: notation, math exposition, structural feedback |
 | `system_properties/` | Python package: `UniformSphere`, `UniformDisc`, physical constants, high-precision Decimal arithmetic |
 | `run_all_systems.py` | Calculates properties of 11 physical systems using `system_properties` |
-| `extract_text.py` | Converts `master.tex` to plain-text reading copy |
 | `supporting_materials/` | Background notes and prior thinking (not primary sources) |
 | `output/` | Draft outputs and intermediate documents |
 

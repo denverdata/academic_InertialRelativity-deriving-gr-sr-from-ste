@@ -36,7 +36,13 @@
       "Bash(detex master.tex)",
       "Read(//tmp/**)",
       "Bash(cd:*)",
-      "Bash(brew uninstall:*)"
+      "Bash(brew uninstall:*)",
+      "Bash(cp:*)",
+      "Bash(sed -n '151,636p' master.tex)",
+      "Bash(printf '\\\\n%%%REFERENCES%%%\\\\n\\\\\\\\bibliography{rsc}\\\\n')",
+      "Bash(bibtex:*)",
+      "Bash(grep:*)",
+      "Bash(zip:*)"
     ]
   }
 }
