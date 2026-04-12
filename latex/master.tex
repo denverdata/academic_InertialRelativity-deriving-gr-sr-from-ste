@@ -299,6 +299,38 @@ recovering the linear scale factor between the two systems. The resulting time d
 \caption{Two uniform spheres related by isometric scaling. The STE recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
 \end{figure}
 
+\subsection{Time Dilation Ratio}
+The ratio of the time dilation parameters of any two systems is determined directly by their masses and radii. For any system, the time dilation parameter $k_i = D_i/D_{crit}$, equivalent to the gravitational parameter when one system is the Schwarzschild condition. Taking the ratio, $D_{crit}$ cancels:
+\begin{equation} \label{eq:tdr}
+\frac{k_1}{k_2} = \frac{D_1/D_{crit}}{D_2/D_{crit}} = \frac{D_1}{D_2} = \frac{M_1 R_2}{M_2 R_1}
+\end{equation}
+When one system is the Schwarzschild threshold ($D = D_{crit}$), the time dilation ratio reduces to $D/D_{crit} = k$, and the time dilation is $\sqrt{1-k}$. Gravitational time dilation and special relativity are both single-constraint cases of this ratio.
+
+\begin{mdframed}
+\textbf{Example (Time Dilation Ratio):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
+
+Time dilation ratio (no constants):
+\[
+k = \frac{M_1 R_2}{M_2 R_1} = \frac{(1 \times 10^{30})(1.98031 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})} = 1.98031 \times 10^{-4}
+\]
+Time dilation:
+\[
+\frac{d\tau}{dt} = \sqrt{1 - k} = \sqrt{1 - 1.98031 \times 10^{-4}} = 9.999009796 \times 10^{-1}
+\]
+\textbf{Confirmation:} Schwarzschild gravitational time dilation:
+\begin{align}
+k_1 &= \frac{2GM_1}{R_1 c^2}
+= \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}
+= 1.48523 \times 10^{-4} \notag \\
+k_2 &= \frac{2GM_2}{R_2 c^2}
+= \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}
+= 7.50000 \times 10^{-1} \notag \\
+\frac{d\tau}{dt}
+&= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}}
+= 5.00037 \times 10^{-1} \notag
+\end{align}
+\end{mdframed}
+
 \section{General and Special Relativity}
 Schwarzschild gravitational time dilation:
 \begin{equation} \label{eq:schwarzschild}
@@ -620,6 +652,34 @@ k_2 &= \frac{M_2/R_2}{D_{crit}}
 &= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
 &= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
 &= 5.00037 \times 10^{-1} \notag
+\end{align}
+\end{mdframed}
+
+\begin{mdframed}
+\textbf{Example (General Case --- Time Dilation Ratio):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
+
+Time dilation ratio (Equation~\ref{eq:tdr}):
+\begin{align}
+k &= \frac{M_1 R_2}{M_2 R_1}
+= \frac{(1 \times 10^{30})(1.98031 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})}
+= 1.98031 \times 10^{-4} \notag \\
+D_n &= \frac{M_2/R_2}{D_{crit}}
+= \frac{1 \times 10^{20}/1.98031 \times 10^{-7}}{6.73295 \times 10^{26}}
+= 7.50000 \times 10^{-1} \notag \\
+\frac{d\tau}{dt} &= \sqrt{1 - D_n}
+= \sqrt{1 - 7.50000 \times 10^{-1}}
+= 5.00000 \times 10^{-1} \notag
+\end{align}
+\textbf{Confirmation:} Schwarzschild gravitational time dilation for each system:
+\begin{align}
+\frac{d\tau_1}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}
+= \sqrt{1 - 1.48523 \times 10^{-4}}
+= 9.99926 \times 10^{-1} \notag \\
+\frac{d\tau_2}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}
+= \sqrt{1 - 7.50000 \times 10^{-1}}
+= 5.00000 \times 10^{-1} \notag \\
+\frac{d\tau_2 / dt}{d\tau_1 / dt} &= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
+= 5.00037 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
 
