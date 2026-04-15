@@ -215,21 +215,21 @@ P = \frac{M}{R} \times \frac{3}{10\pi}
 \end{equation}
 Just as ordinary density ($\rho = M/V$) is mass distributed over volume, inertial density is rotational inertia distributed over volume. As stated in the prior work: \textit{mass and density are to linear motion as moment of inertia and inertial density are to rotational motion.} Because $P$ is defined relative to a selected axis, it can be evaluated per axis directly rather than requiring a full tensor treatment when the quantity varies by direction.
 
-\textbf{DeGerlia Compactness} $D = M/R$ is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over mean radius ratio for a system about the selected axis.
+\textbf{DeGerlia Compactness} $D_{raw} = M/R$ is a simplified analog to inertial density, related to $P$ by the geometric factor $3/10\pi$, and represents the mass over mean radius ratio for a system about the selected axis.
 
 Setting $R = r_s$ (the Schwarzschild condition) \citep{schwarzschild1916radius} and solving yields the \textbf{DeGerlia Threshold}: the universal constant of DeGerlia Compactness at which a system undergoes gravitational collapse:
 \begin{equation}
 D_{crit} = \frac{c^2}{2G} = 6.73295 \times 10^{26} \text{ kg/m}
 \end{equation}
-The normalized DeGerlia Compactness $D_n$ is the ratio of a system's DeGerlia Compactness to the DeGerlia Threshold:
+The normalized DeGerlia Compactness $D_{norm}$ is the ratio of a system's DeGerlia Compactness to the DeGerlia Threshold:
 \begin{equation}
-D_n = \frac{D}{D_{crit}}
+D_{norm} = \frac{D_{raw}}{D_{crit}}
 \end{equation}
-$D_n$ is algebraically identical to $r_s/R$ and is therefore a $k$-factor: the value that enters directly into $d\tau/dt = \sqrt{1-k}$. Because $D_{crit}$ is a universal constant, $D_n$ places every system on the same scale, making $D_n$ values directly comparable across systems of any mass. The time dilation follows directly:
+$D_{norm}$ is algebraically identical to $r_s/R$ and is therefore a linear scale factor $k$: the value that enters directly into $d\tau/dt = \sqrt{1-k}$. Because $D_{crit}$ is a universal constant, $D_{norm}$ places every system on the same scale, making $D_{norm}$ values directly comparable across systems of any mass. The time dilation follows directly:
 \begin{equation}
-\frac{d\tau}{dt} = \sqrt{1 - D_n}
+\frac{d\tau}{dt} = \sqrt{1 - D_{norm}}
 \end{equation}
-Substituting $D = M/R$:
+Substituting $D_{raw} = M/R$:
 \begin{equation}
 \frac{d\tau}{dt} = \sqrt{1 - \frac{M}{R \cdot D_{crit}}}
 \end{equation}
@@ -299,23 +299,39 @@ recovering the linear scale factor between the two systems. The resulting time d
 \caption{Two uniform spheres related by isometric scaling. The STE recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
 \end{figure}
 
-\subsection{Time Dilation Ratio}
-The ratio of the time dilation parameters of any two systems is determined directly by their masses and radii. For any system, the time dilation parameter $k_i = D_i/D_{crit}$, equivalent to the gravitational parameter when one system is the Schwarzschild condition. Taking the ratio, $D_{crit}$ cancels:
+\subsection{Comparison of Relative Time Paces}
+The linear scale factor between any two systems is the ratio of their identically-constructed compactness values. Taking the ratio of each system's normalized compactness $D_{raw}/D_{crit}$:
 \begin{equation} \label{eq:tdr}
-k = \frac{D_1/D_{crit}}{D_2/D_{crit}} = \frac{D_1}{D_2} = \frac{M_1 R_2}{M_2 R_1}
+k = \frac{D_{raw,1}/D_{crit}}{D_{raw,2}/D_{crit}} = \frac{D_{raw,1}}{D_{raw,2}} = \frac{M_1 R_2}{M_2 R_1}
 \end{equation}
-When one system is the Schwarzschild threshold ($D = D_{crit}$), the time dilation ratio reduces to $D/D_{crit} = k$, and the time dilation is $\sqrt{1-k}$. Gravitational time dilation and special relativity are both single-constraint cases of this ratio.
+The result is a \textit{raw} linear scale factor---a direct ratio of compactnesses. When the denominator system is the Schwarzschild condition ($D_{raw,2} = D_{crit}$), $k$ reduces to the \textit{normalized} linear scale factor:
+\[
+k = \frac{D_{raw}}{D_{crit}} = D_{norm}
+\]
+equivalent to $r_s/R$---the compactness parameter of general relativity. The Schwarzschild case is the specific instance of comparing a system to its own collapse point---same mass, physical radius $R$ versus Schwarzschild radius $r_s$.
+
+Applying Equation~\ref{eq:td_k}, $d\tau/dt = \sqrt{1-k}$, converts either form of the linear scale factor into time dilation. With normalized $k$ ($= D_{norm}$), this yields gravitational time dilation: the pace of time relative to flat spacetime. With raw $k$ ($= D_{raw,1}/D_{raw,2}$), it yields the time dilation between the two systems directly.
+
+Each system has its own time dilation $d\tau/dt = \sqrt{1 - k}$. The relative pace of time between two systems is the ratio of their time dilations:
+\[
+\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}}
+\]
+This is not equal to $k_1/k_2$ because $\sqrt{1-x}$ is nonlinear. To recover the linear scale factor from a known time dilation:
+\[
+k = 1 - \left(\frac{d\tau}{dt}\right)^2
+\]
+The ratio of the recovered $k$ values yields the raw compactness ratio $D_{raw,1}/D_{raw,2}$.
 
 \begin{mdframed}
-\textbf{Example (Time Dilation Ratio):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
+\textbf{Example (Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
 
 \[
 k = \frac{M_1 R_2}{M_2 R_1} = \frac{(1 \times 10^{30})(1.98031 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})} = 1.98031 \times 10^{-4}
 \]
 Time dilation of $S_2$:
 \begin{align}
-D_2 &= \frac{M_2}{R_2} = \frac{1 \times 10^{20}}{1.98031 \times 10^{-7}} = 5.04971 \times 10^{26}\;\text{kg/m} \notag \\
-\frac{D_2}{D_{crit}} &= \frac{5.04971 \times 10^{26}}{6.73295 \times 10^{26}} = 7.50000 \times 10^{-1} \notag \\
+D_{raw,2} &= \frac{M_2}{R_2} = \frac{1 \times 10^{20}}{1.98031 \times 10^{-7}} = 5.04971 \times 10^{26}\;\text{kg/m} \notag \\
+\frac{D_{raw,2}}{D_{crit}} &= \frac{5.04971 \times 10^{26}}{6.73295 \times 10^{26}} = 7.50000 \times 10^{-1} \notag \\
 \frac{d\tau}{dt} &= \sqrt{1 - 7.50000 \times 10^{-1}} = 5.00000 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
@@ -323,15 +339,14 @@ D_2 &= \frac{M_2}{R_2} = \frac{1 \times 10^{20}}{1.98031 \times 10^{-7}} = 5.049
 k_2 &= \frac{2GM_2}{R_2 c^2}
 = \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}
 = 7.50000 \times 10^{-1} \notag \\
-\frac{d\tau_2}{dt} &= \sqrt{1 - k_2} = \sqrt{1 - 7.50000 \times 10^{-1}} = 5.00000 \times 10^{-1} \notag
+\frac{d\tau}{dt} &= \sqrt{1 - k_2} = \sqrt{1 - 7.50000 \times 10^{-1}} = 5.00000 \times 10^{-1} \notag
 \end{align}
 Relative time dilation between $S_1$ and $S_2$:
 \begin{align}
 k_1 &= \frac{2GM_1}{R_1 c^2}
 = \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}
 = 1.48523 \times 10^{-4} \notag \\
-\frac{d\tau_2}{d\tau_1} &= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}}
-= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
+\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} &= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
 = 5.00037 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
@@ -375,13 +390,13 @@ where $r_s$ is the Schwarzschild radius and $R$ is the mean radius of the system
 \begin{equation}
 k = \left(\frac{r_s^2}{R^2}\right)^{1/2} = \frac{r_s}{R}
 \end{equation}
-This is equivalently expressed through inertial density or DeGerlia Compactness, since $P \propto M/R$ and $D = M/R$. When mass is static, the ratio of either quantity reduces to the ratio of mean radii about the selected axis:
+This is equivalently expressed through inertial density or DeGerlia Compactness, since $P \propto M/R$ and $D_{raw} = M/R$. When mass is static, the ratio of either quantity reduces to the ratio of mean radii about the selected axis:
 \begin{equation}
-k = \frac{P_1}{P_2} = \frac{D_1}{D_2} = \frac{R_2}{R_1} = \frac{r_s}{R}
+k = \frac{P_1}{P_2} = \frac{D_{raw,1}}{D_{raw,2}} = \frac{R_2}{R_1} = \frac{r_s}{R}
 \end{equation}
 When compared against the DeGerlia Threshold $D_{crit} = 6.73295 \times 10^{26}$ kg/m:
 \begin{equation}
-k = \frac{D}{D_{crit}}
+k = \frac{D_{raw}}{D_{crit}}
 \end{equation}
 
 \subsection{Static Radius (Linear)}
@@ -424,7 +439,7 @@ Substituting the linear case ($k = v^2/c^2$) directly produces Lorentz time dila
 \[
 \frac{d\tau}{dt} = \sqrt{1 - \frac{v^2}{c^2}}
 \]
-Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
+Equivalently, $k = D_{raw}/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$.
 
 The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (\ref{app:general_ste}), which is required whenever both mass and radius differ between systems.
 
@@ -507,7 +522,7 @@ k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 = 1 \times 10^{-2} \notag \\
 &= 1.00000 \times 10^{-2} \notag
 \end{align}
-Since $k = (k_2/k_1)^{1/3}$ where $k_i = D_i/D_{crit}$ and $D = M/R$:
+Since $k = (k_2/k_1)^{1/3}$ where $k_i = D_{raw,i}/D_{crit}$ and $D_{raw} = M/R$:
 \begin{align}
 k_1 &= \frac{M_1/R}{D_{crit}}
 = \frac{1 \times 10^{30}/1 \times 10^{8}}{6.73295 \times 10^{26}}
@@ -524,8 +539,7 @@ k_2 &= k_1 \cdot k^3
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
 \frac{d\tau}{dt}
-&= \frac{d\tau_1 / dt}{d\tau_2 / dt}
-= \frac{\sqrt{1 - \frac{2GM_1}{Rc^2}}}{\sqrt{1 - \frac{2GM_2}{Rc^2}}} \notag \\
+&= \frac{\sqrt{1 - \frac{2GM_1}{Rc^2}}}{\sqrt{1 - \frac{2GM_2}{Rc^2}}} \notag \\
 &= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{8})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{24})}{(1 \times 10^{8})(8.98755 \times 10^{16})}}} \notag \\
 &= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-11}}}
 = 9.9999257381 \times 10^{-1} \notag
@@ -553,7 +567,7 @@ k &= \frac{R_2}{R_1}
 = 1 \times 10^{-1}
 = 1.00000 \times 10^{-1} \notag
 \end{align}
-Since $D = M/R \propto R^2$ at constant density, $k_2/k_1 = (R_2/R_1)^2 = k^2$ where $k_i = D_i/D_{crit}$:
+Since $D_{raw} = M/R \propto R^2$ at constant density, $k_2/k_1 = (R_2/R_1)^2 = k^2$ where $k_i = D_{raw,i}/D_{crit}$:
 \begin{align}
 k_1 &= \frac{M_1/R_1}{D_{crit}}
 = \frac{1 \times 10^{30}/1 \times 10^{8}}{6.73295 \times 10^{26}}
@@ -568,8 +582,7 @@ k_2 &= k_1 \cdot k^2
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
-\frac{d\tau}{dt} &= \frac{d\tau_1 / dt}{d\tau_2 / dt}
-= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}}{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}} \notag \\
 &= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{8})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{27})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
 &= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-7}}}
 = 9.9999264807 \times 10^{-1} \notag
@@ -594,7 +607,7 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 = \left(\frac{1 \times 10^{46}}{1 \times 10^{46}}\right)^{1/5}
 = 1 \notag
 \end{align}
-Since $k = (k_2/k_1)^{1/5}$ where $k_i = D_i/D_{crit}$ and $D = M/R$:
+Since $k = (k_2/k_1)^{1/5}$ where $k_i = D_{raw,i}/D_{crit}$ and $D_{raw} = M/R$:
 \begin{align}
 k_1 &= \frac{M_1/R_1}{D_{crit}}
 = \frac{1 \times 10^{30}/1 \times 10^{8}}{6.73295 \times 10^{26}}
@@ -610,8 +623,7 @@ k_2 &= k_1 \cdot k^5
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
-\frac{d\tau}{dt} &= \frac{d\tau_2 / dt}{d\tau_1 / dt}
-= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} \notag \\
 &= \frac{\sqrt{1 - 1.48523 \times 10^{-5}}}{\sqrt{1 - 1.48523 \times 10^{-5}}}
 = 1
 = 1.00000 \times 10^{0} \notag
@@ -636,7 +648,7 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 = (3.92163 \times 10^{-38})^{1/5} \notag \\
 &= 3.30136 \times 10^{-8} \notag
 \end{align}
-Since $k_i = D_i/D_{crit}$ and $D = M/R$:
+Since $k_i = D_{raw,i}/D_{crit}$ and $D_{raw} = M/R$:
 \begin{align}
 k_1 &= \frac{M_1/R_1}{D_{crit}}
 = \frac{1 \times 10^{30}/1 \times 10^{7}}{6.73295 \times 10^{26}}
@@ -652,8 +664,7 @@ k_2 &= \frac{M_2/R_2}{D_{crit}}
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
-\frac{d\tau}{dt} &= \frac{d\tau_2 / dt}{d\tau_1 / dt}
-= \frac{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}}{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}} \notag \\
+\frac{d\tau}{dt} &= \frac{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}}{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}} \notag \\
 &= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
 &= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
 &= 5.00037 \times 10^{-1} \notag
@@ -661,29 +672,37 @@ k_2 &= \frac{M_2/R_2}{D_{crit}}
 \end{mdframed}
 
 \begin{mdframed}
-\textbf{Example (General Case --- Time Dilation Ratio):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
+\textbf{Example (General Case --- Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
 
-Time dilation ratio (Equation~\ref{eq:tdr}):
+Linear scale factor (Equation~\ref{eq:tdr}):
 \begin{align}
 k &= \frac{M_1 R_2}{M_2 R_1}
 = \frac{(1 \times 10^{30})(1.98031 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})}
 = 1.98031 \times 10^{-4} \notag \\
-D_n &= \frac{M_2/R_2}{D_{crit}}
+D_{norm} &= \frac{M_2/R_2}{D_{crit}}
 = \frac{1 \times 10^{20}/1.98031 \times 10^{-7}}{6.73295 \times 10^{26}}
 = 7.50000 \times 10^{-1} \notag \\
-\frac{d\tau}{dt} &= \sqrt{1 - D_n}
+\frac{d\tau}{dt} &= \sqrt{1 - D_{norm}}
 = \sqrt{1 - 7.50000 \times 10^{-1}}
 = 5.00000 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation for each system:
+
+$S_1$:
 \begin{align}
-\frac{d\tau_1}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}
+\frac{d\tau}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}
 = \sqrt{1 - 1.48523 \times 10^{-4}}
-= 9.99926 \times 10^{-1} \notag \\
-\frac{d\tau_2}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}
+= 9.99926 \times 10^{-1} \notag
+\end{align}
+$S_2$:
+\begin{align}
+\frac{d\tau}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}
 = \sqrt{1 - 7.50000 \times 10^{-1}}
-= 5.00000 \times 10^{-1} \notag \\
-\frac{d\tau_2 / dt}{d\tau_1 / dt} &= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
+= 5.00000 \times 10^{-1} \notag
+\end{align}
+Relative pace of time:
+\begin{align}
+\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} &= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
 = 5.00037 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
