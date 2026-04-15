@@ -56,13 +56,15 @@ python3 latex_to_markdown.py --stdout
 | `latex/master_backup.tex` | Backup of prior revision |
 | `latex/master_AIRCC.tex` | Alternative submission format (AIRCC venue) |
 | `latex/academia/` | Alternative submission format (Academia.edu journal) |
+| `latex/ir_mathematics.tex` | Supplementary mathematics cheat sheet — key formulas and derivation reference |
+| `latex/numericanalysis.tex` | Numeric analysis document |
 | `latex/generate_table.py` | Generates `system_table.tex` appendix table from example systems |
 | `latex/ste_example_diagram.py` | Generates `ste_example.pdf` isometric scaling diagram |
 | `latex_to_markdown.py` | Converts `master.tex` to Markdown reading copy (`latex/full.md`) |
 | `extract_text.py` | Converts `master.tex` to plain-text reading copy (`master_plain.txt`) |
 | `export-reader` | Shell wrapper for `extract_text.py` |
 | `referenced_docs/derivation_lean_v3.txt` | Canonical content source for the derivation — literal content source for the paper |
-| `referenced_docs/*.pdf` | Author's prior published works (source for page numbers in bib) |
+| `referenced_docs/` | Author's prior published works — PDFs, TeX sources, and .docx variant of derivation (source for page numbers in bib) |
 | `project/project_theoretical_foundation.md` | Author's stated objectives, core formulas, and final document requirements |
 | `review/pre_publication_review.md` | Peer review notes: notation, math exposition, structural feedback |
 | `system_properties/` | Python package: `UniformSphere`, `UniformDisc`, physical constants, high-precision Decimal arithmetic |
@@ -87,6 +89,21 @@ $$\frac{T_1}{T_2} = \left(\frac{M_2}{M_1}\right)^{1/3} \quad \text{[linear --- m
 Key prior works cited in `latex/rsc.bib`:
 - `degerlia2025` — "Introducing Inertial Density" (Schwarzschild threshold as M/R constant)
 - `degerlia2025universe` — "The Universe of Light" (STE origin)
+
+### Time Dilation Terminology
+
+- **Raw time dilation**: D₁/D₂ = M₁R₂/(M₂R₁) — ratio of two systems' compactnesses, not divided by D_crit. Scaled relative to the numerator system.
+- **Normalized time dilation**: D/D_crit — compactness divided by the DeGerlia threshold. Equivalent to r_s/r in Schwarzschild.
+- **GTD (Gravitational Time Dilation)**: √(1 − k) — converts a time dilation value (raw or normalized) into pace-of-time form. Same formula applies to both; the meaning of the result depends on what k represents.
+- When k = D/D_crit: GTD gives pace of time relative to flat spacetime (standard gravitational time dilation).
+- When k = D₁/D₂: √(1 − k) gives time dilation between two systems, not referenced to the collapse threshold.
+- D_crit physically represents the collapse threshold (proton collapse point) — the same physics encoded by the Schwarzschild radius, expressed as a universal M/R constant.
+- **Practical GTD calculation**: D = M/R → divide by D_crit → √(1 − D/D_crit). No need to compute r_s.
+
+## Gotchas
+
+- **Always compile from `latex/` directory** — aux files at repo root indicate past root-level compilation; this pollutes the root and can cause build issues.
+- `rsc.bst` and `master_template.tex` are locked/upstream files — never modify.
 
 ## Python Computation
 
