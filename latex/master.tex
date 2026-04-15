@@ -310,13 +310,19 @@ k = \frac{D_{raw}}{D_{crit}} = D_{norm}
 \]
 equivalent to $r_s/R$---the compactness parameter of general relativity. The Schwarzschild case is the specific instance of comparing a system to its own collapse point---same mass, physical radius $R$ versus Schwarzschild radius $r_s$.
 
-Applying Equation~\ref{eq:td_k}, $d\tau/dt = \sqrt{1-k}$, converts either form of the linear scale factor into time dilation. With normalized $k$ ($= D_{norm}$), this yields gravitational time dilation: the pace of time relative to flat spacetime. With raw $k$ ($= D_{raw,1}/D_{raw,2}$), it yields the time dilation between the two systems directly.
+Applying Equation~\ref{eq:td_k}, $d\tau/dt = \sqrt{1-k}$, converts a normalized linear scale factor into time dilation. The value of $k$ must be normalized ($k = D_{norm}$) for $\sqrt{1-k}$ to yield gravitational time dilation: the pace of time relative to flat spacetime.
 
-Each system has its own time dilation $d\tau/dt = \sqrt{1 - k}$. The relative pace of time between two systems is the ratio of their time dilations:
+\textbf{Property:} The ratio of two normalized values is always raw.
+\[
+\frac{D_{norm,1}}{D_{norm,2}} = \frac{D_{raw,1}/D_{crit}}{D_{raw,2}/D_{crit}} = \frac{D_{raw,1}}{D_{raw,2}}
+\]
+$D_{crit}$ cancels, leaving a direct ratio of compactnesses with no reference to the collapse threshold. A raw linear scale factor cannot be passed into $\sqrt{1-k}$ to obtain a time dilation; it must first be normalized by dividing by $D_{crit}$.
+
+Each system has its own time dilation $d\tau/dt = \sqrt{1 - k}$, where $k$ is that system's normalized linear scale factor. The relative pace of time between two systems is the ratio of their time dilations:
 \[
 \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}}
 \]
-This is not equal to $k_1/k_2$ because $\sqrt{1-x}$ is nonlinear. To recover the linear scale factor from a known time dilation:
+This is not equal to $\sqrt{1 - k_1/k_2}$, because $k_1/k_2$ is raw---$D_{crit}$ has cancelled---and cannot be substituted into $\sqrt{1-k}$ without renormalization. To recover the linear scale factor from a known time dilation:
 \[
 k = 1 - \left(\frac{d\tau}{dt}\right)^2
 \]
