@@ -90,16 +90,6 @@ Key prior works cited in `latex/rsc.bib`:
 - `degerlia2025` — "Introducing Inertial Density" (Schwarzschild threshold as M/R constant)
 - `degerlia2025universe` — "The Universe of Light" (STE origin)
 
-### Time Dilation Terminology
-
-- **Raw time dilation**: D₁/D₂ = M₁R₂/(M₂R₁) — ratio of two systems' compactnesses, not divided by D_crit. Scaled relative to the numerator system.
-- **Normalized time dilation**: D/D_crit — compactness divided by the DeGerlia threshold. Equivalent to r_s/r in Schwarzschild.
-- **GTD (Gravitational Time Dilation)**: √(1 − k) — converts a time dilation value (raw or normalized) into pace-of-time form. Same formula applies to both; the meaning of the result depends on what k represents.
-- When k = D/D_crit: GTD gives pace of time relative to flat spacetime (standard gravitational time dilation).
-- When k = D₁/D₂: √(1 − k) gives time dilation between two systems, not referenced to the collapse threshold.
-- D_crit physically represents the collapse threshold (proton collapse point) — the same physics encoded by the Schwarzschild radius, expressed as a universal M/R constant.
-- **Practical GTD calculation**: D = M/R → divide by D_crit → √(1 − D/D_crit). No need to compute r_s.
-
 ## Gotchas
 
 - **Always compile from `latex/` directory** — aux files at repo root indicate past root-level compilation; this pollutes the root and can cause build issues.

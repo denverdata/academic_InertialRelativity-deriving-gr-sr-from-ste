@@ -1,7 +1,13 @@
+
 # Analysis of Pair Comparison Tables
+  
+
+
+
+
+
 
 This document provides a detailed analysis of `pair_comparisons_v2_standard copy.md` and `pair_comparisons_v2_cases copy.md`, relating every row and value to the Inertial Relativity paper.
-
 ---
 
 ## 1. Key Definitions
