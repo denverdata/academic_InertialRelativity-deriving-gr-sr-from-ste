@@ -246,7 +246,7 @@ and the two quantities satisfy:
 \begin{equation} \label{eq:pythagorean}
 \text{DTD}^2 + \left(\frac{d\tau}{dt}\right)^2 = 1
 \end{equation}
-For systems in weak gravitational fields, $d\tau/dt \approx 1 - k/2$; the time dilation signal is confined to digits far from the leading unity, limiting the effective precision of the representation. DTD expresses this signal directly. Because $\sqrt{x}$ is algebraically homogeneous while $\sqrt{1-x}$ is not, DTD ratios decompose into independent mass and radius contributions:
+For systems in weak gravitational fields, $d\tau/dt \approx 1 - k/2$; the time dilation signal is confined to digits far from the leading unity, limiting the effective precision of the representation. DTD expresses this signal directly. Because $\sqrt{x}$ is algebraically homogeneous while $\sqrt{1-x}$ is not, DTD ratios decompose into independent mass and mean radius contributions:
 \begin{equation} \label{eq:dtd_ratio}
 \frac{\text{DTD}_1}{\text{DTD}_2} = \sqrt{\frac{D_1}{D_2}} = \sqrt{\frac{M_1}{M_2}} \cdot \sqrt{\frac{R_2}{R_1}}
 \end{equation}
@@ -261,7 +261,7 @@ Under isometric scaling (constant density), the STE is defined as:
 \begin{equation} \label{eq:ste}
 k = \left(\frac{I_2}{I_1}\right)^{1/5}
 \end{equation}
-where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes, and $R$ denotes the mean radius about the selected axis. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention. Under isometric conditions the two systems share the same density, and the fifth root of the inertia ratio recovers the linear scale factor exactly.
+where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention. Under isometric conditions the two systems share the same density, and the fifth root of the inertia ratio recovers the linear scale factor exactly.
 
 In the linear context, inertia is $M$ and the linear inertia version of the STE applies (see \ref{app:general_ste}). Special Relativity describes linear inertia:
 
@@ -275,7 +275,7 @@ Time dilation is always:
 \begin{equation} \label{eq:td_k}
 \frac{d\tau}{dt} = \sqrt{1 - k}
 \end{equation}
-where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia (Equations~\ref{eq:ste} and~\ref{eq:linear}). Every expression of time dilation takes this form; it is always an abstracted characteristic length scale factor k derived from the 1/5 root of the ratio of the respective moments of inertia of the two compared systems about the selected axes.
+where $d\tau/dt$ is the ratio of proper time to coordinate time and $k$ is the linear scale factor derived from inertia (Equations~\ref{eq:ste} and~\ref{eq:linear}). Every expression of time dilation takes this form; $k$ is always a linear scale factor derived from the relative inertia of two systems about their respective selected axes.
 
 \subsection{Properties of Time}
 The STE reveals the following properties of time:
@@ -292,7 +292,7 @@ The STE reveals the following properties of time:
 \subsection{Physical Interpretation}
 The STE states that the relative pace of time for any system about any axis is determined by its moment of inertia about that same axis. The more inertia a system has about that axis, the slower its clock runs relative to a system with less inertia. This is consistent with the notion that time is a measure of change, and inertia resists change. Therefore, the more inertia a system has, the less it changes over a given period of time, and thus the slower its system clock runs relative to a system with less inertia.
 
-t any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, or a spherical sample of interstellar spacee. Even an assymmetric black hole described by the Kerr metric \citep{kerr1963}, a topic for future investigation.
+At any given time, any system is always undergoing some degree of rotation and some amount of linear motion, however small. This law applies to any system whose mass is distributed over some region of space, requiring, at minimum, both mass and spatial extent. One may define the system as the core of a planet, a disc-shaped galaxy, a cosmic filament, a spherical sample of interstellar space, or even an asymmetric black hole described by the Kerr metric \citep{kerr1963}---a topic for future investigation.
 
 
 \subsection{STE Example}
@@ -338,7 +338,7 @@ The result is a \textit{raw} linear scale factor---a direct ratio of compactness
 \[
 k = \frac{D}{D_{crit}} = D_{norm}
 \]
-equivalent to $r_s/R$---the compactness parameter of general relativity. The Schwarzschild case is the specific instance of comparing a system to its own collapse point---same mass, physical radius $R$ versus Schwarzschild radius $r_s$.
+equivalent to $r_s/R$---the compactness parameter of general relativity. The Schwarzschild case is the specific instance of comparing a system to its own collapse point---same mass, physical mean radius $R$ versus Schwarzschild radius $r_s$.
 
 Applying Equation~\ref{eq:td_k}, $d\tau/dt = \sqrt{1-k}$, converts a normalized linear scale factor into time dilation. The value of $k$ must be normalized ($k = D_{norm}$) for $\sqrt{1-k}$ to yield gravitational time dilation: the pace of time relative to flat spacetime.
 
@@ -400,7 +400,7 @@ Lorentz time dilation:
 \end{equation}
 where $v$ is the velocity of the moving frame and $c$ is the speed of light.
 
-These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the gravitational case and $k = v^2/c^2$ in the velocity case. The two expressions are equivalent: the escape velocity at radius $R$ is $v^2 = 2GM/R$ \citep{goldstein2002}, so $v^2/c^2 = 2GM/(Rc^2) = r_s/R$.
+These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the gravitational case and $k = v^2/c^2$ in the velocity case. The two expressions are equivalent: the escape velocity at mean radius $R$ is $v^2 = 2GM/R$ \citep{goldstein2002}, so $v^2/c^2 = 2GM/(Rc^2) = r_s/R$.
 
 
 \section{Expressions of Relative Inertial Linear Scale}
@@ -453,11 +453,11 @@ When both mass and radius differ between two systems, no component cancels:
 \begin{equation}
 k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 \end{equation}
-This is the full STE (Equation~\ref{eq:ste}). The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of this formula, each arising when one component of inertia is held constant. The general case applies to any two systems without constraint.
+This is the constant-density STE (Equation~\ref{eq:ste}) without constraint on mass or radius. The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of this formula, each arising when one component of inertia is held constant. When densities differ between the two systems, the universal STE (Equation~\ref{eq:ste_universal}) applies.
 
 \subsection{Inertia--Time Dilation Identities}
 
-The preceding cases derive time dilation from inertia. The relationship is invertible: given the DTD ratio and the radius ratio, the moment of inertia ratio is fully determined. From Equation~\ref{eq:dtd_ratio}:
+The preceding cases derive time dilation from inertia. The relationship is invertible: given the DTD ratio and the mean radius ratio, the moment of inertia ratio is fully determined. From Equation~\ref{eq:dtd_ratio}:
 \begin{equation} \label{eq:inertia_recovery}
 \frac{I_1}{I_2} = \left(\frac{\text{DTD}_1}{\text{DTD}_2}\right)^2 \cdot \left(\frac{R_1}{R_2}\right)^3
 \end{equation}
@@ -477,7 +477,7 @@ This expresses time dilation purely in terms of moment of inertia, geometry, and
 
 From Equation~\ref{eq:td_k}, time dilation is always $d\tau/dt = \sqrt{1-k}$, and $k$ is always the linear scale factor between two systems. In all cases, $k$ reduces to a ratio of characteristic lengths. The Schwarzschild and Lorentz results are not independent discoveries; they are the same expression evaluated under different physical constraints on the same underlying parameter $k$.
 
-As derived in Sections 5.1--5.5, each physical constraint yields a specific expression for $k$: static mass produces $r_s/R$, static radius produces $(M_2/M_1)^{1/3}$, constant density produces $R_2/R_1$, and the unconstrained general case retains the full $(I_2/I_1)^{1/5}$. In every case, $k$ reduces to a ratio of characteristic lengths. The velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are connected directly through the escape velocity identity ($v^2/c^2 = r_s/R$). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
+As derived in Sections 5.1--5.5, each physical constraint yields a specific expression for $k$: static mass produces $r_s/R$, static radius produces $(M_2/M_1)^{1/3}$, constant density produces $R_2/R_1$, and the unconstrained general case applies the universal STE (Equation~\ref{eq:ste_universal}). In every case, $k$ reduces to a ratio of characteristic lengths. The velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are connected directly through the escape velocity identity ($v^2/c^2 = r_s/R$). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
 
 \section{Analysis and Conclusion}
 
@@ -499,7 +499,7 @@ The STE produces both Schwarzschild and Lorentz time dilation exactly, with no f
 
 The STE framework also has a strictly larger domain than the Schwarzschild metric. The gravitational time dilation $\sqrt{1-k}$ is undefined for $k \geq 1$ (at or beyond the collapse threshold), whereas the DTD representation $\sqrt{k}$ (Equation~\ref{eq:dtd}) remains real and well-defined for all $k > 0$. The inertia--time dilation identities (Equations~\ref{eq:inertia_recovery}--\ref{eq:dtd_from_I}) continue to hold past the event horizon, as they depend only on ratios of real-valued quantities.
 
-The STE describes time dilation as the 5th root of the relative moment of inertia or the cube root of the relative system mass between any two systems along or about any respective axes. The relative pace of time emerges from the relative moment of inertia or inertia between any two systems. dimensional representation of relative inertia that is applicable to arbitrary mass distributions without geometric constraint. These properties are intrinsic to inertia, the quantity from which both Schwarzschild and Lorentz time dilation are here derived, identifying the inertia as the determinant of spacetime curvature. Causality is intrinsic to this framework: both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}), so the temporal properties of any system are wholly determined by its constituent matter, establishing that causality propagates exclusively from component to system. The symmetric cases treated here are a subset of the framework's domain; asymmetric and higher-order systems, including the Kerr metric, are natural extensions to be developed in subsequent work.
+The STE describes time dilation as the 5th root of the relative moment of inertia or the cube root of the relative system mass between any two systems along or about any respective axes. The relative pace of time emerges from the relative moment of inertia between any two systems---a dimensional representation of relative inertia that is applicable to arbitrary mass distributions without geometric constraint. These properties are intrinsic to inertia, the quantity from which both Schwarzschild and Lorentz time dilation are here derived, identifying the inertia as the determinant of spacetime curvature. Causality is intrinsic to this framework: both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}), so the temporal properties of any system are wholly determined by its constituent matter, establishing that causality propagates exclusively from component to system. The symmetric cases treated here are a subset of the framework's domain; asymmetric and higher-order systems, including the Kerr metric, are natural extensions to be developed in subsequent work.
 
 \appendix
 \renewcommand{\thesection}{Appendix~\Alph{section}}
@@ -546,7 +546,7 @@ k &= \left(\frac{R_2^2}{R_1^2}\right)^{1/2} = \frac{R_2}{R_1}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and radius to that same mass at the Schwarzschild radius, where time dilation is zero. This is a static-mass comparison between two uniform spheres. $S_1$: $M = 1.9885 \times 10^{30}$\,kg, $R_1 = 6.9570 \times 10^{8}$\,m. $S_2$: same mass at $R_2 = r_s = 2953.38$\,m.
+\textbf{Example (Case 1):} Gravitational time dilation compares a system at a given mass and mean radius to that same mass at the Schwarzschild radius, where time dilation is zero. This is a static-mass comparison between two uniform spheres. $S_1$: $M = 1.9885 \times 10^{30}$\,kg, $R_1 = 6.9570 \times 10^{8}$\,m. $S_2$: same mass at $R_2 = r_s = 2953.38$\,m.
 \[
 k = \frac{r_s}{R_1} = \frac{2953.38}{6.9570 \times 10^{8}} = 4.24520 \times 10^{-6}
 \]
