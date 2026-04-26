@@ -443,11 +443,38 @@ k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right
 \end{equation}
 This is the full STE (Equation~\ref{eq:ste}). The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of this formula, each arising when one component of inertia is held constant. The general case applies to any two systems without constraint.
 
+\subsection{Inertia--Time Dilation Identities}
+
+The preceding cases derive time dilation from inertia. The relationship is invertible: given the DTD ratio and the radius ratio, the moment of inertia ratio is fully determined. From Equation~\ref{eq:dtd_ratio}:
+\begin{equation} \label{eq:inertia_recovery}
+\frac{I_1}{I_2} = \left(\frac{\text{DTD}_1}{\text{DTD}_2}\right)^2 \cdot \left(\frac{R_1}{R_2}\right)^3
+\end{equation}
+The inertia ratio decomposes into a time dilation factor (the compactness ratio) and a spatial scale factor (the volume ratio). Equivalently, the DTD ratio is recoverable from inertia and geometry alone:
+\begin{equation} \label{eq:dtd_from_inertia}
+\frac{\text{DTD}_1}{\text{DTD}_2} = \sqrt{\frac{I_1}{I_2} \cdot \left(\frac{R_2}{R_1}\right)^3}
+\end{equation}
+
+Making density explicit, the STE's fifth root separates into density and radius components. For a uniform body, $I_1/I_2 = (\rho_1/\rho_2)(R_1/R_2)^5$, giving:
+\begin{equation} \label{eq:ki}
+\left(\frac{I_1}{I_2}\right)^{1/5} = \left(\frac{\rho_1}{\rho_2}\right)^{1/5} \cdot \frac{R_1}{R_2}
+\end{equation}
+Since the DTD ratio carries density to the $1/2$ power (via Equation~\ref{eq:dtd_ratio}) while the STE carries it to the $1/5$:
+\begin{equation} \label{eq:dtd_inertia_general}
+\frac{\text{DTD}_1}{\text{DTD}_2} = \left(\frac{I_1}{I_2}\right)^{1/5} \cdot \left(\frac{\rho_1}{\rho_2}\right)^{3/10}
+\end{equation}
+The $3/10$ exponent ($= 1/2 - 1/5$) on the density ratio bridges the STE scale factor to the time dilation ratio. When density is equal, this factor is unity and the two ratios coincide (Section~5.3).
+
+Each system's DTD can also be computed directly from its moment of inertia. Substituting $M = 5I/(2R^2)$ into $D_{norm} = M/(R \cdot D_{crit})$:
+\begin{equation} \label{eq:dtd_from_I}
+\text{DTD} = \sqrt{\frac{5\,I}{2\,D_{crit}\,R^3}}
+\end{equation}
+This expresses time dilation purely in terms of moment of inertia, geometry, and the DeGerlia Threshold, with no intermediate computation of mass or compactness.
+
 \section{Unification of GR and SR}
 
 From Equation~\ref{eq:td_k}, time dilation is always $d\tau/dt = \sqrt{1-k}$, and $k$ is always the linear scale factor between two systems. In all cases, $k$ reduces to a ratio of characteristic lengths. The Schwarzschild and Lorentz results are not independent discoveries; they are the same expression evaluated under different physical constraints on the same underlying parameter $k$.
 
-As derived in Sections 5.1--5.4, each physical constraint yields a specific expression for $k$: static mass produces $r_s/R$, static radius produces $(M_2/M_1)^{1/3}$, constant density produces $R_2/R_1$, and the unconstrained general case retains the full $(I_2/I_1)^{1/5}$. In every case, $k$ reduces to a ratio of characteristic lengths. The velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are connected directly through the escape velocity identity ($v^2/c^2 = r_s/R$). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
+As derived in Sections 5.1--5.5, each physical constraint yields a specific expression for $k$: static mass produces $r_s/R$, static radius produces $(M_2/M_1)^{1/3}$, constant density produces $R_2/R_1$, and the unconstrained general case retains the full $(I_2/I_1)^{1/5}$. In every case, $k$ reduces to a ratio of characteristic lengths. The velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are connected directly through the escape velocity identity ($v^2/c^2 = r_s/R$). Both classical relativistic results emerge from this single expression without additional parameters, geometric similarity, or domain restrictions.
 
 \section{Analysis and Conclusion}
 
@@ -467,13 +494,15 @@ Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold cons
 
 The STE produces both Schwarzschild and Lorentz time dilation exactly, with no free parameters. Gravitational and kinematic time dilation are not distinct phenomena requiring separate theoretical frameworks. They are the same phenomenon, expressed under different physical constraints, unified by a single inertial parameter whose physical meaning is always and only linear scale. Both are edge cases of the general formula (\ref{app:general_ste}), which is required whenever both mass and radius differ between systems.
 
+The STE framework also has a strictly larger domain than the Schwarzschild metric. The gravitational time dilation $\sqrt{1-k}$ is undefined for $k \geq 1$ (at or beyond the collapse threshold), whereas the DTD representation $\sqrt{k}$ (Equation~\ref{eq:dtd}) remains real and well-defined for all $k > 0$. The inertia--time dilation identities (Equations~\ref{eq:inertia_recovery}--\ref{eq:dtd_from_I}) continue to hold past the event horizon, as they depend only on ratios of real-valued quantities.
+
 The STE describes time dilation as the 5th root of the relative moment of inertia or the cube root of the relative system mass between any two systems along or about any respective axes. The relative pace of time emerges from the relative moment of inertia or inertia between any two systems. dimensional representation of relative inertia that is applicable to arbitrary mass distributions without geometric constraint. These properties are intrinsic to inertia, the quantity from which both Schwarzschild and Lorentz time dilation are here derived, identifying the inertia as the determinant of spacetime curvature. Causality is intrinsic to this framework: both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}), so the temporal properties of any system are wholly determined by its constituent matter, establishing that causality propagates exclusively from component to system. The symmetric cases treated here are a subset of the framework's domain; asymmetric and higher-order systems, including the Kerr metric, are natural extensions to be developed in subsequent work.
 
 \appendix
 \renewcommand{\thesection}{Appendix~\Alph{section}}
 \section{Special-Case Derivations} \label{app:general_ste}
 
-The main text presents four expressions of $k$ under different physical conditions (Sections 5.1--5.4). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{widder1961}, then verifies the general case through decomposition and numerical example.
+The main text presents five expressions of $k$ under different physical conditions (Sections 5.1--5.5). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{widder1961}, then verifies the general case through decomposition and numerical example.
 
 The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
 
@@ -528,6 +557,8 @@ k = \frac{r_s}{R_1} = \frac{2953.38}{6.9570 \times 10^{8}} = 4.24520 \times 10^{
 \end{align}
 \end{mdframed}
 
+\noindent Under static mass, $\text{DTD}_1/\text{DTD}_2 = \sqrt{R_2/R_1}$: time dilation depends only on radii (Table~\ref{tab:pair_ratios}, column $M = M$).
+
 \subsubsection*{Case 2: Static Radius}
 
 When $R_1 = R_2$ and $M_1 > M_2$:
@@ -569,6 +600,8 @@ k_2 &= k_1 \cdot k^3
 = 9.9999257381 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
+
+\noindent Under static radius, $\text{DTD}_1/\text{DTD}_2 = \sqrt{M_1/M_2}$: time dilation depends only on mass (Table~\ref{tab:pair_ratios}, column $R = R$).
 
 \subsubsection*{Case 3: Constant Density}
 
@@ -613,6 +646,8 @@ k_2 &= k_1 \cdot k^2
 \end{align}
 \end{mdframed}
 
+\noindent This is the only constraint under which $(I_1/I_2)^{1/5} = \text{DTD}_1/\text{DTD}_2$; the density correction $(\rho_1/\rho_2)^{3/10}$ in Equation~\ref{eq:dtd_inertia_general} is unity (Table~\ref{tab:pair_ratios}, column $\rho = \rho$).
+
 \subsubsection*{Case 4: Constant Inertia}
 
 When $M_1 R_1^2 = M_2 R_2^2$:
@@ -649,6 +684,8 @@ k_2 &= \frac{D_2}{D_{crit}} = \frac{M_2/R_2}{D_{crit}}
 = \frac{I_2}{I_1} \notag
 \end{align}
 \end{mdframed}
+
+\noindent Equal inertia does not imply equal compactness: here $(I_2/I_1)^{1/5} = 1$ while the DTD ratio is $31.62$, confirming Equation~\ref{eq:inertia_recovery} (Table~\ref{tab:pair_ratios}, column $I = I$).
 
 \subsubsection*{General Case}
 
@@ -691,6 +728,8 @@ k_2 &= \frac{M_2/R_2}{D_{crit}}
 \end{align}
 \end{mdframed}
 
+\noindent All identities from Section~5.5 hold without constraint; numerical verification appears in Table~\ref{tab:pair_ratios}, column General.
+
 \begin{mdframed}
 \textbf{Example (General Case --- Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
 
@@ -726,6 +765,36 @@ Relative pace of time:
 = 5.00037 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
+
+\newpage
+\section{Pair Comparison Table} \label{app:pair_table}
+
+Table~\ref{tab:pair_ratios} presents key derived ratios for five system pairs, each representing a distinct constraint case from the derivations in Appendix~A. System parameters for each case are given in the corresponding worked examples above. Rows marked $(\ast)$ are universal identities, verified across all cases; unmarked rows are case-specific reductions that hold only under the stated constraint.
+
+\begin{table*}[ht]
+\centering
+\caption{Derived ratios across constraint cases. Columns correspond to the worked examples in Appendix~A. Rows marked $(\ast)$ hold universally; the STE scale factor $(I_1/I_2)^{1/5}$ equals the DTD ratio only under constant density $(\rho = \rho)$.}
+\label{tab:pair_ratios}
+\footnotesize
+\begin{tabular}{@{} l c c c c c @{}}
+\toprule
+\textbf{Ratio} & \makecell{\textbf{$M = M$} \\ \scriptsize $M_{1,2} = 2 \times 10^{30}$ \\ \scriptsize $R_1 = 3 \times 10^{3}$ \\ \scriptsize $R_2 = 7 \times 10^{8}$}
+& \makecell{\textbf{$R = R$} \\ \scriptsize $R_{1,2} = 10^{8}$ \\ \scriptsize $M_1 = 10^{30}$ \\ \scriptsize $M_2 = 10^{24}$}
+& \makecell{\textbf{$\rho = \rho$} \\ \scriptsize $\rho_{1,2} = 2.387 \times 10^{5}$ \\ \scriptsize $R_1 = 10^{8}$ \\ \scriptsize $R_2 = 10^{7}$}
+& \makecell{\textbf{$I = I$} \\ \scriptsize $I_{1,2} = 4 \times 10^{45}$ \\ \scriptsize $M_1 = 10^{32}$ \\ \scriptsize $M_2 = 10^{30}$}
+& \makecell{\textbf{General} \\ \scriptsize $M_1 = 10^{20}$, $R_1 = 2 \times 10^{-7}$ \\ \scriptsize $M_2 = 10^{30}$, $R_2 = 10^{7}$} \\
+\midrule
+$I_1/I_2$ & $1.837 \times 10^{-11}$ & $1 \times 10^{6}$ & $1 \times 10^{5}$ & $1$ & $4 \times 10^{-38}$ \\[4pt]
+$(I_1/I_2)^{1/5}$ & $7.125 \times 10^{-3}$ & $15.85$ & $\mathbf{10}$ & $1$ & $3.314 \times 10^{-8}$ \\[4pt]
+$\text{DTD}_1/\text{DTD}_2$ \; $(\ast)$ & $4.830 \times 10^{2}$ & $1 \times 10^{3}$ & $\mathbf{10}$ & $31.62$ & $70.71$ \\[4pt]
+$\left(\dfrac{I_1}{I_2}\right)^{1/5} \!\! \left(\dfrac{\rho_1}{\rho_2}\right)^{3/10}$ \; $(\ast)$ & $4.830 \times 10^{2}$ & $1 \times 10^{3}$ & $\mathbf{10}$ & $31.62$ & $70.71$ \\[6pt]
+$\left(\dfrac{\text{DTD}_1}{\text{DTD}_2}\right)^{2} \!\! \left(\dfrac{R_1}{R_2}\right)^{3}$ \; $(\ast)$ & $1.837 \times 10^{-11}$ & $1 \times 10^{6}$ & $1 \times 10^{5}$ & $1$ & $4 \times 10^{-38}$ \\[6pt]
+$\dfrac{d\tau_1/dt}{d\tau_2/dt}$ & $9.922 \times 10^{-2}$ & $\approx 1$ & $\approx 1$ & $9.926 \times 10^{-1}$ & $5.074 \times 10^{-1}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Row~4 matches Row~3 in every case, confirming Equation~\ref{eq:dtd_inertia_general}: the density correction factor $(\rho_1/\rho_2)^{3/10}$ bridges the STE scale factor to the DTD ratio universally. Row~5 matches Row~1 in every case, confirming Equation~\ref{eq:inertia_recovery}: the inertia ratio decomposes exactly into time dilation and spatial scale. Under constant density (column~$\rho = \rho$, bold), Rows~2 and~3 coincide, as predicted by Section~5.3. The gravitational time dilation ratio (Row~6) does not equal any other row in general; the nonlinearity of $\sqrt{1-k}$ prevents decomposition into constituent ratios.
 
 \balance
 
