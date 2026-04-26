@@ -129,7 +129,7 @@
 \vspace{0.3cm} & \vspace{0.3cm} \\
  & \noindent\large{Thomas Damon DeGerlia\textit{$^{a}$}} \\
  & \noindent\small{Originally published: February 6, 2026 C.E.} \\
- & \noindent\small{Revision 2.40 April 2, 2026 C.E.} \\
+ & \noindent\small{Revision 3.0 April 26, 2026 C.E.} \\
  \vspace{0.3cm} & \vspace{0.3cm} \\
 \includegraphics{head_foot/dates} & \noindent\normalsize{ABSTRACT: Inertial Relativity and its key formula the Space-Time Equivalence (STE)\citep{degerlia202501} hypothesize that there is a universal mathematical relationship between time and the spatial distribution of matter: \textit{The characteristic length scale factor that determines time dilation between any two physical systems about any respective axes is universally equal to the fifth root of the inverse ratio of their moments of inertia about the same axes.} A central prediction of this hypothesis is that General and Special Relativity are edge cases of the STE. In our prior paper \citep{degerlia202505}, we began validating this prediction by arriving at General Relativity calculations with exact precision utilizing only principles of relativistic inertia. This paper completes the validation by demonstrating the mathematical equivalence between the STE, General Relativity, and Special Relativity. In the context of moment of inertia about an axis, we demonstrate that the STE is mathematically equivalent to Schwarzschild gravitational time dilation. In the context of linear inertia (mass), the STE states an inverse third root relationship with inertia (mass), which we demonstrate is mathematically equivalent to Lorentz time dilation. Both results confirm the original prediction: Special and General Relativity emerge as edge cases of the same underlying phenomenon, Inertial Relativity: Special Relativity at the extremes of velocity and General Relativity at the extremes of mass, unifying the two under a single universal relativistic framework.} \\
  & \vspace{0.3cm} \\
@@ -263,7 +263,7 @@ k = \left(\frac{I_2}{I_1}\right)^{1/5}
 \end{equation}
 where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention. Under isometric conditions the two systems share the same density, and the fifth root of the inertia ratio recovers the linear scale factor exactly.
 
-In the linear context, inertia is $M$ and the linear inertia version of the STE applies (see \ref{app:general_ste}). Special Relativity describes linear inertia:
+In the linear context, inertia is $M$ and the linear inertia version of the constant-density STE applies (see \ref{app:general_ste}). Special Relativity describes linear inertia:
 
 \begin{equation} \label{eq:linear}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
@@ -302,7 +302,7 @@ I_1 = \tfrac{2}{5}(8\,\text{kg})(2\,\text{m})^2 = 12.8\,\text{kg\,m}^2
 \qquad
 I_2 = \tfrac{2}{5}(1\,\text{kg})(1\,\text{m})^2 = 0.4\,\text{kg\,m}^2
 \]
-The ratio $I_1/I_2 = 32 = 2^5$ confirms that moment of inertia scales as $k^5$ under isometric scaling. Designating the larger sphere as the observer (System~1) and the smaller as the observed (System~2), the STE yields:
+The ratio $I_1/I_2 = 32 = 2^5$ confirms that moment of inertia scales as $k^5$ under isometric scaling. Designating the larger sphere as the observer (System~1) and the smaller as the observed (System~2), the constant-density STE yields:
 \[
 k = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{0.4}{12.8}\right)^{1/5} = \left(\frac{1}{32}\right)^{1/5} = 0.5
 \]
@@ -314,7 +314,7 @@ recovering the linear scale factor between the two systems. The resulting time d
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{ste_example.pdf}
-\caption{Two uniform spheres related by isometric scaling. The STE recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
+\caption{Two uniform spheres related by isometric scaling. The constant-density STE recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
 \end{figure}
 
 \subsection{Universal STE}
@@ -407,7 +407,7 @@ These are the same form as Equation~\ref{eq:td_k}, where $k = r_s/R$ in the grav
 
 The parameter $k$ is always the linear scale factor between two systems about their respective selected axes. Because $k$ is determined by relative inertia, it is fundamentally an inertial ratio. The various scenarios, such as special relativity, gravitational time dilation, etc., are all directly derived from this inertia ratio. In the case of general relativity, we simply set $M_1$ and $M_2$ equal and set $R_2$ to the Schwarzschild radius (see \ref{app:general_ste}).
 
-Each expression of $k$ below derives from the STE (Equation~\ref{eq:ste}), where $I_1$ and $I_2$ are the moments of inertia of two systems about their respective selected axes. Substituting the moment of inertia for a uniform sphere, $I = \frac{2}{5}MR^2$:
+Each expression of $k$ below derives from the constant-density STE (Equation~\ref{eq:ste}), where $I_1$ and $I_2$ are the moments of inertia of two systems about their respective selected axes. Substituting the moment of inertia for a uniform sphere, $I = \frac{2}{5}MR^2$:
 \begin{equation} \label{eq:k_expanded}
 k = \left(\frac{\frac{2}{5}M_2 R_2^2}{\frac{2}{5}M_1 R_1^2}\right)^{1/5}
 \end{equation}
@@ -436,14 +436,14 @@ k = \frac{D}{D_{crit}}
 \end{equation}
 
 \subsection{Static Radius (Linear)}
-From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the STE reduces to (see \ref{app:general_ste}):
+From Equation~\ref{eq:k_simplified}, when $R_1 = R_2$, the constant-density STE reduces to (see \ref{app:general_ste}):
 \begin{equation}
 k = \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{equation}
 This is Equation~\ref{eq:linear}. The Lorentz factor (Equation~\ref{eq:lorentz}) has the same form as Equation~\ref{eq:td_k}, with $k = v^2/c^2$. Since velocity is distance per unit time, $v^2/c^2$ is the square of a ratio of two lengths, with the shared time unit cancelling. Gravitational time dilation confirms this directly: $v^2/c^2 = r_s/R$ via the escape velocity identity, so the velocity-based $k$ of special relativity and the radius-based $k$ of general relativity are the same length ratio.
 
 \subsection{Constant Density (Isometric)}
-When density is held constant, $M \propto R^3$, and the STE reduces to a pure linear scale ratio (see \ref{app:general_ste}):
+When density is held constant, $M \propto R^3$, and the constant-density STE reduces to a pure linear scale ratio (see \ref{app:general_ste}):
 \begin{equation}
 k = \left(\frac{R_2^3 R_2^2}{R_1^3 R_1^2}\right)^{1/5} = \left(\frac{R_2^5}{R_1^5}\right)^{1/5} = \frac{R_2}{R_1}
 \end{equation}
@@ -499,15 +499,15 @@ The STE produces both Schwarzschild and Lorentz time dilation exactly, with no f
 
 The STE framework also has a strictly larger domain than the Schwarzschild metric. The gravitational time dilation $\sqrt{1-k}$ is undefined for $k \geq 1$ (at or beyond the collapse threshold), whereas the DTD representation $\sqrt{k}$ (Equation~\ref{eq:dtd}) remains real and well-defined for all $k > 0$. The inertia--time dilation identities (Equations~\ref{eq:inertia_recovery}--\ref{eq:dtd_from_I}) continue to hold past the event horizon, as they depend only on ratios of real-valued quantities.
 
-The STE describes time dilation as the 5th root of the relative moment of inertia or the cube root of the relative system mass between any two systems along or about any respective axes. The relative pace of time emerges from the relative moment of inertia between any two systems---a dimensional representation of relative inertia that is applicable to arbitrary mass distributions without geometric constraint. These properties are intrinsic to inertia, the quantity from which both Schwarzschild and Lorentz time dilation are here derived, identifying the inertia as the determinant of spacetime curvature. Causality is intrinsic to this framework: both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}), so the temporal properties of any system are wholly determined by its constituent matter, establishing that causality propagates exclusively from component to system. The symmetric cases treated here are a subset of the framework's domain; asymmetric and higher-order systems, including the Kerr metric, are natural extensions to be developed in subsequent work.
+The STE (Equation~\ref{eq:ste_universal}) describes the ratio of time dilation between any two systems as the 5th root of their relative moment of inertia, corrected by the $3/10$ power of their density ratio, or equivalently the cube root of relative mass in the linear case. The relative pace of time emerges from the relative moment of inertia between any two systems---a dimensional representation of relative inertia that is applicable to arbitrary mass distributions without geometric constraint. These properties are intrinsic to inertia, the quantity from which both Schwarzschild and Lorentz time dilation are here derived, identifying the inertia as the determinant of spacetime curvature. Causality is intrinsic to this framework: both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}), so the temporal properties of any system are wholly determined by its constituent matter, establishing that causality propagates exclusively from component to system. The symmetric cases treated here are a subset of the framework's domain; asymmetric and higher-order systems, including the Kerr metric, are natural extensions to be developed in subsequent work.
 
 \appendix
 \renewcommand{\thesection}{Appendix~\Alph{section}}
 \section{Special-Case Derivations} \label{app:general_ste}
 
-The main text presents five expressions of $k$ under different physical conditions (Sections 5.1--5.5). When a component of inertia is held constant between two systems, the exponent of the STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{widder1961}, then verifies the general case through decomposition and numerical example.
+The main text presents five expressions of $k$ under different physical conditions (Sections 5.1--5.5). When a component of inertia is held constant between two systems, the exponent of the constant-density STE changes from $1/5$ to reflect the degree of homogeneity of the remaining quantity. This appendix derives each case from the general form using Euler's theorem of homogeneous functions \citep{widder1961}, then verifies the general case through decomposition and numerical example.
 
-The fundamental form of the STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
+The fundamental form of the constant-density STE is $k = (I_2/I_1)^{1/L}$, where $L$ is the degree of homogeneity of the compared quantity in the characteristic length. Under isometric scaling by factor $k$, a quantity with degree of homogeneity $L$ scales as $k^L$. The specific exponents used throughout this paper ($1/5$ for moment of inertia, $1/3$ for mass, $1/2$ for $R^2$) each emerge from the value of $L$ for that quantity.
 
 \begin{equation}
 k = \left(\frac{I_2}{I_1}\right)^{1/L} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/L}
@@ -572,7 +572,7 @@ k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 2):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $S_2$: $M_2 = 1 \times 10^{24}$\,kg, both at $R = 1 \times 10^{8}$\,m. Starting from the STE with static radius ($R_1 = R_2$, $L = 3$):
+\textbf{Example (Case 2):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $S_2$: $M_2 = 1 \times 10^{24}$\,kg, both at $R = 1 \times 10^{8}$\,m. Starting from the constant-density STE with static radius ($R_1 = R_2$, $L = 3$):
 \begin{align}
 k &= \left(\frac{M_2}{M_1}\right)^{1/3}
 = \left(\frac{1 \times 10^{24}}{1 \times 10^{30}}\right)^{1/3}
@@ -620,7 +620,7 @@ k &= \left(\frac{R_2^5}{R_1^5}\right)^{1/5}
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 3):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{27}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both at $\rho = 2.38732 \times 10^{5}$\,kg/m$^3$. Starting from the STE with constant density ($M \propto R^3$, $L = 5$):
+\textbf{Example (Case 3):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{27}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both at $\rho = 2.38732 \times 10^{5}$\,kg/m$^3$. Starting from the constant-density STE ($M \propto R^3$, $L = 5$):
 \begin{align}
 k &= \frac{R_2}{R_1}
 = \frac{1 \times 10^{7}}{1 \times 10^{8}}
@@ -661,7 +661,7 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = (1)^{1/5} = 1
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (Case 4):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{32}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both have $I = MR^2 = 1 \times 10^{46}$\,kg$\cdot$m$^2$. Starting from the STE:
+\textbf{Example (Case 4):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{8}$\,m. $S_2$: $M_2 = 1 \times 10^{32}$\,kg, $R_2 = 1 \times 10^{7}$\,m. Both have $I = MR^2 = 1 \times 10^{46}$\,kg$\cdot$m$^2$. Starting from the constant-density STE:
 \begin{align}
 I_1 &= M_1 R_1^2 = (1 \times 10^{30})(1 \times 10^{8})^2 = 1 \times 10^{46} \notag \\
 I_2 &= M_2 R_2^2 = (1 \times 10^{32})(1 \times 10^{7})^2 = 1 \times 10^{46} \notag \\
@@ -700,7 +700,7 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\righ
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (General Case):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 2 \times 10^{-7}$\,m. Starting from the STE:
+\textbf{Example (General Case):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 2 \times 10^{-7}$\,m. Starting from the constant-density STE:
 \begin{align}
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 = \left(\frac{(1 \times 10^{20}) \cdot (2 \times 10^{-7})^2}{(1 \times 10^{30}) \cdot (1 \times 10^{7})^2}\right)^{1/5} \notag \\
@@ -770,34 +770,75 @@ Relative pace of time:
 \end{mdframed}
 
 \newpage
-\section{Pair Comparison Table} \label{app:pair_table}
+\section{Pair Comparison Tables} \label{app:pair_table}
 
-Table~\ref{tab:pair_ratios} presents key derived ratios for five system pairs, each representing a distinct constraint case from the derivations in Appendix~A. System parameters for each case are given in the corresponding worked examples above. Rows marked $(\ast)$ are universal identities, verified across all cases; unmarked rows are case-specific reductions that hold only under the stated constraint.
+Tables~\ref{tab:pair_properties} and~\ref{tab:pair_ratios} present the complete system properties and derived ratios for five system pairs, each representing a distinct constraint case from the derivations in Appendix~A: static mass (M=M), static radius (R=R), constant density ($\rho=\rho$), constant inertia (I=I), and the unconstrained general case. In the derived ratios (Table~\ref{tab:pair_ratios}), rows marked $(\ast)$ are universal identities equal to $\text{DTD}_1/\text{DTD}_2$ in every case; unmarked rows hold only under specific constraints. The constant-density STE scale factor $(I_1/I_2)^{1/5}$ equals the DTD ratio only under constant density. The inertia recovery identity $(\text{DTD}_1/\text{DTD}_2)^2(R_1/R_2)^3 = I_1/I_2$ holds in every case.
 
 \begin{table*}[ht]
 \centering
-\caption{Derived ratios across constraint cases. Columns correspond to the worked examples in Appendix~A. Rows marked $(\ast)$ hold universally; the STE scale factor $(I_1/I_2)^{1/5}$ equals the DTD ratio only under constant density $(\rho = \rho)$.}
-\label{tab:pair_ratios}
-\footnotesize
+\caption{System properties for each pair comparison case. M=M: static mass (near Schwarzschild radius). R=R: static radius. $\rho=\rho$: constant density. I=I: constant inertia. General: unconstrained.}
+\label{tab:pair_properties}
+\scriptsize
 \begin{tabular}{@{} l c c c c c @{}}
 \toprule
-\textbf{Ratio} & \makecell{\textbf{$M = M$} \\ \scriptsize $M_{1,2} = 2 \times 10^{30}$ \\ \scriptsize $R_1 = 3 \times 10^{3}$ \\ \scriptsize $R_2 = 7 \times 10^{8}$}
-& \makecell{\textbf{$R = R$} \\ \scriptsize $R_{1,2} = 10^{8}$ \\ \scriptsize $M_1 = 10^{30}$ \\ \scriptsize $M_2 = 10^{24}$}
-& \makecell{\textbf{$\rho = \rho$} \\ \scriptsize $\rho_{1,2} = 2.387 \times 10^{5}$ \\ \scriptsize $R_1 = 10^{8}$ \\ \scriptsize $R_2 = 10^{7}$}
-& \makecell{\textbf{$I = I$} \\ \scriptsize $I_{1,2} = 4 \times 10^{45}$ \\ \scriptsize $M_1 = 10^{32}$ \\ \scriptsize $M_2 = 10^{30}$}
-& \makecell{\textbf{General} \\ \scriptsize $M_1 = 10^{20}$, $R_1 = 2 \times 10^{-7}$ \\ \scriptsize $M_2 = 10^{30}$, $R_2 = 10^{7}$} \\
+\textbf{Property} & \makecell{\textbf{M=M} \\ \scriptsize $M_{1,2}\!=\!2\!\times\!10^{30}$ \\ \scriptsize $R_1\!=\!3\!\times\!10^{3}$ \\ \scriptsize $R_2\!=\!7\!\times\!10^{8}$} & \makecell{\textbf{R=R} \\ \scriptsize $R_{1,2}\!=\!10^{8}$ \\ \scriptsize $M_1\!=\!10^{30}$ \\ \scriptsize $M_2\!=\!10^{24}$} & \makecell{\textbf{$\rho=\rho$} \\ \scriptsize $\rho_{1,2}\!=\!2.39\!\times\!10^{5}$ \\ \scriptsize $R_1\!=\!10^{8}$ \\ \scriptsize $R_2\!=\!10^{7}$} & \makecell{\textbf{I=I} \\ \scriptsize $I_{1,2}\!=\!4\!\times\!10^{45}$ \\ \scriptsize $M_1\!=\!10^{32}$ \\ \scriptsize $M_2\!=\!10^{30}$} & \makecell{\textbf{General} \\ \scriptsize $M_1\!=\!10^{20}$, $R_1\!=\!2\!\times\!10^{-7}$ \\ \scriptsize $M_2\!=\!10^{30}$, $R_2\!=\!10^{7}$} \\
 \midrule
-$I_1/I_2$ & $1.837 \times 10^{-11}$ & $1 \times 10^{6}$ & $1 \times 10^{5}$ & $1$ & $4 \times 10^{-38}$ \\[4pt]
-$(I_1/I_2)^{1/5}$ & $7.125 \times 10^{-3}$ & $15.85$ & $\mathbf{10}$ & $1$ & $3.314 \times 10^{-8}$ \\[4pt]
-$\text{DTD}_1/\text{DTD}_2$ \; $(\ast)$ & $4.830 \times 10^{2}$ & $1 \times 10^{3}$ & $\mathbf{10}$ & $31.62$ & $70.71$ \\[4pt]
-$\left(\dfrac{I_1}{I_2}\right)^{1/5} \!\! \left(\dfrac{\rho_1}{\rho_2}\right)^{3/10}$ \; $(\ast)$ & $4.830 \times 10^{2}$ & $1 \times 10^{3}$ & $\mathbf{10}$ & $31.62$ & $70.71$ \\[6pt]
-$\left(\dfrac{\text{DTD}_1}{\text{DTD}_2}\right)^{2} \!\! \left(\dfrac{R_1}{R_2}\right)^{3}$ \; $(\ast)$ & $1.837 \times 10^{-11}$ & $1 \times 10^{6}$ & $1 \times 10^{5}$ & $1$ & $4 \times 10^{-38}$ \\[6pt]
-$\dfrac{d\tau_1/dt}{d\tau_2/dt}$ & $9.922 \times 10^{-2}$ & $\approx 1$ & $\approx 1$ & $9.926 \times 10^{-1}$ & $5.074 \times 10^{-1}$ \\
+$M_1$ (kg) & $2.0 \times 10^{30}$ & $1.0 \times 10^{30}$ & $1.0 \times 10^{30}$ & $1.0 \times 10^{32}$ & $1.0 \times 10^{20}$ \\
+$M_2$ (kg) & $2.0 \times 10^{30}$ & $1.0 \times 10^{24}$ & $1.0 \times 10^{27}$ & $1.0 \times 10^{30}$ & $1.0 \times 10^{30}$ \\
+$R_1$ (m) & $3.0 \times 10^{3}$ & $1.0 \times 10^{8}$ & $1.0 \times 10^{8}$ & $1.0 \times 10^{7}$ & $2.0 \times 10^{-7}$ \\
+$R_2$ (m) & $7.0 \times 10^{8}$ & $1.0 \times 10^{8}$ & $1.0 \times 10^{7}$ & $1.0 \times 10^{8}$ & $1.0 \times 10^{7}$ \\
+$\rho_1$ (kg/m$^3$) & $1.76839 \times 10^{19}$ & $2.38732 \times 10^{5}$ & $2.38732 \times 10^{5}$ & $2.38732 \times 10^{10}$ & $2.98416 \times 10^{39}$ \\
+$\rho_2$ (kg/m$^3$) & $1.39203 \times 10^{3}$ & $2.38732 \times 10^{-1}$ & $2.38732 \times 10^{5}$ & $2.38732 \times 10^{5}$ & $2.38732 \times 10^{8}$ \\
+$I_1$ (kg\,m$^2$) & $7.20000 \times 10^{36}$ & $4.00000 \times 10^{45}$ & $4.00000 \times 10^{45}$ & $4.00000 \times 10^{45}$ & $1.60000 \times 10^{6}$ \\
+$I_2$ (kg\,m$^2$) & $3.92000 \times 10^{47}$ & $4.00000 \times 10^{39}$ & $4.00000 \times 10^{40}$ & $4.00000 \times 10^{45}$ & $4.00000 \times 10^{43}$ \\
+$D_1$ (kg/m) & $6.66667 \times 10^{26}$ & $1.00000 \times 10^{22}$ & $1.00000 \times 10^{22}$ & $1.00000 \times 10^{25}$ & $5.00000 \times 10^{26}$ \\
+$D_2$ (kg/m) & $2.85714 \times 10^{21}$ & $1.00000 \times 10^{16}$ & $1.00000 \times 10^{20}$ & $1.00000 \times 10^{22}$ & $1.00000 \times 10^{23}$ \\
+$D_{1,\text{norm}}$ & $9.90155 \times 10^{-1}$ & $1.48523 \times 10^{-5}$ & $1.48523 \times 10^{-5}$ & $1.48523 \times 10^{-2}$ & $7.42617 \times 10^{-1}$ \\
+$D_{2,\text{norm}}$ & $4.24352 \times 10^{-6}$ & $1.48523 \times 10^{-11}$ & $1.48523 \times 10^{-7}$ & $1.48523 \times 10^{-5}$ & $1.48523 \times 10^{-4}$ \\
+$r_{s,1}$ (m) & $2.97046 \times 10^{3}$ & $1.48523 \times 10^{3}$ & $1.48523 \times 10^{3}$ & $1.48523 \times 10^{5}$ & $1.48523 \times 10^{-7}$ \\
+$r_{s,2}$ (m) & $2.97046 \times 10^{3}$ & $1.48523 \times 10^{-3}$ & $1.48523$ & $1.48523 \times 10^{3}$ & $1.48523 \times 10^{3}$ \\
+GTD$_1$ & $9.92235 \times 10^{-2}$ & $9.99993 \times 10^{-1}$ & $9.99993 \times 10^{-1}$ & $9.92546 \times 10^{-1}$ & $5.07330 \times 10^{-1}$ \\
+GTD$_2$ & $9.99998 \times 10^{-1}$ & $\approx 1$ & $9.99999 \times 10^{-1}$ & $9.99993 \times 10^{-1}$ & $9.99926 \times 10^{-1}$ \\
+DTD$_1$ & $9.95066 \times 10^{-1}$ & $3.85387 \times 10^{-3}$ & $3.85387 \times 10^{-3}$ & $1.21870 \times 10^{-1}$ & $8.61752 \times 10^{-1}$ \\
+DTD$_2$ & $2.05998 \times 10^{-3}$ & $3.85387 \times 10^{-6}$ & $3.85387 \times 10^{-4}$ & $3.85387 \times 10^{-3}$ & $1.21870 \times 10^{-2}$ \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
-Row~4 matches Row~3 in every case, confirming Equation~\ref{eq:ste_universal}: the density correction factor $(\rho_1/\rho_2)^{3/10}$ bridges the STE scale factor to the DTD ratio universally. Row~5 matches Row~1 in every case, confirming Equation~\ref{eq:inertia_recovery}: the inertia ratio decomposes exactly into time dilation and spatial scale. Under constant density (column~$\rho = \rho$, bold), Rows~2 and~3 coincide, as predicted by Section~5.3. The gravitational time dilation ratio (Row~6) does not equal any other row in general; the nonlinearity of $\sqrt{1-k}$ prevents decomposition into constituent ratios.
+\begin{table*}[ht]
+\centering
+\caption{Derived ratios across constraint cases. Rows marked $(\ast)$ are universally equal to $\text{DTD}_1/\text{DTD}_2$; unmarked rows hold only under specific constraints.}
+\label{tab:pair_ratios}
+\scriptsize
+\begin{tabular}{@{} l c c c c c @{}}
+\toprule
+\textbf{Ratio} & \makecell{\textbf{M=M}} & \makecell{\textbf{R=R}} & \makecell{\textbf{$\rho=\rho$}} & \makecell{\textbf{I=I}} & \makecell{\textbf{General}} \\
+\midrule
+$I_1/I_2$ & $1.83673 \times 10^{-11}$ & $1.00000 \times 10^{6}$ & $1.00000 \times 10^{5}$ & $1.00000$ & $4.00000 \times 10^{-38}$ \\
+$(I_1/I_2)^{1/2}$ & $4.28571 \times 10^{-6}$ & $1.00000 \times 10^{3}$ & $3.16228 \times 10^{2}$ & $1.00000$ & $2.00000 \times 10^{-19}$ \\
+$k_i = (\rho_1/\rho_2)^{1/5}(R_1/R_2)$ & $7.12540 \times 10^{-3}$ & $1.58489 \times 10^{1}$ & $1.00000 \times 10^{1}$ & $1.00000$ & $3.31445 \times 10^{-8}$ \\
+$(I_1/I_2)^{1/5}$ & $7.12540 \times 10^{-3}$ & $1.58489 \times 10^{1}$ & $1.00000 \times 10^{1}$ & $1.00000$ & $3.31445 \times 10^{-8}$ \\
+$D_2/D_1$ & $4.28571 \times 10^{-6}$ & $1.00000 \times 10^{-6}$ & $1.00000 \times 10^{-2}$ & $1.00000 \times 10^{-3}$ & $2.00000 \times 10^{-4}$ \\
+GTD$_1$/GTD$_2$ & $9.92237 \times 10^{-2}$ & $9.99993 \times 10^{-1}$ & $9.99993 \times 10^{-1}$ & $9.92553 \times 10^{-1}$ & $5.07368 \times 10^{-1}$ \\[3pt]
+\hline\\[-6pt]
+DTD$_1$/DTD$_2$ \; $(\ast)$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{1}$ & $3.16228 \times 10^{1}$ & $7.07107 \times 10^{1}$ \\
+$(I_1/I_2)^{1/5}(\rho_1/\rho_2)^{3/10}$ \; $(\ast)$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{1}$ & $3.16228 \times 10^{1}$ & $7.07107 \times 10^{1}$ \\
+$\sqrt{D_1/D_2}$ \; $(\ast)$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{1}$ & $3.16228 \times 10^{1}$ & $7.07107 \times 10^{1}$ \\
+$\sqrt{D_1}/\sqrt{D_2}$ \; $(\ast)$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{1}$ & $3.16228 \times 10^{1}$ & $7.07107 \times 10^{1}$ \\
+$\sqrt{M_1/M_2} \cdot \sqrt{R_2/R_1}$ \; $(\ast)$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{1}$ & $3.16228 \times 10^{1}$ & $7.07107 \times 10^{1}$ \\
+$\sqrt{(I_1/I_2)(R_2/R_1)^3}$ \; $(\ast)$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{1}$ & $3.16228 \times 10^{1}$ & $7.07107 \times 10^{1}$ \\[3pt]
+\hline\\[-6pt]
+$M_1/M_2$ & $1.00000$ & $1.00000 \times 10^{6}$ & $1.00000 \times 10^{3}$ & $1.00000 \times 10^{2}$ & $1.00000 \times 10^{-10}$ \\
+$R_1/R_2$ & $4.28571 \times 10^{-6}$ & $1.00000$ & $1.00000 \times 10^{1}$ & $1.00000 \times 10^{-1}$ & $2.00000 \times 10^{-14}$ \\
+$\sqrt{R_2/R_1}$ & $4.83046 \times 10^{2}$ & $1.00000$ & $3.16228 \times 10^{-1}$ & $3.16228$ & $7.07107 \times 10^{6}$ \\
+$\sqrt{M_1/M_2}$ & $1.00000$ & $1.00000 \times 10^{3}$ & $3.16228 \times 10^{1}$ & $1.00000 \times 10^{1}$ & $1.00000 \times 10^{-5}$ \\[3pt]
+\hline\\[-6pt]
+$(\text{DTD}_1/\text{DTD}_2)^2(R_1/R_2)^3$ & $1.83673 \times 10^{-11}$ & $1.00000 \times 10^{6}$ & $1.00000 \times 10^{5}$ & $1.00000$ & $4.00000 \times 10^{-38}$ \\
+$\sqrt{M_2^2 R_2/(M_1^2 R_1)}$ & $4.83046 \times 10^{2}$ & $1.00000 \times 10^{-6}$ & $3.16228 \times 10^{-4}$ & $3.16228 \times 10^{-2}$ & $7.07107 \times 10^{16}$ \\
+$\sqrt{1\!-\!\text{DTD}_1^2}/\sqrt{1\!-\!\text{DTD}_2^2}$ & $9.92203 \times 10^{-2}$ & $9.99993 \times 10^{-1}$ & $9.99993 \times 10^{-1}$ & $9.92553 \times 10^{-1}$ & $5.07367 \times 10^{-1}$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 \balance
 
