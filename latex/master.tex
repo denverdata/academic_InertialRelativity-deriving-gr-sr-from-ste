@@ -257,11 +257,11 @@ The STE is the core universal equivalence stated by Inertial Relativity. In the 
 \begin{quote}
 ``Ultimately, general relativity, gravitational, and velocity-induced time dilation are phenomena associated with the law of Space-Time Equivalence. They are static-scale frames of reference (from the human perspective), extreme scenarios of velocity or gravity, and the time dilation described by Einstein---these are likely edge cases of Space-Time Equivalence.''
 \end{quote}
-The STE is defined as:
+Under isometric scaling (constant density), the STE is defined as:
 \begin{equation} \label{eq:ste}
 k = \left(\frac{I_2}{I_1}\right)^{1/5}
 \end{equation}
-where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention.
+where $I_1$ and $I_2$ are the moments of inertia of any two systems about any respective axes, and $R$ denotes the mean radius about the selected axis. By convention, System 1 denotes the observer and System 2 the observed, consistent with the Schwarzschild convention. Under isometric conditions the two systems share the same density, and the fifth root of the inertia ratio recovers the linear scale factor exactly.
 
 In the linear context, inertia is $M$ and the linear inertia version of the STE applies (see \ref{app:general_ste}). Special Relativity describes linear inertia:
 
@@ -317,6 +317,18 @@ recovering the linear scale factor between the two systems. The resulting time d
 \caption{Two uniform spheres related by isometric scaling. The STE recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
 \end{figure}
 
+\subsection{Universal STE}
+
+The isometric STE (Equation~\ref{eq:ste}) assumes constant density between the two systems. When densities differ, the inertia ratio encodes both density and radius. Making density explicit, for a uniform body $I = \frac{2}{5}MR^2$ with $M = \frac{4}{3}\pi R^3 \rho$, so $I \propto \rho R^5$ and:
+\begin{equation} \label{eq:ki}
+\left(\frac{I_1}{I_2}\right)^{1/5} = \left(\frac{\rho_1}{\rho_2}\right)^{1/5} \cdot \frac{R_1}{R_2}
+\end{equation}
+Under constant density, this reduces to $R_1/R_2$, recovering the isometric case. The DTD ratio (Equation~\ref{eq:dtd_ratio}) carries density to the $1/2$ power, while the isometric STE carries it to the $1/5$. The universal relationship between time dilation and inertia is therefore:
+\begin{equation} \label{eq:ste_universal}
+\frac{\text{DTD}_1}{\text{DTD}_2} = \left(\frac{I_1}{I_2}\right)^{1/5} \cdot \left(\frac{\rho_1}{\rho_2}\right)^{3/10}
+\end{equation}
+The $3/10$ exponent ($= 1/2 - 1/5$) on the density ratio is the correction that bridges the isometric STE to the general case. When density is equal, this factor is unity and the isometric STE gives the time dilation ratio directly. When density differs, the correction is exact and the formula holds universally for any two systems of any mass, radius, and density.
+
 \subsection{Comparison of Relative Time Paces}
 The linear scale factor between any two systems is the ratio of their identically-constructed compactness values. Taking the ratio of each system's normalized compactness $D/D_{crit}$:
 \begin{equation} \label{eq:tdr}
@@ -347,31 +359,31 @@ k = 1 - \left(\frac{d\tau}{dt}\right)^2
 The ratio of the recovered $k$ values yields the raw compactness ratio $D_1/D_2$.
 
 \begin{mdframed}
-\textbf{Example (Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
+\textbf{Example (Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 2 \times 10^{-7}$\,m.
 
 \[
-k = \frac{M_1 R_2}{M_2 R_1} = \frac{(1 \times 10^{30})(1.98031 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})} = 1.98031 \times 10^{-4}
+k = \frac{M_1 R_2}{M_2 R_1} = \frac{(1 \times 10^{30})(2 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})} = 2.00000 \times 10^{-4}
 \]
 Time dilation of $S_2$:
 \begin{align}
-D_2 &= \frac{M_2}{R_2} = \frac{1 \times 10^{20}}{1.98031 \times 10^{-7}} = 5.04971 \times 10^{26}\;\text{kg/m} \notag \\
-\frac{D_2}{D_{crit}} &= \frac{5.04971 \times 10^{26}}{6.73295 \times 10^{26}} = 7.50000 \times 10^{-1} \notag \\
-\frac{d\tau}{dt} &= \sqrt{1 - 7.50000 \times 10^{-1}} = 5.00000 \times 10^{-1} \notag
+D_2 &= \frac{M_2}{R_2} = \frac{1 \times 10^{20}}{2 \times 10^{-7}} = 5.00000 \times 10^{26}\;\text{kg/m} \notag \\
+\frac{D_2}{D_{crit}} &= \frac{5.00000 \times 10^{26}}{6.73295 \times 10^{26}} = 7.42617 \times 10^{-1} \notag \\
+\frac{d\tau}{dt} &= \sqrt{1 - 7.42617 \times 10^{-1}} = 5.07330 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
 k_2 &= \frac{2GM_2}{R_2 c^2}
-= \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}
-= 7.50000 \times 10^{-1} \notag \\
-\frac{d\tau}{dt} &= \sqrt{1 - k_2} = \sqrt{1 - 7.50000 \times 10^{-1}} = 5.00000 \times 10^{-1} \notag
+= \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(2 \times 10^{-7})(8.98755 \times 10^{16})}
+= 7.42617 \times 10^{-1} \notag \\
+\frac{d\tau}{dt} &= \sqrt{1 - k_2} = \sqrt{1 - 7.42617 \times 10^{-1}} = 5.07330 \times 10^{-1} \notag
 \end{align}
 Relative time dilation between $S_1$ and $S_2$:
 \begin{align}
 k_1 &= \frac{2GM_1}{R_1 c^2}
 = \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}
 = 1.48523 \times 10^{-4} \notag \\
-\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} &= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
-= 5.00037 \times 10^{-1} \notag
+\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} &= \frac{5.07330 \times 10^{-1}}{9.99926 \times 10^{-1}}
+= 5.07368 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
 
@@ -453,16 +465,7 @@ The inertia ratio decomposes into a time dilation factor (the compactness ratio)
 \begin{equation} \label{eq:dtd_from_inertia}
 \frac{\text{DTD}_1}{\text{DTD}_2} = \sqrt{\frac{I_1}{I_2} \cdot \left(\frac{R_2}{R_1}\right)^3}
 \end{equation}
-
-Making density explicit, the STE's fifth root separates into density and radius components. For a uniform body, $I_1/I_2 = (\rho_1/\rho_2)(R_1/R_2)^5$, giving:
-\begin{equation} \label{eq:ki}
-\left(\frac{I_1}{I_2}\right)^{1/5} = \left(\frac{\rho_1}{\rho_2}\right)^{1/5} \cdot \frac{R_1}{R_2}
-\end{equation}
-Since the DTD ratio carries density to the $1/2$ power (via Equation~\ref{eq:dtd_ratio}) while the STE carries it to the $1/5$:
-\begin{equation} \label{eq:dtd_inertia_general}
-\frac{\text{DTD}_1}{\text{DTD}_2} = \left(\frac{I_1}{I_2}\right)^{1/5} \cdot \left(\frac{\rho_1}{\rho_2}\right)^{3/10}
-\end{equation}
-The $3/10$ exponent ($= 1/2 - 1/5$) on the density ratio bridges the STE scale factor to the time dilation ratio. When density is equal, this factor is unity and the two ratios coincide (Section~5.3).
+This is a direct consequence of the universal STE (Equation~\ref{eq:ste_universal}): the $(R_2/R_1)^3$ factor converts the $R^2$ dependence in inertia back to the $R^{-1}$ dependence in compactness.
 
 Each system's DTD can also be computed directly from its moment of inertia. Substituting $M = 5I/(2R^2)$ into $D_{norm} = M/(R \cdot D_{crit})$:
 \begin{equation} \label{eq:dtd_from_I}
@@ -646,7 +649,7 @@ k_2 &= k_1 \cdot k^2
 \end{align}
 \end{mdframed}
 
-\noindent This is the only constraint under which $(I_1/I_2)^{1/5} = \text{DTD}_1/\text{DTD}_2$; the density correction $(\rho_1/\rho_2)^{3/10}$ in Equation~\ref{eq:dtd_inertia_general} is unity (Table~\ref{tab:pair_ratios}, column $\rho = \rho$).
+\noindent This is the only constraint under which $(I_1/I_2)^{1/5} = \text{DTD}_1/\text{DTD}_2$; the density correction $(\rho_1/\rho_2)^{3/10}$ in Equation~\ref{eq:ste_universal} is unity (Table~\ref{tab:pair_ratios}, column $\rho = \rho$).
 
 \subsubsection*{Case 4: Constant Inertia}
 
@@ -697,13 +700,13 @@ k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5} = \left(\frac{M_2}{M_1}\righ
 \end{align}
 
 \begin{mdframed}
-\textbf{Example (General Case):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = \frac{4}{3} r_s = 1.98031 \times 10^{-7}$\,m. Starting from the STE:
+\textbf{Example (General Case):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 2 \times 10^{-7}$\,m. Starting from the STE:
 \begin{align}
 k &= \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
-= \left(\frac{(1 \times 10^{20}) \cdot (1.98031 \times 10^{-7})^2}{(1 \times 10^{30}) \cdot (1 \times 10^{7})^2}\right)^{1/5} \notag \\
-&= \left(\frac{3.92163 \times 10^{6}}{1 \times 10^{44}}\right)^{1/5}
-= (3.92163 \times 10^{-38})^{1/5} \notag \\
-&= 3.30136 \times 10^{-8} \notag
+= \left(\frac{(1 \times 10^{20}) \cdot (2 \times 10^{-7})^2}{(1 \times 10^{30}) \cdot (1 \times 10^{7})^2}\right)^{1/5} \notag \\
+&= \left(\frac{4.00000 \times 10^{6}}{1 \times 10^{44}}\right)^{1/5}
+= (4.00000 \times 10^{-38})^{1/5} \notag \\
+&= 3.31445 \times 10^{-8} \notag
 \end{align}
 Since $k_i = D_i/D_{crit}$ and $D = M/R$:
 \begin{align}
@@ -711,39 +714,39 @@ k_1 &= \frac{M_1/R_1}{D_{crit}}
 = \frac{1 \times 10^{30}/1 \times 10^{7}}{6.73295 \times 10^{26}}
 = 1.48523 \times 10^{-4} \notag \\
 k_2 &= \frac{M_2/R_2}{D_{crit}}
-= \frac{1 \times 10^{20}/1.98031 \times 10^{-7}}{6.73295 \times 10^{26}}
-= 7.50000 \times 10^{-1} \notag
+= \frac{1 \times 10^{20}/2 \times 10^{-7}}{6.73295 \times 10^{26}}
+= 7.42617 \times 10^{-1} \notag
 \end{align}
 \begin{align}
 \frac{d\tau}{dt} &= \frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}}
-= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
-&= 5.00037 \times 10^{-1} \notag
+= \frac{\sqrt{1 - 7.42617 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
+&= 5.07368 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation:
 \begin{align}
 \frac{d\tau}{dt} &= \frac{\sqrt{1 - \frac{2GM_2}{R_2 c^2}}}{\sqrt{1 - \frac{2GM_1}{R_1 c^2}}} \notag \\
-&= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
-&= \frac{\sqrt{1 - 7.50000 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
-&= 5.00037 \times 10^{-1} \notag
+&= \frac{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(2 \times 10^{-7})(8.98755 \times 10^{16})}}}{\sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{30})}{(1 \times 10^{7})(8.98755 \times 10^{16})}}} \notag \\
+&= \frac{\sqrt{1 - 7.42617 \times 10^{-1}}}{\sqrt{1 - 1.48523 \times 10^{-4}}} \notag \\
+&= 5.07368 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
 
 \noindent All identities from Section~5.5 hold without constraint; numerical verification appears in Table~\ref{tab:pair_ratios}, column General.
 
 \begin{mdframed}
-\textbf{Example (General Case --- Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 1.98031 \times 10^{-7}$\,m.
+\textbf{Example (General Case --- Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 2 \times 10^{-7}$\,m.
 
 Linear scale factor (Equation~\ref{eq:tdr}):
 \begin{align}
 k &= \frac{M_1 R_2}{M_2 R_1}
-= \frac{(1 \times 10^{30})(1.98031 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})}
-= 1.98031 \times 10^{-4} \notag \\
+= \frac{(1 \times 10^{30})(2 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})}
+= 2.00000 \times 10^{-4} \notag \\
 D_{norm} &= \frac{M_2/R_2}{D_{crit}}
-= \frac{1 \times 10^{20}/1.98031 \times 10^{-7}}{6.73295 \times 10^{26}}
-= 7.50000 \times 10^{-1} \notag \\
+= \frac{1 \times 10^{20}/2 \times 10^{-7}}{6.73295 \times 10^{26}}
+= 7.42617 \times 10^{-1} \notag \\
 \frac{d\tau}{dt} &= \sqrt{1 - D_{norm}}
-= \sqrt{1 - 7.50000 \times 10^{-1}}
-= 5.00000 \times 10^{-1} \notag
+= \sqrt{1 - 7.42617 \times 10^{-1}}
+= 5.07330 \times 10^{-1} \notag
 \end{align}
 \textbf{Confirmation:} Schwarzschild gravitational time dilation for each system:
 
@@ -755,14 +758,14 @@ $S_1$:
 \end{align}
 $S_2$:
 \begin{align}
-\frac{d\tau}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(1.98031 \times 10^{-7})(8.98755 \times 10^{16})}}
-= \sqrt{1 - 7.50000 \times 10^{-1}}
-= 5.00000 \times 10^{-1} \notag
+\frac{d\tau}{dt} &= \sqrt{1 - \frac{2(6.67430 \times 10^{-11})(1 \times 10^{20})}{(2 \times 10^{-7})(8.98755 \times 10^{16})}}
+= \sqrt{1 - 7.42617 \times 10^{-1}}
+= 5.07330 \times 10^{-1} \notag
 \end{align}
 Relative pace of time:
 \begin{align}
-\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} &= \frac{5.00000 \times 10^{-1}}{9.99926 \times 10^{-1}}
-= 5.00037 \times 10^{-1} \notag
+\frac{\sqrt{1 - k_2}}{\sqrt{1 - k_1}} &= \frac{5.07330 \times 10^{-1}}{9.99926 \times 10^{-1}}
+= 5.07368 \times 10^{-1} \notag
 \end{align}
 \end{mdframed}
 
@@ -794,7 +797,7 @@ $\dfrac{d\tau_1/dt}{d\tau_2/dt}$ & $9.922 \times 10^{-2}$ & $\approx 1$ & $\appr
 \end{tabular}
 \end{table*}
 
-Row~4 matches Row~3 in every case, confirming Equation~\ref{eq:dtd_inertia_general}: the density correction factor $(\rho_1/\rho_2)^{3/10}$ bridges the STE scale factor to the DTD ratio universally. Row~5 matches Row~1 in every case, confirming Equation~\ref{eq:inertia_recovery}: the inertia ratio decomposes exactly into time dilation and spatial scale. Under constant density (column~$\rho = \rho$, bold), Rows~2 and~3 coincide, as predicted by Section~5.3. The gravitational time dilation ratio (Row~6) does not equal any other row in general; the nonlinearity of $\sqrt{1-k}$ prevents decomposition into constituent ratios.
+Row~4 matches Row~3 in every case, confirming Equation~\ref{eq:ste_universal}: the density correction factor $(\rho_1/\rho_2)^{3/10}$ bridges the STE scale factor to the DTD ratio universally. Row~5 matches Row~1 in every case, confirming Equation~\ref{eq:inertia_recovery}: the inertia ratio decomposes exactly into time dilation and spatial scale. Under constant density (column~$\rho = \rho$, bold), Rows~2 and~3 coincide, as predicted by Section~5.3. The gravitational time dilation ratio (Row~6) does not equal any other row in general; the nonlinearity of $\sqrt{1-k}$ prevents decomposition into constituent ratios.
 
 \balance
 
