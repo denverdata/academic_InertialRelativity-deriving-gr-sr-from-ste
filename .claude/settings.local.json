@@ -42,7 +42,17 @@
       "Bash(printf '\\\\n%%%REFERENCES%%%\\\\n\\\\\\\\bibliography{rsc}\\\\n')",
       "Bash(bibtex:*)",
       "Bash(grep:*)",
-      "Bash(zip:*)"
+      "Bash(zip:*)",
+      "Bash(pdftotext -layout -f 11 latex/master.pdf -)",
+      "Bash(pdfinfo master.pdf)",
+      "Bash(pdftoppm -png -r 130 -f 11 -l 12 master.pdf /tmp/page_v3)",
+      "Read(//private/tmp/**)",
+      "Bash(awk 'NR>=43' pair_tables_exact.tex)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(awk '/Overfull/{c=10;print;next} c>0{print;c--}' master.log)",
+      "Bash(pdftoppm -png -r 120 -f 11 -l 11 master.pdf /tmp/page_v6)",
+      "Bash(cp pair_comparisons_v2_cases.md /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/pair_comparisons_v2_cases.md)",
+      "Bash(echo \"renderer exit=$?\")"
     ]
   }
 }
