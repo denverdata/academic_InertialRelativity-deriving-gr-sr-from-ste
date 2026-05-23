@@ -203,7 +203,7 @@ The extension from isometrically scaled systems to all systems follows from the 
 
 The fifth root relationship therefore holds universally: for any two systems about any two respective axes, the characteristic length scale factor that determines time dilation is the fifth root of the inverse ratio of their moments of inertia about those same axes. Isometric scaling establishes the exponent (Equation~\ref{eq:inertia_scaling}).
 
-\subsection{Inertial Density}
+\subsection{The DeGerlia Time Dilation Framework}
 
 Inertial density $P$ is the moment of inertia of a system divided by its volume:
 \begin{equation}
@@ -253,6 +253,26 @@ For systems in weak gravitational fields, $d\tau/dt \approx 1 - k/2$; the time d
 \frac{\text{DTD}_1}{\text{DTD}_2} = \sqrt{\frac{D_1}{D_2}} = \sqrt{\frac{M_1}{M_2}} \cdot \sqrt{\frac{R_2}{R_1}}
 \end{equation}
 The gravitational time dilation ratio $\sqrt{1-k_1}/\sqrt{1-k_2}$ does not factor; the nonlinearity of $f(x) = \sqrt{1-x}$ precludes decomposition into constituent ratios. DTD is defined for all $D > 0$ and diverges as $D \to \infty$, correctly reflecting the unbounded growth of the dilation parameter at and beyond the collapse threshold, where the gravitational time dilation form $\sqrt{1-k}$ is undefined. DTD depends solely on $D/D_{crit}$, requiring no system-specific reference values such as the Schwarzschild radius.
+
+\subsection{$D_{crit}$, $D_{norm}$, and the Role of Ratios}
+
+$D_{crit}$ and $D_{norm}$ play distinct roles in the framework, and the distinction matters for how precision propagates.
+
+\textbf{$D_{crit}$ is a universal constant.} It is the compactness at the collapse threshold, the same value for every system. Its numerical value derives from $c^2/(2G)$ and inherits the experimental precision of $G$ — bounded at approximately six significant figures.
+
+\textbf{$D_{norm}$ is system-specific.} For a given system, $D_{norm} = D/D_{crit}$ is the fraction of the universal threshold that system has reached. Every system has its own $D_{norm}$, determined by its mass and mean radius.
+
+When time dilation is computed for a single system through $d\tau/dt = \sqrt{1 - D_{norm}}$ or $\text{DTD} = \sqrt{D_{norm}}$, the result inherits the precision of $D_{crit}$ — and therefore of $G$. Single-system quantities cannot escape this precision floor.
+
+When time dilation is computed as a comparison between two systems, $D_{crit}$ appears identically in both halves of the ratio and cancels structurally:
+\[
+\frac{D_{norm,1}}{D_{norm,2}} = \frac{D_1/D_{crit}}{D_2/D_{crit}} = \frac{D_1}{D_2}
+\]
+The result no longer depends on $D_{crit}$ at all. Comparative predictions are decoupled from the precision of $G$ and bounded only by the precision of the mass and length inputs, which can be measured to many more digits than $G$.
+
+The same property holds for any universal constant. $G$, $c$, and any dimensional combination of universal constants appear identically on both sides of any ratio between two systems, and cancel. The framework's comparative results are therefore robust even to the hypothetical scenario in which $G$ and $c$ are scale-dependent rather than strictly constant: as long as they vary together such that their combinations (and therefore $D_{crit}$) remain identical between the two systems being compared, the cancellation still holds.
+
+This is the structural reason the framework prioritizes ratios. Time dilation is a relational property — the natural object is the comparison between two systems, not the absolute time dilation of one. Single-system quantities require a universal reference to express and inherit that reference's precision; comparative quantities do not. The relational form is both more physically meaningful (no fictional flat-spacetime observer at infinity is needed) and more numerically precise (no inherited precision floor from universal constants).
 
 \section{The Space-Time Equivalence (STE)}
 The STE is the core universal equivalence stated by Inertial Relativity. In the original work\citep{degerlia202501}, the author hypothesized:
@@ -329,7 +349,7 @@ recovering the linear scale factor between the two systems. The resulting time d
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{ste_example.pdf}
-\caption{Two uniform spheres related by isometric scaling. The isometric equivalence recovers the linear scale factor $k = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
+\caption{Two uniform spheres related by isometric scaling. The isometric equivalence recovers the linear scale factor $k_i = 0.5$ from the moment of inertia ratio; time dilation follows directly.}
 \end{figure}
 
 \subsection{Density-Explicit Form}
@@ -466,7 +486,7 @@ When both mass and radius differ between two systems, no component cancels:
 \begin{equation}
 k_i = \left(\frac{I_2}{I_1}\right)^{1/5} = \left(\frac{M_2 R_2^2}{M_1 R_1^2}\right)^{1/5}
 \end{equation}
-This is $k_i$ (Equation~\ref{eq:isometric}) without constraint on mass or radius. The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of $k_i$, each arising when one component of inertia is held constant. When densities differ between the two systems, $k_i$ alone is insufficient and the universal STE (Equation~\ref{eq:ste_density}) applies, equivalently expressible as $k_d = D_1/D_2$ (Equation~\ref{eq:tdr}).
+This is $k_i$ (Equation~\ref{eq:isometric}) without constraint on mass or radius. The static-mass and static-radius cases derived above, producing Schwarzschild and Lorentz time dilation respectively, are edge cases of $k_i$, each arising when one component of inertia is held constant. When densities differ between the two systems, $k_i$ alone is insufficient and the universal STE (Equation~\ref{eq:ste_density}) applies, equivalently expressible as $k_d = D_1/D_2$ (Equation~\ref{eq:kd}).
 
 \subsection{Inertia--Time Dilation Identities}
 
@@ -496,7 +516,7 @@ The Space-Time Equivalence (Equation~\ref{eq:td_k}) states that time dilation is
 \]
 where $k$ is the linear scale factor derived from the relative compactness of two systems. Substituting the gravitational case ($k = r_s/R$) directly produces Schwarzschild time dilation (Equation~\ref{eq:schwarzschild}). Substituting the velocity case ($k = v^2/c^2$, related to the gravitational case by the escape-velocity identity $v^2/c^2 = 2GM/(Rc^2) = r_s/R$) directly produces Lorentz time dilation (Equation~\ref{eq:lorentz}). Equivalently, $k = D/D_{crit}$ gives the fraction of the DeGerlia Threshold consumed by the system, and is algebraically identical to $r_s/R$. Both Schwarzschild and Lorentz time dilation are produced exactly by the STE, with no free parameters.
 
-\subsection*{Generalization of the Original Hypothesis}
+\subsection{Generalization of the Original Hypothesis}
 
 The original hypothesis stated that time dilation is determined by the fifth-root inertia relation $k_i = (I_2/I_1)^{1/5}$. Evaluation against the pair comparison data (Appendix~\ref{app:pair_table}) confirms this relation under isometric (constant-density) scaling. For non-isometric pairs, the relation requires generalization. The generalized form is the compactness ratio:
 \[
@@ -508,23 +528,23 @@ equivalently expressible in $(I, \rho)$ coordinates as:
 \]
 (Equation~\ref{eq:ste_density}). These are two equivalent expressions of the generalized STE. The compactness-ratio form $k_d$ exposes the inertial-geometric structure of the relationship directly; the $(I, \rho)$ form makes explicit that compactness has two independent inputs --- inertial scale and density. The fifth-root inertia form is recovered as the constant-density limit of either expression. Given the masses and mean radii of any two systems, the full relative time dilation between them follows from $k_d$.
 
-\subsection*{Time Dilation Is Geometric, Not Gravitational}
+\subsection{Time Dilation Is Geometric, Not Gravitational}
 
 Compactness $D = M/R$ is a geometric quantity: mass distributed over a length. The label ``gravitational time dilation'' attaches historically because the effect was first observed in gravitational contexts, but no field-theoretic gravity entered the derivations above. Gravity is the name given to the observable consequence of compactness; the underlying cause is the relative geometric-inertial structure of the systems being compared. Time dilation is a structural property of how matter is distributed, not a property mediated by a force.
 
-\subsection*{Time Dilation Is System-Relational, Not Personal}
+\subsection{Time Dilation Is System-Relational, Not Personal}
 
 No observer experiences their own time as anything but normal. Time dilation arises only when the temporal property of one inertial system is compared against another. It is a structural property of the relationship between systems, not of any single system in isolation. Nothing physically changes for any observer on their own terms; what is structured is how two systems compare. This is the framing that the STE makes natural and that the standard treatment, by privileging the observer's frame, often obscures.
 
-\subsection*{Special and General Relativity Are Projections of One Law}
+\subsection{Special and General Relativity Are Projections of One Law}
 
 The Schwarzschild time dilation formula is the STE evaluated under the constraint $M_1 = M_2$: same mass, different radii. The Lorentz time dilation formula is the STE evaluated under the constraint $R_1 = R_2$: same radius, different masses, with the velocity-based form connected to the radius-based form by the escape-velocity identity. Neither is a separate theory. Both are evaluations of the same compactness-based relation under different choices of which variable is held fixed. The general case --- both mass and radius varying, both densities varying --- requires the universal STE (Equation~\ref{eq:ste_density}). Special and General Relativity are not independent discoveries; they are two projections of a single law into the regimes where one or the other variable happens to be constrained.
 
-\subsection*{$G$ Cancels in Comparisons}
+\subsection{$G$ Cancels in Comparisons}
 
 The gravitational constant $G$ appears identically in both halves of any time dilation ratio between two systems and therefore cancels structurally. The precision of comparative predictions in this framework is not bounded by the experimental uncertainty in $G$ ($\sim 6$ significant figures); it is bounded only by the precision of the mass and length inputs. Whatever the true value of $G$ --- including any joint scale-dependence with $c$ that preserves the combination $G/c^2$ --- comparative time dilation between two systems is exact at the precision of those inputs. The framework's comparative predictions are decoupled from the precision floor of $G$.
 
-\subsection*{DTD and GTD: Complementary Forms with Computational Advantages}
+\subsection{DTD and GTD: Complementary Forms with Computational Advantages}
 
 The gravitational time dilation factor $d\tau/dt = \sqrt{1 - D/D_{crit}}$ answers ``how much slower is this system's clock relative to flat spacetime?'' The DeGerlia time dilation $\text{DTD} = \sqrt{D/D_{crit}}$ answers ``how compact is this system relative to its collapse threshold?'' The two are algebraically related ($\text{GTD}^2 + \text{DTD}^2 = 1$, Equation~\ref{eq:pythagorean}) and describe the same physical time dilation from different angles.
 
@@ -534,7 +554,7 @@ DTD is the natural computational form. The standard $\sqrt{1 - r_s/R}$ buries th
 \]
 into independent mass and mean-radius contributions, a decomposition the $\sqrt{1-k}$ form does not admit. Calculations may be carried in DTD throughout and converted back to standard $d\tau/dt$ at the end via $\sqrt{1 - \text{DTD}^2} = d\tau/dt$ when needed. Having both representations available makes the framework more flexible than the standard treatment.
 
-\subsection*{The Schwarzschild Radius Is Not the Singularity}
+\subsection{The Schwarzschild Radius Is Not the Singularity}
 
 Standard treatments often conflate the Schwarzschild radius with the singularity, treating both as locations where physics breaks down. This framework keeps them properly distinct.
 
@@ -542,11 +562,11 @@ The \textit{singularity} is the asymptote at $R \to 0$: the formal limit where c
 
 The \textit{Schwarzschild radius} is the point where $D = D_{crit}$, equivalently where the escape velocity equals $c$. It is a meaningful threshold --- a milestone in the system's compactness --- but it is not a place where the framework fails. The standard $\sqrt{1 - r_s/R}$ form becomes imaginary at $R = r_s$ and forces a conflation between the threshold and the singularity. The DTD formulation remains real and well-defined throughout, including for $R < r_s$. The inertia--time dilation identities (Equations~\ref{eq:inertia_recovery}--\ref{eq:dtd_from_I}) continue to hold past the event horizon, depending only on ratios of real-valued quantities. The framework therefore gives a coherent description of the region between the Schwarzschild radius and $R \to 0$ --- the region that standard general relativity treats as undefined or ambiguous.
 
-\subsection*{Causality from Inertial Additivity}
+\subsection{Causality from Inertial Additivity}
 
 Both rotational and linear inertia are strictly additive (Equations~\ref{eq:moi} and~\ref{eq:mass}). The temporal properties of any system are therefore wholly determined by its constituent matter, establishing that causality in this framework propagates exclusively from component to system. No top-down field assumption is required; the law operates at the level of mass distribution itself.
 
-\subsection*{Future Extensions}
+\subsection{Future Extensions}
 
 The symmetric cases treated here are a subset of the framework's domain. The $(I, \rho)$ parameterization extends to arbitrary mass distributions, since moment of inertia is defined for any geometry. The $D_{crit}$ derivation and Schwarzschild correspondence assume spherical symmetry and would need to be redone for asymmetric systems. Rotating systems described by the Kerr metric \citep{kerr1963} and non-spherical mass distributions are natural extensions enabled by the framework but not derived in this paper. The framework's reach into weakly-gravitating and non-gravitational regimes follows from the same formulas returning vanishingly small but well-defined values for low compactness; the structural law does not break down. Cosmological implications follow if the framework extends consistently to light propagation, but those are the subject of separate work.
 
@@ -785,7 +805,7 @@ k_2 &= \frac{M_2/R_2}{D_{crit}}
 \begin{mdframed}
 \textbf{Example (General Case --- Comparison of Relative Time Paces):} $S_1$: $M_1 = 1 \times 10^{30}$\,kg, $R_1 = 1 \times 10^{7}$\,m. $S_2$: $M_2 = 1 \times 10^{20}$\,kg, $R_2 = 2 \times 10^{-7}$\,m.
 
-Linear scale factor (Equation~\ref{eq:tdr}):
+Linear scale factor (Equation~\ref{eq:kd}):
 \begin{align}
 k &= \frac{M_1 R_2}{M_2 R_1}
 = \frac{(1 \times 10^{30})(2 \times 10^{-7})}{(1 \times 10^{20})(1 \times 10^{7})}
