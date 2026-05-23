@@ -52,7 +52,11 @@
       "Bash(awk '/Overfull/{c=10;print;next} c>0{print;c--}' master.log)",
       "Bash(pdftoppm -png -r 120 -f 11 -l 11 master.pdf /tmp/page_v6)",
       "Bash(cp pair_comparisons_v2_cases.md /Users/tomdegerlia/Develop/academic/academic_InertialRelativity-deriving-gr-sr-from-ste/pair_comparisons_v2_cases.md)",
-      "Bash(echo \"renderer exit=$?\")"
+      "Bash(echo \"renderer exit=$?\")",
+      "Bash(pdftocairo -pdf master.pdf master_fixed.pdf)",
+      "Bash(pdftotext -f 5 -l 5 master.pdf -)",
+      "Bash(git checkout *)",
+      "Bash(pdftoppm *)"
     ]
   }
 }
